@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+p{
+	font-family: Source Sans Pro, serif;
+	font-weight: 600;
+	margin: inherit;
+	color: blue;
+	}
+h1{
+	font-family: Helvetica;
+	}
+	
+#intro{
+    background-color: black;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+#second{
+    background:url(images/space.jpg) 50% 0 no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+    color: white;
+    height: 1200px;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+.story{
+	height: 800;
+    margin: 0 auto;
+    min-width: 980px;
+    width: 100%px;
+}
+
+#second .bg1{
+	background: url(images/pug3.png) 50% 0 no-repeat;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	top: 400px;
+	left: -100px;
+	width: 100%;
+	z-index: 200;
+}
+
+#second .bg2{
+	background: url(images/pug1.png) 50% 0 no-repeat;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	top: 420px;
+	left: 300px;
+	width: 100%;
+	z-index: 150;
+}

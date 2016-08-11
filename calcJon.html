@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="calcJon.css">
+
+<script type="text/javascript">
+
+function calcJon()
+{
+  var volume = document.getElementById('VOLUME_ID').value;
+  var percentage = document.getElementById('PERCENTAGE_ID').value;
+  var price = document.getElementById('PRICE_ID').value;
+  
+  var jon = volume*percentage*0.01/price;
+  
+  document.getElementById('finalJons').innerHTML = "Your drink has " + jon.toFixed(2) + " jons!<br>";
+  
+
+}
+
+</script>
+</head>
+
+<body>
+
+<input type="text" id="VOLUME_ID" value="Volume in ml" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(!this.value) this.value = this.defaultValue;"></br>
+<input type="text" id="PERCENTAGE_ID" value="Alcohol in percent" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(!this.value) this.value = this.defaultValue;"></br>
+<input type="text" id="PRICE_ID"value="Price in Euros" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(!this.value) this.value = this.defaultValue;"></br>
+
+<button id="button" onclick="calcJon()">Calculate my jons!</button>
+
+<p id="finalJons"></p>
+
+</body>

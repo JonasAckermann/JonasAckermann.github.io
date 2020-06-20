@@ -5270,6 +5270,25 @@ class $c_Lindigo_shared_AnimationsRegister extends $c_O {
       return new $c_s_Some(newAnim)
     }
   };
+  fetchAnimationInLastState__T__T__s_Option(bindingKey, animationKey) {
+    const this$1 = this.findByAnimationKey__T__s_Option(animationKey);
+    if (this$1.isEmpty__Z()) {
+      return $m_s_None$()
+    } else {
+      const arg1 = this$1.get__O();
+      const anim = $as_Lindigo_shared_animation_Animation(arg1);
+      const this$2 = this.findMementoByBindingKey__T__s_Option(bindingKey);
+      let this$3;
+      if (this$2.isEmpty__Z()) {
+        this$3 = $m_s_None$()
+      } else {
+        const arg1$1 = this$2.get__O();
+        const m = $as_Lindigo_shared_animation_AnimationMemento(arg1$1);
+        this$3 = new $c_s_Some(anim.applyMemento__Lindigo_shared_animation_AnimationMemento__Lindigo_shared_animation_Animation(m))
+      };
+      return new $c_s_Some($as_Lindigo_shared_animation_Animation((this$3.isEmpty__Z() ? anim : this$3.get__O())))
+    }
+  };
 }
 const $d_Lindigo_shared_AnimationsRegister = new $TypeData().initClass({
   Lindigo_shared_AnimationsRegister: 0
@@ -5444,7 +5463,7 @@ const $p_Lindigo_shared_BoundaryLocator__textLineBounds__T__Lindigo_shared_datat
   const xs = $f_T__toCharArray__AC(lineText);
   const f = ((this$2, fontInfo$1) => ((c$2) => {
     const c = $uC(c$2);
-    return fontInfo$1.findByCharacter__C__Lindigo_shared_datatypes_FontChar(c).bounds__Lindigo_shared_datatypes_Rectangle()
+    return fontInfo$1.findByCharacter__T__Lindigo_shared_datatypes_FontChar($as_T(String.fromCharCode(c))).Lindigo_shared_datatypes_FontChar__f_bounds
   }))($thiz, fontInfo);
   const len = xs.u.length;
   const ys = $newArrayObject($d_Lindigo_shared_datatypes_Rectangle.getArrayOf(), [len]);
@@ -5567,6 +5586,68 @@ class $c_Lindigo_shared_BoundaryLocator extends $c_O {
     const this$2 = $p_Lindigo_shared_BoundaryLocator__textLinesCache__Lindigo_shared_QuickCache(this);
     this$2.Lindigo_shared_QuickCache__f_cache.clear__V()
   };
+  findBounds__Lindigo_shared_scenegraph_SceneGraphNode__Lindigo_shared_datatypes_Rectangle(sceneGraphNode) {
+    if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_Group)) {
+      const x2 = $as_Lindigo_shared_scenegraph_Group(sceneGraphNode);
+      return x2.bounds__Lindigo_shared_BoundaryLocator__Lindigo_shared_datatypes_Rectangle(this)
+    } else if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_Clone)) {
+      return $m_Lindigo_shared_datatypes_Rectangle$().zero__Lindigo_shared_datatypes_Rectangle()
+    } else if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_CloneBatch)) {
+      return $m_Lindigo_shared_datatypes_Rectangle$().zero__Lindigo_shared_datatypes_Rectangle()
+    } else if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_Graphic)) {
+      const x5 = $as_Lindigo_shared_scenegraph_Graphic(sceneGraphNode);
+      return x5.lazyBounds__Lindigo_shared_datatypes_Rectangle()
+    } else if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_Sprite)) {
+      const x6 = $as_Lindigo_shared_scenegraph_Sprite(sceneGraphNode);
+      return this.spriteBounds__Lindigo_shared_scenegraph_Sprite__Lindigo_shared_datatypes_Rectangle(x6)
+    } else if ((sceneGraphNode instanceof $c_Lindigo_shared_scenegraph_Text)) {
+      const x7 = $as_Lindigo_shared_scenegraph_Text(sceneGraphNode);
+      return this.textBounds__Lindigo_shared_scenegraph_Text__Lindigo_shared_datatypes_Rectangle(x7)
+    } else {
+      throw new $c_s_MatchError(sceneGraphNode)
+    }
+  };
+  spriteBounds__Lindigo_shared_scenegraph_Sprite__Lindigo_shared_datatypes_Rectangle(sprite) {
+    const key = ((("sprite-" + sprite.bindingKey__T()) + "-") + sprite.animationKey__T());
+    const f = ((this$1, sprite$1) => (() => {
+      const x1 = this$1.Lindigo_shared_BoundaryLocator__f_animationsRegister.fetchAnimationInLastState__T__T__s_Option(sprite$1.bindingKey__T(), sprite$1.animationKey__T());
+      if ((x1 instanceof $c_s_Some)) {
+        const x2 = $as_s_Some(x1);
+        const animation = $as_Lindigo_shared_animation_Animation(x2.s_Some__f_value);
+        $m_Lindigo_shared_datatypes_Rectangle$();
+        const position = sprite$1.position__Lindigo_shared_datatypes_Point();
+        const size = animation.currentFrame__Lindigo_shared_animation_Frame().crop__Lindigo_shared_datatypes_Rectangle().Lindigo_shared_datatypes_Rectangle__f_size;
+        return new $c_Lindigo_shared_datatypes_Rectangle(position, size)
+      } else {
+        const x = $m_s_None$();
+        if ((x === x1)) {
+          const $$x1 = $m_Lindigo_shared_IndigoLogger$();
+          $m_Lindigo_shared_datatypes_BindingKey$();
+          const this$ = sprite$1.bindingKey__T();
+          $$x1.errorOnce__O__Lindigo_shared_AsString__V(("Cannot build bounds for Sprite with bindingKey: " + $m_Lindigo_shared_datatypes_BindingKey$().asString$extension__T__T(this$)), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+          $m_Lindigo_shared_datatypes_Rectangle$();
+          const position$1 = sprite$1.position__Lindigo_shared_datatypes_Point();
+          const size$1 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+          return new $c_Lindigo_shared_datatypes_Rectangle(position$1, size$1)
+        } else {
+          throw new $c_s_MatchError(x1)
+        }
+      }
+    }))(this, sprite);
+    const cache = $p_Lindigo_shared_BoundaryLocator__boundsCache__Lindigo_shared_QuickCache(this);
+    const this$7 = cache.fetch__T__s_Option(key);
+    let $$x2;
+    if (this$7.isEmpty__Z()) {
+      const this$8 = cache.Lindigo_shared_QuickCache__f_cache;
+      const key$1 = new $c_Lindigo_shared_CacheKey(key);
+      const value = f();
+      $p_scm_HashMap__put0__O__O__Z__s_Some(this$8, key$1, value, false);
+      $$x2 = f()
+    } else {
+      $$x2 = this$7.get__O()
+    };
+    return $as_Lindigo_shared_datatypes_Rectangle($$x2)
+  };
   textAsLinesWithBounds__T__T__sci_List(text, fontKey) {
     const key = ((("text-lines-" + fontKey) + "-") + text);
     const f$1 = ((this$1, fontKey$1, text$1) => (() => {
@@ -5637,6 +5718,102 @@ class $c_Lindigo_shared_BoundaryLocator extends $c_O {
       $$x2 = this$13.get__O()
     };
     return $as_sci_List($$x2)
+  };
+  textBounds__Lindigo_shared_scenegraph_Text__Lindigo_shared_datatypes_Rectangle(text) {
+    const key = ((("text-bounds-" + text.Lindigo_shared_scenegraph_Text__f_fontKey) + "-") + text.Lindigo_shared_scenegraph_Text__f_text);
+    const f$1 = ((this$1, text$1) => (() => {
+      const this$3 = this$1.textAsLinesWithBounds__T__T__sci_List(text$1.Lindigo_shared_scenegraph_Text__f_text, text$1.Lindigo_shared_scenegraph_Text__f_fontKey);
+      const f = ((this$2) => ((x$1$2) => {
+        const x$1 = $as_Lindigo_shared_scenegraph_TextLine(x$1$2);
+        return x$1.Lindigo_shared_scenegraph_TextLine__f_lineBounds
+      }))(this$1);
+      let this$4;
+      if ((this$3 === $m_sci_Nil$())) {
+        this$4 = $m_sci_Nil$()
+      } else {
+        const arg1 = this$3.head__O();
+        const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+        let t = h;
+        let rest = $as_sci_List(this$3.tail__O());
+        while ((rest !== $m_sci_Nil$())) {
+          const arg1$1 = rest.head__O();
+          const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+          t.sci_$colon$colon__f_next = nx;
+          t = nx;
+          rest = $as_sci_List(rest.tail__O())
+        };
+        this$4 = h
+      };
+      const z = $m_Lindigo_shared_datatypes_Rectangle$().zero__Lindigo_shared_datatypes_Rectangle();
+      let acc = z;
+      let these = this$4;
+      while ((!these.isEmpty__Z())) {
+        const arg1$2 = acc;
+        const arg2 = these.head__O();
+        const acc$1 = $as_Lindigo_shared_datatypes_Rectangle(arg1$2);
+        const next = $as_Lindigo_shared_datatypes_Rectangle(arg2);
+        $m_Lindigo_shared_datatypes_Point$();
+        const a = acc$1.width__I();
+        const b = next.width__I();
+        const x = ((a > b) ? a : b);
+        const y = ((acc$1.height__I() + next.height__I()) | 0);
+        const point = new $c_Lindigo_shared_datatypes_Point(x, y);
+        $m_Lindigo_shared_datatypes_Rectangle$();
+        const position = acc$1.Lindigo_shared_datatypes_Rectangle__f_position;
+        acc = new $c_Lindigo_shared_datatypes_Rectangle(position, point);
+        these = $as_sc_LinearSeq(these.tail__O())
+      };
+      const this$8 = $as_Lindigo_shared_datatypes_Rectangle(acc);
+      const point$1 = text$1.Lindigo_shared_scenegraph_Text__f_position;
+      $m_Lindigo_shared_datatypes_Rectangle$();
+      const size = this$8.Lindigo_shared_datatypes_Rectangle__f_size;
+      const unaligned = new $c_Lindigo_shared_datatypes_Rectangle(point$1, size);
+      const x1 = $ct_T2__O__O__(new $c_T2(), text$1.Lindigo_shared_scenegraph_Text__f_alignment, unaligned);
+      const p2 = $as_Lindigo_shared_datatypes_TextAlignment(x1.T2__f__1);
+      const b$1 = $as_Lindigo_shared_datatypes_Rectangle(x1.T2__f__2);
+      const x$2 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+      if ((x$2 === p2)) {
+        return b$1
+      };
+      const p3 = $as_Lindigo_shared_datatypes_TextAlignment(x1.T2__f__1);
+      const b$2 = $as_Lindigo_shared_datatypes_Rectangle(x1.T2__f__2);
+      const x$3 = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+      if ((x$3 === p3)) {
+        $m_Lindigo_shared_datatypes_Point$();
+        const x$4 = ((b$2.x__I() - ((b$2.width__I() / 2) | 0)) | 0);
+        const y$1 = b$2.y__I();
+        const point$2 = new $c_Lindigo_shared_datatypes_Point(x$4, y$1);
+        $m_Lindigo_shared_datatypes_Rectangle$();
+        const size$1 = b$2.Lindigo_shared_datatypes_Rectangle__f_size;
+        return new $c_Lindigo_shared_datatypes_Rectangle(point$2, size$1)
+      };
+      const p4 = $as_Lindigo_shared_datatypes_TextAlignment(x1.T2__f__1);
+      const b$3 = $as_Lindigo_shared_datatypes_Rectangle(x1.T2__f__2);
+      const x$5 = $m_Lindigo_shared_datatypes_TextAlignment$Right$();
+      if ((x$5 === p4)) {
+        $m_Lindigo_shared_datatypes_Point$();
+        const x$6 = ((b$3.x__I() - b$3.width__I()) | 0);
+        const y$2 = b$3.y__I();
+        const point$3 = new $c_Lindigo_shared_datatypes_Point(x$6, y$2);
+        $m_Lindigo_shared_datatypes_Rectangle$();
+        const size$2 = b$3.Lindigo_shared_datatypes_Rectangle__f_size;
+        return new $c_Lindigo_shared_datatypes_Rectangle(point$3, size$2)
+      };
+      throw new $c_s_MatchError(x1)
+    }))(this, text);
+    const cache = $p_Lindigo_shared_BoundaryLocator__boundsCache__Lindigo_shared_QuickCache(this);
+    const this$16 = cache.fetch__T__s_Option(key);
+    let $$x1;
+    if (this$16.isEmpty__Z()) {
+      const this$17 = cache.Lindigo_shared_QuickCache__f_cache;
+      const key$1 = new $c_Lindigo_shared_CacheKey(key);
+      const value = f$1();
+      $p_scm_HashMap__put0__O__O__Z__s_Some(this$17, key$1, value, false);
+      $$x1 = f$1()
+    } else {
+      $$x1 = this$16.get__O()
+    };
+    return $as_Lindigo_shared_datatypes_Rectangle($$x1)
   };
 }
 const $d_Lindigo_shared_BoundaryLocator = new $TypeData().initClass({
@@ -5895,7 +6072,7 @@ class $c_Lindigo_shared_FontRegister extends $c_O {
     this.Lindigo_shared_FontRegister__f_bitmap$init$0 = true
   };
   register__Lindigo_shared_datatypes_FontInfo__V(fontInfo) {
-    const key = fontInfo.fontKey__T();
+    const key = fontInfo.Lindigo_shared_datatypes_FontInfo__f_fontKey;
     const f = ((this$1, fontInfo$1) => (() => fontInfo$1))(this, fontInfo);
     const cache = $p_Lindigo_shared_FontRegister__cache__Lindigo_shared_QuickCache(this);
     const this$4 = cache.fetch__T__s_Option(key);
@@ -8800,7 +8977,80 @@ function $m_Lindigo_shared_datatypes_Flip$() {
   };
   return $n_Lindigo_shared_datatypes_Flip$
 }
-class $c_Lindigo_shared_datatypes_FontInfo {
+const $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List = (function($thiz) {
+  if ((!$thiz.Lindigo_shared_datatypes_FontInfo__f_bitmap$init$0)) {
+    throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/datatypes/TextDataTypes.scala: 12")
+  };
+  return $thiz.Lindigo_shared_datatypes_FontInfo__f_nonEmptyChars
+});
+class $c_Lindigo_shared_datatypes_FontInfo extends $c_O {
+  constructor(fontKey, fontSpriteSheet, unknownChar, fontChars, caseSensitive) {
+    super();
+    this.Lindigo_shared_datatypes_FontInfo__f_fontKey = null;
+    this.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet = null;
+    this.Lindigo_shared_datatypes_FontInfo__f_unknownChar = null;
+    this.Lindigo_shared_datatypes_FontInfo__f_fontChars = null;
+    this.Lindigo_shared_datatypes_FontInfo__f_caseSensitive = false;
+    this.Lindigo_shared_datatypes_FontInfo__f_nonEmptyChars = null;
+    this.Lindigo_shared_datatypes_FontInfo__f_bitmap$init$0 = false;
+    this.Lindigo_shared_datatypes_FontInfo__f_fontKey = fontKey;
+    this.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet = fontSpriteSheet;
+    this.Lindigo_shared_datatypes_FontInfo__f_unknownChar = unknownChar;
+    this.Lindigo_shared_datatypes_FontInfo__f_fontChars = fontChars;
+    this.Lindigo_shared_datatypes_FontInfo__f_caseSensitive = caseSensitive;
+    this.Lindigo_shared_datatypes_FontInfo__f_nonEmptyChars = fontChars.prepended__O__sci_List(unknownChar);
+    this.Lindigo_shared_datatypes_FontInfo__f_bitmap$init$0 = true
+  };
+  findByCharacter__T__Lindigo_shared_datatypes_FontChar(character) {
+    const key = ((("char-" + character) + "-") + this.Lindigo_shared_datatypes_FontInfo__f_fontKey);
+    const f = ((this$1, character$1) => (() => {
+      const this$2 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$1);
+      let this$8;
+      _return: {
+        let these = this$2;
+        while ((!these.isEmpty__Z())) {
+          const arg1 = these.head__O();
+          const p = $as_Lindigo_shared_datatypes_FontChar(arg1);
+          let $$x1;
+          if (this$1.Lindigo_shared_datatypes_FontInfo__f_caseSensitive) {
+            $m_Lindigo_shared_EqualTo$();
+            const value = p.Lindigo_shared_datatypes_FontChar__f_character;
+            const eq = $m_Lindigo_shared_EqualTo$().eqString__Lindigo_shared_EqualTo();
+            const this$4 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+            $$x1 = this$4.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$4.Lindigo_shared_EqualTo$EqualToSyntax__f_value, character$1)
+          } else {
+            $m_Lindigo_shared_EqualTo$();
+            const this$5 = p.Lindigo_shared_datatypes_FontChar__f_character;
+            const value$1 = $as_T(this$5.toLowerCase());
+            const eq$1 = $m_Lindigo_shared_EqualTo$().eqString__Lindigo_shared_EqualTo();
+            const this$7 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value$1, eq$1);
+            const other = $as_T(character$1.toLowerCase());
+            $$x1 = this$7.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$7.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)
+          };
+          if ($$x1) {
+            this$8 = new $c_s_Some(these.head__O());
+            break _return
+          };
+          these = $as_sci_List(these.tail__O())
+        };
+        this$8 = $m_s_None$()
+      };
+      return $as_Lindigo_shared_datatypes_FontChar((this$8.isEmpty__Z() ? this$1.Lindigo_shared_datatypes_FontInfo__f_unknownChar : this$8.get__O()))
+    }))(this, character);
+    const cache = $m_Lindigo_shared_datatypes_FontInfo$().fontCharCache__Lindigo_shared_QuickCache();
+    const this$11 = cache.fetch__T__s_Option(key);
+    let $$x2;
+    if (this$11.isEmpty__Z()) {
+      const this$12 = cache.Lindigo_shared_QuickCache__f_cache;
+      const key$1 = new $c_Lindigo_shared_CacheKey(key);
+      const value$2 = f();
+      $p_scm_HashMap__put0__O__O__Z__s_Some(this$12, key$1, value$2, false);
+      $$x2 = f()
+    } else {
+      $$x2 = this$11.get__O()
+    };
+    return $as_Lindigo_shared_datatypes_FontChar($$x2)
+  };
 }
 function $as_Lindigo_shared_datatypes_FontInfo(obj) {
   return (((obj instanceof $c_Lindigo_shared_datatypes_FontInfo) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.datatypes.FontInfo"))
@@ -8811,6 +9061,13 @@ function $isArrayOf_Lindigo_shared_datatypes_FontInfo(obj, depth) {
 function $asArrayOf_Lindigo_shared_datatypes_FontInfo(obj, depth) {
   return (($isArrayOf_Lindigo_shared_datatypes_FontInfo(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.datatypes.FontInfo;", depth))
 }
+const $d_Lindigo_shared_datatypes_FontInfo = new $TypeData().initClass({
+  Lindigo_shared_datatypes_FontInfo: 0
+}, false, "indigo.shared.datatypes.FontInfo", {
+  Lindigo_shared_datatypes_FontInfo: 1,
+  O: 1
+});
+$c_Lindigo_shared_datatypes_FontInfo.prototype.$classData = $d_Lindigo_shared_datatypes_FontInfo;
 class $c_Lindigo_shared_datatypes_FontInfo$ extends $c_O {
   constructor() {
     super();
@@ -8819,6 +9076,20 @@ class $c_Lindigo_shared_datatypes_FontInfo$ extends $c_O {
     $n_Lindigo_shared_datatypes_FontInfo$ = this;
     this.Lindigo_shared_datatypes_FontInfo$__f_fontCharCache = new $c_Lindigo_shared_QuickCache($ct_scm_HashMap__(new $c_scm_HashMap()));
     this.Lindigo_shared_datatypes_FontInfo$__f_bitmap$init$0 = true
+  };
+  fontCharCache__Lindigo_shared_QuickCache() {
+    if ((!this.Lindigo_shared_datatypes_FontInfo$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/datatypes/TextDataTypes.scala: 45")
+    };
+    return this.Lindigo_shared_datatypes_FontInfo$__f_fontCharCache
+  };
+  apply__T__Lindigo_shared_datatypes_Material__I__I__Lindigo_shared_datatypes_FontChar__sci_Seq__Lindigo_shared_datatypes_FontInfo(fontKey, material, sheetWidth, sheetHeight, unknownChar, chars) {
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    $m_Lindigo_shared_datatypes_Point$();
+    const size = new $c_Lindigo_shared_datatypes_Point(sheetWidth, sheetHeight);
+    const fontSpriteSheet = new $c_Lindigo_shared_datatypes_FontSpriteSheet(material, size);
+    const fontChars = chars.toList__sci_List();
+    return new $c_Lindigo_shared_datatypes_FontInfo(fontKey, fontSpriteSheet, unknownChar, fontChars, false)
   };
 }
 const $d_Lindigo_shared_datatypes_FontInfo$ = new $TypeData().initClass({
@@ -8880,6 +9151,22 @@ function $m_Lindigo_shared_datatypes_FontKey$() {
   };
   return $n_Lindigo_shared_datatypes_FontKey$
 }
+class $c_Lindigo_shared_datatypes_FontSpriteSheet extends $c_O {
+  constructor(material, size) {
+    super();
+    this.Lindigo_shared_datatypes_FontSpriteSheet__f_material = null;
+    this.Lindigo_shared_datatypes_FontSpriteSheet__f_size = null;
+    this.Lindigo_shared_datatypes_FontSpriteSheet__f_material = material;
+    this.Lindigo_shared_datatypes_FontSpriteSheet__f_size = size
+  };
+}
+const $d_Lindigo_shared_datatypes_FontSpriteSheet = new $TypeData().initClass({
+  Lindigo_shared_datatypes_FontSpriteSheet: 0
+}, false, "indigo.shared.datatypes.FontSpriteSheet", {
+  Lindigo_shared_datatypes_FontSpriteSheet: 1,
+  O: 1
+});
+$c_Lindigo_shared_datatypes_FontSpriteSheet.prototype.$classData = $d_Lindigo_shared_datatypes_FontSpriteSheet;
 class $c_Lindigo_shared_datatypes_FontSpriteSheet$ extends $c_O {
 }
 const $d_Lindigo_shared_datatypes_FontSpriteSheet$ = new $TypeData().initClass({
@@ -10239,6 +10526,18 @@ function $m_Lindigo_shared_datatypes_Rectangle$() {
     $n_Lindigo_shared_datatypes_Rectangle$ = new $c_Lindigo_shared_datatypes_Rectangle$()
   };
   return $n_Lindigo_shared_datatypes_Rectangle$
+}
+function $is_Lindigo_shared_datatypes_TextAlignment(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lindigo_shared_datatypes_TextAlignment)))
+}
+function $as_Lindigo_shared_datatypes_TextAlignment(obj) {
+  return (($is_Lindigo_shared_datatypes_TextAlignment(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.datatypes.TextAlignment"))
+}
+function $isArrayOf_Lindigo_shared_datatypes_TextAlignment(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_shared_datatypes_TextAlignment)))
+}
+function $asArrayOf_Lindigo_shared_datatypes_TextAlignment(obj, depth) {
+  return (($isArrayOf_Lindigo_shared_datatypes_TextAlignment(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.datatypes.TextAlignment;", depth))
 }
 class $c_Lindigo_shared_datatypes_Texture {
 }
@@ -12241,7 +12540,7 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__zipWithCharDetails__s
   $p_Lindigo_shared_platform_DisplayObjectConversions__accCharDetails_$eq__scm_ListBuffer__V($thiz, new $c_scm_ListBuffer());
   const f = ((this$1, fontInfo$1) => ((c$2) => {
     const c = $uC(c$2);
-    return $ct_T2__O__O__(new $c_T2(), $bC(c), fontInfo$1.findByCharacter__C__Lindigo_shared_datatypes_FontChar(c))
+    return $ct_T2__O__O__(new $c_T2(), $bC(c), fontInfo$1.findByCharacter__T__Lindigo_shared_datatypes_FontChar($as_T(String.fromCharCode(c))))
   }))($thiz, fontInfo);
   let $$x1;
   if ((charList === $m_sci_Nil$())) {
@@ -12329,30 +12628,22 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
       const xs$3 = x2.sci_$colon$colon__f_next;
       if ((x$3 instanceof $c_Lindigo_shared_scenegraph_Group)) {
         const x11 = $as_Lindigo_shared_scenegraph_Group(x$3);
-        const this$6 = x11.children__sci_List();
+        const this$5 = x11.children__sci_List();
         const f = ((this$3, x11$1) => ((c$3$2) => {
           const c$3 = $as_Lindigo_shared_scenegraph_SceneGraphNodePrimitive(c$3$2);
           $m_Lindigo_shared_datatypes_Depth$();
-          const this$ = c$3.Lindigo_shared_scenegraph_Graphic__f_depth;
+          const this$ = c$3.depth__I();
           const other = x11$1.depth__I();
-          const depth = $m_Lindigo_shared_datatypes_Depth$().append__I__I__I(this$, other);
-          const position = c$3.Lindigo_shared_scenegraph_Graphic__f_position;
-          const rotation = c$3.Lindigo_shared_scenegraph_Graphic__f_rotation;
-          const scale = c$3.Lindigo_shared_scenegraph_Graphic__f_scale;
-          const ref = c$3.Lindigo_shared_scenegraph_Graphic__f_ref;
-          const crop = c$3.Lindigo_shared_scenegraph_Graphic__f_crop;
-          const effects = c$3.Lindigo_shared_scenegraph_Graphic__f_effects;
-          const material = c$3.Lindigo_shared_scenegraph_Graphic__f_material;
-          return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material).transformBy__Lindigo_shared_datatypes_Point__D__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(x11$1.positionOffset__Lindigo_shared_datatypes_Point(), x11$1.rotation__D(), x11$1.scale__Lindigo_shared_datatypes_Vector2())
+          return c$3.withDepth__I__Lindigo_shared_scenegraph_SceneGraphNodePrimitive($m_Lindigo_shared_datatypes_Depth$().append__I__I__I(this$, other)).transformBy__Lindigo_shared_datatypes_Point__D__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(x11$1.positionOffset__Lindigo_shared_datatypes_Point(), x11$1.rotation__D(), x11$1.scale__Lindigo_shared_datatypes_Vector2())
         }))($thiz, x11);
         let childNodes;
-        if ((this$6 === $m_sci_Nil$())) {
+        if ((this$5 === $m_sci_Nil$())) {
           childNodes = $m_sci_Nil$()
         } else {
-          const arg1 = this$6.head__O();
+          const arg1 = this$5.head__O();
           const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
           let t = h;
-          let rest = $as_sci_List(this$6.tail__O());
+          let rest = $as_sci_List(this$5.tail__O());
           while ((rest !== $m_sci_Nil$())) {
             const arg1$1 = rest.head__O();
             const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
@@ -12371,9 +12662,9 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
       const xs$4 = x2.sci_$colon$colon__f_next;
       if ((x$4 instanceof $c_Lindigo_shared_scenegraph_Graphic)) {
         const x12 = $as_Lindigo_shared_scenegraph_Graphic(x$4);
-        const this$7 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
+        const this$6 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
         const elem$2 = $thiz.graphicToDisplayObject__Lindigo_shared_scenegraph_Graphic__Lindigo_shared_platform_AssetMapping__Lindigo_shared_display_DisplayObject(x12, assetMapping$4);
-        this$7.addOne__O__scm_ListBuffer(elem$2);
+        this$6.addOne__O__scm_ListBuffer(elem$2);
         remaining = xs$4;
         continue
       }
@@ -12392,9 +12683,9 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
         } else if ((x1$2 instanceof $c_s_Some)) {
           const x2$2 = $as_s_Some(x1$2);
           const anim = $as_Lindigo_shared_animation_Animation(x2$2.s_Some__f_value);
-          const this$8 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
+          const this$7 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
           const elem$3 = $thiz.spriteToDisplayObject__Lindigo_shared_BoundaryLocator__Lindigo_shared_scenegraph_Sprite__Lindigo_shared_platform_AssetMapping__Lindigo_shared_animation_Animation__Lindigo_shared_display_DisplayObject($thiz.Lindigo_shared_platform_DisplayObjectConversions__f_boundaryLocator, x13, assetMapping$4, anim);
-          this$8.addOne__O__scm_ListBuffer(elem$3);
+          this$7.addOne__O__scm_ListBuffer(elem$3);
           remaining = xs$5;
           continue
         } else {
@@ -12407,36 +12698,36 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
       const xs$6 = x2.sci_$colon$colon__f_next;
       if ((x$8 instanceof $c_Lindigo_shared_scenegraph_Text)) {
         const x14 = $as_Lindigo_shared_scenegraph_Text(x$8);
-        const this$9 = $thiz.Lindigo_shared_platform_DisplayObjectConversions__f_fontRegister.findByFontKey__T__s_Option(x14.fontKey__T());
-        let this$10;
-        if (this$9.isEmpty__Z()) {
-          this$10 = $m_s_None$()
+        const this$8 = $thiz.Lindigo_shared_platform_DisplayObjectConversions__f_fontRegister.findByFontKey__T__s_Option(x14.Lindigo_shared_scenegraph_Text__f_fontKey);
+        let this$9;
+        if (this$8.isEmpty__Z()) {
+          this$9 = $m_s_None$()
         } else {
-          const arg1$2 = this$9.get__O();
+          const arg1$2 = this$8.get__O();
           const fontInfo = $as_Lindigo_shared_datatypes_FontInfo(arg1$2);
-          this$10 = new $c_s_Some($thiz.textLineToDisplayObjects__Lindigo_shared_scenegraph_Text__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_FontInfo__F3(x14, assetMapping$4, fontInfo))
+          this$9 = new $c_s_Some($thiz.textLineToDisplayObjects__Lindigo_shared_scenegraph_Text__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_FontInfo__F3(x14, assetMapping$4, fontInfo))
         };
-        const converterFunc = $as_F3((this$10.isEmpty__Z() ? new $c_sjsr_AnonFunction3(((this$11, x14$1) => ((x$4$2, x$5$2, x$6$2) => {
+        const converterFunc = $as_F3((this$9.isEmpty__Z() ? new $c_sjsr_AnonFunction3(((this$10, x14$1) => ((x$4$2, x$5$2, x$6$2) => {
           $as_Lindigo_shared_scenegraph_TextLine(x$4$2);
           $uI(x$5$2);
           $uI(x$6$2);
-          $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Cannot render Text, missing Font with key: " + $m_Lindigo_shared_datatypes_FontKey$().toString$extension__T__T(x14$1.fontKey__T())), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+          $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Cannot render Text, missing Font with key: " + $m_Lindigo_shared_datatypes_FontKey$().toString$extension__T__T(x14$1.Lindigo_shared_scenegraph_Text__f_fontKey)), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
           return $m_sci_Nil$()
-        }))($thiz, x14)) : this$10.get__O()));
-        const this$14 = $thiz.Lindigo_shared_platform_DisplayObjectConversions__f_boundaryLocator.textAsLinesWithBounds__T__T__sci_List(x14.text__T(), x14.fontKey__T());
+        }))($thiz, x14)) : this$9.get__O()));
+        const this$13 = $thiz.Lindigo_shared_platform_DisplayObjectConversions__f_boundaryLocator.textAsLinesWithBounds__T__T__sci_List(x14.Lindigo_shared_scenegraph_Text__f_text, x14.Lindigo_shared_scenegraph_Text__f_fontKey);
         const y = $m_sci_Nil$();
         let acc___1 = 0;
         let acc___2 = y;
-        let these = this$14;
+        let these = this$13;
         while ((!these.isEmpty__Z())) {
           const arg1$3___1 = acc___1;
           const arg1$3___2 = acc___2;
           const arg2 = these.head__O();
           const textLine = $as_Lindigo_shared_scenegraph_TextLine(arg2);
           const _1 = (($uI(arg1$3___1) + textLine.Lindigo_shared_scenegraph_TextLine__f_lineBounds.height__I()) | 0);
-          const this$15 = $as_sc_IterableOps(arg1$3___2);
+          const this$14 = $as_sc_IterableOps(arg1$3___2);
           const arg1$4 = textLine.Lindigo_shared_scenegraph_TextLine__f_lineBounds;
-          const x1$1 = x14.alignment__Lindigo_shared_datatypes_TextAlignment();
+          const x1$1 = x14.Lindigo_shared_scenegraph_Text__f_alignment;
           const x$1 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
           let $$x1;
           if ((x$1 === x1$1)) {
@@ -12454,7 +12745,7 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
             }
           };
           const suffix = $as_sc_IterableOnce(converterFunc.apply__O__O__O__O(textLine, $$x1, $uI(arg1$3___1)));
-          const _2 = this$15.concat__sc_IterableOnce__O(suffix);
+          const _2 = this$14.concat__sc_IterableOnce__O(suffix);
           const $$x2___1 = _1;
           const $$x2___2 = _2;
           acc___1 = $$x2___1;
@@ -12462,8 +12753,8 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$1__sci_List__Lind
           these = $as_sc_LinearSeq(these.tail__O())
         };
         const letters = $as_sci_List(acc___2);
-        const this$16 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
-        this$16.addAll__sc_IterableOnce__scm_ListBuffer(letters);
+        const this$15 = $p_Lindigo_shared_platform_DisplayObjectConversions__accDisplayObjects__scm_ListBuffer($thiz);
+        this$15.addAll__sc_IterableOnce__scm_ListBuffer(letters);
         remaining = xs$6;
         continue
       }
@@ -12484,7 +12775,7 @@ const $p_Lindigo_shared_platform_DisplayObjectConversions__rec$2__sci_List__I__s
       const rassoc$1 = $ct_T2__O__O__(new $c_T2(), x$3._2__O(), nextX);
       const this$1 = $p_Lindigo_shared_platform_DisplayObjectConversions__accCharDetails__scm_ListBuffer($thiz);
       this$1.prepend__O__scm_ListBuffer(rassoc$1);
-      const temp$nextX = ((nextX + $as_Lindigo_shared_datatypes_FontChar(x$3._2__O()).bounds__Lindigo_shared_datatypes_Rectangle().width__I()) | 0);
+      const temp$nextX = ((nextX + $as_Lindigo_shared_datatypes_FontChar(x$3._2__O()).Lindigo_shared_datatypes_FontChar__f_bounds.width__I()) | 0);
       remaining = xs;
       nextX = temp$nextX
     } else {
@@ -12838,33 +13129,33 @@ class $c_Lindigo_shared_platform_DisplayObjectConversions extends $c_O {
       const line = $as_Lindigo_shared_scenegraph_TextLine(line$2);
       const alignmentOffsetX = $uI(alignmentOffsetX$2);
       const yOffset = $uI(yOffset$2);
-      const $$x3 = leaf$1.fontKey__T();
+      const $$x3 = leaf$1.Lindigo_shared_scenegraph_Text__f_fontKey;
       const $$x2 = line.hash__T();
-      const $$x1 = leaf$1.position__Lindigo_shared_datatypes_Point().hash__T();
+      const $$x1 = leaf$1.Lindigo_shared_scenegraph_Text__f_position.hash__T();
       $m_Lindigo_shared_datatypes_Radians$();
-      const this$ = leaf$1.rotation__D();
-      const lineHash = (((((((((((((((((($$x3 + ":") + $$x2) + ":") + "") + alignmentOffsetX) + ":") + "") + yOffset) + ":") + $$x1) + ":") + ("" + this$)) + ":") + leaf$1.scale__Lindigo_shared_datatypes_Vector2().hash__T()) + ":") + fontInfo$1.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material().hash__T()) + ":") + leaf$1.effects__Lindigo_shared_datatypes_Effects().hash__T());
-      const materialName = fontInfo$1.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material().default__T();
-      const x1 = this$1.materialToEmissiveValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material());
+      const this$ = leaf$1.Lindigo_shared_scenegraph_Text__f_rotation;
+      const lineHash = (((((((((((((((((($$x3 + ":") + $$x2) + ":") + "") + alignmentOffsetX) + ":") + "") + yOffset) + ":") + $$x1) + ":") + ("" + this$)) + ":") + leaf$1.Lindigo_shared_scenegraph_Text__f_scale.hash__T()) + ":") + fontInfo$1.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material.hash__T()) + ":") + leaf$1.Lindigo_shared_scenegraph_Text__f_effects.hash__T());
+      const materialName = fontInfo$1.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material.default__T();
+      const x1 = this$1.materialToEmissiveValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material);
       if ((x1 === null)) {
         throw new $c_s_MatchError(x1)
       };
       const emissiveOffset = $as_Lindigo_shared_datatypes_Vector2(x1._1__O());
       const emissiveAmount = x1._2$mcD$sp__D();
-      const x1$2 = this$1.materialToNormalValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material());
+      const x1$2 = this$1.materialToNormalValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material);
       if ((x1$2 === null)) {
         throw new $c_s_MatchError(x1$2)
       };
       const normalOffset = $as_Lindigo_shared_datatypes_Vector2(x1$2._1__O());
       const normalAmount = x1$2._2$mcD$sp__D();
-      const x1$3 = this$1.materialToSpecularValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material());
+      const x1$3 = this$1.materialToSpecularValues__Lindigo_shared_platform_AssetMapping__Lindigo_shared_datatypes_Material__T2(assetMapping$1, fontInfo$1.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material);
       if ((x1$3 === null)) {
         throw new $c_s_MatchError(x1$3)
       };
       const specularOffset = $as_Lindigo_shared_datatypes_Vector2(x1$3._1__O());
       const specularAmount = x1$3._2$mcD$sp__D();
-      const key = leaf$1.effects__Lindigo_shared_datatypes_Effects().hash__T();
-      const f = ((this$6, leaf$3) => (() => $m_Lindigo_shared_display_DisplayEffects$().fromEffects__Lindigo_shared_datatypes_Effects__Lindigo_shared_display_DisplayEffects(leaf$3.effects__Lindigo_shared_datatypes_Effects())))(this$1, leaf$1);
+      const key = leaf$1.Lindigo_shared_scenegraph_Text__f_effects.hash__T();
+      const f = ((this$6, leaf$3) => (() => $m_Lindigo_shared_display_DisplayEffects$().fromEffects__Lindigo_shared_datatypes_Effects__Lindigo_shared_display_DisplayEffects(leaf$3.Lindigo_shared_scenegraph_Text__f_effects)))(this$1, leaf$1);
       const cache = $p_Lindigo_shared_platform_DisplayObjectConversions__effectsCache__Lindigo_shared_QuickCache(this$1);
       const this$9 = cache.fetch__T__s_Option(key);
       let $$x4;
@@ -12886,8 +13177,8 @@ class $c_Lindigo_shared_platform_DisplayObjectConversions extends $c_O {
           if ((x0$1 !== null)) {
             const fontChar = $as_Lindigo_shared_datatypes_FontChar(x0$1._1__O());
             const xPosition = x0$1._2$mcI$sp__I();
-            const key$2 = ((fontChar.bounds__Lindigo_shared_datatypes_Rectangle().hash__T() + "_") + fontInfo$1$2.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material().hash__T());
-            const f$1 = ((this$13, assetMapping$8$2, materialName$3$1, fontChar$1) => (() => $m_Lindigo_shared_display_SpriteSheetFrame$().calculateFrameOffset__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Vector2__Lindigo_shared_display_SpriteSheetFrame$SpriteSheetFrameCoordinateOffsets($p_Lindigo_shared_platform_DisplayObjectConversions__lookupAtlasSize__Lindigo_shared_platform_AssetMapping__T__Lindigo_shared_datatypes_Vector2(this$13, assetMapping$8$2, materialName$3$1), fontChar$1.bounds__Lindigo_shared_datatypes_Rectangle(), this$13.lookupTextureOffset__Lindigo_shared_platform_AssetMapping__T__Lindigo_shared_datatypes_Vector2(assetMapping$8$2, materialName$3$1))))(this$12, assetMapping$8$1, materialName$3, fontChar);
+            const key$2 = ((fontChar.Lindigo_shared_datatypes_FontChar__f_bounds.hash__T() + "_") + fontInfo$1$2.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material.hash__T());
+            const f$1 = ((this$13, assetMapping$8$2, materialName$3$1, fontChar$1) => (() => $m_Lindigo_shared_display_SpriteSheetFrame$().calculateFrameOffset__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Vector2__Lindigo_shared_display_SpriteSheetFrame$SpriteSheetFrameCoordinateOffsets($p_Lindigo_shared_platform_DisplayObjectConversions__lookupAtlasSize__Lindigo_shared_platform_AssetMapping__T__Lindigo_shared_datatypes_Vector2(this$13, assetMapping$8$2, materialName$3$1), fontChar$1.Lindigo_shared_datatypes_FontChar__f_bounds, this$13.lookupTextureOffset__Lindigo_shared_platform_AssetMapping__T__Lindigo_shared_datatypes_Vector2(assetMapping$8$2, materialName$3$1))))(this$12, assetMapping$8$1, materialName$3, fontChar);
             const cache$1 = $p_Lindigo_shared_platform_DisplayObjectConversions__frameCache__Lindigo_shared_QuickCache(this$12);
             const this$16 = cache$1.fetch__T__s_Option(key$2);
             let $$x5;
@@ -12901,7 +13192,7 @@ class $c_Lindigo_shared_platform_DisplayObjectConversions extends $c_O {
               $$x5 = this$16.get__O()
             };
             const frameInfo = $as_Lindigo_shared_display_SpriteSheetFrame$SpriteSheetFrameCoordinateOffsets($$x5);
-            return $m_Lindigo_shared_display_DisplayObject$().apply__I__I__I__I__I__F__F__F__T__Lindigo_shared_display_SpriteSheetFrame$SpriteSheetFrameCoordinateOffsets__F__Lindigo_shared_datatypes_Vector2__F__Lindigo_shared_datatypes_Vector2__F__Lindigo_shared_datatypes_Vector2__F__F__I__I__Lindigo_shared_display_DisplayEffects__Lindigo_shared_display_DisplayObject(((((leaf$3$2.position__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_x + xPosition) | 0) + alignmentOffsetX$2$1) | 0), ((leaf$3$2.position__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_y + yOffset$1$1) | 0), leaf$3$2.depth__I(), fontChar.bounds__Lindigo_shared_datatypes_Rectangle().width__I(), fontChar.bounds__Lindigo_shared_datatypes_Rectangle().height__I(), $fround(leaf$3$2.rotation__D()), $fround(leaf$3$2.scale__Lindigo_shared_datatypes_Vector2().Lindigo_shared_datatypes_Vector2__f_x), $fround(leaf$3$2.scale__Lindigo_shared_datatypes_Vector2().Lindigo_shared_datatypes_Vector2__f_y), this$12.lookupAtlasName__Lindigo_shared_platform_AssetMapping__T__T(assetMapping$8$1, materialName$3), frameInfo, albedoAmount$1, frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(emissiveOffset$1), $fround(emissiveAmount$1), frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(normalOffset$1), $fround(normalAmount$1), frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(specularOffset$1), $fround(specularAmount$1), (fontInfo$1$2.fontSpriteSheet__Lindigo_shared_datatypes_FontSpriteSheet().material__Lindigo_shared_datatypes_Material().Lindigo_shared_datatypes_Material$Textured__f_isLit ? 1.0 : 0.0), leaf$3$2.ref__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_x, leaf$3$2.ref__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_y, effectsValues$1$1)
+            return $m_Lindigo_shared_display_DisplayObject$().apply__I__I__I__I__I__F__F__F__T__Lindigo_shared_display_SpriteSheetFrame$SpriteSheetFrameCoordinateOffsets__F__Lindigo_shared_datatypes_Vector2__F__Lindigo_shared_datatypes_Vector2__F__Lindigo_shared_datatypes_Vector2__F__F__I__I__Lindigo_shared_display_DisplayEffects__Lindigo_shared_display_DisplayObject(((((leaf$3$2.Lindigo_shared_scenegraph_Text__f_position.Lindigo_shared_datatypes_Point__f_x + xPosition) | 0) + alignmentOffsetX$2$1) | 0), ((leaf$3$2.Lindigo_shared_scenegraph_Text__f_position.Lindigo_shared_datatypes_Point__f_y + yOffset$1$1) | 0), leaf$3$2.Lindigo_shared_scenegraph_Text__f_depth, fontChar.Lindigo_shared_datatypes_FontChar__f_bounds.width__I(), fontChar.Lindigo_shared_datatypes_FontChar__f_bounds.height__I(), $fround(leaf$3$2.Lindigo_shared_scenegraph_Text__f_rotation), $fround(leaf$3$2.Lindigo_shared_scenegraph_Text__f_scale.Lindigo_shared_datatypes_Vector2__f_x), $fround(leaf$3$2.Lindigo_shared_scenegraph_Text__f_scale.Lindigo_shared_datatypes_Vector2__f_y), this$12.lookupAtlasName__Lindigo_shared_platform_AssetMapping__T__T(assetMapping$8$1, materialName$3), frameInfo, albedoAmount$1, frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(emissiveOffset$1), $fround(emissiveAmount$1), frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(normalOffset$1), $fround(normalAmount$1), frameInfo.offsetToCoords__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(specularOffset$1), $fround(specularAmount$1), (fontInfo$1$2.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet.Lindigo_shared_datatypes_FontSpriteSheet__f_material.Lindigo_shared_datatypes_Material$Textured__f_isLit ? 1.0 : 0.0), leaf$3$2.ref__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_x, leaf$3$2.ref__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_y, effectsValues$1$1)
           } else {
             throw new $c_s_MatchError(x0$1)
           }
@@ -13713,7 +14004,7 @@ class $c_Lindigo_shared_scenegraph_SceneGraphViewEvents$ extends $c_O {
     const count = inputEvents.length__I();
     let index = 0;
     while ((index < count)) {
-      const $$x1 = node.eventHandler__F1();
+      const $$x1 = node.Lindigo_shared_scenegraph_Text__f_eventHandler;
       const n = index;
       this.pushEvents__sci_List__F1__V($as_sci_List($$x1.apply__O__O($ct_T2__O__O__(new $c_T2(), bounds, $f_sc_LinearSeqOps__apply__I__O(inputEvents, n)))), sendEvent);
       index = ((1 + index) | 0)
@@ -13730,7 +14021,7 @@ class $c_Lindigo_shared_scenegraph_SceneGraphViewEvents$ extends $c_O {
         this.applyInputEvents__Lindigo_shared_scenegraph_EventHandling__Lindigo_shared_datatypes_Rectangle__sci_List__F1__V(x2, x2.bounds__Lindigo_shared_BoundaryLocator__Lindigo_shared_datatypes_Rectangle(boundaryLocator), inputEvents, sendEvent)
       } else if ((x1 instanceof $c_Lindigo_shared_scenegraph_Text)) {
         const x3 = $as_Lindigo_shared_scenegraph_Text(x1);
-        this.applyInputEvents__Lindigo_shared_scenegraph_EventHandling__Lindigo_shared_datatypes_Rectangle__sci_List__F1__V(x3, x3.bounds__Lindigo_shared_BoundaryLocator__Lindigo_shared_datatypes_Rectangle(boundaryLocator), inputEvents, sendEvent)
+        this.applyInputEvents__Lindigo_shared_scenegraph_EventHandling__Lindigo_shared_datatypes_Rectangle__sci_List__F1__V(x3, boundaryLocator.findBounds__Lindigo_shared_scenegraph_SceneGraphNode__Lindigo_shared_datatypes_Rectangle(x3), inputEvents, sendEvent)
       } else if ((!(x1 instanceof $c_Lindigo_shared_scenegraph_Graphic))) {
         if ((x1 instanceof $c_Lindigo_shared_scenegraph_Group)) {
           const x5 = $as_Lindigo_shared_scenegraph_Group(x1);
@@ -14070,6 +14361,22 @@ function $m_Lindigo_shared_scenegraph_Sprite$() {
   return $n_Lindigo_shared_scenegraph_Sprite$
 }
 class $c_Lindigo_shared_scenegraph_Text$ extends $c_O {
+  apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(text, x, y, depth, fontKey) {
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    $m_Lindigo_shared_datatypes_Point$();
+    const position = new $c_Lindigo_shared_datatypes_Point(x, y);
+    $m_Lindigo_shared_datatypes_Depth$();
+    $m_Lindigo_shared_datatypes_Radians$();
+    $m_Lindigo_shared_datatypes_Radians$();
+    const rotation = 0.0;
+    const scale = $m_Lindigo_shared_datatypes_Vector2$().one__Lindigo_shared_datatypes_Vector2();
+    const effects = $m_Lindigo_shared_datatypes_Effects$().default__Lindigo_shared_datatypes_Effects();
+    const eventHandler = new $c_sjsr_AnonFunction1(((this$5) => ((x$4$2) => {
+      $as_T2(x$4$2);
+      return $m_sci_Nil$()
+    }))(this));
+    return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
+  };
 }
 const $d_Lindigo_shared_scenegraph_Text$ = new $TypeData().initClass({
   Lindigo_shared_scenegraph_Text$: 0
@@ -22078,6 +22385,9 @@ function $m_Lindigo_shared_constants_Key$() {
   return $n_Lindigo_shared_constants_Key$
 }
 class $c_Lindigo_shared_datatypes_FontChar$ extends $c_O {
+  apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(character, x, y, width, height) {
+    return new $c_Lindigo_shared_datatypes_FontChar(character, $m_Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(x, y, width, height))
+  };
 }
 const $d_Lindigo_shared_datatypes_FontChar$ = new $TypeData().initClass({
   Lindigo_shared_datatypes_FontChar$: 0
@@ -22878,23 +23188,26 @@ function $m_Lio_indigo_pluto_DeliveryStop$() {
 }
 class $c_Lio_indigo_pluto_Model$ extends $c_O {
   initial__Lindigo_shared_datatypes_Point__Lio_indigo_pluto_Model(center) {
-    const $$x3 = new $c_Lio_indigo_pluto_Pluto(center, 0);
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const x = center.Lindigo_shared_datatypes_Point__f_x;
+    const y = (((-300) + center.Lindigo_shared_datatypes_Point__f_y) | 0);
+    const $$x3 = new $c_Lio_indigo_pluto_Pluto(new $c_Lindigo_shared_datatypes_Point(x, y), 0);
     const b = $m_sci_IndexedSeq$().newBuilder__scm_Builder();
     const it = new $c_sci_RangeIterator(0, 88, 968, false);
     while (it.sci_RangeIterator__f__hasNext) {
       const arg1 = it.next__I();
       $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-      const x = center.Lindigo_shared_datatypes_Point__f_x;
-      const elem = new $c_Lio_indigo_pluto_CenterStrip(new $c_Lindigo_shared_datatypes_Point(x, arg1), ((-$m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0));
+      const x$1 = center.Lindigo_shared_datatypes_Point__f_x;
+      const elem = new $c_Lio_indigo_pluto_CenterStrip(new $c_Lindigo_shared_datatypes_Point(x$1, arg1), ((-$m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0));
       b.addOne__O__scm_Growable(elem)
     };
-    const this$5 = $as_sci_IndexedSeq(b.result__O());
-    const $$x2 = $m_sci_List$().from__sc_IterableOnce__sci_List(this$5);
+    const this$6 = $as_sci_IndexedSeq(b.result__O());
+    const $$x2 = $m_sci_List$().from__sc_IterableOnce__sci_List(this$6);
     const $$x1 = $m_Lio_indigo_pluto_Passenger$().initial__I__Lio_indigo_pluto_Passenger((((-100) + center.Lindigo_shared_datatypes_Point__f_x) | 0));
     $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-    const x$1 = center.Lindigo_shared_datatypes_Point__f_x;
-    const y = center.Lindigo_shared_datatypes_Point__f_y;
-    return new $c_Lio_indigo_pluto_Model($$x3, $$x2, $$x1, new $c_Lio_indigo_pluto_DeliveryStop(new $c_Lindigo_shared_datatypes_Point(x$1, y)), 0)
+    const x$2 = center.Lindigo_shared_datatypes_Point__f_x;
+    const y$1 = center.Lindigo_shared_datatypes_Point__f_y;
+    return new $c_Lio_indigo_pluto_Model($$x3, $$x2, $$x1, new $c_Lio_indigo_pluto_DeliveryStop(new $c_Lindigo_shared_datatypes_Point(x$2, y$1)), 0)
   };
 }
 const $d_Lio_indigo_pluto_Model$ = new $TypeData().initClass({
@@ -22921,7 +23234,7 @@ class $c_Lio_indigo_pluto_Passenger$ extends $c_O {
     const state = $as_Lio_indigo_pluto_Pickup$NotYet$(x1.T3__f__1);
     const loc = $as_Lindigo_shared_datatypes_Point(x1.T3__f__2);
     const dloc = $as_Lindigo_shared_datatypes_Point(x1.T3__f__3);
-    return new $c_Lio_indigo_pluto_Passenger(state, loc, dloc)
+    return new $c_Lio_indigo_pluto_Passenger(state, loc, dloc, 0)
   };
   reset__I__T3(xLoc) {
     const $$x2 = $m_Lio_indigo_pluto_Pickup$NotYet$();
@@ -22932,7 +23245,7 @@ class $c_Lio_indigo_pluto_Passenger$ extends $c_O {
     const y$1 = $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_height;
     return new $c_T3($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(xLoc, y$1))
   };
-  placeRandom__T3() {
+  placeRandom__I__T4(score) {
     const xLoc = $m_s_util_Random$().between__I__I__I(10, (((-10) + $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_width) | 0));
     const $$x2 = $m_Lio_indigo_pluto_Pickup$NotYet$();
     $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
@@ -22940,7 +23253,7 @@ class $c_Lio_indigo_pluto_Passenger$ extends $c_O {
     const $$x1 = new $c_Lindigo_shared_datatypes_Point(xLoc, y);
     $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
     const y$1 = $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_height;
-    return new $c_T3($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(xLoc, y$1))
+    return new $c_T4($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(xLoc, y$1), score)
   };
 }
 const $d_Lio_indigo_pluto_Passenger$ = new $TypeData().initClass({
@@ -24380,18 +24693,6 @@ function $isArrayOf_s_PartialFunction(obj, depth) {
 function $asArrayOf_s_PartialFunction(obj, depth) {
   return (($isArrayOf_s_PartialFunction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.PartialFunction;", depth))
 }
-function $is_s_Product(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.s_Product)))
-}
-function $as_s_Product(obj) {
-  return (($is_s_Product(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "scala.Product"))
-}
-function $isArrayOf_s_Product(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.s_Product)))
-}
-function $asArrayOf_s_Product(obj, depth) {
-  return (($isArrayOf_s_Product(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.Product;", depth))
-}
 class $c_T2$ extends $c_O {
   toString__T() {
     return "Tuple2"
@@ -25135,7 +25436,9 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     this.Lio_indigo_pluto_HelloIndigo$__f_lineAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_deliveryAssetName = null;
+    this.Lio_indigo_pluto_HelloIndigo$__f_fontAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_assets = null;
+    this.Lio_indigo_pluto_HelloIndigo$__f_fontKey = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_fonts = null;
     $n_Lio_indigo_pluto_HelloIndigo$ = this;
     const $$x1 = $m_Lindigo_package$().GameConfig__Lindigo_shared_config_GameConfig$().default__Lindigo_shared_config_GameConfig().withMagnification__I__Lindigo_shared_config_GameConfig($m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_magnification).withViewport__I__I__Lindigo_shared_config_GameConfig($m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_width, $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_height);
@@ -25148,38 +25451,339 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     this.Lio_indigo_pluto_HelloIndigo$__f_lineAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "centerStrip");
     this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "passenger");
     this.Lio_indigo_pluto_HelloIndigo$__f_deliveryAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "delivery");
-    const this$22 = $m_s_Predef$().s_Predef$__f_Set;
+    this.Lio_indigo_pluto_HelloIndigo$__f_fontAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "font");
+    const this$26 = $m_s_Predef$().s_Predef$__f_Set;
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name = "pluto";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path = "assets/pluto.png";
-    const $$x4 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
+    const $$x5 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name$1 = "centerStrip";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path$1 = "assets/line.png";
-    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
+    const $$x4 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name$2 = "passenger";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path$2 = "assets/robert.png";
-    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$());
+    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$());
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name$3 = "delivery";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path$3 = "assets/delivery.png";
-    const array = [$$x4, $$x3, $$x2, new $c_Lindigo_shared_assets_AssetType$Image(name$3, path$3, $m_s_None$())];
+    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$3, path$3, $m_s_None$());
+    $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
+    const name$4 = "font";
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$4 = "assets/boxy_font.png";
+    const array = [$$x5, $$x4, $$x3, $$x2, new $c_Lindigo_shared_assets_AssetType$Image(name$4, path$4, $m_s_None$())];
     const elems$1 = new $c_sjsr_WrappedVarArgs(array);
-    this.Lio_indigo_pluto_HelloIndigo$__f_assets = this$22.from__sc_IterableOnce__sci_Set(elems$1);
-    const this$23 = $m_s_Predef$().s_Predef$__f_Set;
-    const elems$2 = $m_sci_Nil$();
-    this.Lio_indigo_pluto_HelloIndigo$__f_fonts = this$23.from__sc_IterableOnce__sci_Set(elems$2)
+    this.Lio_indigo_pluto_HelloIndigo$__f_assets = this$26.from__sc_IterableOnce__sci_Set(elems$1);
+    this.Lio_indigo_pluto_HelloIndigo$__f_fontKey = ($m_Lindigo_package$().FontKey__Lindigo_shared_datatypes_FontKey$(), "font");
+    const this$31 = $m_s_Predef$().s_Predef$__f_Set;
+    const array$1 = [this.fontInfo__Lindigo_shared_datatypes_FontInfo()];
+    const elems$2 = new $c_sjsr_WrappedVarArgs(array$1);
+    this.Lio_indigo_pluto_HelloIndigo$__f_fonts = this$31.from__sc_IterableOnce__sci_Set(elems$2)
   };
   $js$exported$meth$launch__O() {
     $f_Lindigo_GameLauncher__launch__V(this)
   };
   $js$exported$meth$launch__sjs_js_Dictionary__O(flags) {
     $f_Lindigo_GameLauncher__launch__sjs_js_Dictionary__V(this, flags)
+  };
+  fontInfo__Lindigo_shared_datatypes_FontInfo() {
+    const $$x2 = $m_Lindigo_package$().FontInfo__Lindigo_shared_datatypes_FontInfo$();
+    const $$x1 = this.Lio_indigo_pluto_HelloIndigo$__f_fontKey;
+    const diffuse = this.Lio_indigo_pluto_HelloIndigo$__f_fontAssetName;
+    const this$2 = $$x2.apply__T__Lindigo_shared_datatypes_Material__I__I__Lindigo_shared_datatypes_FontChar__sci_Seq__Lindigo_shared_datatypes_FontInfo($$x1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false), 320, 230, $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23), $m_sci_Nil$());
+    const fontChar = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("A", 3, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey = this$2.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet = this$2.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$2);
+    const caseSensitive = this$2.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$4 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey, fontSpriteSheet, fontChar, fontChars, caseSensitive);
+    const fontChar$1 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("B", 26, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$1 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$4);
+    const caseSensitive$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$6 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$1, fontSpriteSheet$1, fontChar$1, fontChars$1, caseSensitive$1);
+    const fontChar$2 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("C", 50, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$2 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$6);
+    const caseSensitive$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$8 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$2, fontSpriteSheet$2, fontChar$2, fontChars$2, caseSensitive$2);
+    const fontChar$3 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("D", 73, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$3 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$8);
+    const caseSensitive$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$10 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$3, fontSpriteSheet$3, fontChar$3, fontChars$3, caseSensitive$3);
+    const fontChar$4 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("E", 96, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$4 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$10);
+    const caseSensitive$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$12 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$4, fontSpriteSheet$4, fontChar$4, fontChars$4, caseSensitive$4);
+    const fontChar$5 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("F", 119, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$5 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$12);
+    const caseSensitive$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$14 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$5, fontSpriteSheet$5, fontChar$5, fontChars$5, caseSensitive$5);
+    const fontChar$6 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("G", 142, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$6 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$14);
+    const caseSensitive$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$16 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$6, fontSpriteSheet$6, fontChar$6, fontChars$6, caseSensitive$6);
+    const fontChar$7 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("H", 165, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$7 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$16);
+    const caseSensitive$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$18 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$7, fontSpriteSheet$7, fontChar$7, fontChars$7, caseSensitive$7);
+    const fontChar$8 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("I", 188, 78, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$8 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$18);
+    const caseSensitive$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$20 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$8, fontSpriteSheet$8, fontChar$8, fontChars$8, caseSensitive$8);
+    const fontChar$9 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("J", 202, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$9 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$20);
+    const caseSensitive$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$22 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$9, fontSpriteSheet$9, fontChar$9, fontChars$9, caseSensitive$9);
+    const fontChar$10 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("K", 225, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$10 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$22);
+    const caseSensitive$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$24 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$10, fontSpriteSheet$10, fontChar$10, fontChars$10, caseSensitive$10);
+    const fontChar$11 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("L", 248, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$11 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$24);
+    const caseSensitive$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$26 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$11, fontSpriteSheet$11, fontChar$11, fontChars$11, caseSensitive$11);
+    const fontChar$12 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("M", 271, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$12 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$26);
+    const caseSensitive$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$28 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$12, fontSpriteSheet$12, fontChar$12, fontChars$12, caseSensitive$12);
+    const fontChar$13 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("N", 3, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$13 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$28);
+    const caseSensitive$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$30 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$13, fontSpriteSheet$13, fontChar$13, fontChars$13, caseSensitive$13);
+    const fontChar$14 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("O", 29, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$14 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$30);
+    const caseSensitive$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$32 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$14, fontSpriteSheet$14, fontChar$14, fontChars$14, caseSensitive$14);
+    const fontChar$15 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("P", 54, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$15 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$32);
+    const caseSensitive$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$34 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$15, fontSpriteSheet$15, fontChar$15, fontChars$15, caseSensitive$15);
+    const fontChar$16 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Q", 75, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$16 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$34);
+    const caseSensitive$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$36 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$16, fontSpriteSheet$16, fontChar$16, fontChars$16, caseSensitive$16);
+    const fontChar$17 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("R", 101, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$17 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$36);
+    const caseSensitive$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$38 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$17, fontSpriteSheet$17, fontChar$17, fontChars$17, caseSensitive$17);
+    const fontChar$18 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("S", 124, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$18 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$38);
+    const caseSensitive$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$40 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$18, fontSpriteSheet$18, fontChar$18, fontChars$18, caseSensitive$18);
+    const fontChar$19 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("T", 148, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$19 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$40);
+    const caseSensitive$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$42 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$19, fontSpriteSheet$19, fontChar$19, fontChars$19, caseSensitive$19);
+    const fontChar$20 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("U", 173, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$20 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$42);
+    const caseSensitive$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$44 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$20, fontSpriteSheet$20, fontChar$20, fontChars$20, caseSensitive$20);
+    const fontChar$21 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("V", 197, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$21 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$44);
+    const caseSensitive$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$46 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$21, fontSpriteSheet$21, fontChar$21, fontChars$21, caseSensitive$21);
+    const fontChar$22 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("W", 220, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$22 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$46);
+    const caseSensitive$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$48 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$22, fontSpriteSheet$22, fontChar$22, fontChars$22, caseSensitive$22);
+    const fontChar$23 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("X", 248, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$23 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$48);
+    const caseSensitive$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$50 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$23, fontSpriteSheet$23, fontChar$23, fontChars$23, caseSensitive$23);
+    const fontChar$24 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Y", 271, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$24 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$50);
+    const caseSensitive$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$52 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$24, fontSpriteSheet$24, fontChar$24, fontChars$24, caseSensitive$24);
+    const fontChar$25 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Z", 297, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$25 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$52);
+    const caseSensitive$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$54 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$25, fontSpriteSheet$25, fontChar$25, fontChars$25, caseSensitive$25);
+    const fontChar$26 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("0", 3, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$26 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$54);
+    const caseSensitive$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$56 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$26, fontSpriteSheet$26, fontChar$26, fontChars$26, caseSensitive$26);
+    const fontChar$27 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("1", 26, 26, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$27 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$56);
+    const caseSensitive$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$58 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$27, fontSpriteSheet$27, fontChar$27, fontChars$27, caseSensitive$27);
+    const fontChar$28 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("2", 41, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$28 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$58);
+    const caseSensitive$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$60 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$28, fontSpriteSheet$28, fontChar$28, fontChars$28, caseSensitive$28);
+    const fontChar$29 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("3", 64, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$29 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$60);
+    const caseSensitive$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$62 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$29, fontSpriteSheet$29, fontChar$29, fontChars$29, caseSensitive$29);
+    const fontChar$30 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("4", 87, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$30 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$62);
+    const caseSensitive$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$64 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$30, fontSpriteSheet$30, fontChar$30, fontChars$30, caseSensitive$30);
+    const fontChar$31 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("5", 110, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$31 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$64);
+    const caseSensitive$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$66 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$31, fontSpriteSheet$31, fontChar$31, fontChars$31, caseSensitive$31);
+    const fontChar$32 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("6", 133, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$32 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$66);
+    const caseSensitive$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$68 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$32, fontSpriteSheet$32, fontChar$32, fontChars$32, caseSensitive$32);
+    const fontChar$33 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("7", 156, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$33 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$68);
+    const caseSensitive$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$70 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$33, fontSpriteSheet$33, fontChar$33, fontChars$33, caseSensitive$33);
+    const fontChar$34 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("8", 179, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$34 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$70);
+    const caseSensitive$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$72 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$34, fontSpriteSheet$34, fontChar$34, fontChars$34, caseSensitive$34);
+    const fontChar$35 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("9", 202, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$35 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$72);
+    const caseSensitive$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$74 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$35, fontSpriteSheet$35, fontChar$35, fontChars$35, caseSensitive$35);
+    const fontChar$36 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$36 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$74);
+    const caseSensitive$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$76 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$36, fontSpriteSheet$36, fontChar$36, fontChars$36, caseSensitive$36);
+    const fontChar$37 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("!", 3, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$37 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$76);
+    const caseSensitive$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$78 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$37, fontSpriteSheet$37, fontChar$37, fontChars$37, caseSensitive$37);
+    const fontChar$38 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(".", 286, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$38 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$78);
+    const caseSensitive$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$80 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$38, fontSpriteSheet$38, fontChar$38, fontChars$38, caseSensitive$38);
+    const fontChar$39 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(",", 248, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$39 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$80);
+    const caseSensitive$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$82 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$39, fontSpriteSheet$39, fontChar$39, fontChars$39, caseSensitive$39);
+    const fontChar$40 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(" ", 145, 52, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$40 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$82);
+    const caseSensitive$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    return new $c_Lindigo_shared_datatypes_FontInfo(fontKey$40, fontSpriteSheet$40, fontChar$40, fontChars$40, caseSensitive$40)
   };
   initialModel__jl_Void__Lio_indigo_pluto_Model(startupData) {
     const $$x1 = $m_Lio_indigo_pluto_Model$();
@@ -25255,8 +25859,8 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
   };
   present__Lindigo_shared_FrameContext__Lio_indigo_pluto_Model__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model) {
     $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
-    const gameLayer = $m_sci_Nil$();
-    const $$x8 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x8 = $m_sci_Nil$();
     const $$x7 = $m_sci_Nil$();
     const $$x6 = $m_sci_Nil$();
     const $$x5 = $m_sci_Nil$();
@@ -25266,7 +25870,10 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
     const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
     const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
-    return $$x8.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__Lio_indigo_pluto_DeliveryStop__sci_List(model.Lio_indigo_pluto_Model__f_pluto, model.Lio_indigo_pluto_Model__f_lines, model.Lio_indigo_pluto_Model__f_passenger, model.Lio_indigo_pluto_Model__f_deliveryStop))
+    const this$7 = $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__Lio_indigo_pluto_DeliveryStop__sci_List(model.Lio_indigo_pluto_Model__f_pluto, model.Lio_indigo_pluto_Model__f_lines, model.Lio_indigo_pluto_Model__f_passenger, model.Lio_indigo_pluto_Model__f_deliveryStop));
+    const array = [this.drawText__I__Lindigo_shared_scenegraph_Text(model.Lio_indigo_pluto_Model__f_passenger.Lio_indigo_pluto_Passenger__f_score)];
+    const nodes = new $c_sjsr_WrappedVarArgs(array);
+    return this$7.addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($m_sci_List$().from__sc_IterableOnce__sci_List(nodes))
   };
   drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__Lio_indigo_pluto_DeliveryStop__sci_List(pluto, lines, passenger, delivery) {
     const f = ((this$1) => ((line$2) => {
@@ -25353,6 +25960,19 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     const elems$2 = new $c_sjsr_WrappedVarArgs(array$2);
     const suffix$2 = this$27.from__sc_IterableOnce__sci_List(elems$2);
     return this$28.appendedAll__sc_IterableOnce__sci_List(suffix$2)
+  };
+  drawText__I__Lindigo_shared_scenegraph_Text(score) {
+    const this$1 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(("Score " + score), 10, 20, 1, this.Lio_indigo_pluto_HelloIndigo$__f_fontKey);
+    const text = this$1.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position = this$1.Lindigo_shared_scenegraph_Text__f_position;
+    const depth = this$1.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation = this$1.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this$1.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this$1.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this$1.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this$1.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
   };
   "launch"(...rest) {
     switch ($uI(rest.length)) {
@@ -29905,7 +30525,61 @@ const $d_Lindigo_shared_constants_Key = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lindigo_shared_constants_Key.prototype.$classData = $d_Lindigo_shared_constants_Key;
-class $c_Lindigo_shared_datatypes_FontChar {
+class $c_Lindigo_shared_datatypes_FontChar extends $c_O {
+  constructor(character, bounds) {
+    super();
+    this.Lindigo_shared_datatypes_FontChar__f_character = null;
+    this.Lindigo_shared_datatypes_FontChar__f_bounds = null;
+    this.Lindigo_shared_datatypes_FontChar__f_character = character;
+    this.Lindigo_shared_datatypes_FontChar__f_bounds = bounds
+  };
+  productPrefix__T() {
+    return "FontChar"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lindigo_shared_datatypes_FontChar__f_character;
+        break
+      }
+      case 1: {
+        return this.Lindigo_shared_datatypes_FontChar__f_bounds;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lindigo_shared_datatypes_FontChar)) {
+      const FontChar$1 = $as_Lindigo_shared_datatypes_FontChar(x$1);
+      if ((this.Lindigo_shared_datatypes_FontChar__f_character === FontChar$1.Lindigo_shared_datatypes_FontChar__f_character)) {
+        const x = this.Lindigo_shared_datatypes_FontChar__f_bounds;
+        const x$2 = FontChar$1.Lindigo_shared_datatypes_FontChar__f_bounds;
+        return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
 }
 function $as_Lindigo_shared_datatypes_FontChar(obj) {
   return (((obj instanceof $c_Lindigo_shared_datatypes_FontChar) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.datatypes.FontChar"))
@@ -29916,6 +30590,16 @@ function $isArrayOf_Lindigo_shared_datatypes_FontChar(obj, depth) {
 function $asArrayOf_Lindigo_shared_datatypes_FontChar(obj, depth) {
   return (($isArrayOf_Lindigo_shared_datatypes_FontChar(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.datatypes.FontChar;", depth))
 }
+const $d_Lindigo_shared_datatypes_FontChar = new $TypeData().initClass({
+  Lindigo_shared_datatypes_FontChar: 0
+}, false, "indigo.shared.datatypes.FontChar", {
+  Lindigo_shared_datatypes_FontChar: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_shared_datatypes_FontChar.prototype.$classData = $d_Lindigo_shared_datatypes_FontChar;
 class $c_Lindigo_shared_events_AssetEvent$AssetBatchLoadError$ extends $c_sr_AbstractFunction1 {
   toString__T() {
     return "AssetBatchLoadError"
@@ -30932,14 +31616,16 @@ const $d_Lio_indigo_pluto_Model = new $TypeData().initClass({
 });
 $c_Lio_indigo_pluto_Model.prototype.$classData = $d_Lio_indigo_pluto_Model;
 class $c_Lio_indigo_pluto_Passenger extends $c_O {
-  constructor(state, location, drawLocation) {
+  constructor(state, location, drawLocation, score) {
     super();
     this.Lio_indigo_pluto_Passenger__f_state = null;
     this.Lio_indigo_pluto_Passenger__f_location = null;
     this.Lio_indigo_pluto_Passenger__f_drawLocation = null;
+    this.Lio_indigo_pluto_Passenger__f_score = 0;
     this.Lio_indigo_pluto_Passenger__f_state = state;
     this.Lio_indigo_pluto_Passenger__f_location = location;
-    this.Lio_indigo_pluto_Passenger__f_drawLocation = drawLocation
+    this.Lio_indigo_pluto_Passenger__f_drawLocation = drawLocation;
+    this.Lio_indigo_pluto_Passenger__f_score = score
   };
   update__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Lio_indigo_pluto_Command__Lio_indigo_pluto_Passenger(plutoPos, deliveryPos, input) {
     const x = this.Lio_indigo_pluto_Passenger__f_state;
@@ -30956,29 +31642,25 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
         $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
         const x$4 = ((40 + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0);
         const y$1 = ((25 + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0);
-        x1$5 = new $c_T3($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(x$4, y$1))
+        x1$5 = new $c_T4($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(x$4, y$1), ((10 + this.Lio_indigo_pluto_Passenger__f_score) | 0))
       } else {
-        const x$5 = ((("In check, but condition false for pluto " + plutoPos) + ", del ") + deliveryPos);
-        const this$4 = $m_s_Console$();
-        const this$5 = this$4.out__Ljava_io_PrintStream();
-        this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$5 + "\n"));
         const $$x3 = $m_Lio_indigo_pluto_Pickup$Success$();
         $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-        const x$6 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+        const x$5 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
         const y$2 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-        x1$5 = new $c_T3($$x3, new $c_Lindigo_shared_datatypes_Point(x$6, y$2), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+        x1$5 = new $c_T4($$x3, new $c_Lindigo_shared_datatypes_Point(x$5, y$2), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))), this.Lio_indigo_pluto_Passenger__f_score)
       }
     } else {
       let $$x4;
       if ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y < (-25))) {
         const x$5$1 = this.Lio_indigo_pluto_Passenger__f_state;
-        const x$6$1 = $m_Lio_indigo_pluto_Pickup$Success$();
-        $$x4 = (!((x$5$1 !== null) && (x$5$1 === x$6$1)))
+        const x$6 = $m_Lio_indigo_pluto_Pickup$Success$();
+        $$x4 = (!((x$5$1 !== null) && (x$5$1 === x$6)))
       } else {
         $$x4 = false
       };
       if ($$x4) {
-        x1$5 = $m_Lio_indigo_pluto_Passenger$().placeRandom__T3()
+        x1$5 = $m_Lio_indigo_pluto_Passenger$().placeRandom__I__T4(this.Lio_indigo_pluto_Passenger__f_score)
       } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y > ((100 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
         const x1$3 = this.Lio_indigo_pluto_Passenger__f_state;
         const x$7 = $m_Lio_indigo_pluto_Pickup$Success$();
@@ -30987,7 +31669,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
           const x$8 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
           const y$3 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$5 = new $c_T3($$x5, new $c_Lindigo_shared_datatypes_Point(x$8, y$3), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+          x1$5 = new $c_T4($$x5, new $c_Lindigo_shared_datatypes_Point(x$8, y$3), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))), this.Lio_indigo_pluto_Passenger__f_score)
         } else {
           const $$x7 = $m_Lio_indigo_pluto_Pickup$Missed$();
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
@@ -30997,7 +31679,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
           const x$10 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
           const y$5 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$5 = new $c_T3($$x7, $$x6, new $c_Lindigo_shared_datatypes_Point(x$10, y$5))
+          x1$5 = new $c_T4($$x7, $$x6, new $c_Lindigo_shared_datatypes_Point(x$10, y$5), this.Lio_indigo_pluto_Passenger__f_score)
         }
       } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y < (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
         const $$x9 = $m_Lio_indigo_pluto_Pickup$NotYet$();
@@ -31008,7 +31690,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
         $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
         const x$12 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
         const y$7 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-        x1$5 = new $c_T3($$x9, $$x8, new $c_Lindigo_shared_datatypes_Point(x$12, y$7))
+        x1$5 = new $c_T4($$x9, $$x8, new $c_Lindigo_shared_datatypes_Point(x$12, y$7), this.Lio_indigo_pluto_Passenger__f_score)
       } else {
         let $$x10;
         if (((plutoPos.Lindigo_shared_datatypes_Point__f_x >= (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)) && (plutoPos.Lindigo_shared_datatypes_Point__f_x <= ((95 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)))) {
@@ -31025,7 +31707,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
             $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
             const x$13 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
             const y$8 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-            x1$5 = new $c_T3($$x11, new $c_Lindigo_shared_datatypes_Point(x$13, y$8), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+            x1$5 = new $c_T4($$x11, new $c_Lindigo_shared_datatypes_Point(x$13, y$8), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))), this.Lio_indigo_pluto_Passenger__f_score)
           } else {
             const $$x13 = $m_Lio_indigo_pluto_Pickup$NotYet$();
             $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
@@ -31035,7 +31717,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
             $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
             const x$15 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
             const y$10 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-            x1$5 = new $c_T3($$x13, $$x12, new $c_Lindigo_shared_datatypes_Point(x$15, y$10))
+            x1$5 = new $c_T4($$x13, $$x12, new $c_Lindigo_shared_datatypes_Point(x$15, y$10), this.Lio_indigo_pluto_Passenger__f_score)
           }
         } else {
           const $$x15 = $m_Lio_indigo_pluto_Pickup$NotYet$();
@@ -31046,18 +31728,18 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
           const x$17 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
           const y$12 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$5 = new $c_T3($$x15, $$x14, new $c_Lindigo_shared_datatypes_Point(x$17, y$12))
+          x1$5 = new $c_T4($$x15, $$x14, new $c_Lindigo_shared_datatypes_Point(x$17, y$12), this.Lio_indigo_pluto_Passenger__f_score)
         }
       }
     };
     if ((x1$5 === null)) {
       throw new $c_s_MatchError(x1$5)
     };
-    const newState = $as_s_Product(x1$5.T3__f__1);
-    const newLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T3__f__2);
-    const newDrawLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T3__f__3);
-    const state = $as_Lio_indigo_pluto_Pickup(newState);
-    return new $c_Lio_indigo_pluto_Passenger(state, newLocation, newDrawLocation)
+    const newState = $as_Lio_indigo_pluto_Pickup(x1$5.T4__f__1);
+    const newLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T4__f__2);
+    const newDrawLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T4__f__3);
+    const newScore = $uI(x1$5.T4__f__4);
+    return new $c_Lio_indigo_pluto_Passenger(newState, newLocation, newDrawLocation, newScore)
   };
   checkInDelivery__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Z(plutoPos, deliveryPos) {
     return ((((plutoPos.Lindigo_shared_datatypes_Point__f_x >= (((-120) + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0)) && (plutoPos.Lindigo_shared_datatypes_Point__f_x <= ((150 + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0))) && (plutoPos.Lindigo_shared_datatypes_Point__f_y >= (((-75) + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0))) && (plutoPos.Lindigo_shared_datatypes_Point__f_y <= ((150 + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0)))
@@ -31066,7 +31748,7 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
     return "Passenger"
   };
   productArity__I() {
-    return 3
+    return 4
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -31082,6 +31764,10 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
         return this.Lio_indigo_pluto_Passenger__f_drawLocation;
         break
       }
+      case 3: {
+        return this.Lio_indigo_pluto_Passenger__f_score;
+        break
+      }
       default: {
         return $m_sr_Statics$().ioobe__I__O(x$1)
       }
@@ -31091,8 +31777,27 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
     return new $c_sr_ScalaRunTime$$anon$1(this)
   };
   hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("Passenger");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Lio_indigo_pluto_Passenger__f_state;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Lio_indigo_pluto_Passenger__f_location;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$2 = this.Lio_indigo_pluto_Passenger__f_drawLocation;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const data$4 = this.Lio_indigo_pluto_Passenger__f_score;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 4)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -31102,10 +31807,16 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
       return true
     } else if ((x$1 instanceof $c_Lio_indigo_pluto_Passenger)) {
       const Passenger$1 = $as_Lio_indigo_pluto_Passenger(x$1);
-      const x = this.Lio_indigo_pluto_Passenger__f_state;
-      const x$2 = Passenger$1.Lio_indigo_pluto_Passenger__f_state;
+      let $$x2;
+      if ((this.Lio_indigo_pluto_Passenger__f_score === Passenger$1.Lio_indigo_pluto_Passenger__f_score)) {
+        const x = this.Lio_indigo_pluto_Passenger__f_state;
+        const x$2 = Passenger$1.Lio_indigo_pluto_Passenger__f_state;
+        $$x2 = (x === x$2)
+      } else {
+        $$x2 = false
+      };
       let $$x1;
-      if ((x === x$2)) {
+      if ($$x2) {
         const x$3 = this.Lio_indigo_pluto_Passenger__f_location;
         const x$4 = Passenger$1.Lio_indigo_pluto_Passenger__f_location;
         $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
@@ -35453,6 +36164,16 @@ function $m_Lindigo_shared_networking_WebSocketReadyState$OPEN$() {
   };
   return $n_Lindigo_shared_networking_WebSocketReadyState$OPEN$
 }
+const $p_Lindigo_shared_scenegraph_Graphic__lazyBounds$lzycompute__Lindigo_shared_datatypes_Rectangle = (function($thiz) {
+  if (((((1 & $thiz.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0)) {
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const position = $thiz.Lindigo_shared_scenegraph_Graphic__f_position;
+    const size = $thiz.Lindigo_shared_scenegraph_Graphic__f_crop.Lindigo_shared_datatypes_Rectangle__f_size;
+    $thiz.Lindigo_shared_scenegraph_Graphic__f_lazyBounds = new $c_Lindigo_shared_datatypes_Rectangle(position, size);
+    $thiz.Lindigo_shared_scenegraph_Graphic__f_bitmap$0 = (((1 | $thiz.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24)
+  };
+  return $thiz.Lindigo_shared_scenegraph_Graphic__f_lazyBounds
+});
 const $p_Lindigo_shared_scenegraph_Graphic__x$lzycompute__I = (function($thiz) {
   if (((((2 & $thiz.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0)) {
     $thiz.Lindigo_shared_scenegraph_Graphic__f_x = $thiz.Lindigo_shared_scenegraph_Graphic__f_position.Lindigo_shared_datatypes_Point__f_x;
@@ -35490,6 +36211,12 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
     this.Lindigo_shared_scenegraph_Graphic__f_crop = crop;
     this.Lindigo_shared_scenegraph_Graphic__f_effects = effects;
     this.Lindigo_shared_scenegraph_Graphic__f_material = material
+  };
+  depth__I() {
+    return this.Lindigo_shared_scenegraph_Graphic__f_depth
+  };
+  lazyBounds__Lindigo_shared_datatypes_Rectangle() {
+    return (((((1 & this.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lindigo_shared_scenegraph_Graphic__lazyBounds$lzycompute__Lindigo_shared_datatypes_Rectangle(this) : this.Lindigo_shared_scenegraph_Graphic__f_lazyBounds)
   };
   x__I() {
     return (((((2 & this.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lindigo_shared_scenegraph_Graphic__x$lzycompute__I(this) : this.Lindigo_shared_scenegraph_Graphic__f_x)
@@ -35576,6 +36303,16 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
     const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
     return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, refValue, crop, effects, material)
   };
+  withDepth__I__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(depth) {
+    const position = this.Lindigo_shared_scenegraph_Graphic__f_position;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
+  };
 }
 function $as_Lindigo_shared_scenegraph_Graphic(obj) {
   return (((obj instanceof $c_Lindigo_shared_scenegraph_Graphic) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.scenegraph.Graphic"))
@@ -35646,7 +36383,70 @@ function $isArrayOf_Lindigo_shared_scenegraph_PlaybackPattern$SingleTrackLoop(ob
 function $asArrayOf_Lindigo_shared_scenegraph_PlaybackPattern$SingleTrackLoop(obj, depth) {
   return (($isArrayOf_Lindigo_shared_scenegraph_PlaybackPattern$SingleTrackLoop(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.scenegraph.PlaybackPattern$SingleTrackLoop;", depth))
 }
-class $c_Lindigo_shared_scenegraph_Text {
+class $c_Lindigo_shared_scenegraph_Text extends $c_O {
+  constructor(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler) {
+    super();
+    this.Lindigo_shared_scenegraph_Text__f_x = 0;
+    this.Lindigo_shared_scenegraph_Text__f_y = 0;
+    this.Lindigo_shared_scenegraph_Text__f_text = null;
+    this.Lindigo_shared_scenegraph_Text__f_alignment = null;
+    this.Lindigo_shared_scenegraph_Text__f_position = null;
+    this.Lindigo_shared_scenegraph_Text__f_depth = 0;
+    this.Lindigo_shared_scenegraph_Text__f_rotation = 0.0;
+    this.Lindigo_shared_scenegraph_Text__f_scale = null;
+    this.Lindigo_shared_scenegraph_Text__f_fontKey = null;
+    this.Lindigo_shared_scenegraph_Text__f_effects = null;
+    this.Lindigo_shared_scenegraph_Text__f_eventHandler = null;
+    this.Lindigo_shared_scenegraph_Text__f_ref = null;
+    this.Lindigo_shared_scenegraph_Text__f_bitmap$0 = 0;
+    this.Lindigo_shared_scenegraph_Text__f_bitmap$init$0 = false;
+    this.Lindigo_shared_scenegraph_Text__f_text = text;
+    this.Lindigo_shared_scenegraph_Text__f_alignment = alignment;
+    this.Lindigo_shared_scenegraph_Text__f_position = position;
+    this.Lindigo_shared_scenegraph_Text__f_depth = depth;
+    this.Lindigo_shared_scenegraph_Text__f_rotation = rotation;
+    this.Lindigo_shared_scenegraph_Text__f_scale = scale;
+    this.Lindigo_shared_scenegraph_Text__f_fontKey = fontKey;
+    this.Lindigo_shared_scenegraph_Text__f_effects = effects;
+    this.Lindigo_shared_scenegraph_Text__f_eventHandler = eventHandler;
+    this.Lindigo_shared_scenegraph_Text__f_ref = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+    this.Lindigo_shared_scenegraph_Text__f_bitmap$init$0 = true
+  };
+  depth__I() {
+    return this.Lindigo_shared_scenegraph_Text__f_depth
+  };
+  ref__Lindigo_shared_datatypes_Point() {
+    if ((!this.Lindigo_shared_scenegraph_Text__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/scenegraph/SceneGraphNode.scala: 494")
+    };
+    return this.Lindigo_shared_scenegraph_Text__f_ref
+  };
+  transformBy__Lindigo_shared_datatypes_Point__D__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(positionDiff, rotationDiff, scaleDiff) {
+    const text = this.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = this.Lindigo_shared_scenegraph_Text__f_alignment;
+    const position = this.Lindigo_shared_scenegraph_Text__f_position.$plus__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point(positionDiff);
+    const depth = this.Lindigo_shared_scenegraph_Text__f_depth;
+    $m_Lindigo_shared_datatypes_Radians$();
+    const this$ = this.Lindigo_shared_scenegraph_Text__f_rotation;
+    const rotation = $m_Lindigo_shared_datatypes_Radians$().add__D__D__D(this$, rotationDiff);
+    const this$2 = this.Lindigo_shared_scenegraph_Text__f_scale;
+    const scale = $m_Lindigo_shared_datatypes_Vector2$().multiply__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(this$2, scaleDiff);
+    const fontKey = this.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
+  };
+  withDepth__I__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(depth) {
+    const text = this.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = this.Lindigo_shared_scenegraph_Text__f_alignment;
+    const position = this.Lindigo_shared_scenegraph_Text__f_position;
+    const rotation = this.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
+  };
 }
 function $as_Lindigo_shared_scenegraph_Text(obj) {
   return (((obj instanceof $c_Lindigo_shared_scenegraph_Text) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.scenegraph.Text"))
@@ -35657,6 +36457,17 @@ function $isArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) {
 function $asArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) {
   return (($isArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.scenegraph.Text;", depth))
 }
+const $d_Lindigo_shared_scenegraph_Text = new $TypeData().initClass({
+  Lindigo_shared_scenegraph_Text: 0
+}, false, "indigo.shared.scenegraph.Text", {
+  Lindigo_shared_scenegraph_Text: 1,
+  O: 1,
+  Lindigo_shared_scenegraph_Renderable: 1,
+  Lindigo_shared_scenegraph_SceneGraphNodePrimitive: 1,
+  Lindigo_shared_scenegraph_SceneGraphNode: 1,
+  Lindigo_shared_scenegraph_EventHandling: 1
+});
+$c_Lindigo_shared_scenegraph_Text.prototype.$classData = $d_Lindigo_shared_scenegraph_Text;
 class $c_Lio_indigo_pluto_Command$Delivery$ extends $c_O {
   productPrefix__T() {
     return "Delivery"
@@ -39743,6 +40554,14 @@ class $c_Lindigo_package$ extends $c_O {
     };
     return this.Lindigo_package$__f_SceneUpdateFragment
   };
+  Text__Lindigo_shared_scenegraph_Text$() {
+    const b = this.Lindigo_package$__f_bitmap$init$1;
+    const lo = (8192 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_Text
+  };
   Graphic__Lindigo_shared_scenegraph_Graphic$() {
     const b = this.Lindigo_package$__f_bitmap$init$1;
     const lo = (16384 & b.RTLong__f_lo);
@@ -39939,6 +40758,30 @@ class $c_Lindigo_package$ extends $c_O {
     const lo = (8388608 | b.RTLong__f_lo);
     const hi = b.RTLong__f_hi;
     this.Lindigo_package$__f_bitmap$init$1 = new $c_RTLong(lo, hi)
+  };
+  FontChar__Lindigo_shared_datatypes_FontChar$() {
+    const b = this.Lindigo_package$__f_bitmap$init$1;
+    const lo = (16777216 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_FontChar
+  };
+  FontInfo__Lindigo_shared_datatypes_FontInfo$() {
+    const b = this.Lindigo_package$__f_bitmap$init$1;
+    const lo = (33554432 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_FontInfo
+  };
+  FontKey__Lindigo_shared_datatypes_FontKey$() {
+    const b = this.Lindigo_package$__f_bitmap$init$1;
+    const lo = (67108864 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_FontKey
   };
   Rectangle__Lindigo_shared_datatypes_Rectangle$() {
     const b = this.Lindigo_package$__f_bitmap$init$1;
@@ -50436,6 +51279,9 @@ class $c_sci_List extends $c_sci_AbstractSeq {
   };
   isEmpty__Z() {
     return (this === $m_sci_Nil$())
+  };
+  prepended__O__sci_List(elem) {
+    return new $c_sci_$colon$colon(elem, this)
   };
   appendedAll__sc_IterableOnce__sci_List(suffix) {
     if ((suffix instanceof $c_sci_List)) {

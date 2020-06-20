@@ -7910,6 +7910,14 @@ class $c_Lindigo_shared_constants_Keys$ extends $c_O {
     };
     return this.Lindigo_shared_constants_Keys$__f_SHIFT
   };
+  CTRL__Lindigo_shared_constants_Key() {
+    const b = this.Lindigo_shared_constants_Keys$__f_bitmap$init$0;
+    const lo = (16 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/constants/Keys.scala: 46")
+    };
+    return this.Lindigo_shared_constants_Keys$__f_CTRL
+  };
   SPACE__Lindigo_shared_constants_Key() {
     const b = this.Lindigo_shared_constants_Keys$__f_bitmap$init$0;
     const lo = (512 & b.RTLong__f_lo);
@@ -22840,9 +22848,37 @@ const $d_Lindigo_shared_scenegraph_SpotLight = new $TypeData().initClass({
   Lindigo_shared_scenegraph_Light: 1
 });
 $c_Lindigo_shared_scenegraph_SpotLight.prototype.$classData = $d_Lindigo_shared_scenegraph_SpotLight;
+class $c_Lio_indigo_pluto_DeliveryStop$ extends $c_O {
+  initial__I__Lio_indigo_pluto_DeliveryStop(xLoc) {
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const y = $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_height;
+    return new $c_Lio_indigo_pluto_DeliveryStop(new $c_Lindigo_shared_datatypes_Point(xLoc, y))
+  };
+  randomX__I() {
+    return $m_s_util_Random$().between__I__I__I(10, (((-10) + $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_width) | 0))
+  };
+  hidden__Lio_indigo_pluto_DeliveryStop() {
+    return new $c_Lio_indigo_pluto_DeliveryStop(($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point(0, (-200))))
+  };
+}
+const $d_Lio_indigo_pluto_DeliveryStop$ = new $TypeData().initClass({
+  Lio_indigo_pluto_DeliveryStop$: 0
+}, false, "io.indigo.pluto.DeliveryStop$", {
+  Lio_indigo_pluto_DeliveryStop$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_DeliveryStop$.prototype.$classData = $d_Lio_indigo_pluto_DeliveryStop$;
+let $n_Lio_indigo_pluto_DeliveryStop$ = (void 0);
+function $m_Lio_indigo_pluto_DeliveryStop$() {
+  if ((!$n_Lio_indigo_pluto_DeliveryStop$)) {
+    $n_Lio_indigo_pluto_DeliveryStop$ = new $c_Lio_indigo_pluto_DeliveryStop$()
+  };
+  return $n_Lio_indigo_pluto_DeliveryStop$
+}
 class $c_Lio_indigo_pluto_Model$ extends $c_O {
   initial__Lindigo_shared_datatypes_Point__Lio_indigo_pluto_Model(center) {
-    const $$x1 = new $c_Lio_indigo_pluto_Pluto(center, 0);
+    const $$x3 = new $c_Lio_indigo_pluto_Pluto(center, 0);
     const b = $m_sci_IndexedSeq$().newBuilder__scm_Builder();
     const it = new $c_sci_RangeIterator(0, 88, 968, false);
     while (it.sci_RangeIterator__f__hasNext) {
@@ -22853,7 +22889,12 @@ class $c_Lio_indigo_pluto_Model$ extends $c_O {
       b.addOne__O__scm_Growable(elem)
     };
     const this$5 = $as_sci_IndexedSeq(b.result__O());
-    return new $c_Lio_indigo_pluto_Model($$x1, $m_sci_List$().from__sc_IterableOnce__sci_List(this$5), $m_Lio_indigo_pluto_Passenger$().initial__I__Lio_indigo_pluto_Passenger((((-100) + center.Lindigo_shared_datatypes_Point__f_x) | 0)), 0)
+    const $$x2 = $m_sci_List$().from__sc_IterableOnce__sci_List(this$5);
+    const $$x1 = $m_Lio_indigo_pluto_Passenger$().initial__I__Lio_indigo_pluto_Passenger((((-100) + center.Lindigo_shared_datatypes_Point__f_x) | 0));
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const x$1 = center.Lindigo_shared_datatypes_Point__f_x;
+    const y = center.Lindigo_shared_datatypes_Point__f_y;
+    return new $c_Lio_indigo_pluto_Model($$x3, $$x2, $$x1, new $c_Lio_indigo_pluto_DeliveryStop(new $c_Lindigo_shared_datatypes_Point(x$1, y)), 0)
   };
 }
 const $d_Lio_indigo_pluto_Model$ = new $TypeData().initClass({
@@ -25093,6 +25134,7 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     this.Lio_indigo_pluto_HelloIndigo$__f_plutoAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_lineAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName = null;
+    this.Lio_indigo_pluto_HelloIndigo$__f_deliveryAssetName = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_assets = null;
     this.Lio_indigo_pluto_HelloIndigo$__f_fonts = null;
     $n_Lio_indigo_pluto_HelloIndigo$ = this;
@@ -25105,27 +25147,33 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     this.Lio_indigo_pluto_HelloIndigo$__f_plutoAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "pluto");
     this.Lio_indigo_pluto_HelloIndigo$__f_lineAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "centerStrip");
     this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "passenger");
-    const this$18 = $m_s_Predef$().s_Predef$__f_Set;
+    this.Lio_indigo_pluto_HelloIndigo$__f_deliveryAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "delivery");
+    const this$22 = $m_s_Predef$().s_Predef$__f_Set;
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name = "pluto";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path = "assets/pluto.png";
-    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
+    const $$x4 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name$1 = "centerStrip";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path$1 = "assets/line.png";
-    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
+    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
     $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
     const name$2 = "passenger";
     $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
     const path$2 = "assets/robert.png";
-    const array = [$$x3, $$x2, new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$())];
+    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$());
+    $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
+    const name$3 = "delivery";
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$3 = "assets/delivery.png";
+    const array = [$$x4, $$x3, $$x2, new $c_Lindigo_shared_assets_AssetType$Image(name$3, path$3, $m_s_None$())];
     const elems$1 = new $c_sjsr_WrappedVarArgs(array);
-    this.Lio_indigo_pluto_HelloIndigo$__f_assets = this$18.from__sc_IterableOnce__sci_Set(elems$1);
-    const this$19 = $m_s_Predef$().s_Predef$__f_Set;
+    this.Lio_indigo_pluto_HelloIndigo$__f_assets = this$22.from__sc_IterableOnce__sci_Set(elems$1);
+    const this$23 = $m_s_Predef$().s_Predef$__f_Set;
     const elems$2 = $m_sci_Nil$();
-    this.Lio_indigo_pluto_HelloIndigo$__f_fonts = this$19.from__sc_IterableOnce__sci_Set(elems$2)
+    this.Lio_indigo_pluto_HelloIndigo$__f_fonts = this$23.from__sc_IterableOnce__sci_Set(elems$2)
   };
   $js$exported$meth$launch__O() {
     $f_Lindigo_GameLauncher__launch__V(this)
@@ -25144,10 +25192,10 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
   updateModel__Lindigo_shared_FrameContext__Lio_indigo_pluto_Model__F1(context, model) {
     return new $c_sjsr_AnonFunction1(((this$1, model$1) => ((x0$1$2) => {
       const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
-      let rc13 = false;
+      let rc16 = false;
       let x2 = null;
       if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyDown)) {
-        rc13 = true;
+        rc16 = true;
         x2 = $as_Lindigo_shared_events_KeyboardEvent$KeyDown(x0$1);
         const p3 = x2.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
         const x = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().LEFT_ARROW__Lindigo_shared_constants_Key();
@@ -25155,32 +25203,41 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
           const x1$2 = model$1.Lio_indigo_pluto_Model__f_pluto.Lio_indigo_pluto_Pluto__f_velocity;
           const change = ((x1$2 === 0) ? (-3) : ((x1$2 > (-5)) ? (-2) : (-1)));
           $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-          const state = model$1.update__I__Z__Lio_indigo_pluto_Model(change, false);
+          const state = model$1.update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(change, $m_Lio_indigo_pluto_Command$NoOp$());
           return new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$())
         }
       };
-      if (rc13) {
+      if (rc16) {
         const p5 = x2.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
         const x$3 = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().RIGHT_ARROW__Lindigo_shared_constants_Key();
         if (((x$3 === null) ? (p5 === null) : x$3.equals__O__Z(p5))) {
           const x1$3 = model$1.Lio_indigo_pluto_Model__f_pluto.Lio_indigo_pluto_Pluto__f_velocity;
           const change$2 = ((x1$3 === 0) ? 3 : ((x1$3 < 5) ? 2 : 1));
           $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-          const state$1 = model$1.update__I__Z__Lio_indigo_pluto_Model(change$2, false);
+          const state$1 = model$1.update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(change$2, $m_Lio_indigo_pluto_Command$NoOp$());
           return new $c_Lindigo_shared_Outcome(state$1, $m_sci_Nil$())
         }
       };
-      if (rc13) {
+      if (rc16) {
         const p7 = x2.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
         const x$5 = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SHIFT__Lindigo_shared_constants_Key();
         if (((x$5 === null) ? (p7 === null) : x$5.equals__O__Z(p7))) {
           $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-          const state$2 = model$1.update__I__Z__Lio_indigo_pluto_Model(0, true);
+          const state$2 = model$1.update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(0, $m_Lio_indigo_pluto_Command$Pickup$());
           return new $c_Lindigo_shared_Outcome(state$2, $m_sci_Nil$())
         }
       };
-      const x$7 = $m_Lindigo_package$().FrameTick__Lindigo_shared_events_FrameTick$();
-      if ((x$7 === x0$1)) {
+      if (rc16) {
+        const p9 = x2.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
+        const x$7 = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().CTRL__Lindigo_shared_constants_Key();
+        if (((x$7 === null) ? (p9 === null) : x$7.equals__O__Z(p9))) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const state$3 = model$1.update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(0, $m_Lio_indigo_pluto_Command$Delivery$());
+          return new $c_Lindigo_shared_Outcome(state$3, $m_sci_Nil$())
+        }
+      };
+      const x$9 = $m_Lindigo_package$().FrameTick__Lindigo_shared_events_FrameTick$();
+      if ((x$9 === x0$1)) {
         let change$3;
         if ((((model$1.Lio_indigo_pluto_Model__f_ftct % 10) | 0) === 0)) {
           const x1$4 = model$1.Lio_indigo_pluto_Model__f_pluto.Lio_indigo_pluto_Pluto__f_velocity;
@@ -25189,8 +25246,8 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
           change$3 = 0
         };
         $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-        const state$3 = model$1.update__I__Z__Lio_indigo_pluto_Model(change$3, false);
-        return new $c_Lindigo_shared_Outcome(state$3, $m_sci_Nil$())
+        const state$4 = model$1.update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(change$3, $m_Lio_indigo_pluto_Command$NoOp$());
+        return new $c_Lindigo_shared_Outcome(state$4, $m_sci_Nil$())
       };
       $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
       return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
@@ -25209,9 +25266,9 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
     const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
     const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
-    return $$x8.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__sci_List(model.Lio_indigo_pluto_Model__f_pluto, model.Lio_indigo_pluto_Model__f_lines, model.Lio_indigo_pluto_Model__f_passenger))
+    return $$x8.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__Lio_indigo_pluto_DeliveryStop__sci_List(model.Lio_indigo_pluto_Model__f_pluto, model.Lio_indigo_pluto_Model__f_lines, model.Lio_indigo_pluto_Model__f_passenger, model.Lio_indigo_pluto_Model__f_deliveryStop))
   };
-  drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__sci_List(pluto, lines, passenger) {
+  drawScene__Lio_indigo_pluto_Pluto__sci_List__Lio_indigo_pluto_Passenger__Lio_indigo_pluto_DeliveryStop__sci_List(pluto, lines, passenger, delivery) {
     const f = ((this$1) => ((line$2) => {
       const line = $as_Lio_indigo_pluto_CenterStrip(line$2);
       const $$x2 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
@@ -25247,10 +25304,10 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     };
     const this$11 = $m_sci_List$();
     const $$x4 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-    const $$x3 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 20, 60);
-    const diffuse$1 = this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName;
-    const this$6 = $$x4.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x3, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false));
-    const pt$1 = passenger.Lio_indigo_pluto_Passenger__f_drawLocation;
+    const $$x3 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 150, 150);
+    const diffuse$1 = this.Lio_indigo_pluto_HelloIndigo$__f_deliveryAssetName;
+    const this$6 = $$x4.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x3, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false)).withAlpha__D__Lindigo_shared_scenegraph_Graphic(0.8).scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(0.7, 0.7);
+    const pt$1 = delivery.Lio_indigo_pluto_DeliveryStop__f_location;
     const depth$1 = this$6.Lindigo_shared_scenegraph_Graphic__f_depth;
     const rotation$1 = this$6.Lindigo_shared_scenegraph_Graphic__f_rotation;
     const scale$1 = this$6.Lindigo_shared_scenegraph_Graphic__f_scale;
@@ -25264,10 +25321,10 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     const this$20 = this$12.appendedAll__sc_IterableOnce__sci_List(suffix);
     const this$19 = $m_sci_List$();
     const $$x6 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-    const $$x5 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 120, 75);
-    const diffuse$2 = this.Lio_indigo_pluto_HelloIndigo$__f_plutoAssetName;
-    const this$14 = $$x6.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x5, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$2, false)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(60, 38);
-    const pt$2 = pluto.Lio_indigo_pluto_Pluto__f_location;
+    const $$x5 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 20, 60);
+    const diffuse$2 = this.Lio_indigo_pluto_HelloIndigo$__f_passengerAssetName;
+    const this$14 = $$x6.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x5, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$2, false));
+    const pt$2 = passenger.Lio_indigo_pluto_Passenger__f_drawLocation;
     const depth$2 = this$14.Lindigo_shared_scenegraph_Graphic__f_depth;
     const rotation$2 = this$14.Lindigo_shared_scenegraph_Graphic__f_rotation;
     const scale$2 = this$14.Lindigo_shared_scenegraph_Graphic__f_scale;
@@ -25278,7 +25335,24 @@ class $c_Lio_indigo_pluto_HelloIndigo$ extends $c_O {
     const array$1 = [new $c_Lindigo_shared_scenegraph_Graphic(pt$2, depth$2, rotation$2, scale$2, ref$2, crop$2, effects$2, material$2)];
     const elems$1 = new $c_sjsr_WrappedVarArgs(array$1);
     const suffix$1 = this$19.from__sc_IterableOnce__sci_List(elems$1);
-    return this$20.appendedAll__sc_IterableOnce__sci_List(suffix$1)
+    const this$28 = this$20.appendedAll__sc_IterableOnce__sci_List(suffix$1);
+    const this$27 = $m_sci_List$();
+    const $$x8 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+    const $$x7 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 120, 75);
+    const diffuse$3 = this.Lio_indigo_pluto_HelloIndigo$__f_plutoAssetName;
+    const this$22 = $$x8.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x7, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$3, false)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(60, 38);
+    const pt$3 = pluto.Lio_indigo_pluto_Pluto__f_location;
+    const depth$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material$3 = this$22.Lindigo_shared_scenegraph_Graphic__f_material;
+    const array$2 = [new $c_Lindigo_shared_scenegraph_Graphic(pt$3, depth$3, rotation$3, scale$3, ref$3, crop$3, effects$3, material$3)];
+    const elems$2 = new $c_sjsr_WrappedVarArgs(array$2);
+    const suffix$2 = this$27.from__sc_IterableOnce__sci_List(elems$2);
+    return this$28.appendedAll__sc_IterableOnce__sci_List(suffix$2)
   };
   "launch"(...rest) {
     switch ($uI(rest.length)) {
@@ -30614,28 +30688,104 @@ const $d_Lio_indigo_pluto_CenterStrip = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lio_indigo_pluto_CenterStrip.prototype.$classData = $d_Lio_indigo_pluto_CenterStrip;
+class $c_Lio_indigo_pluto_DeliveryStop extends $c_O {
+  constructor(location) {
+    super();
+    this.Lio_indigo_pluto_DeliveryStop__f_location = null;
+    this.Lio_indigo_pluto_DeliveryStop__f_location = location
+  };
+  update__Lio_indigo_pluto_Pickup__Lio_indigo_pluto_DeliveryStop(passengerState) {
+    const x$2 = $m_Lio_indigo_pluto_Pickup$Success$();
+    if (((passengerState !== null) && (passengerState === x$2))) {
+      const x1 = this.Lio_indigo_pluto_DeliveryStop__f_location.Lindigo_shared_datatypes_Point__f_y;
+      if ((x1 < (-150))) {
+        return $m_Lio_indigo_pluto_DeliveryStop$().initial__I__Lio_indigo_pluto_DeliveryStop($m_Lio_indigo_pluto_DeliveryStop$().randomX__I())
+      } else {
+        $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+        const x = this.Lio_indigo_pluto_DeliveryStop__f_location.Lindigo_shared_datatypes_Point__f_x;
+        const y = ((this.Lio_indigo_pluto_DeliveryStop__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+        const location = new $c_Lindigo_shared_datatypes_Point(x, y);
+        return new $c_Lio_indigo_pluto_DeliveryStop(location)
+      }
+    } else {
+      return $m_Lio_indigo_pluto_DeliveryStop$().hidden__Lio_indigo_pluto_DeliveryStop()
+    }
+  };
+  productPrefix__T() {
+    return "DeliveryStop"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Lio_indigo_pluto_DeliveryStop__f_location : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lio_indigo_pluto_DeliveryStop)) {
+      const DeliveryStop$1 = $as_Lio_indigo_pluto_DeliveryStop(x$1);
+      const x = this.Lio_indigo_pluto_DeliveryStop__f_location;
+      const x$2 = DeliveryStop$1.Lio_indigo_pluto_DeliveryStop__f_location;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lio_indigo_pluto_DeliveryStop(obj) {
+  return (((obj instanceof $c_Lio_indigo_pluto_DeliveryStop) || (obj === null)) ? obj : $throwClassCastException(obj, "io.indigo.pluto.DeliveryStop"))
+}
+function $isArrayOf_Lio_indigo_pluto_DeliveryStop(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lio_indigo_pluto_DeliveryStop)))
+}
+function $asArrayOf_Lio_indigo_pluto_DeliveryStop(obj, depth) {
+  return (($isArrayOf_Lio_indigo_pluto_DeliveryStop(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lio.indigo.pluto.DeliveryStop;", depth))
+}
+const $d_Lio_indigo_pluto_DeliveryStop = new $TypeData().initClass({
+  Lio_indigo_pluto_DeliveryStop: 0
+}, false, "io.indigo.pluto.DeliveryStop", {
+  Lio_indigo_pluto_DeliveryStop: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_DeliveryStop.prototype.$classData = $d_Lio_indigo_pluto_DeliveryStop;
 class $c_Lio_indigo_pluto_Model extends $c_O {
-  constructor(pluto, lines, passenger, ftct) {
+  constructor(pluto, lines, passenger, deliveryStop, ftct) {
     super();
     this.Lio_indigo_pluto_Model__f_pluto = null;
     this.Lio_indigo_pluto_Model__f_lines = null;
     this.Lio_indigo_pluto_Model__f_passenger = null;
+    this.Lio_indigo_pluto_Model__f_deliveryStop = null;
     this.Lio_indigo_pluto_Model__f_ftct = 0;
     this.Lio_indigo_pluto_Model__f_pluto = pluto;
     this.Lio_indigo_pluto_Model__f_lines = lines;
     this.Lio_indigo_pluto_Model__f_passenger = passenger;
+    this.Lio_indigo_pluto_Model__f_deliveryStop = deliveryStop;
     this.Lio_indigo_pluto_Model__f_ftct = ftct
   };
-  update__I__Z__Lio_indigo_pluto_Model(acc, pickupAttempt) {
-    const pluto = this.Lio_indigo_pluto_Model__f_pluto.update__I__Lio_indigo_pluto_Pluto(acc);
+  update__I__Lio_indigo_pluto_Command__Lio_indigo_pluto_Model(acc, input) {
+    const newPluto = this.Lio_indigo_pluto_Model__f_pluto.update__I__Lio_indigo_pluto_Pluto(acc);
     const this$2 = this.Lio_indigo_pluto_Model__f_lines;
     const f = ((this$1) => ((x$1$2) => {
       const x$1 = $as_Lio_indigo_pluto_CenterStrip(x$1$2);
       return x$1.update__I__Lio_indigo_pluto_CenterStrip(this$1.Lio_indigo_pluto_Model__f_ftct)
     }))(this);
-    let lines;
+    let newLines;
     if ((this$2 === $m_sci_Nil$())) {
-      lines = $m_sci_Nil$()
+      newLines = $m_sci_Nil$()
     } else {
       const arg1 = this$2.head__O();
       const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
@@ -30648,17 +30798,18 @@ class $c_Lio_indigo_pluto_Model extends $c_O {
         t = nx;
         rest = $as_sci_List(rest.tail__O())
       };
-      lines = h
+      newLines = h
     };
-    const passenger = this.Lio_indigo_pluto_Model__f_passenger.update__Lindigo_shared_datatypes_Point__Z__Lio_indigo_pluto_Passenger(this.Lio_indigo_pluto_Model__f_pluto.Lio_indigo_pluto_Pluto__f_location, pickupAttempt);
+    const newPassenger = this.Lio_indigo_pluto_Model__f_passenger.update__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Lio_indigo_pluto_Command__Lio_indigo_pluto_Passenger(this.Lio_indigo_pluto_Model__f_pluto.Lio_indigo_pluto_Pluto__f_location, this.Lio_indigo_pluto_Model__f_deliveryStop.Lio_indigo_pluto_DeliveryStop__f_location, input);
+    const newDelivery = this.Lio_indigo_pluto_Model__f_deliveryStop.update__Lio_indigo_pluto_Pickup__Lio_indigo_pluto_DeliveryStop(this.Lio_indigo_pluto_Model__f_passenger.Lio_indigo_pluto_Passenger__f_state);
     const ftct = ((1 + ((this.Lio_indigo_pluto_Model__f_ftct % 10) | 0)) | 0);
-    return new $c_Lio_indigo_pluto_Model(pluto, lines, passenger, ftct)
+    return new $c_Lio_indigo_pluto_Model(newPluto, newLines, newPassenger, newDelivery, ftct)
   };
   productPrefix__T() {
     return "Model"
   };
   productArity__I() {
-    return 4
+    return 5
   };
   productElement__I__O(x$1) {
     switch (x$1) {
@@ -30675,6 +30826,10 @@ class $c_Lio_indigo_pluto_Model extends $c_O {
         break
       }
       case 3: {
+        return this.Lio_indigo_pluto_Model__f_deliveryStop;
+        break
+      }
+      case 4: {
         return this.Lio_indigo_pluto_Model__f_ftct;
         break
       }
@@ -30704,10 +30859,14 @@ class $c_Lio_indigo_pluto_Model extends $c_O {
     const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
     acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
     const hash$4 = acc;
-    const data$4 = this.Lio_indigo_pluto_Model__f_ftct;
+    const x$3 = this.Lio_indigo_pluto_Model__f_deliveryStop;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$3);
     acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
     const hash$5 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 4)
+    const data$5 = this.Lio_indigo_pluto_Model__f_ftct;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$6, 5)
   };
   toString__T() {
     return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
@@ -30717,26 +30876,34 @@ class $c_Lio_indigo_pluto_Model extends $c_O {
       return true
     } else if ((x$1 instanceof $c_Lio_indigo_pluto_Model)) {
       const Model$1 = $as_Lio_indigo_pluto_Model(x$1);
-      let $$x2;
+      let $$x3;
       if ((this.Lio_indigo_pluto_Model__f_ftct === Model$1.Lio_indigo_pluto_Model__f_ftct)) {
         const x = this.Lio_indigo_pluto_Model__f_pluto;
         const x$2 = Model$1.Lio_indigo_pluto_Model__f_pluto;
-        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+        $$x3 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ($$x3) {
+        const x$3 = this.Lio_indigo_pluto_Model__f_lines;
+        const x$4 = Model$1.Lio_indigo_pluto_Model__f_lines;
+        $$x2 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
       } else {
         $$x2 = false
       };
       let $$x1;
       if ($$x2) {
-        const x$3 = this.Lio_indigo_pluto_Model__f_lines;
-        const x$4 = Model$1.Lio_indigo_pluto_Model__f_lines;
-        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+        const x$5 = this.Lio_indigo_pluto_Model__f_passenger;
+        const x$6 = Model$1.Lio_indigo_pluto_Model__f_passenger;
+        $$x1 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
       } else {
         $$x1 = false
       };
       if ($$x1) {
-        const x$5 = this.Lio_indigo_pluto_Model__f_passenger;
-        const x$6 = Model$1.Lio_indigo_pluto_Model__f_passenger;
-        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+        const x$7 = this.Lio_indigo_pluto_Model__f_deliveryStop;
+        const x$8 = Model$1.Lio_indigo_pluto_Model__f_deliveryStop;
+        return ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
       } else {
         return false
       }
@@ -30774,99 +30941,126 @@ class $c_Lio_indigo_pluto_Passenger extends $c_O {
     this.Lio_indigo_pluto_Passenger__f_location = location;
     this.Lio_indigo_pluto_Passenger__f_drawLocation = drawLocation
   };
-  update__Lindigo_shared_datatypes_Point__Z__Lio_indigo_pluto_Passenger(plutoPos, button) {
-    let x1$4;
-    if ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y < (-25))) {
-      x1$4 = $m_Lio_indigo_pluto_Passenger$().placeRandom__T3()
-    } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y > ((100 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
-      const x1$2 = this.Lio_indigo_pluto_Passenger__f_state;
-      const x = $m_Lio_indigo_pluto_Pickup$Success$();
-      if ((x === x1$2)) {
-        const $$x1 = $m_Lio_indigo_pluto_Pickup$Success$();
+  update__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Lio_indigo_pluto_Command__Lio_indigo_pluto_Passenger(plutoPos, deliveryPos, input) {
+    const x = this.Lio_indigo_pluto_Passenger__f_state;
+    const x$2 = $m_Lio_indigo_pluto_Pickup$Success$();
+    let x1$5;
+    if (((x !== null) && (x === x$2))) {
+      const x$3 = $m_Lio_indigo_pluto_Command$Delivery$();
+      if (((x$3 === input) && this.checkInDelivery__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Z(plutoPos, deliveryPos))) {
+        const $$x2 = $m_Lio_indigo_pluto_Pickup$Delivered$();
         $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-        const x$1 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-        const y = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-        x1$4 = new $c_T3($$x1, new $c_Lindigo_shared_datatypes_Point(x$1, y), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+        const x$1 = ((40 + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0);
+        const y = ((25 + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0);
+        const $$x1 = new $c_Lindigo_shared_datatypes_Point(x$1, y);
+        $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+        const x$4 = ((40 + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0);
+        const y$1 = ((25 + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0);
+        x1$5 = new $c_T3($$x2, $$x1, new $c_Lindigo_shared_datatypes_Point(x$4, y$1))
       } else {
-        const $$x3 = $m_Lio_indigo_pluto_Pickup$Missed$();
+        const x$5 = ((("In check, but condition false for pluto " + plutoPos) + ", del ") + deliveryPos);
+        const this$4 = $m_s_Console$();
+        const this$5 = this$4.out__Ljava_io_PrintStream();
+        this$5.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x$5 + "\n"));
+        const $$x3 = $m_Lio_indigo_pluto_Pickup$Success$();
         $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-        const x$2 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-        const y$1 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-        const $$x2 = new $c_Lindigo_shared_datatypes_Point(x$2, y$1);
-        $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-        const x$3 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+        const x$6 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
         const y$2 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-        x1$4 = new $c_T3($$x3, $$x2, new $c_Lindigo_shared_datatypes_Point(x$3, y$2))
+        x1$5 = new $c_T3($$x3, new $c_Lindigo_shared_datatypes_Point(x$6, y$2), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
       }
-    } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y < (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
-      const $$x5 = $m_Lio_indigo_pluto_Pickup$NotYet$();
-      $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-      const x$4 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-      const y$3 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-      const $$x4 = new $c_Lindigo_shared_datatypes_Point(x$4, y$3);
-      $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-      const x$5 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-      const y$4 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-      x1$4 = new $c_T3($$x5, $$x4, new $c_Lindigo_shared_datatypes_Point(x$5, y$4))
     } else {
-      let $$x6;
-      if (((plutoPos.Lindigo_shared_datatypes_Point__f_x >= (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)) && (plutoPos.Lindigo_shared_datatypes_Point__f_x <= ((95 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)))) {
-        const x$3$1 = this.Lio_indigo_pluto_Passenger__f_state;
-        const x$4$1 = $m_Lio_indigo_pluto_Pickup$Success$();
-        $$x6 = (!((x$3$1 !== null) && (x$3$1 === x$4$1)))
-      } else {
-        $$x6 = false
-      };
-      if ($$x6) {
-        if ((button === true)) {
-          const $$x7 = $m_Lio_indigo_pluto_Pickup$Success$();
-          $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-          const x$6 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$5 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$4 = new $c_T3($$x7, new $c_Lindigo_shared_datatypes_Point(x$6, y$5), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
-        } else if ((button === false)) {
-          const $$x9 = $m_Lio_indigo_pluto_Pickup$NotYet$();
-          $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-          const x$7 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$6 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          const $$x8 = new $c_Lindigo_shared_datatypes_Point(x$7, y$6);
-          $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-          const x$8 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$7 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$4 = new $c_T3($$x9, $$x8, new $c_Lindigo_shared_datatypes_Point(x$8, y$7))
-        } else {
-          throw new $c_s_MatchError(button)
-        }
-      } else {
+      let $$x4;
+      if ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y < (-25))) {
         const x$5$1 = this.Lio_indigo_pluto_Passenger__f_state;
         const x$6$1 = $m_Lio_indigo_pluto_Pickup$Success$();
-        if (((x$5$1 !== null) && (x$5$1 === x$6$1))) {
-          const $$x10 = $m_Lio_indigo_pluto_Pickup$Success$();
+        $$x4 = (!((x$5$1 !== null) && (x$5$1 === x$6$1)))
+      } else {
+        $$x4 = false
+      };
+      if ($$x4) {
+        x1$5 = $m_Lio_indigo_pluto_Passenger$().placeRandom__T3()
+      } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y > ((100 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
+        const x1$3 = this.Lio_indigo_pluto_Passenger__f_state;
+        const x$7 = $m_Lio_indigo_pluto_Pickup$Success$();
+        if ((x$7 === x1$3)) {
+          const $$x5 = $m_Lio_indigo_pluto_Pickup$Success$();
+          $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+          const x$8 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+          const y$3 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+          x1$5 = new $c_T3($$x5, new $c_Lindigo_shared_datatypes_Point(x$8, y$3), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+        } else {
+          const $$x7 = $m_Lio_indigo_pluto_Pickup$Missed$();
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
           const x$9 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$8 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$4 = new $c_T3($$x10, new $c_Lindigo_shared_datatypes_Point(x$9, y$8), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
-        } else {
-          const $$x12 = $m_Lio_indigo_pluto_Pickup$NotYet$();
+          const y$4 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+          const $$x6 = new $c_Lindigo_shared_datatypes_Point(x$9, y$4);
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
           const x$10 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$9 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          const $$x11 = new $c_Lindigo_shared_datatypes_Point(x$10, y$9);
+          const y$5 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+          x1$5 = new $c_T3($$x7, $$x6, new $c_Lindigo_shared_datatypes_Point(x$10, y$5))
+        }
+      } else if ((plutoPos.Lindigo_shared_datatypes_Point__f_y < (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y) | 0))) {
+        const $$x9 = $m_Lio_indigo_pluto_Pickup$NotYet$();
+        $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+        const x$11 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+        const y$6 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+        const $$x8 = new $c_Lindigo_shared_datatypes_Point(x$11, y$6);
+        $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+        const x$12 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+        const y$7 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+        x1$5 = new $c_T3($$x9, $$x8, new $c_Lindigo_shared_datatypes_Point(x$12, y$7))
+      } else {
+        let $$x10;
+        if (((plutoPos.Lindigo_shared_datatypes_Point__f_x >= (((-20) + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)) && (plutoPos.Lindigo_shared_datatypes_Point__f_x <= ((95 + this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x) | 0)))) {
+          const x$9$1 = this.Lio_indigo_pluto_Passenger__f_state;
+          const x$10$1 = $m_Lio_indigo_pluto_Pickup$Success$();
+          $$x10 = (!((x$9$1 !== null) && (x$9$1 === x$10$1)))
+        } else {
+          $$x10 = false
+        };
+        if ($$x10) {
+          const x$11$1 = $m_Lio_indigo_pluto_Command$Pickup$();
+          if ((x$11$1 === input)) {
+            const $$x11 = $m_Lio_indigo_pluto_Pickup$Success$();
+            $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+            const x$13 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+            const y$8 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+            x1$5 = new $c_T3($$x11, new $c_Lindigo_shared_datatypes_Point(x$13, y$8), ($m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$(), new $c_Lindigo_shared_datatypes_Point((-100), (-100))))
+          } else {
+            const $$x13 = $m_Lio_indigo_pluto_Pickup$NotYet$();
+            $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+            const x$14 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+            const y$9 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+            const $$x12 = new $c_Lindigo_shared_datatypes_Point(x$14, y$9);
+            $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+            const x$15 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+            const y$10 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+            x1$5 = new $c_T3($$x13, $$x12, new $c_Lindigo_shared_datatypes_Point(x$15, y$10))
+          }
+        } else {
+          const $$x15 = $m_Lio_indigo_pluto_Pickup$NotYet$();
           $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-          const x$11 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
-          const y$10 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
-          x1$4 = new $c_T3($$x12, $$x11, new $c_Lindigo_shared_datatypes_Point(x$11, y$10))
+          const x$16 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+          const y$11 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+          const $$x14 = new $c_Lindigo_shared_datatypes_Point(x$16, y$11);
+          $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+          const x$17 = this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_x;
+          const y$12 = ((this.Lio_indigo_pluto_Passenger__f_location.Lindigo_shared_datatypes_Point__f_y - $m_Lio_indigo_pluto_package$().Lio_indigo_pluto_package$__f_gamespeed) | 0);
+          x1$5 = new $c_T3($$x15, $$x14, new $c_Lindigo_shared_datatypes_Point(x$17, y$12))
         }
       }
     };
-    if ((x1$4 === null)) {
-      throw new $c_s_MatchError(x1$4)
+    if ((x1$5 === null)) {
+      throw new $c_s_MatchError(x1$5)
     };
-    const newState = $as_s_Product(x1$4.T3__f__1);
-    const newLocation = $as_Lindigo_shared_datatypes_Point(x1$4.T3__f__2);
-    const newDrawLocation = $as_Lindigo_shared_datatypes_Point(x1$4.T3__f__3);
+    const newState = $as_s_Product(x1$5.T3__f__1);
+    const newLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T3__f__2);
+    const newDrawLocation = $as_Lindigo_shared_datatypes_Point(x1$5.T3__f__3);
     const state = $as_Lio_indigo_pluto_Pickup(newState);
     return new $c_Lio_indigo_pluto_Passenger(state, newLocation, newDrawLocation)
+  };
+  checkInDelivery__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point__Z(plutoPos, deliveryPos) {
+    return ((((plutoPos.Lindigo_shared_datatypes_Point__f_x >= (((-120) + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0)) && (plutoPos.Lindigo_shared_datatypes_Point__f_x <= ((150 + deliveryPos.Lindigo_shared_datatypes_Point__f_x) | 0))) && (plutoPos.Lindigo_shared_datatypes_Point__f_y >= (((-75) + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0))) && (plutoPos.Lindigo_shared_datatypes_Point__f_y <= ((150 + deliveryPos.Lindigo_shared_datatypes_Point__f_y) | 0)))
   };
   productPrefix__T() {
     return "Passenger"
@@ -35303,6 +35497,21 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
   y__I() {
     return (((((4 & this.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lindigo_shared_scenegraph_Graphic__y$lzycompute__I(this) : this.Lindigo_shared_scenegraph_Graphic__f_y)
   };
+  scaleBy__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_Graphic(amount) {
+    const position = this.Lindigo_shared_scenegraph_Graphic__f_position;
+    const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const this$1 = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const scale = $m_Lindigo_shared_datatypes_Vector2$().multiply__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2__Lindigo_shared_datatypes_Vector2(this$1, amount);
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
+  };
+  scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(x, y) {
+    return this.scaleBy__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_Graphic(($m_Lindigo_shared_datatypes_Vector2$(), new $c_Lindigo_shared_datatypes_Vector2(x, y)))
+  };
   transformBy__Lindigo_shared_datatypes_Point__D__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(positionDiff, rotationDiff, scaleDiff) {
     const position = this.Lindigo_shared_scenegraph_Graphic__f_position.$plus__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point(positionDiff);
     const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
@@ -35314,6 +35523,24 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
     const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
     const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
     const effects = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
+  };
+  withAlpha__D__Lindigo_shared_scenegraph_Graphic(a) {
+    const position = this.Lindigo_shared_scenegraph_Graphic__f_position;
+    const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const this$1 = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    $m_Lindigo_shared_datatypes_Effects$();
+    const tint = this$1.Lindigo_shared_datatypes_Effects__f_tint;
+    const overlay = this$1.Lindigo_shared_datatypes_Effects__f_overlay;
+    const border = this$1.Lindigo_shared_datatypes_Effects__f_border;
+    const glow = this$1.Lindigo_shared_datatypes_Effects__f_glow;
+    const flip = this$1.Lindigo_shared_datatypes_Effects__f_flip;
+    const effects = new $c_Lindigo_shared_datatypes_Effects(tint, overlay, border, glow, a, flip);
     const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
     return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
   };
@@ -35429,6 +35656,158 @@ function $isArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) {
 }
 function $asArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) {
   return (($isArrayOf_Lindigo_shared_scenegraph_Text(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.scenegraph.Text;", depth))
+}
+class $c_Lio_indigo_pluto_Command$Delivery$ extends $c_O {
+  productPrefix__T() {
+    return "Delivery"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 888111124
+  };
+  toString__T() {
+    return "Delivery"
+  };
+}
+const $d_Lio_indigo_pluto_Command$Delivery$ = new $TypeData().initClass({
+  Lio_indigo_pluto_Command$Delivery$: 0
+}, false, "io.indigo.pluto.Command$Delivery$", {
+  Lio_indigo_pluto_Command$Delivery$: 1,
+  O: 1,
+  Lio_indigo_pluto_Command: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_Command$Delivery$.prototype.$classData = $d_Lio_indigo_pluto_Command$Delivery$;
+let $n_Lio_indigo_pluto_Command$Delivery$ = (void 0);
+function $m_Lio_indigo_pluto_Command$Delivery$() {
+  if ((!$n_Lio_indigo_pluto_Command$Delivery$)) {
+    $n_Lio_indigo_pluto_Command$Delivery$ = new $c_Lio_indigo_pluto_Command$Delivery$()
+  };
+  return $n_Lio_indigo_pluto_Command$Delivery$
+}
+class $c_Lio_indigo_pluto_Command$NoOp$ extends $c_O {
+  productPrefix__T() {
+    return "NoOp"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2432930
+  };
+  toString__T() {
+    return "NoOp"
+  };
+}
+const $d_Lio_indigo_pluto_Command$NoOp$ = new $TypeData().initClass({
+  Lio_indigo_pluto_Command$NoOp$: 0
+}, false, "io.indigo.pluto.Command$NoOp$", {
+  Lio_indigo_pluto_Command$NoOp$: 1,
+  O: 1,
+  Lio_indigo_pluto_Command: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_Command$NoOp$.prototype.$classData = $d_Lio_indigo_pluto_Command$NoOp$;
+let $n_Lio_indigo_pluto_Command$NoOp$ = (void 0);
+function $m_Lio_indigo_pluto_Command$NoOp$() {
+  if ((!$n_Lio_indigo_pluto_Command$NoOp$)) {
+    $n_Lio_indigo_pluto_Command$NoOp$ = new $c_Lio_indigo_pluto_Command$NoOp$()
+  };
+  return $n_Lio_indigo_pluto_Command$NoOp$
+}
+class $c_Lio_indigo_pluto_Command$Pickup$ extends $c_O {
+  productPrefix__T() {
+    return "Pickup"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return (-1904609636)
+  };
+  toString__T() {
+    return "Pickup"
+  };
+}
+const $d_Lio_indigo_pluto_Command$Pickup$ = new $TypeData().initClass({
+  Lio_indigo_pluto_Command$Pickup$: 0
+}, false, "io.indigo.pluto.Command$Pickup$", {
+  Lio_indigo_pluto_Command$Pickup$: 1,
+  O: 1,
+  Lio_indigo_pluto_Command: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_Command$Pickup$.prototype.$classData = $d_Lio_indigo_pluto_Command$Pickup$;
+let $n_Lio_indigo_pluto_Command$Pickup$ = (void 0);
+function $m_Lio_indigo_pluto_Command$Pickup$() {
+  if ((!$n_Lio_indigo_pluto_Command$Pickup$)) {
+    $n_Lio_indigo_pluto_Command$Pickup$ = new $c_Lio_indigo_pluto_Command$Pickup$()
+  };
+  return $n_Lio_indigo_pluto_Command$Pickup$
+}
+class $c_Lio_indigo_pluto_Pickup$Delivered$ extends $c_O {
+  productPrefix__T() {
+    return "Delivered"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 1761640548
+  };
+  toString__T() {
+    return "Delivered"
+  };
+}
+const $d_Lio_indigo_pluto_Pickup$Delivered$ = new $TypeData().initClass({
+  Lio_indigo_pluto_Pickup$Delivered$: 0
+}, false, "io.indigo.pluto.Pickup$Delivered$", {
+  Lio_indigo_pluto_Pickup$Delivered$: 1,
+  O: 1,
+  Lio_indigo_pluto_Pickup: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lio_indigo_pluto_Pickup$Delivered$.prototype.$classData = $d_Lio_indigo_pluto_Pickup$Delivered$;
+let $n_Lio_indigo_pluto_Pickup$Delivered$ = (void 0);
+function $m_Lio_indigo_pluto_Pickup$Delivered$() {
+  if ((!$n_Lio_indigo_pluto_Pickup$Delivered$)) {
+    $n_Lio_indigo_pluto_Pickup$Delivered$ = new $c_Lio_indigo_pluto_Pickup$Delivered$()
+  };
+  return $n_Lio_indigo_pluto_Pickup$Delivered$
 }
 class $c_Lio_indigo_pluto_Pickup$Missed$ extends $c_O {
   productPrefix__T() {

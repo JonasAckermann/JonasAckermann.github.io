@@ -702,331 +702,65 @@ const $d_O = new $TypeData().initClass({
   O: 1
 }, (void 0), (void 0), $is_O, $isArrayOf_O);
 $c_O.prototype.$classData = $d_O;
-class $c_LFont$ extends $c_O {
-  constructor() {
+class $c_Lindigo_BootResult extends $c_O {
+  constructor(gameConfig, bootData, animations, assets, fonts, subSystems) {
     super();
-    this.LFont$__f_fontKey = null;
-    this.LFont$__f_bitmap$init$0 = false;
-    $n_LFont$ = this;
-    this.LFont$__f_fontKey = ($m_Lindigo_package$().FontKey__Lindigo_shared_datatypes_FontKey$(), "font");
-    this.LFont$__f_bitmap$init$0 = true
-  };
-  fontKey__T() {
-    if ((!this.LFont$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/Font.scala: 5")
-    };
-    return this.LFont$__f_fontKey
-  };
-  fontInfo__T__Lindigo_shared_datatypes_FontInfo(fontAssetName) {
-    const this$2 = $m_Lindigo_package$().FontInfo__Lindigo_shared_datatypes_FontInfo$().apply__T__Lindigo_shared_datatypes_Material__I__I__Lindigo_shared_datatypes_FontChar__sci_Seq__Lindigo_shared_datatypes_FontInfo(this.fontKey__T(), new $c_Lindigo_shared_datatypes_Material$Textured(fontAssetName, false), 320, 230, $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23), $m_sci_Nil$());
-    const fontChar = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("A", 3, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey = this$2.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet = this$2.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$2);
-    const caseSensitive = this$2.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$4 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey, fontSpriteSheet, fontChar, fontChars, caseSensitive);
-    const fontChar$1 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("B", 26, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$1 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$4);
-    const caseSensitive$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$6 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$1, fontSpriteSheet$1, fontChar$1, fontChars$1, caseSensitive$1);
-    const fontChar$2 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("C", 50, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$2 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$6);
-    const caseSensitive$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$8 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$2, fontSpriteSheet$2, fontChar$2, fontChars$2, caseSensitive$2);
-    const fontChar$3 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("D", 73, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$3 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$8);
-    const caseSensitive$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$10 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$3, fontSpriteSheet$3, fontChar$3, fontChars$3, caseSensitive$3);
-    const fontChar$4 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("E", 96, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$4 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$10);
-    const caseSensitive$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$12 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$4, fontSpriteSheet$4, fontChar$4, fontChars$4, caseSensitive$4);
-    const fontChar$5 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("F", 119, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$5 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$12);
-    const caseSensitive$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$14 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$5, fontSpriteSheet$5, fontChar$5, fontChars$5, caseSensitive$5);
-    const fontChar$6 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("G", 142, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$6 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$14);
-    const caseSensitive$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$16 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$6, fontSpriteSheet$6, fontChar$6, fontChars$6, caseSensitive$6);
-    const fontChar$7 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("H", 165, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$7 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$16);
-    const caseSensitive$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$18 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$7, fontSpriteSheet$7, fontChar$7, fontChars$7, caseSensitive$7);
-    const fontChar$8 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("I", 188, 78, 15, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$8 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$18);
-    const caseSensitive$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$20 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$8, fontSpriteSheet$8, fontChar$8, fontChars$8, caseSensitive$8);
-    const fontChar$9 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("J", 202, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$9 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$20);
-    const caseSensitive$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$22 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$9, fontSpriteSheet$9, fontChar$9, fontChars$9, caseSensitive$9);
-    const fontChar$10 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("K", 225, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$10 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$22);
-    const caseSensitive$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$24 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$10, fontSpriteSheet$10, fontChar$10, fontChars$10, caseSensitive$10);
-    const fontChar$11 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("L", 248, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$11 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$24);
-    const caseSensitive$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$26 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$11, fontSpriteSheet$11, fontChar$11, fontChars$11, caseSensitive$11);
-    const fontChar$12 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("M", 271, 78, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$12 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$26);
-    const caseSensitive$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$28 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$12, fontSpriteSheet$12, fontChar$12, fontChars$12, caseSensitive$12);
-    const fontChar$13 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("N", 3, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$13 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$28);
-    const caseSensitive$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$30 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$13, fontSpriteSheet$13, fontChar$13, fontChars$13, caseSensitive$13);
-    const fontChar$14 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("O", 29, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$14 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$30);
-    const caseSensitive$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$32 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$14, fontSpriteSheet$14, fontChar$14, fontChars$14, caseSensitive$14);
-    const fontChar$15 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("P", 54, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$15 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$32);
-    const caseSensitive$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$34 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$15, fontSpriteSheet$15, fontChar$15, fontChars$15, caseSensitive$15);
-    const fontChar$16 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Q", 75, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$16 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$34);
-    const caseSensitive$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$36 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$16, fontSpriteSheet$16, fontChar$16, fontChars$16, caseSensitive$16);
-    const fontChar$17 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("R", 101, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$17 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$36);
-    const caseSensitive$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$38 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$17, fontSpriteSheet$17, fontChar$17, fontChars$17, caseSensitive$17);
-    const fontChar$18 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("S", 124, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$18 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$38);
-    const caseSensitive$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$40 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$18, fontSpriteSheet$18, fontChar$18, fontChars$18, caseSensitive$18);
-    const fontChar$19 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("T", 148, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$19 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$40);
-    const caseSensitive$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$42 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$19, fontSpriteSheet$19, fontChar$19, fontChars$19, caseSensitive$19);
-    const fontChar$20 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("U", 173, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$20 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$42);
-    const caseSensitive$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$44 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$20, fontSpriteSheet$20, fontChar$20, fontChars$20, caseSensitive$20);
-    const fontChar$21 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("V", 197, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$21 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$44);
-    const caseSensitive$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$46 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$21, fontSpriteSheet$21, fontChar$21, fontChars$21, caseSensitive$21);
-    const fontChar$22 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("W", 220, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$22 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$46);
-    const caseSensitive$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$48 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$22, fontSpriteSheet$22, fontChar$22, fontChars$22, caseSensitive$22);
-    const fontChar$23 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("X", 248, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$23 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$48);
-    const caseSensitive$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$50 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$23, fontSpriteSheet$23, fontChar$23, fontChars$23, caseSensitive$23);
-    const fontChar$24 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Y", 271, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$24 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$50);
-    const caseSensitive$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$52 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$24, fontSpriteSheet$24, fontChar$24, fontChars$24, caseSensitive$24);
-    const fontChar$25 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Z", 297, 104, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$25 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$52);
-    const caseSensitive$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$54 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$25, fontSpriteSheet$25, fontChar$25, fontChars$25, caseSensitive$25);
-    const fontChar$26 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("0", 3, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$26 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$54);
-    const caseSensitive$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$56 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$26, fontSpriteSheet$26, fontChar$26, fontChars$26, caseSensitive$26);
-    const fontChar$27 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("1", 26, 26, 15, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$27 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$56);
-    const caseSensitive$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$58 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$27, fontSpriteSheet$27, fontChar$27, fontChars$27, caseSensitive$27);
-    const fontChar$28 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("2", 41, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$28 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$58);
-    const caseSensitive$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$60 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$28, fontSpriteSheet$28, fontChar$28, fontChars$28, caseSensitive$28);
-    const fontChar$29 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("3", 64, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$29 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$60);
-    const caseSensitive$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$62 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$29, fontSpriteSheet$29, fontChar$29, fontChars$29, caseSensitive$29);
-    const fontChar$30 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("4", 87, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$30 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$62);
-    const caseSensitive$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$64 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$30, fontSpriteSheet$30, fontChar$30, fontChars$30, caseSensitive$30);
-    const fontChar$31 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("5", 110, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$31 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$64);
-    const caseSensitive$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$66 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$31, fontSpriteSheet$31, fontChar$31, fontChars$31, caseSensitive$31);
-    const fontChar$32 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("6", 133, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$32 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$66);
-    const caseSensitive$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$68 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$32, fontSpriteSheet$32, fontChar$32, fontChars$32, caseSensitive$32);
-    const fontChar$33 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("7", 156, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$33 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$68);
-    const caseSensitive$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$70 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$33, fontSpriteSheet$33, fontChar$33, fontChars$33, caseSensitive$33);
-    const fontChar$34 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("8", 179, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$34 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$70);
-    const caseSensitive$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$72 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$34, fontSpriteSheet$34, fontChar$34, fontChars$34, caseSensitive$34);
-    const fontChar$35 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("9", 202, 26, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$35 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$72);
-    const caseSensitive$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$74 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$35, fontSpriteSheet$35, fontChar$35, fontChars$35, caseSensitive$35);
-    const fontChar$36 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$36 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$74);
-    const caseSensitive$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$76 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$36, fontSpriteSheet$36, fontChar$36, fontChars$36, caseSensitive$36);
-    const fontChar$37 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("!", 3, 0, 15, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$37 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$76);
-    const caseSensitive$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$78 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$37, fontSpriteSheet$37, fontChar$37, fontChars$37, caseSensitive$37);
-    const fontChar$38 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(".", 286, 0, 15, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$38 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$78);
-    const caseSensitive$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$80 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$38, fontSpriteSheet$38, fontChar$38, fontChars$38, caseSensitive$38);
-    const fontChar$39 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(",", 248, 0, 15, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$39 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$80);
-    const caseSensitive$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    const this$82 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$39, fontSpriteSheet$39, fontChar$39, fontChars$39, caseSensitive$39);
-    const fontChar$40 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(" ", 145, 52, 23, 23);
-    $m_Lindigo_shared_datatypes_FontInfo$();
-    const fontKey$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontKey;
-    const fontSpriteSheet$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
-    const fontChars$40 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$82);
-    const caseSensitive$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
-    return new $c_Lindigo_shared_datatypes_FontInfo(fontKey$40, fontSpriteSheet$40, fontChar$40, fontChars$40, caseSensitive$40)
+    this.Lindigo_BootResult__f_gameConfig = null;
+    this.Lindigo_BootResult__f_bootData = null;
+    this.Lindigo_BootResult__f_animations = null;
+    this.Lindigo_BootResult__f_assets = null;
+    this.Lindigo_BootResult__f_fonts = null;
+    this.Lindigo_BootResult__f_subSystems = null;
+    this.Lindigo_BootResult__f_gameConfig = gameConfig;
+    this.Lindigo_BootResult__f_bootData = bootData;
+    this.Lindigo_BootResult__f_animations = animations;
+    this.Lindigo_BootResult__f_assets = assets;
+    this.Lindigo_BootResult__f_fonts = fonts;
+    this.Lindigo_BootResult__f_subSystems = subSystems
   };
 }
-const $d_LFont$ = new $TypeData().initClass({
-  LFont$: 0
-}, false, "Font$", {
-  LFont$: 1,
+const $d_Lindigo_BootResult = new $TypeData().initClass({
+  Lindigo_BootResult: 0
+}, false, "indigo.BootResult", {
+  Lindigo_BootResult: 1,
   O: 1
 });
-$c_LFont$.prototype.$classData = $d_LFont$;
-let $n_LFont$ = (void 0);
-function $m_LFont$() {
-  if ((!$n_LFont$)) {
-    $n_LFont$ = new $c_LFont$()
+$c_Lindigo_BootResult.prototype.$classData = $d_Lindigo_BootResult;
+class $c_Lindigo_BootResult$ extends $c_O {
+  apply__Lindigo_shared_config_GameConfig__O__Lindigo_BootResult(gameConfig, bootData) {
+    const this$1 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems = $m_sci_Nil$();
+    const $$x3 = this$1.from__sc_IterableOnce__sci_Set(elems);
+    const this$2 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems$1 = $m_sci_Nil$();
+    const $$x2 = this$2.from__sc_IterableOnce__sci_Set(elems$1);
+    const this$3 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems$2 = $m_sci_Nil$();
+    const $$x1 = this$3.from__sc_IterableOnce__sci_Set(elems$2);
+    const this$4 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems$3 = $m_sci_Nil$();
+    return new $c_Lindigo_BootResult(gameConfig, bootData, $$x3, $$x2, $$x1, this$4.from__sc_IterableOnce__sci_Set(elems$3))
   };
-  return $n_LFont$
+}
+const $d_Lindigo_BootResult$ = new $TypeData().initClass({
+  Lindigo_BootResult$: 0
+}, false, "indigo.BootResult$", {
+  Lindigo_BootResult$: 1,
+  O: 1
+});
+$c_Lindigo_BootResult$.prototype.$classData = $d_Lindigo_BootResult$;
+let $n_Lindigo_BootResult$ = (void 0);
+function $m_Lindigo_BootResult$() {
+  if ((!$n_Lindigo_BootResult$)) {
+    $n_Lindigo_BootResult$ = new $c_Lindigo_BootResult$()
+  };
+  return $n_Lindigo_BootResult$
 }
 function $f_Lindigo_GameLauncher__launch__V($thiz) {
   const this$1 = $m_s_Predef$().s_Predef$__f_Map;
   const elems = $m_sci_Nil$();
   const flags = this$1.from__sc_IterableOnce__sci_Map(elems);
-  $f_Lindigo_IndigoSandbox__ready__sci_Map__V($thiz, flags)
+  $f_Lindigo_IndigoGame__ready__sci_Map__V($thiz, flags)
 }
 function $f_Lindigo_GameLauncher__launch__sjs_js_Dictionary__V($thiz, flags) {
   $m_s_$less$colon$less$();
@@ -1050,7 +784,7 @@ function $f_Lindigo_GameLauncher__launch__sjs_js_Dictionary__V($thiz, flags) {
     this$6 = this$4
   };
   flags$1 = this$6.result__sci_Map();
-  $f_Lindigo_IndigoSandbox__ready__sci_Map__V($thiz, flags$1)
+  $f_Lindigo_IndigoGame__ready__sci_Map__V($thiz, flags$1)
 }
 class $c_Lindigo_gameengine_GameEngine extends $c_O {
   constructor(fonts, animations, initialise, initialModel, initialViewModel, frameProccessor) {
@@ -1521,7 +1255,7 @@ class $c_Lindigo_gameengine_GameLoop extends $c_O {
             const inputState = $p_Lindigo_gameengine_GameLoop__inputState__Lindigo_shared_events_InputState(this$1);
             const boundaryLocator = this$1.Lindigo_gameengine_GameLoop__f_boundaryLocator;
             const frameContext = new $c_Lindigo_shared_FrameContext(gameTime, dice, inputState, boundaryLocator, startUpData$2);
-            const this$15 = collectedEvents.map__F1__sci_List(this$13.Lindigo_entry_StandardFrameProcessor__f_eventFilters.Lindigo_shared_events_EventFilters__f_modelFilter).collect__s_PartialFunction__sci_List(new $c_Lindigo_entry_StandardFrameProcessor$$anonfun$1(this$13));
+            const this$15 = collectedEvents.map__F1__sci_List(this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.eventFilters__Lindigo_shared_events_EventFilters().Lindigo_shared_events_EventFilters__f_modelFilter).collect__s_PartialFunction__sci_List(new $c_Lindigo_entry_ScenesFrameProcessor$$anonfun$1(this$13));
             $m_Lindigo_shared_Outcome$();
             const state = this$1.gameModelState__O();
             const z = new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$());
@@ -1535,44 +1269,46 @@ class $c_Lindigo_gameengine_GameLoop extends $c_O {
               const this$16 = $m_Lindigo_shared_Outcome$();
               $m_Lindigo_shared_Outcome$();
               const arg1$1 = acc$1.Lindigo_shared_Outcome__f_state;
-              const state$1 = $as_Lindigo_shared_Outcome($as_F1(this$13.Lindigo_entry_StandardFrameProcessor__f_modelUpdate.apply__O__O__O(frameContext, arg1$1)).apply__O__O(e));
+              const state$1 = $as_Lindigo_shared_Outcome(this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateModel__Lindigo_shared_FrameContext__O__F1(frameContext, arg1$1).apply__O__O(e));
               const this$19 = new $c_Lindigo_shared_Outcome(state$1, $m_sci_Nil$());
               const arg1$2 = acc$1.Lindigo_shared_Outcome__f_globalEvents;
               acc = this$16.join__Lindigo_shared_Outcome__Lindigo_shared_Outcome($m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$19, arg1$2));
               these = $as_sc_LinearSeq(these.tail__O())
             };
             const updatedModel = $as_Lindigo_shared_Outcome(acc);
-            const subSystemEvents = this$13.Lindigo_entry_StandardFrameProcessor__f_subSystemsRegister.update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents).Lindigo_shared_Outcome__f_globalEvents;
-            const this$22 = collectedEvents.map__F1__sci_List(this$13.Lindigo_entry_StandardFrameProcessor__f_eventFilters.Lindigo_shared_events_EventFilters__f_viewModelFilter).collect__s_PartialFunction__sci_List(new $c_Lindigo_entry_StandardFrameProcessor$$anonfun$2(this$13));
+            const this$22 = this$13.Lindigo_entry_ScenesFrameProcessor__f_subSystemsRegister.update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents).Lindigo_shared_Outcome__f_globalEvents;
+            const suffix = this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__sci_List(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents);
+            const subSystemEvents = this$22.appendedAll__sc_IterableOnce__sci_List(suffix);
+            const this$24 = collectedEvents.map__F1__sci_List(this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.eventFilters__Lindigo_shared_events_EventFilters().Lindigo_shared_events_EventFilters__f_viewModelFilter).collect__s_PartialFunction__sci_List(new $c_Lindigo_entry_ScenesFrameProcessor$$anonfun$2(this$13));
             $m_Lindigo_shared_Outcome$();
             const state$2 = this$1.viewModelState__O();
             const z$1 = new $c_Lindigo_shared_Outcome(state$2, $m_sci_Nil$());
             let acc$2 = z$1;
-            let these$1 = this$22;
+            let these$1 = this$24;
             while ((!these$1.isEmpty__Z())) {
               const arg1$3 = acc$2;
               const arg2$1 = these$1.head__O();
               const acc$3 = $as_Lindigo_shared_Outcome(arg1$3);
               const e$3 = $as_Lindigo_shared_events_GlobalEvent(arg2$1);
-              const this$23 = $m_Lindigo_shared_Outcome$();
+              const this$25 = $m_Lindigo_shared_Outcome$();
               $m_Lindigo_shared_Outcome$();
               const arg1$4 = acc$3.Lindigo_shared_Outcome__f_state;
-              const state$3 = $as_Lindigo_shared_Outcome($as_F1(this$13.Lindigo_entry_StandardFrameProcessor__f_viewModelUpdate.apply__O__O__O__O(frameContext, updatedModel.Lindigo_shared_Outcome__f_state, arg1$4)).apply__O__O(e$3));
-              const this$26 = new $c_Lindigo_shared_Outcome(state$3, $m_sci_Nil$());
+              const state$3 = $as_Lindigo_shared_Outcome(this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateViewModel__Lindigo_shared_FrameContext__O__O__F1(frameContext, updatedModel.Lindigo_shared_Outcome__f_state, arg1$4).apply__O__O(e$3));
+              const this$28 = new $c_Lindigo_shared_Outcome(state$3, $m_sci_Nil$());
               const arg1$5 = acc$3.Lindigo_shared_Outcome__f_globalEvents;
-              acc$2 = this$23.join__Lindigo_shared_Outcome__Lindigo_shared_Outcome($m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$26, arg1$5));
+              acc$2 = this$25.join__Lindigo_shared_Outcome__Lindigo_shared_Outcome($m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$28, arg1$5));
               these$1 = $as_sc_LinearSeq(these$1.tail__O())
             };
             const updatedViewModel = $as_Lindigo_shared_Outcome(acc$2);
-            const this$28 = $as_Lindigo_shared_scenegraph_SceneUpdateFragment(this$13.Lindigo_entry_StandardFrameProcessor__f_viewUpdate.apply__O__O__O__O(frameContext, updatedModel.Lindigo_shared_Outcome__f_state, updatedViewModel.Lindigo_shared_Outcome__f_state));
-            const other = this$13.Lindigo_entry_StandardFrameProcessor__f_subSystemsRegister.present__Lindigo_shared_subsystems_SubSystemFrameContext__Lindigo_shared_scenegraph_SceneUpdateFragment(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext());
-            const view = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$().append__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment(this$28, other);
-            const this$30 = $m_Lindigo_shared_Outcome$().combine3__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome(updatedModel, updatedViewModel, ($m_Lindigo_shared_Outcome$(), new $c_Lindigo_shared_Outcome(view, $m_sci_Nil$())));
-            const processedFrame = $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$30, subSystemEvents);
+            const this$30 = this$13.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateView__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(frameContext, updatedModel.Lindigo_shared_Outcome__f_state, updatedViewModel.Lindigo_shared_Outcome__f_state);
+            const other = this$13.Lindigo_entry_ScenesFrameProcessor__f_subSystemsRegister.present__Lindigo_shared_subsystems_SubSystemFrameContext__Lindigo_shared_scenegraph_SceneUpdateFragment(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext());
+            const view = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$().append__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment(this$30, other);
+            const this$32 = $m_Lindigo_shared_Outcome$().combine3__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome(updatedModel, updatedViewModel, ($m_Lindigo_shared_Outcome$(), new $c_Lindigo_shared_Outcome(view, $m_sci_Nil$())));
+            const processedFrame = $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$32, subSystemEvents);
             this$1.gameModelState_$eq__O__V($as_T3(processedFrame.Lindigo_shared_Outcome__f_state).T3__f__1);
             this$1.viewModelState_$eq__O__V($as_T3(processedFrame.Lindigo_shared_Outcome__f_state).T3__f__2);
-            const this$31 = processedFrame.Lindigo_shared_Outcome__f_globalEvents;
-            let these$2 = this$31;
+            const this$33 = processedFrame.Lindigo_shared_Outcome__f_globalEvents;
+            let these$2 = this$33;
             while ((!these$2.isEmpty__Z())) {
               const arg1$6 = these$2.head__O();
               const e$1 = $as_Lindigo_shared_events_GlobalEvent(arg1$6);
@@ -1580,8 +1316,8 @@ class $c_Lindigo_gameengine_GameLoop extends $c_O {
               these$2 = $as_sci_List(these$2.tail__O())
             };
             const scene = $as_Lindigo_shared_scenegraph_SceneUpdateFragment($as_T3(processedFrame.Lindigo_shared_Outcome__f_state).T3__f__3);
-            const this$32 = scene.Lindigo_shared_scenegraph_SceneUpdateFragment__f_globalEvents;
-            let these$3 = this$32;
+            const this$34 = scene.Lindigo_shared_scenegraph_SceneUpdateFragment__f_globalEvents;
+            let these$3 = this$34;
             while ((!these$3.isEmpty__Z())) {
               const arg1$7 = these$3.head__O();
               const e$3$1 = $as_Lindigo_shared_events_GlobalEvent(arg1$7);
@@ -1615,11 +1351,11 @@ class $c_Lindigo_gameengine_GameLoop extends $c_O {
             this$1.Lindigo_gameengine_GameLoop__f_gameEngine.audioPlayer__Lindigo_platform_audio_AudioPlayer().playAudio__Lindigo_shared_scenegraph_SceneAudio__V(scene.Lindigo_shared_scenegraph_SceneUpdateFragment__f_audio);
             const $$x14 = this$1.Lindigo_gameengine_GameLoop__f_sceneProcessor;
             const $$x13 = this$1.Lindigo_gameengine_GameLoop__f_gameEngine.assetMapping__Lindigo_shared_platform_AssetMapping();
-            const this$33 = this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer();
-            const sceneData = $$x14.processScene__Lindigo_shared_time_GameTime__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_platform_AssetMapping__D__D__Lindigo_shared_datatypes_Matrix4__Lindigo_shared_platform_ProcessedSceneData(gameTime, scene, $$x13, this$33.lastWidth__I(), this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer().screenHeight__I(), this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer().orthographicProjectionMatrix__Lindigo_shared_datatypes_Matrix4());
+            const this$35 = this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer();
+            const sceneData = $$x14.processScene__Lindigo_shared_time_GameTime__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_platform_AssetMapping__D__D__Lindigo_shared_datatypes_Matrix4__Lindigo_shared_platform_ProcessedSceneData(gameTime, scene, $$x13, this$35.lastWidth__I(), this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer().screenHeight__I(), this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer().orthographicProjectionMatrix__Lindigo_shared_datatypes_Matrix4());
             this$1.Lindigo_gameengine_GameLoop__f_gameEngine.renderer__Lindigo_platform_renderer_Renderer().drawScene__Lindigo_shared_platform_ProcessedSceneData__V(sceneData)
           } else {
-            const this$34 = this$1.Lindigo_gameengine_GameLoop__f_frameProcessor;
+            const this$36 = this$1.Lindigo_gameengine_GameLoop__f_frameProcessor;
             const startUpData$4 = new $c_sjsr_AnonFunction0(((this$9$1, startUpData$3) => (() => startUpData$3))(this$1, startUpData));
             const inputState$1 = $p_Lindigo_gameengine_GameLoop__inputState__Lindigo_shared_events_InputState(this$1);
             const boundaryLocator$1 = this$1.Lindigo_gameengine_GameLoop__f_boundaryLocator;
@@ -1634,26 +1370,28 @@ class $c_Lindigo_gameengine_GameLoop extends $c_O {
               const arg2$2 = these$4.head__O();
               const acc$5 = $as_Lindigo_shared_Outcome(arg1$8);
               const e$2 = $as_Lindigo_shared_events_GlobalEvent(arg2$2);
-              const this$36 = $m_Lindigo_shared_Outcome$();
+              const this$38 = $m_Lindigo_shared_Outcome$();
               $m_Lindigo_shared_Outcome$();
               const arg1$9 = acc$5.Lindigo_shared_Outcome__f_state;
-              const state$5 = $as_Lindigo_shared_Outcome($as_F1(this$34.Lindigo_entry_StandardFrameProcessor__f_modelUpdate.apply__O__O__O(frameContext$1, arg1$9)).apply__O__O(e$2));
-              const this$39 = new $c_Lindigo_shared_Outcome(state$5, $m_sci_Nil$());
+              const state$5 = $as_Lindigo_shared_Outcome(this$36.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateModel__Lindigo_shared_FrameContext__O__F1(frameContext$1, arg1$9).apply__O__O(e$2));
+              const this$41 = new $c_Lindigo_shared_Outcome(state$5, $m_sci_Nil$());
               const arg1$10 = acc$5.Lindigo_shared_Outcome__f_globalEvents;
-              acc$4 = this$36.join__Lindigo_shared_Outcome__Lindigo_shared_Outcome($m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$39, arg1$10));
+              acc$4 = this$38.join__Lindigo_shared_Outcome__Lindigo_shared_Outcome($m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$41, arg1$10));
               these$4 = $as_sc_LinearSeq(these$4.tail__O())
             };
             const updatedModel$1 = $as_Lindigo_shared_Outcome(acc$4);
-            const subSystemEvents$1 = this$34.Lindigo_entry_StandardFrameProcessor__f_subSystemsRegister.update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext$1).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents).Lindigo_shared_Outcome__f_globalEvents;
+            const this$44 = this$36.Lindigo_entry_ScenesFrameProcessor__f_subSystemsRegister.update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext$1).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents).Lindigo_shared_Outcome__f_globalEvents;
+            const suffix$1 = this$36.Lindigo_entry_ScenesFrameProcessor__f_sceneManager.updateSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__sci_List(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext$1).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext(), collectedEvents);
+            const subSystemEvents$1 = this$44.appendedAll__sc_IterableOnce__sci_List(suffix$1);
             const $$x15 = $m_Lindigo_shared_Outcome$();
             $m_Lindigo_shared_Outcome$();
             const state$6 = this$1.viewModelState__O();
-            const this$42 = $$x15.combine__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome(updatedModel$1, new $c_Lindigo_shared_Outcome(state$6, $m_sci_Nil$()));
-            const processedFrame$2 = $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$42, subSystemEvents$1);
+            const this$46 = $$x15.combine__Lindigo_shared_Outcome__Lindigo_shared_Outcome__Lindigo_shared_Outcome(updatedModel$1, new $c_Lindigo_shared_Outcome(state$6, $m_sci_Nil$()));
+            const processedFrame$2 = $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$46, subSystemEvents$1);
             this$1.gameModelState_$eq__O__V($as_T2(processedFrame$2.Lindigo_shared_Outcome__f_state)._1__O());
             this$1.viewModelState_$eq__O__V($as_T2(processedFrame$2.Lindigo_shared_Outcome__f_state)._2__O());
-            const this$43 = processedFrame$2.Lindigo_shared_Outcome__f_globalEvents;
-            let these$5 = this$43;
+            const this$47 = processedFrame$2.Lindigo_shared_Outcome__f_globalEvents;
+            let these$5 = this$47;
             while ((!these$5.isEmpty__Z())) {
               const arg1$11 = these$5.head__O();
               const e$7 = $as_Lindigo_shared_events_GlobalEvent(arg1$11);
@@ -6124,6 +5862,732 @@ const $d_Lindigo_platform_storage_Storage = new $TypeData().initClass({
   O: 1
 });
 $c_Lindigo_platform_storage_Storage.prototype.$classData = $d_Lindigo_platform_storage_Storage;
+class $c_Lindigo_scenes_Lens$ extends $c_O {
+  keepLatest__Lindigo_scenes_Lens() {
+    const getter = new $c_sjsr_AnonFunction1(((this$1) => ((x$2) => x$2))(this));
+    const setter = new $c_sjsr_AnonFunction2(((this$2$1) => ((x$2$2$2, a$2) => a$2))(this));
+    return new $c_Lindigo_scenes_Lens$$anon$1(getter, setter)
+  };
+}
+const $d_Lindigo_scenes_Lens$ = new $TypeData().initClass({
+  Lindigo_scenes_Lens$: 0
+}, false, "indigo.scenes.Lens$", {
+  Lindigo_scenes_Lens$: 1,
+  O: 1
+});
+$c_Lindigo_scenes_Lens$.prototype.$classData = $d_Lindigo_scenes_Lens$;
+let $n_Lindigo_scenes_Lens$ = (void 0);
+function $m_Lindigo_scenes_Lens$() {
+  if ((!$n_Lindigo_scenes_Lens$)) {
+    $n_Lindigo_scenes_Lens$ = new $c_Lindigo_scenes_Lens$()
+  };
+  return $n_Lindigo_scenes_Lens$
+}
+function $is_Lindigo_scenes_Scene(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lindigo_scenes_Scene)))
+}
+function $as_Lindigo_scenes_Scene(obj) {
+  return (($is_Lindigo_scenes_Scene(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.scenes.Scene"))
+}
+function $isArrayOf_Lindigo_scenes_Scene(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_scenes_Scene)))
+}
+function $asArrayOf_Lindigo_scenes_Scene(obj, depth) {
+  return (($isArrayOf_Lindigo_scenes_Scene(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.scenes.Scene;", depth))
+}
+class $c_Lindigo_scenes_Scene$ extends $c_O {
+  updateModel__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__F1(scene, context, gameModel) {
+    return new $c_sjsr_AnonFunction1(((this$1, scene$1, context$1, gameModel$1) => ((e$2) => {
+      const e = $as_Lindigo_shared_events_GlobalEvent(e$2);
+      const this$2 = $as_Lindigo_shared_Outcome(scene$1.updateModel__Lindigo_shared_FrameContext__O__F1(context$1, scene$1.modelLens__Lindigo_scenes_Lens().get__O__O(gameModel$1)).apply__O__O(e));
+      $m_Lindigo_shared_Outcome$();
+      $m_Lindigo_shared_Outcome$();
+      const arg1 = this$2.Lindigo_shared_Outcome__f_state;
+      const state = scene$1.modelLens__Lindigo_scenes_Lens().set__O__O__O(gameModel$1, arg1);
+      const this$6 = new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$());
+      const arg1$1 = this$2.Lindigo_shared_Outcome__f_globalEvents;
+      return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$6, arg1$1)
+    }))(this, scene, context, gameModel))
+  };
+  updateViewModel__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__O__F1(scene, context, model, viewModel) {
+    return new $c_sjsr_AnonFunction1(((this$1, scene$1, context$1, model$1, viewModel$1) => ((e$2) => {
+      const e = $as_Lindigo_shared_events_GlobalEvent(e$2);
+      const this$2 = $as_Lindigo_shared_Outcome(scene$1.updateViewModel__Lindigo_shared_FrameContext__O__O__F1(context$1, scene$1.modelLens__Lindigo_scenes_Lens().get__O__O(model$1), scene$1.viewModelLens__Lindigo_scenes_Lens().get__O__O(viewModel$1)).apply__O__O(e));
+      $m_Lindigo_shared_Outcome$();
+      $m_Lindigo_shared_Outcome$();
+      const arg1 = this$2.Lindigo_shared_Outcome__f_state;
+      const state = scene$1.viewModelLens__Lindigo_scenes_Lens().set__O__O__O(viewModel$1, arg1);
+      const this$6 = new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$());
+      const arg1$1 = this$2.Lindigo_shared_Outcome__f_globalEvents;
+      return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$6, arg1$1)
+    }))(this, scene, context, model, viewModel))
+  };
+  updateView__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(scene, context, model, viewModel) {
+    return scene.present__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(context, scene.modelLens__Lindigo_scenes_Lens().get__O__O(model), scene.viewModelLens__Lindigo_scenes_Lens().get__O__O(viewModel))
+  };
+}
+const $d_Lindigo_scenes_Scene$ = new $TypeData().initClass({
+  Lindigo_scenes_Scene$: 0
+}, false, "indigo.scenes.Scene$", {
+  Lindigo_scenes_Scene$: 1,
+  O: 1
+});
+$c_Lindigo_scenes_Scene$.prototype.$classData = $d_Lindigo_scenes_Scene$;
+let $n_Lindigo_scenes_Scene$ = (void 0);
+function $m_Lindigo_scenes_Scene$() {
+  if ((!$n_Lindigo_scenes_Scene$)) {
+    $n_Lindigo_scenes_Scene$ = new $c_Lindigo_scenes_Scene$()
+  };
+  return $n_Lindigo_scenes_Scene$
+}
+class $c_Lindigo_scenes_SceneFinder extends $c_O {
+  constructor(previous, current, next) {
+    super();
+    this.Lindigo_scenes_SceneFinder__f_previous = null;
+    this.Lindigo_scenes_SceneFinder__f_current = null;
+    this.Lindigo_scenes_SceneFinder__f_next = null;
+    this.Lindigo_scenes_SceneFinder__f_sceneCount = 0;
+    this.Lindigo_scenes_SceneFinder__f_bitmap$init$0 = false;
+    this.Lindigo_scenes_SceneFinder__f_previous = previous;
+    this.Lindigo_scenes_SceneFinder__f_current = current;
+    this.Lindigo_scenes_SceneFinder__f_next = next;
+    this.Lindigo_scenes_SceneFinder__f_sceneCount = this.toList__sci_List().length__I();
+    this.Lindigo_scenes_SceneFinder__f_bitmap$init$0 = true
+  };
+  sceneCount__I() {
+    if ((!this.Lindigo_scenes_SceneFinder__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo/src/main/scala/indigo/scenes/SceneFinder.scala: 12")
+    };
+    return this.Lindigo_scenes_SceneFinder__f_sceneCount
+  };
+  toList__sci_List() {
+    const this$5 = this.Lindigo_scenes_SceneFinder__f_previous;
+    $m_sci_List$();
+    const array = [this.Lindigo_scenes_SceneFinder__f_current];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const suffix = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
+    const this$6 = this$5.appendedAll__sc_IterableOnce__sci_List(suffix);
+    const suffix$1 = this.Lindigo_scenes_SceneFinder__f_next;
+    return this$6.appendedAll__sc_IterableOnce__sci_List(suffix$1)
+  };
+  forward__Lindigo_scenes_SceneFinder() {
+    const x1 = this.Lindigo_scenes_SceneFinder__f_next;
+    const x = $m_sci_Nil$();
+    if (x.equals__O__Z(x1)) {
+      return this
+    } else if ((x1 instanceof $c_sci_$colon$colon)) {
+      const x2 = $as_sci_$colon$colon(x1);
+      const x$3 = $as_Lindigo_scenes_ScenePosition(x2.sci_$colon$colon__f_head);
+      const xs = x2.sci_$colon$colon__f_next;
+      $m_Lindigo_scenes_SceneFinder$();
+      const this$1 = this.Lindigo_scenes_SceneFinder__f_previous;
+      const elem = this.Lindigo_scenes_SceneFinder__f_current;
+      const previous = $as_sci_List($f_sc_StrictOptimizedSeqOps__appended__O__O(this$1, elem));
+      return new $c_Lindigo_scenes_SceneFinder(previous, x$3, xs)
+    } else {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+  backward__Lindigo_scenes_SceneFinder() {
+    const x1 = this.Lindigo_scenes_SceneFinder__f_previous.reverse__sci_List();
+    const x = $m_sci_Nil$();
+    if (x.equals__O__Z(x1)) {
+      return this
+    } else if ((x1 instanceof $c_sci_$colon$colon)) {
+      const x2 = $as_sci_$colon$colon(x1);
+      const x$3 = $as_Lindigo_scenes_ScenePosition(x2.sci_$colon$colon__f_head);
+      const xs = x2.sci_$colon$colon__f_next;
+      $m_Lindigo_scenes_SceneFinder$();
+      const previous = xs.reverse__sci_List();
+      const rassoc$1 = this.Lindigo_scenes_SceneFinder__f_current;
+      const this$1 = this.Lindigo_scenes_SceneFinder__f_next;
+      const next = new $c_sci_$colon$colon(rassoc$1, this$1);
+      return new $c_Lindigo_scenes_SceneFinder(previous, x$3, next)
+    } else {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+  jumpToSceneByPosition__I__Lindigo_scenes_SceneFinder(index) {
+    let _$this = this;
+    while (true) {
+      if ((index < 0)) {
+        return _$this
+      } else if ((index > _$this.sceneCount__I())) {
+        return _$this
+      } else {
+        $m_Lindigo_shared_EqualTo$();
+        const eq = $m_Lindigo_shared_EqualTo$().eqInt__Lindigo_shared_EqualTo();
+        const this$2 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(index, eq);
+        const other = _$this.Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_index;
+        if (this$2.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$2.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          return _$this
+        } else if ((index < _$this.Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_index)) {
+          _$this = _$this.backward__Lindigo_scenes_SceneFinder()
+        } else if ((index > _$this.Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_index)) {
+          _$this = _$this.forward__Lindigo_scenes_SceneFinder()
+        } else {
+          return _$this
+        }
+      }
+    }
+  };
+  jumpToSceneByName__T__Lindigo_scenes_SceneFinder(name) {
+    const this$1 = this.toList__sci_List();
+    let this$4;
+    _return: {
+      let these = this$1;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const p = $as_Lindigo_scenes_ScenePosition(arg1);
+        $m_Lindigo_shared_EqualTo$();
+        const value = new $c_Lindigo_scenes_SceneName(p.Lindigo_scenes_ScenePosition__f_name);
+        const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+        const this$3 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+        const other = new $c_Lindigo_scenes_SceneName(name);
+        if (this$3.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$3.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          this$4 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      this$4 = $m_s_None$()
+    };
+    let x1;
+    if (this$4.isEmpty__Z()) {
+      x1 = $m_s_None$()
+    } else {
+      const arg1$1 = this$4.get__O();
+      const p$3 = $as_Lindigo_scenes_ScenePosition(arg1$1);
+      x1 = new $c_s_Some(this.jumpToSceneByPosition__I__Lindigo_scenes_SceneFinder(p$3.Lindigo_scenes_ScenePosition__f_index))
+    };
+    if ((x1 instanceof $c_s_Some)) {
+      const x2 = $as_s_Some(x1);
+      const sf = $as_Lindigo_scenes_SceneFinder(x2.s_Some__f_value);
+      return sf
+    } else {
+      const x = $m_s_None$();
+      if ((x === x1)) {
+        $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Failed to find scene called: " + name), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+        return this
+      } else {
+        throw new $c_s_MatchError(x1)
+      }
+    }
+  };
+}
+function $as_Lindigo_scenes_SceneFinder(obj) {
+  return (((obj instanceof $c_Lindigo_scenes_SceneFinder) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.scenes.SceneFinder"))
+}
+function $isArrayOf_Lindigo_scenes_SceneFinder(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_scenes_SceneFinder)))
+}
+function $asArrayOf_Lindigo_scenes_SceneFinder(obj, depth) {
+  return (($isArrayOf_Lindigo_scenes_SceneFinder(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.scenes.SceneFinder;", depth))
+}
+const $d_Lindigo_scenes_SceneFinder = new $TypeData().initClass({
+  Lindigo_scenes_SceneFinder: 0
+}, false, "indigo.scenes.SceneFinder", {
+  Lindigo_scenes_SceneFinder: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneFinder.prototype.$classData = $d_Lindigo_scenes_SceneFinder;
+class $c_Lindigo_scenes_SceneFinder$ extends $c_O {
+  constructor() {
+    super();
+    this.Lindigo_scenes_SceneFinder$__f_scenesFinderEqualTo = null;
+    this.Lindigo_scenes_SceneFinder$__f_bitmap$init$0 = false;
+    $n_Lindigo_scenes_SceneFinder$ = this;
+    const e = $m_Lindigo_shared_EqualTo$().eqList__Lindigo_shared_EqualTo__Lindigo_shared_EqualTo($m_Lindigo_scenes_ScenePosition$().EqScenePosition__Lindigo_shared_EqualTo());
+    const e$1 = $m_Lindigo_scenes_ScenePosition$().EqScenePosition__Lindigo_shared_EqualTo();
+    $m_Lindigo_shared_EqualTo$();
+    const f = new $c_sjsr_AnonFunction2(((this$3, eqL, eqP) => ((a$2, b$2) => {
+      const a = $as_Lindigo_scenes_SceneFinder(a$2);
+      const b = $as_Lindigo_scenes_SceneFinder(b$2);
+      return ((eqL.equal__O__O__Z(a.Lindigo_scenes_SceneFinder__f_previous, b.Lindigo_scenes_SceneFinder__f_previous) && eqP.equal__O__O__Z(a.Lindigo_scenes_SceneFinder__f_current, b.Lindigo_scenes_SceneFinder__f_current)) && eqL.equal__O__O__Z(a.Lindigo_scenes_SceneFinder__f_next, b.Lindigo_scenes_SceneFinder__f_next))
+    }))(this, e, e$1));
+    this.Lindigo_scenes_SceneFinder$__f_scenesFinderEqualTo = new $c_Lindigo_shared_EqualTo$$anon$1(f);
+    this.Lindigo_scenes_SceneFinder$__f_bitmap$init$0 = true
+  };
+  fromScenes__Lindigo_shared_collections_NonEmptyList__Lindigo_scenes_SceneFinder(scenesList) {
+    const f = ((this$1) => ((x$1$2) => {
+      const x$1 = $as_Lindigo_scenes_Scene(x$1$2);
+      return new $c_Lindigo_scenes_SceneName(x$1.name__T())
+    }))(this);
+    const arg1 = scenesList.head__O();
+    const headItem = f(arg1);
+    const this$3 = scenesList.tail__sci_List();
+    let tailItems;
+    if ((this$3 === $m_sci_Nil$())) {
+      tailItems = $m_sci_Nil$()
+    } else {
+      const arg1$1 = this$3.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$3.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$2 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$2), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      tailItems = h
+    };
+    const this$4 = new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(headItem, tailItems);
+    const this$5 = $m_Lindigo_shared_collections_NonEmptyList$().zipWithIndex__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList(this$4);
+    const f$1 = ((this$2$1) => ((p$2) => {
+      const p = $as_T2(p$2);
+      return new $c_Lindigo_scenes_ScenePosition($uI(p._2__O()), $as_Lindigo_scenes_SceneName(p._1__O()).Lindigo_scenes_SceneName__f_name)
+    }))(this);
+    const arg1$3 = this$5.head__O();
+    const headItem$1 = f$1(arg1$3);
+    const this$7 = this$5.tail__sci_List();
+    let tailItems$1;
+    if ((this$7 === $m_sci_Nil$())) {
+      tailItems$1 = $m_sci_Nil$()
+    } else {
+      const arg1$4 = this$7.head__O();
+      const h$1 = new $c_sci_$colon$colon(f$1(arg1$4), $m_sci_Nil$());
+      let t$1 = h$1;
+      let rest$1 = $as_sci_List(this$7.tail__O());
+      while ((rest$1 !== $m_sci_Nil$())) {
+        const arg1$5 = rest$1.head__O();
+        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$5), $m_sci_Nil$());
+        t$1.sci_$colon$colon__f_next = nx$1;
+        t$1 = nx$1;
+        rest$1 = $as_sci_List(rest$1.tail__O())
+      };
+      tailItems$1 = h$1
+    };
+    const a = new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(headItem$1, tailItems$1);
+    $m_Lindigo_scenes_SceneFinder$();
+    const previous = $m_sci_Nil$();
+    const current = $as_Lindigo_scenes_ScenePosition(a.head__O());
+    const next = a.tail__sci_List();
+    return new $c_Lindigo_scenes_SceneFinder(previous, current, next)
+  };
+}
+const $d_Lindigo_scenes_SceneFinder$ = new $TypeData().initClass({
+  Lindigo_scenes_SceneFinder$: 0
+}, false, "indigo.scenes.SceneFinder$", {
+  Lindigo_scenes_SceneFinder$: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneFinder$.prototype.$classData = $d_Lindigo_scenes_SceneFinder$;
+let $n_Lindigo_scenes_SceneFinder$ = (void 0);
+function $m_Lindigo_scenes_SceneFinder$() {
+  if ((!$n_Lindigo_scenes_SceneFinder$)) {
+    $n_Lindigo_scenes_SceneFinder$ = new $c_Lindigo_scenes_SceneFinder$()
+  };
+  return $n_Lindigo_scenes_SceneFinder$
+}
+const $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder = (function($thiz) {
+  if (((((1 & $thiz.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24) === 0)) {
+    throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo/src/main/scala/indigo/scenes/SceneManager.scala: 19")
+  };
+  return $thiz.Lindigo_scenes_SceneManager__f_finderInstance
+});
+const $p_Lindigo_scenes_SceneManager__finderInstance_$eq__Lindigo_scenes_SceneFinder__V = (function($thiz, x$1) {
+  $thiz.Lindigo_scenes_SceneManager__f_finderInstance = x$1;
+  $thiz.Lindigo_scenes_SceneManager__f_bitmap$init$0 = (((1 | $thiz.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24)
+});
+const $p_Lindigo_scenes_SceneManager__subSystemStates__sci_Map = (function($thiz) {
+  if (((((2 & $thiz.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24) === 0)) {
+    throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo/src/main/scala/indigo/scenes/SceneManager.scala: 22")
+  };
+  return $thiz.Lindigo_scenes_SceneManager__f_subSystemStates
+});
+class $c_Lindigo_scenes_SceneManager extends $c_O {
+  constructor(scenes, scenesFinder) {
+    super();
+    this.Lindigo_scenes_SceneManager__f_scenes = null;
+    this.Lindigo_scenes_SceneManager__f_finderInstance = null;
+    this.Lindigo_scenes_SceneManager__f_subSystemStates = null;
+    this.Lindigo_scenes_SceneManager__f_defaultFilter = null;
+    this.Lindigo_scenes_SceneManager__f_bitmap$init$0 = 0;
+    this.Lindigo_scenes_SceneManager__f_scenes = scenes;
+    this.Lindigo_scenes_SceneManager__f_finderInstance = scenesFinder;
+    this.Lindigo_scenes_SceneManager__f_bitmap$init$0 = (((1 | this.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24);
+    const this$6 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(scenes);
+    const f = ((this$1) => ((s$2) => {
+      const s = $as_Lindigo_scenes_Scene(s$2);
+      const r = new $c_Lindigo_shared_subsystems_SubSystemsRegister($m_sci_Nil$());
+      const this$2 = s.subSystems__sci_Set();
+      $m_sci_List$();
+      r.register__sci_List__V($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$2));
+      const self = new $c_Lindigo_scenes_SceneName(s.name__T());
+      return $ct_T2__O__O__(new $c_T2(), self, r)
+    }))(this);
+    let this$8;
+    if ((this$6 === $m_sci_Nil$())) {
+      this$8 = $m_sci_Nil$()
+    } else {
+      const arg1 = this$6.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$6.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      this$8 = h
+    };
+    $m_s_$less$colon$less$();
+    this.Lindigo_scenes_SceneManager__f_subSystemStates = $m_sci_Map$().from__sc_IterableOnce__sci_Map(this$8);
+    this.Lindigo_scenes_SceneManager__f_bitmap$init$0 = (((2 | this.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24);
+    this.Lindigo_scenes_SceneManager__f_defaultFilter = new $c_sjsr_AnonFunction1(((this$2$1) => ((e$2) => {
+      const e = $as_Lindigo_shared_events_GlobalEvent(e$2);
+      return new $c_s_Some(e)
+    }))(this));
+    this.Lindigo_scenes_SceneManager__f_bitmap$init$0 = (((4 | this.Lindigo_scenes_SceneManager__f_bitmap$init$0) << 24) >> 24)
+  };
+  updateModel__Lindigo_shared_FrameContext__O__F1(frameContext, model) {
+    return new $c_sjsr_AnonFunction1(((this$1, model$1, frameContext$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
+      const x = $m_Lindigo_scenes_SceneEvent$Next$();
+      if ((x === x0$1)) {
+        $p_Lindigo_scenes_SceneManager__finderInstance_$eq__Lindigo_scenes_SceneFinder__V(this$1, $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this$1).forward__Lindigo_scenes_SceneFinder());
+        $m_Lindigo_shared_Outcome$();
+        return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+      } else {
+        const x$3 = $m_Lindigo_scenes_SceneEvent$Previous$();
+        if ((x$3 === x0$1)) {
+          $p_Lindigo_scenes_SceneManager__finderInstance_$eq__Lindigo_scenes_SceneFinder__V(this$1, $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this$1).backward__Lindigo_scenes_SceneFinder());
+          $m_Lindigo_shared_Outcome$();
+          return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+        } else if ((x0$1 instanceof $c_Lindigo_scenes_SceneEvent$JumpTo)) {
+          const x2 = $as_Lindigo_scenes_SceneEvent$JumpTo(x0$1);
+          const name = x2.Lindigo_scenes_SceneEvent$JumpTo__f_name;
+          $p_Lindigo_scenes_SceneManager__finderInstance_$eq__Lindigo_scenes_SceneFinder__V(this$1, $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this$1).jumpToSceneByName__T__Lindigo_scenes_SceneFinder(name));
+          $m_Lindigo_shared_Outcome$();
+          return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+        } else {
+          const this$5 = this$1.Lindigo_scenes_SceneManager__f_scenes;
+          const this$7 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$5);
+          let x1$2;
+          _return: {
+            let these = this$7;
+            while ((!these.isEmpty__Z())) {
+              const arg1 = these.head__O();
+              const x$1 = $as_Lindigo_scenes_Scene(arg1);
+              $m_Lindigo_shared_EqualTo$();
+              const value = new $c_Lindigo_scenes_SceneName(x$1.name__T());
+              const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+              const this$9 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+              const other = new $c_Lindigo_scenes_SceneName($p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this$1).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name);
+              if (this$9.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$9.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+                x1$2 = new $c_s_Some(these.head__O());
+                break _return
+              };
+              these = $as_sci_List(these.tail__O())
+            };
+            x1$2 = $m_s_None$()
+          };
+          const x$5 = $m_s_None$();
+          if ((x$5 === x1$2)) {
+            $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Could not find scene called: " + $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this$1).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+            $m_Lindigo_shared_Outcome$();
+            return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+          } else if ((x1$2 instanceof $c_s_Some)) {
+            const x2$2 = $as_s_Some(x1$2);
+            const scene = $as_Lindigo_scenes_Scene(x2$2.s_Some__f_value);
+            return $as_Lindigo_shared_Outcome($m_Lindigo_scenes_Scene$().updateModel__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__F1(scene, frameContext$1, model$1).apply__O__O(x0$1))
+          } else {
+            throw new $c_s_MatchError(x1$2)
+          }
+        }
+      }
+    }))(this, model, frameContext))
+  };
+  updateSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__sci_List(frameContext, globalEvents) {
+    const this$1 = this.Lindigo_scenes_SceneManager__f_scenes;
+    const this$3 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1);
+    let this$6;
+    _return: {
+      let these = this$3;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$2 = $as_Lindigo_scenes_Scene(arg1);
+        $m_Lindigo_shared_EqualTo$();
+        const value = new $c_Lindigo_scenes_SceneName(x$2.name__T());
+        const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+        const this$5 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+        const other = new $c_Lindigo_scenes_SceneName($p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name);
+        if (this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          this$6 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      this$6 = $m_s_None$()
+    };
+    let this$8;
+    if (this$6.isEmpty__Z()) {
+      this$8 = $m_s_None$()
+    } else {
+      const arg1$1 = this$6.get__O();
+      const scene = $as_Lindigo_scenes_Scene(arg1$1);
+      const this$7 = $p_Lindigo_scenes_SceneManager__subSystemStates__sci_Map(this).get__O__s_Option(new $c_Lindigo_scenes_SceneName(scene.name__T()));
+      if (this$7.isEmpty__Z()) {
+        this$8 = $m_s_None$()
+      } else {
+        const arg1$2 = this$7.get__O();
+        const x$3 = $as_Lindigo_shared_subsystems_SubSystemsRegister(arg1$2);
+        this$8 = new $c_s_Some(x$3.update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(frameContext, globalEvents).Lindigo_shared_Outcome__f_globalEvents)
+      }
+    };
+    return $as_sci_List((this$8.isEmpty__Z() ? $m_sci_Nil$() : this$8.get__O()))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__O__O__F1(frameContext, model, viewModel) {
+    const this$1 = this.Lindigo_scenes_SceneManager__f_scenes;
+    const this$3 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1);
+    let x1;
+    _return: {
+      let these = this$3;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$4 = $as_Lindigo_scenes_Scene(arg1);
+        $m_Lindigo_shared_EqualTo$();
+        const value = new $c_Lindigo_scenes_SceneName(x$4.name__T());
+        const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+        const this$5 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+        const other = new $c_Lindigo_scenes_SceneName($p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name);
+        if (this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          x1 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      x1 = $m_s_None$()
+    };
+    const x = $m_s_None$();
+    if ((x === x1)) {
+      $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Could not find scene called: " + $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+      return new $c_sjsr_AnonFunction1(((this$2$1, viewModel$1) => ((x$5$2) => {
+        $as_Lindigo_shared_events_GlobalEvent(x$5$2);
+        $m_Lindigo_shared_Outcome$();
+        return new $c_Lindigo_shared_Outcome(viewModel$1, $m_sci_Nil$())
+      }))(this, viewModel))
+    } else if ((x1 instanceof $c_s_Some)) {
+      const x2 = $as_s_Some(x1);
+      const scene = $as_Lindigo_scenes_Scene(x2.s_Some__f_value);
+      return $m_Lindigo_scenes_Scene$().updateViewModel__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__O__F1(scene, frameContext, model, viewModel)
+    } else {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+  updateView__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(frameContext, model, viewModel) {
+    const this$1 = this.Lindigo_scenes_SceneManager__f_scenes;
+    const this$3 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1);
+    let x1;
+    _return: {
+      let these = this$3;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$6 = $as_Lindigo_scenes_Scene(arg1);
+        $m_Lindigo_shared_EqualTo$();
+        const value = new $c_Lindigo_scenes_SceneName(x$6.name__T());
+        const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+        const this$5 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+        const other = new $c_Lindigo_scenes_SceneName($p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name);
+        if (this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          x1 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      x1 = $m_s_None$()
+    };
+    const x = $m_s_None$();
+    if ((x === x1)) {
+      $m_Lindigo_shared_IndigoLogger$().errorOnce__O__Lindigo_shared_AsString__V(("Could not find scene called: " + $p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name), $m_Lindigo_shared_AsString$().stringShow__Lindigo_shared_AsString());
+      const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+      const $$x8 = $m_sci_Nil$();
+      const $$x7 = $m_sci_Nil$();
+      const $$x6 = $m_sci_Nil$();
+      const $$x5 = $m_sci_Nil$();
+      const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+      const $$x3 = $m_sci_Nil$();
+      const $$x2 = $m_sci_Nil$();
+      const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+      const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+      const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+      return $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$())
+    } else if ((x1 instanceof $c_s_Some)) {
+      const x2 = $as_s_Some(x1);
+      const scene = $as_Lindigo_scenes_Scene(x2.s_Some__f_value);
+      const this$9 = $p_Lindigo_scenes_SceneManager__subSystemStates__sci_Map(this).get__O__s_Option(new $c_Lindigo_scenes_SceneName(scene.name__T()));
+      let this$11;
+      if (this$9.isEmpty__Z()) {
+        this$11 = $m_s_None$()
+      } else {
+        const arg1$1 = this$9.get__O();
+        const ssr = $as_Lindigo_shared_subsystems_SubSystemsRegister(arg1$1);
+        this$11 = new $c_s_Some(ssr.present__Lindigo_shared_subsystems_SubSystemFrameContext__Lindigo_shared_scenegraph_SceneUpdateFragment(new $c_Lindigo_shared_subsystems_SubSystemFrameContext$FrameContextForSubSystems(frameContext).forSubSystems__Lindigo_shared_subsystems_SubSystemFrameContext()))
+      };
+      let $$x10;
+      if (this$11.isEmpty__Z()) {
+        const $$x19 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+        const $$x18 = $m_sci_Nil$();
+        const $$x17 = $m_sci_Nil$();
+        const $$x16 = $m_sci_Nil$();
+        const $$x15 = $m_sci_Nil$();
+        const $$x14 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+        const $$x13 = $m_sci_Nil$();
+        const $$x12 = $m_sci_Nil$();
+        const $$x11 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+        const gameColorOverlay$1 = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+        const uiColorOverlay$1 = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+        $$x10 = $$x19.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x18, $$x17, $$x16, $$x15, $$x14, $$x13, $$x12, $$x11, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay$1, uiColorOverlay$1), $m_sci_Nil$())
+      } else {
+        $$x10 = this$11.get__O()
+      };
+      const subsystemView = $as_Lindigo_shared_scenegraph_SceneUpdateFragment($$x10);
+      const this$15 = $m_Lindigo_scenes_Scene$().updateView__Lindigo_scenes_Scene__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(scene, frameContext, model, viewModel);
+      return $m_Lindigo_shared_scenegraph_SceneUpdateFragment$().append__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment(this$15, subsystemView)
+    } else {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+  eventFilters__Lindigo_shared_events_EventFilters() {
+    const this$1 = this.Lindigo_scenes_SceneManager__f_scenes;
+    const this$3 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1);
+    let x1;
+    _return: {
+      let these = this$3;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const x$7 = $as_Lindigo_scenes_Scene(arg1);
+        $m_Lindigo_shared_EqualTo$();
+        const value = new $c_Lindigo_scenes_SceneName(x$7.name__T());
+        const eq = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+        const this$5 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq);
+        const other = new $c_Lindigo_scenes_SceneName($p_Lindigo_scenes_SceneManager__finderInstance__Lindigo_scenes_SceneFinder(this).Lindigo_scenes_SceneFinder__f_current.Lindigo_scenes_ScenePosition__f_name);
+        if (this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$5.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
+          x1 = new $c_s_Some(these.head__O());
+          break _return
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      x1 = $m_s_None$()
+    };
+    const x = $m_s_None$();
+    if ((x === x1)) {
+      return $m_Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters()
+    } else if ((x1 instanceof $c_s_Some)) {
+      const x2 = $as_s_Some(x1);
+      const value$1 = $as_Lindigo_scenes_Scene(x2.s_Some__f_value);
+      return value$1.eventFilters__Lindigo_shared_events_EventFilters()
+    } else {
+      throw new $c_s_MatchError(x1)
+    }
+  };
+}
+const $d_Lindigo_scenes_SceneManager = new $TypeData().initClass({
+  Lindigo_scenes_SceneManager: 0
+}, false, "indigo.scenes.SceneManager", {
+  Lindigo_scenes_SceneManager: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneManager.prototype.$classData = $d_Lindigo_scenes_SceneManager;
+class $c_Lindigo_scenes_SceneManager$ extends $c_O {
+  apply__Lindigo_shared_collections_NonEmptyList__T__Lindigo_scenes_SceneManager(scenes, initialScene) {
+    return new $c_Lindigo_scenes_SceneManager(scenes, $m_Lindigo_scenes_SceneFinder$().fromScenes__Lindigo_shared_collections_NonEmptyList__Lindigo_scenes_SceneFinder(scenes).jumpToSceneByName__T__Lindigo_scenes_SceneFinder(initialScene))
+  };
+}
+const $d_Lindigo_scenes_SceneManager$ = new $TypeData().initClass({
+  Lindigo_scenes_SceneManager$: 0
+}, false, "indigo.scenes.SceneManager$", {
+  Lindigo_scenes_SceneManager$: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneManager$.prototype.$classData = $d_Lindigo_scenes_SceneManager$;
+let $n_Lindigo_scenes_SceneManager$ = (void 0);
+function $m_Lindigo_scenes_SceneManager$() {
+  if ((!$n_Lindigo_scenes_SceneManager$)) {
+    $n_Lindigo_scenes_SceneManager$ = new $c_Lindigo_scenes_SceneManager$()
+  };
+  return $n_Lindigo_scenes_SceneManager$
+}
+class $c_Lindigo_scenes_SceneName extends $c_O {
+  constructor(name) {
+    super();
+    this.Lindigo_scenes_SceneName__f_name = null;
+    this.Lindigo_scenes_SceneName__f_name = name
+  };
+  hashCode__I() {
+    $m_Lindigo_scenes_SceneName$();
+    const this$ = this.Lindigo_scenes_SceneName__f_name;
+    return $f_T__hashCode__I(this$)
+  };
+  equals__O__Z(x$1) {
+    return $m_Lindigo_scenes_SceneName$().equals$extension__T__O__Z(this.Lindigo_scenes_SceneName__f_name, x$1)
+  };
+}
+function $as_Lindigo_scenes_SceneName(obj) {
+  return (((obj instanceof $c_Lindigo_scenes_SceneName) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.scenes.SceneName"))
+}
+function $isArrayOf_Lindigo_scenes_SceneName(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_scenes_SceneName)))
+}
+function $asArrayOf_Lindigo_scenes_SceneName(obj, depth) {
+  return (($isArrayOf_Lindigo_scenes_SceneName(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.scenes.SceneName;", depth))
+}
+const $d_Lindigo_scenes_SceneName = new $TypeData().initClass({
+  Lindigo_scenes_SceneName: 0
+}, false, "indigo.scenes.SceneName", {
+  Lindigo_scenes_SceneName: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneName.prototype.$classData = $d_Lindigo_scenes_SceneName;
+class $c_Lindigo_scenes_SceneName$ extends $c_O {
+  constructor() {
+    super();
+    this.Lindigo_scenes_SceneName$__f_EqSceneName = null;
+    this.Lindigo_scenes_SceneName$__f_bitmap$init$0 = false;
+    $n_Lindigo_scenes_SceneName$ = this;
+    const e = $m_Lindigo_shared_EqualTo$().eqString__Lindigo_shared_EqualTo();
+    $m_Lindigo_shared_EqualTo$();
+    const f = new $c_sjsr_AnonFunction2(((this$2, eq) => ((a$2, b$2) => {
+      const a = $as_Lindigo_scenes_SceneName(a$2).Lindigo_scenes_SceneName__f_name;
+      const b = $as_Lindigo_scenes_SceneName(b$2).Lindigo_scenes_SceneName__f_name;
+      return eq.equal__O__O__Z(a, b)
+    }))(this, e));
+    this.Lindigo_scenes_SceneName$__f_EqSceneName = new $c_Lindigo_shared_EqualTo$$anon$1(f);
+    this.Lindigo_scenes_SceneName$__f_bitmap$init$0 = true
+  };
+  EqSceneName__Lindigo_shared_EqualTo() {
+    if ((!this.Lindigo_scenes_SceneName$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo/src/main/scala/indigo/scenes/Scene.scala: 50")
+    };
+    return this.Lindigo_scenes_SceneName$__f_EqSceneName
+  };
+  equals$extension__T__O__Z(this$, x$1) {
+    if ((x$1 instanceof $c_Lindigo_scenes_SceneName)) {
+      const SceneName$1 = ((x$1 === null) ? null : $as_Lindigo_scenes_SceneName(x$1).Lindigo_scenes_SceneName__f_name);
+      return (this$ === SceneName$1)
+    } else {
+      return false
+    }
+  };
+}
+const $d_Lindigo_scenes_SceneName$ = new $TypeData().initClass({
+  Lindigo_scenes_SceneName$: 0
+}, false, "indigo.scenes.SceneName$", {
+  Lindigo_scenes_SceneName$: 1,
+  O: 1
+});
+$c_Lindigo_scenes_SceneName$.prototype.$classData = $d_Lindigo_scenes_SceneName$;
+let $n_Lindigo_scenes_SceneName$ = (void 0);
+function $m_Lindigo_scenes_SceneName$() {
+  if ((!$n_Lindigo_scenes_SceneName$)) {
+    $n_Lindigo_scenes_SceneName$ = new $c_Lindigo_scenes_SceneName$()
+  };
+  return $n_Lindigo_scenes_SceneName$
+}
 const $p_Lindigo_shared_AnimationsRegister__animationRegistry__scm_HashMap = (function($thiz) {
   if (((((1 & $thiz.Lindigo_shared_AnimationsRegister__f_bitmap$init$0) << 24) >> 24) === 0)) {
     throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/AnimationsRegister.scala: 13")
@@ -7050,15 +7514,6 @@ class $c_Lindigo_shared_FrameContext extends $c_O {
     };
     return this.Lindigo_shared_FrameContext__f_delta
   };
-}
-function $as_Lindigo_shared_FrameContext(obj) {
-  return (((obj instanceof $c_Lindigo_shared_FrameContext) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.FrameContext"))
-}
-function $isArrayOf_Lindigo_shared_FrameContext(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_shared_FrameContext)))
-}
-function $asArrayOf_Lindigo_shared_FrameContext(obj, depth) {
-  return (($isArrayOf_Lindigo_shared_FrameContext(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.FrameContext;", depth))
 }
 const $d_Lindigo_shared_FrameContext = new $TypeData().initClass({
   Lindigo_shared_FrameContext: 0
@@ -8484,6 +8939,16 @@ function $m_Lindigo_shared_audio_Volume$() {
   };
   return $n_Lindigo_shared_audio_Volume$
 }
+function $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List($thiz) {
+  const rassoc$1 = $thiz.head__O();
+  const this$1 = $thiz.tail__sci_List();
+  return new $c_sci_$colon$colon(rassoc$1, this$1)
+}
+function $f_Lindigo_shared_collections_NonEmptyList__toString__T($thiz) {
+  const $$x1 = $thiz.head__O();
+  const this$1 = $thiz.tail__sci_List();
+  return (((("NonEmptyList[" + $$x1) + "][") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$1, "", ", ", "")) + "]")
+}
 function $is_Lindigo_shared_collections_NonEmptyList(obj) {
   return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lindigo_shared_collections_NonEmptyList)))
 }
@@ -8499,14 +8964,35 @@ function $asArrayOf_Lindigo_shared_collections_NonEmptyList(obj, depth) {
 class $c_Lindigo_shared_collections_NonEmptyList$ extends $c_O {
   showNonEmptyList__Lindigo_shared_AsString__Lindigo_shared_AsString(showA) {
     $m_Lindigo_shared_AsString$();
-    const f = new $c_sjsr_AnonFunction1(((this$1, showA$1) => ((l$2) => {
+    const f$1 = new $c_sjsr_AnonFunction1(((this$1, showA$1) => ((l$2) => {
       const l = $as_Lindigo_shared_collections_NonEmptyList(l$2);
-      const s = l.map__F1__Lindigo_shared_collections_NonEmptyList(new $c_sjsr_AnonFunction1(((this$2, showA$1$1) => ((a$2) => showA$1$1.show__O__T(a$2)))(this$1, showA$1)));
+      const f = ((this$2, showA$1$1) => ((a$2) => showA$1$1.show__O__T(a$2)))(this$1, showA$1);
+      const arg1 = l.head__O();
+      const headItem = f(arg1);
+      const this$4 = l.tail__sci_List();
+      let tailItems;
+      if ((this$4 === $m_sci_Nil$())) {
+        tailItems = $m_sci_Nil$()
+      } else {
+        const arg1$1 = this$4.head__O();
+        const h = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        let t = h;
+        let rest = $as_sci_List(this$4.tail__O());
+        while ((rest !== $m_sci_Nil$())) {
+          const arg1$2 = rest.head__O();
+          const nx = new $c_sci_$colon$colon(f(arg1$2), $m_sci_Nil$());
+          t.sci_$colon$colon__f_next = nx;
+          t = nx;
+          rest = $as_sci_List(rest.tail__O())
+        };
+        tailItems = h
+      };
+      const s = new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(headItem, tailItems);
       const $$x1 = s.head__O();
-      const this$3 = s.tail__sci_List();
-      return (((("NonEmptyList[" + $$x1) + "][") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$3, "", ", ", "")) + "]")
+      const this$5 = s.tail__sci_List();
+      return (((("NonEmptyList[" + $$x1) + "][") + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$5, "", ", ", "")) + "]")
     }))(this, showA));
-    return new $c_Lindigo_shared_AsString$$anon$1(f)
+    return new $c_Lindigo_shared_AsString$$anon$1(f$1)
   };
   equalToNonEmptyList__Lindigo_shared_EqualTo__Lindigo_shared_EqualTo(eq) {
     $m_Lindigo_shared_EqualTo$();
@@ -8519,18 +9005,63 @@ class $c_Lindigo_shared_collections_NonEmptyList$ extends $c_O {
   };
   equality__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_EqualTo__Z(a, b, eq) {
     $m_Lindigo_shared_EqualTo$();
-    const value = a.length__I();
+    const value = $m_Lindigo_shared_collections_NonEmptyList$().length__Lindigo_shared_collections_NonEmptyList__I(a);
     const eq$1 = $m_Lindigo_shared_EqualTo$().eqInt__Lindigo_shared_EqualTo();
     const this$2 = new $c_Lindigo_shared_EqualTo$EqualToSyntax(value, eq$1);
-    const other = b.length__I();
+    const other = $m_Lindigo_shared_collections_NonEmptyList$().length__Lindigo_shared_collections_NonEmptyList__I(b);
     if (this$2.Lindigo_shared_EqualTo$EqualToSyntax__f_eq.equal__O__O__Z(this$2.Lindigo_shared_EqualTo$EqualToSyntax__f_value, other)) {
-      return a.zip__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList(b).forall__F1__Z(new $c_sjsr_AnonFunction1(((this$3, eq$2) => ((as$2) => {
-        const as = $as_T2(as$2);
-        return eq$2.equal__O__O__Z(as._1__O(), as._2__O())
-      }))(this, eq)))
+      const this$3 = $m_Lindigo_shared_collections_NonEmptyList$().zip__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList(a, b);
+      const this$5 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$3);
+      let these = this$5;
+      while ((!these.isEmpty__Z())) {
+        const arg1 = these.head__O();
+        const as = $as_T2(arg1);
+        if ((!eq.equal__O__O__Z(as._1__O(), as._2__O()))) {
+          return false
+        };
+        these = $as_sci_List(these.tail__O())
+      };
+      return true
     } else {
       return false
     }
+  };
+  length__Lindigo_shared_collections_NonEmptyList__I(fa) {
+    return ((1 + fa.tail__sci_List().length__I()) | 0)
+  };
+  zipWithIndex__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList(fa) {
+    const headItem = $ct_T2__O__O__(new $c_T2(), fa.head__O(), 0);
+    const this$1 = fa.tail__sci_List();
+    const this$3 = $as_sci_List($f_sc_StrictOptimizedIterableOps__zipWithIndex__O(this$1));
+    const f = ((this$2) => ((p$2) => {
+      const p = $as_T2(p$2);
+      return $ct_T2__O__O__(new $c_T2(), p._1__O(), ((1 + $uI(p._2__O())) | 0))
+    }))(this);
+    let tailItems;
+    if ((this$3 === $m_sci_Nil$())) {
+      tailItems = $m_sci_Nil$()
+    } else {
+      const arg1 = this$3.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$3.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      tailItems = h
+    };
+    return new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(headItem, tailItems)
+  };
+  zip__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList__Lindigo_shared_collections_NonEmptyList(fa, fb) {
+    const headItem = $ct_T2__O__O__(new $c_T2(), fa.head__O(), fb.head__O());
+    const this$1 = fa.tail__sci_List();
+    const that = fb.tail__sci_List();
+    const tailItems = $as_sci_List($f_sc_StrictOptimizedIterableOps__zip__sc_IterableOnce__O(this$1, that));
+    return new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(headItem, tailItems)
   };
 }
 const $d_Lindigo_shared_collections_NonEmptyList$ = new $TypeData().initClass({
@@ -15491,6 +16022,19 @@ class $c_Lindigo_shared_scenegraph_SceneUpdateFragment extends $c_O {
     const cloneBlanks = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_cloneBlanks;
     return new $c_Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, lightingLayer, distortionLayer, uiLayer, ambientLight, lights, globalEvents, audio, screenEffects, cloneBlanks)
   };
+  addUiLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(nodes) {
+    const gameLayer = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_gameLayer;
+    const lightingLayer = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_lightingLayer;
+    const distortionLayer = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_distortionLayer;
+    const uiLayer = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_uiLayer.$plus$plus__sci_List__Lindigo_shared_scenegraph_SceneLayer(nodes);
+    const ambientLight = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_ambientLight;
+    const lights = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_lights;
+    const globalEvents = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_globalEvents;
+    const audio = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_audio;
+    const screenEffects = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_screenEffects;
+    const cloneBlanks = this.Lindigo_shared_scenegraph_SceneUpdateFragment__f_cloneBlanks;
+    return new $c_Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, lightingLayer, distortionLayer, uiLayer, ambientLight, lights, globalEvents, audio, screenEffects, cloneBlanks)
+  };
 }
 function $as_Lindigo_shared_scenegraph_SceneUpdateFragment(obj) {
   return (((obj instanceof $c_Lindigo_shared_scenegraph_SceneUpdateFragment) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.scenegraph.SceneUpdateFragment"))
@@ -15895,6 +16439,10 @@ const $p_Lindigo_shared_subsystems_SubSystemsRegister__registeredSubSystems__sci
   };
   return $thiz.Lindigo_shared_subsystems_SubSystemsRegister__f_registeredSubSystems
 });
+const $p_Lindigo_shared_subsystems_SubSystemsRegister__registeredSubSystems_$eq__sci_List__V = (function($thiz, x$1) {
+  $thiz.Lindigo_shared_subsystems_SubSystemsRegister__f_registeredSubSystems = x$1;
+  $thiz.Lindigo_shared_subsystems_SubSystemsRegister__f_bitmap$init$0 = (((2 | $thiz.Lindigo_shared_subsystems_SubSystemsRegister__f_bitmap$init$0) << 24) >> 24)
+});
 const $p_Lindigo_shared_subsystems_SubSystemsRegister__initialiseSubSystem__Lindigo_shared_subsystems_SubSystem__Lindigo_shared_subsystems_RegisteredSubSystem = (function($thiz, subSystem) {
   const key = $m_ju_UUID$().randomUUID__ju_UUID().toString__T();
   const res = new $c_Lindigo_shared_subsystems_RegisteredSubSystem(key, subSystem);
@@ -15938,6 +16486,31 @@ class $c_Lindigo_shared_subsystems_SubSystemsRegister extends $c_O {
       throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/subsystems/SubSystemsRegister.scala: 15")
     };
     return this.Lindigo_shared_subsystems_SubSystemsRegister__f_stateMap
+  };
+  register__sci_List__V(newSubSystems) {
+    const this$2 = $p_Lindigo_shared_subsystems_SubSystemsRegister__registeredSubSystems__sci_List(this);
+    const f = ((this$1) => ((subSystem$2) => {
+      const subSystem = $as_Lindigo_shared_subsystems_SubSystem(subSystem$2);
+      return $p_Lindigo_shared_subsystems_SubSystemsRegister__initialiseSubSystem__Lindigo_shared_subsystems_SubSystem__Lindigo_shared_subsystems_RegisteredSubSystem(this$1, subSystem)
+    }))(this);
+    let suffix;
+    if ((newSubSystems === $m_sci_Nil$())) {
+      suffix = $m_sci_Nil$()
+    } else {
+      const arg1 = newSubSystems.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(newSubSystems.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      suffix = h
+    };
+    $p_Lindigo_shared_subsystems_SubSystemsRegister__registeredSubSystems_$eq__sci_List__V(this, this$2.appendedAll__sc_IterableOnce__sci_List(suffix))
   };
   update__Lindigo_shared_subsystems_SubSystemFrameContext__sci_List__Lindigo_shared_Outcome(frameContext, globalEvents) {
     const this$1 = $p_Lindigo_shared_subsystems_SubSystemsRegister__registeredSubSystems__sci_List(this);
@@ -16033,6 +16606,15 @@ class $c_Lindigo_shared_subsystems_SubSystemsRegister extends $c_O {
     };
     return $as_Lindigo_shared_scenegraph_SceneUpdateFragment(acc)
   };
+}
+function $as_Lindigo_shared_subsystems_SubSystemsRegister(obj) {
+  return (((obj instanceof $c_Lindigo_shared_subsystems_SubSystemsRegister) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.shared.subsystems.SubSystemsRegister"))
+}
+function $isArrayOf_Lindigo_shared_subsystems_SubSystemsRegister(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_shared_subsystems_SubSystemsRegister)))
+}
+function $asArrayOf_Lindigo_shared_subsystems_SubSystemsRegister(obj, depth) {
+  return (($isArrayOf_Lindigo_shared_subsystems_SubSystemsRegister(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.subsystems.SubSystemsRegister;", depth))
 }
 const $d_Lindigo_shared_subsystems_SubSystemsRegister = new $TypeData().initClass({
   Lindigo_shared_subsystems_SubSystemsRegister: 0
@@ -16539,6 +17121,522 @@ function $m_Lindigo_shared_time_Seconds$() {
     $n_Lindigo_shared_time_Seconds$ = new $c_Lindigo_shared_time_Seconds$()
   };
   return $n_Lindigo_shared_time_Seconds$
+}
+class $c_Linvaders_GameAssets$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_GameAssets$__f_skrillexAsset = null;
+    this.Linvaders_GameAssets$__f_shotAsset = null;
+    this.Linvaders_GameAssets$__f_grandmaAsset = null;
+    this.Linvaders_GameAssets$__f_splatAsset = null;
+    this.Linvaders_GameAssets$__f_bgAsset = null;
+    this.Linvaders_GameAssets$__f_shotSoundAsset = null;
+    this.Linvaders_GameAssets$__f_fontAssetName = null;
+    this.Linvaders_GameAssets$__f_assets = null;
+    this.Linvaders_GameAssets$__f_fontKey = null;
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = 0;
+    $n_Linvaders_GameAssets$ = this;
+    this.Linvaders_GameAssets$__f_skrillexAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "skrillex");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (1 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_shotAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "shot");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (2 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_grandmaAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "grandma");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (4 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_splatAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "splat");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (8 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_bgAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "bg");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (16 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_shotSoundAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "shotSound");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (32 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_fontAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "font");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (64 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    const this$25 = $m_s_Predef$().s_Predef$__f_Set;
+    const name = this.skrillexAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path = "assets/skrillex.png";
+    const $$x6 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
+    const name$1 = this.shotAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$1 = "assets/Wave2.png";
+    const $$x5 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
+    const name$2 = this.grandmaAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$2 = "assets/Granny.png";
+    const $$x4 = new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$());
+    const name$3 = this.splatAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$3 = "assets/splat.png";
+    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name$3, path$3, $m_s_None$());
+    const name$4 = this.bgAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$4 = "assets/bg.png";
+    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$4, path$4, $m_s_None$());
+    const name$5 = this.shotSoundAsset__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$5 = "assets/drop.m4a";
+    const $$x1 = new $c_Lindigo_shared_assets_AssetType$Audio(name$5, path$5);
+    const name$6 = this.fontAssetName__T();
+    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
+    const path$6 = "assets/boxy_font.png";
+    const array = [$$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_assets_AssetType$Image(name$6, path$6, $m_s_None$())];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    this.Linvaders_GameAssets$__f_assets = this$25.from__sc_IterableOnce__sci_Set(elems);
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (128 | this.Linvaders_GameAssets$__f_bitmap$init$0);
+    this.Linvaders_GameAssets$__f_fontKey = ($m_Lindigo_package$().FontKey__Lindigo_shared_datatypes_FontKey$(), "font");
+    this.Linvaders_GameAssets$__f_bitmap$init$0 = (256 | this.Linvaders_GameAssets$__f_bitmap$init$0)
+  };
+  skrillexAsset__T() {
+    if (((1 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 7")
+    };
+    return this.Linvaders_GameAssets$__f_skrillexAsset
+  };
+  shotAsset__T() {
+    if (((2 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 8")
+    };
+    return this.Linvaders_GameAssets$__f_shotAsset
+  };
+  grandmaAsset__T() {
+    if (((4 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 9")
+    };
+    return this.Linvaders_GameAssets$__f_grandmaAsset
+  };
+  splatAsset__T() {
+    if (((8 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 10")
+    };
+    return this.Linvaders_GameAssets$__f_splatAsset
+  };
+  bgAsset__T() {
+    if (((16 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 11")
+    };
+    return this.Linvaders_GameAssets$__f_bgAsset
+  };
+  shotSoundAsset__T() {
+    if (((32 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 12")
+    };
+    return this.Linvaders_GameAssets$__f_shotSoundAsset
+  };
+  fontAssetName__T() {
+    if (((64 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 13")
+    };
+    return this.Linvaders_GameAssets$__f_fontAssetName
+  };
+  assets__sci_Set() {
+    if (((128 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 14")
+    };
+    return this.Linvaders_GameAssets$__f_assets
+  };
+  fontKey__T() {
+    if (((256 & this.Linvaders_GameAssets$__f_bitmap$init$0) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/GameAssets.scala: 25")
+    };
+    return this.Linvaders_GameAssets$__f_fontKey
+  };
+  fontInfo__T__Lindigo_shared_datatypes_FontInfo(fontAssetName) {
+    const this$2 = $m_Lindigo_package$().FontInfo__Lindigo_shared_datatypes_FontInfo$().apply__T__Lindigo_shared_datatypes_Material__I__I__Lindigo_shared_datatypes_FontChar__sci_Seq__Lindigo_shared_datatypes_FontInfo(this.fontKey__T(), new $c_Lindigo_shared_datatypes_Material$Textured(fontAssetName, false), 320, 230, $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23), $m_sci_Nil$());
+    const fontChar = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("A", 3, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey = this$2.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet = this$2.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$2);
+    const caseSensitive = this$2.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$4 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey, fontSpriteSheet, fontChar, fontChars, caseSensitive);
+    const fontChar$1 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("B", 26, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$1 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$4);
+    const caseSensitive$1 = this$4.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$6 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$1, fontSpriteSheet$1, fontChar$1, fontChars$1, caseSensitive$1);
+    const fontChar$2 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("C", 50, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$2 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$6);
+    const caseSensitive$2 = this$6.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$8 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$2, fontSpriteSheet$2, fontChar$2, fontChars$2, caseSensitive$2);
+    const fontChar$3 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("D", 73, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$3 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$8);
+    const caseSensitive$3 = this$8.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$10 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$3, fontSpriteSheet$3, fontChar$3, fontChars$3, caseSensitive$3);
+    const fontChar$4 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("E", 96, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$4 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$10);
+    const caseSensitive$4 = this$10.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$12 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$4, fontSpriteSheet$4, fontChar$4, fontChars$4, caseSensitive$4);
+    const fontChar$5 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("F", 119, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$5 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$12);
+    const caseSensitive$5 = this$12.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$14 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$5, fontSpriteSheet$5, fontChar$5, fontChars$5, caseSensitive$5);
+    const fontChar$6 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("G", 142, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$6 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$14);
+    const caseSensitive$6 = this$14.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$16 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$6, fontSpriteSheet$6, fontChar$6, fontChars$6, caseSensitive$6);
+    const fontChar$7 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("H", 165, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$7 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$16);
+    const caseSensitive$7 = this$16.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$18 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$7, fontSpriteSheet$7, fontChar$7, fontChars$7, caseSensitive$7);
+    const fontChar$8 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("I", 188, 78, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$8 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$18);
+    const caseSensitive$8 = this$18.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$20 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$8, fontSpriteSheet$8, fontChar$8, fontChars$8, caseSensitive$8);
+    const fontChar$9 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("J", 202, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$9 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$20);
+    const caseSensitive$9 = this$20.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$22 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$9, fontSpriteSheet$9, fontChar$9, fontChars$9, caseSensitive$9);
+    const fontChar$10 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("K", 225, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$10 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$22);
+    const caseSensitive$10 = this$22.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$24 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$10, fontSpriteSheet$10, fontChar$10, fontChars$10, caseSensitive$10);
+    const fontChar$11 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("L", 248, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$11 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$24);
+    const caseSensitive$11 = this$24.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$26 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$11, fontSpriteSheet$11, fontChar$11, fontChars$11, caseSensitive$11);
+    const fontChar$12 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("M", 271, 78, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$12 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$26);
+    const caseSensitive$12 = this$26.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$28 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$12, fontSpriteSheet$12, fontChar$12, fontChars$12, caseSensitive$12);
+    const fontChar$13 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("N", 3, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$13 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$28);
+    const caseSensitive$13 = this$28.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$30 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$13, fontSpriteSheet$13, fontChar$13, fontChars$13, caseSensitive$13);
+    const fontChar$14 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("O", 29, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$14 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$30);
+    const caseSensitive$14 = this$30.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$32 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$14, fontSpriteSheet$14, fontChar$14, fontChars$14, caseSensitive$14);
+    const fontChar$15 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("P", 54, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$15 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$32);
+    const caseSensitive$15 = this$32.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$34 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$15, fontSpriteSheet$15, fontChar$15, fontChars$15, caseSensitive$15);
+    const fontChar$16 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Q", 75, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$16 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$34);
+    const caseSensitive$16 = this$34.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$36 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$16, fontSpriteSheet$16, fontChar$16, fontChars$16, caseSensitive$16);
+    const fontChar$17 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("R", 101, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$17 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$36);
+    const caseSensitive$17 = this$36.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$38 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$17, fontSpriteSheet$17, fontChar$17, fontChars$17, caseSensitive$17);
+    const fontChar$18 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("S", 124, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$18 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$38);
+    const caseSensitive$18 = this$38.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$40 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$18, fontSpriteSheet$18, fontChar$18, fontChars$18, caseSensitive$18);
+    const fontChar$19 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("T", 148, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$19 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$40);
+    const caseSensitive$19 = this$40.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$42 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$19, fontSpriteSheet$19, fontChar$19, fontChars$19, caseSensitive$19);
+    const fontChar$20 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("U", 173, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$20 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$42);
+    const caseSensitive$20 = this$42.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$44 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$20, fontSpriteSheet$20, fontChar$20, fontChars$20, caseSensitive$20);
+    const fontChar$21 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("V", 197, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$21 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$44);
+    const caseSensitive$21 = this$44.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$46 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$21, fontSpriteSheet$21, fontChar$21, fontChars$21, caseSensitive$21);
+    const fontChar$22 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("W", 220, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$22 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$46);
+    const caseSensitive$22 = this$46.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$48 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$22, fontSpriteSheet$22, fontChar$22, fontChars$22, caseSensitive$22);
+    const fontChar$23 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("X", 248, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$23 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$48);
+    const caseSensitive$23 = this$48.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$50 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$23, fontSpriteSheet$23, fontChar$23, fontChars$23, caseSensitive$23);
+    const fontChar$24 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Y", 271, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$24 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$50);
+    const caseSensitive$24 = this$50.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$52 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$24, fontSpriteSheet$24, fontChar$24, fontChars$24, caseSensitive$24);
+    const fontChar$25 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("Z", 297, 104, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$25 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$52);
+    const caseSensitive$25 = this$52.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$54 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$25, fontSpriteSheet$25, fontChar$25, fontChars$25, caseSensitive$25);
+    const fontChar$26 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("0", 3, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$26 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$54);
+    const caseSensitive$26 = this$54.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$56 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$26, fontSpriteSheet$26, fontChar$26, fontChars$26, caseSensitive$26);
+    const fontChar$27 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("1", 26, 26, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$27 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$56);
+    const caseSensitive$27 = this$56.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$58 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$27, fontSpriteSheet$27, fontChar$27, fontChars$27, caseSensitive$27);
+    const fontChar$28 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("2", 41, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$28 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$58);
+    const caseSensitive$28 = this$58.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$60 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$28, fontSpriteSheet$28, fontChar$28, fontChars$28, caseSensitive$28);
+    const fontChar$29 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("3", 64, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$29 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$60);
+    const caseSensitive$29 = this$60.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$62 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$29, fontSpriteSheet$29, fontChar$29, fontChars$29, caseSensitive$29);
+    const fontChar$30 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("4", 87, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$30 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$62);
+    const caseSensitive$30 = this$62.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$64 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$30, fontSpriteSheet$30, fontChar$30, fontChars$30, caseSensitive$30);
+    const fontChar$31 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("5", 110, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$31 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$64);
+    const caseSensitive$31 = this$64.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$66 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$31, fontSpriteSheet$31, fontChar$31, fontChars$31, caseSensitive$31);
+    const fontChar$32 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("6", 133, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$32 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$66);
+    const caseSensitive$32 = this$66.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$68 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$32, fontSpriteSheet$32, fontChar$32, fontChars$32, caseSensitive$32);
+    const fontChar$33 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("7", 156, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$33 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$68);
+    const caseSensitive$33 = this$68.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$70 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$33, fontSpriteSheet$33, fontChar$33, fontChars$33, caseSensitive$33);
+    const fontChar$34 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("8", 179, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$34 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$70);
+    const caseSensitive$34 = this$70.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$72 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$34, fontSpriteSheet$34, fontChar$34, fontChars$34, caseSensitive$34);
+    const fontChar$35 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("9", 202, 26, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$35 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$72);
+    const caseSensitive$35 = this$72.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$74 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$35, fontSpriteSheet$35, fontChar$35, fontChars$35, caseSensitive$35);
+    const fontChar$36 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("?", 93, 52, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$36 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$74);
+    const caseSensitive$36 = this$74.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$76 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$36, fontSpriteSheet$36, fontChar$36, fontChars$36, caseSensitive$36);
+    const fontChar$37 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar("!", 3, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$37 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$76);
+    const caseSensitive$37 = this$76.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$78 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$37, fontSpriteSheet$37, fontChar$37, fontChars$37, caseSensitive$37);
+    const fontChar$38 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(".", 286, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$38 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$78);
+    const caseSensitive$38 = this$78.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$80 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$38, fontSpriteSheet$38, fontChar$38, fontChars$38, caseSensitive$38);
+    const fontChar$39 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(",", 248, 0, 15, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$39 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$80);
+    const caseSensitive$39 = this$80.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    const this$82 = new $c_Lindigo_shared_datatypes_FontInfo(fontKey$39, fontSpriteSheet$39, fontChar$39, fontChars$39, caseSensitive$39);
+    const fontChar$40 = $m_Lindigo_package$().FontChar__Lindigo_shared_datatypes_FontChar$().apply__T__I__I__I__I__Lindigo_shared_datatypes_FontChar(" ", 145, 52, 23, 23);
+    $m_Lindigo_shared_datatypes_FontInfo$();
+    const fontKey$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontKey;
+    const fontSpriteSheet$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_fontSpriteSheet;
+    const fontChars$40 = $p_Lindigo_shared_datatypes_FontInfo__nonEmptyChars__sci_List(this$82);
+    const caseSensitive$40 = this$82.Lindigo_shared_datatypes_FontInfo__f_caseSensitive;
+    return new $c_Lindigo_shared_datatypes_FontInfo(fontKey$40, fontSpriteSheet$40, fontChar$40, fontChars$40, caseSensitive$40)
+  };
+}
+const $d_Linvaders_GameAssets$ = new $TypeData().initClass({
+  Linvaders_GameAssets$: 0
+}, false, "invaders.GameAssets$", {
+  Linvaders_GameAssets$: 1,
+  O: 1
+});
+$c_Linvaders_GameAssets$.prototype.$classData = $d_Linvaders_GameAssets$;
+let $n_Linvaders_GameAssets$ = (void 0);
+function $m_Linvaders_GameAssets$() {
+  if ((!$n_Linvaders_GameAssets$)) {
+    $n_Linvaders_GameAssets$ = new $c_Linvaders_GameAssets$()
+  };
+  return $n_Linvaders_GameAssets$
+}
+class $c_Linvaders_Settings$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_Settings$__f_speed = 0.0;
+    this.Linvaders_Settings$__f_shotSpeed = 0.0;
+    this.Linvaders_Settings$__f_grandmaSpeed = 0.0;
+    this.Linvaders_Settings$__f_lives = 0;
+    this.Linvaders_Settings$__f_bloodFadeSpeed = 0.0;
+    this.Linvaders_Settings$__f_grandmaFadeSpeed = 0.0;
+    this.Linvaders_Settings$__f_config = null;
+    this.Linvaders_Settings$__f_bitmap$init$0 = 0;
+    $n_Linvaders_Settings$ = this;
+    this.Linvaders_Settings$__f_speed = 40.0;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((1 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_shotSpeed = 3.0;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((2 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_grandmaSpeed = 3.0;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((4 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_lives = 10;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((8 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_bloodFadeSpeed = 0.05;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((16 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_grandmaFadeSpeed = 0.05;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((32 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    $m_Lindigo_package$().GameConfig__Lindigo_shared_config_GameConfig$();
+    $m_Lindigo_package$().GameViewport__Lindigo_shared_config_GameViewport$();
+    const viewport = new $c_Lindigo_shared_config_GameViewport(1200, 800);
+    const clearColor = $m_Lindigo_package$().ClearColor__Lindigo_shared_ClearColor$().Black__Lindigo_shared_ClearColor();
+    this.Linvaders_Settings$__f_config = new $c_Lindigo_shared_config_GameConfig(viewport, 60, clearColor, 1, $m_Lindigo_shared_config_AdvancedGameConfig$().default__Lindigo_shared_config_AdvancedGameConfig());
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((64 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24)
+  };
+  shotSpeed__D() {
+    if (((((2 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 8")
+    };
+    return this.Linvaders_Settings$__f_shotSpeed
+  };
+  grandmaSpeed__D() {
+    if (((((4 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 9")
+    };
+    return this.Linvaders_Settings$__f_grandmaSpeed
+  };
+  lives__I() {
+    if (((((8 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 10")
+    };
+    return this.Linvaders_Settings$__f_lives
+  };
+  bloodFadeSpeed__D() {
+    if (((((16 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 11")
+    };
+    return this.Linvaders_Settings$__f_bloodFadeSpeed
+  };
+  grandmaFadeSpeed__D() {
+    if (((((32 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 12")
+    };
+    return this.Linvaders_Settings$__f_grandmaFadeSpeed
+  };
+  config__Lindigo_shared_config_GameConfig() {
+    if (((((64 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 14")
+    };
+    return this.Linvaders_Settings$__f_config
+  };
+}
+const $d_Linvaders_Settings$ = new $TypeData().initClass({
+  Linvaders_Settings$: 0
+}, false, "invaders.Settings$", {
+  Linvaders_Settings$: 1,
+  O: 1
+});
+$c_Linvaders_Settings$.prototype.$classData = $d_Linvaders_Settings$;
+let $n_Linvaders_Settings$ = (void 0);
+function $m_Linvaders_Settings$() {
+  if ((!$n_Linvaders_Settings$)) {
+    $n_Linvaders_Settings$ = new $c_Linvaders_Settings$()
+  };
+  return $n_Linvaders_Settings$
+}
+function $is_Linvaders_model_Horizontal(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Linvaders_model_Horizontal)))
+}
+function $as_Linvaders_model_Horizontal(obj) {
+  return (($is_Linvaders_model_Horizontal(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Horizontal"))
+}
+function $isArrayOf_Linvaders_model_Horizontal(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Horizontal)))
+}
+function $asArrayOf_Linvaders_model_Horizontal(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Horizontal(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Horizontal;", depth))
 }
 class $c_jl_Class extends $c_O {
   constructor(data0) {
@@ -18044,18 +19142,6 @@ function $m_ju_Arrays$() {
     $n_ju_Arrays$ = new $c_ju_Arrays$()
   };
   return $n_ju_Arrays$
-}
-function $is_Lmodel_Horizontal(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lmodel_Horizontal)))
-}
-function $as_Lmodel_Horizontal(obj) {
-  return (($is_Lmodel_Horizontal(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Horizontal"))
-}
-function $isArrayOf_Lmodel_Horizontal(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Horizontal)))
-}
-function $asArrayOf_Lmodel_Horizontal(obj, depth) {
-  return (($isArrayOf_Lmodel_Horizontal(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Horizontal;", depth))
 }
 class $c_Lorg_scalajs_dom_ext_Ajax$ extends $c_O {
   apply__T__T__Lorg_scalajs_dom_ext_Ajax$InputData__I__sci_Map__Z__T__s_concurrent_Future(method, url, data, timeout, headers, withCredentials, responseType) {
@@ -21782,68 +22868,72 @@ class $c_s_util_hashing_MurmurHash3 extends $c_O {
     }
   };
 }
-const $p_Lindigo_IndigoSandbox__indigoGame__Lindigo_gameengine_GameEngine = (function($thiz) {
-  const updateViewModel = new $c_sjsr_AnonFunction3(((this$1) => ((x$1$2, x$2$2, vm$2) => {
-    $as_Lindigo_shared_FrameContext(x$1$2);
-    const vm = $as_jl_Void(vm$2);
-    return new $c_sjsr_AnonFunction1(((this$2, vm$1) => ((x$3$2) => {
-      $as_Lindigo_shared_events_GlobalEvent(x$3$2);
-      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-      return new $c_Lindigo_shared_Outcome(vm$1, $m_sci_Nil$())
-    }))(this$1, vm))
-  }))($thiz));
-  const frameProcessor = new $c_Lindigo_entry_StandardFrameProcessor(new $c_Lindigo_shared_subsystems_SubSystemsRegister($m_sci_Nil$()), $m_Lindigo_package$().EventFilters__Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters(), new $c_sjsr_AnonFunction2(((this$2$1) => ((ctx$2, m$2) => {
-    const ctx = $as_Lindigo_shared_FrameContext(ctx$2);
-    return new $c_sjsr_AnonFunction1(((this$4, ctx$1, m) => ((e$2) => {
-      const e = $as_Lindigo_shared_events_GlobalEvent(e$2);
-      return $as_Lindigo_shared_Outcome(this$4.updateModel__Lindigo_shared_FrameContext__Lmodel_Model__F1(ctx$1, $as_Lmodel_Model(m)).apply__O__O(e))
-    }))(this$2$1, ctx, m$2))
-  }))($thiz)), updateViewModel, new $c_sjsr_AnonFunction3(((this$3$1) => ((ctx$3$2, m$3$2, x$4$2) => {
-    const ctx$3 = $as_Lindigo_shared_FrameContext(ctx$3$2);
-    $as_jl_Void(x$4$2);
-    return this$3$1.present__Lindigo_shared_FrameContext__Lmodel_Model__Lindigo_shared_scenegraph_SceneUpdateFragment(ctx$3, $as_Lmodel_Model(m$3$2))
-  }))($thiz)));
-  return new $c_Lindigo_gameengine_GameEngine($thiz.fonts__sci_Set(), $thiz.animations__sci_Set(), new $c_sjsr_AnonFunction1(((this$4$1) => ((ac$2) => {
+const $p_Lindigo_IndigoGame__indigoGame__Lindigo_BootResult__Lindigo_gameengine_GameEngine = (function($thiz, bootUp) {
+  const $$x1 = $thiz.indigo$IndigoGame$$subSystemsRegister__Lindigo_shared_subsystems_SubSystemsRegister();
+  const this$1 = bootUp.Lindigo_BootResult__f_subSystems;
+  $m_sci_List$();
+  $$x1.register__sci_List__V($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$1));
+  const bootData = bootUp.Lindigo_BootResult__f_bootData;
+  const s = $thiz.scenes__Lindigo_shared_config_GameViewport__Lindigo_shared_collections_NonEmptyList($as_Lindigo_shared_config_GameViewport(bootData));
+  const bootData$1 = bootUp.Lindigo_BootResult__f_bootData;
+  const x1 = $thiz.initialScene__Lindigo_shared_config_GameViewport__s_Option($as_Lindigo_shared_config_GameViewport(bootData$1));
+  let sceneManager;
+  if ((x1 instanceof $c_s_Some)) {
+    const x2 = $as_s_Some(x1);
+    const name = $as_Lindigo_scenes_SceneName(x2.s_Some__f_value).Lindigo_scenes_SceneName__f_name;
+    sceneManager = $m_Lindigo_scenes_SceneManager$().apply__Lindigo_shared_collections_NonEmptyList__T__Lindigo_scenes_SceneManager(s, name)
+  } else {
+    const x = $m_s_None$();
+    if ((!(x === x1))) {
+      throw new $c_s_MatchError(x1)
+    };
+    sceneManager = $m_Lindigo_scenes_SceneManager$().apply__Lindigo_shared_collections_NonEmptyList__T__Lindigo_scenes_SceneManager(s, $as_Lindigo_scenes_Scene(s.head__O()).name__T())
+  };
+  const frameProcessor = new $c_Lindigo_entry_ScenesFrameProcessor($thiz.indigo$IndigoGame$$subSystemsRegister__Lindigo_shared_subsystems_SubSystemsRegister(), sceneManager);
+  return new $c_Lindigo_gameengine_GameEngine(bootUp.Lindigo_BootResult__f_fonts, bootUp.Lindigo_BootResult__f_animations, new $c_sjsr_AnonFunction1(((this$3, bootUp$1) => ((ac$2) => {
     const ac = $as_Lindigo_platform_assets_AssetCollection(ac$2);
-    return new $c_sjsr_AnonFunction1(((this$5, ac$1) => ((d$2) => {
+    return new $c_sjsr_AnonFunction1(((this$4, bootUp$1$1, ac$1) => ((d$2) => {
       $as_Lindigo_shared_dice_Dice(d$2);
+      const bootData$2 = bootUp$1$1.Lindigo_BootResult__f_bootData;
+      $as_Lindigo_shared_config_GameViewport(bootData$2);
       return $m_Lindigo_shared_Startup$Success$().apply__O__Lindigo_shared_Startup$Success((void 0))
-    }))(this$4$1, ac))
-  }))($thiz)), new $c_sjsr_AnonFunction1(((this$5$1) => ((sd$2) => {
+    }))(this$3, bootUp$1, ac))
+  }))($thiz, bootUp)), new $c_sjsr_AnonFunction1(((this$2$1) => ((sd$2) => {
     $as_jl_Void(sd$2);
-    return $m_Lmodel_Model$().initial__Lindigo_shared_config_GameConfig__D__D__Lmodel_Model(this$5$1.config__Lindigo_shared_config_GameConfig(), this$5$1.shotSpeed__D(), this$5$1.grandmaSpeed__D())
-  }))($thiz)), new $c_sjsr_AnonFunction1(((this$6) => ((x$5$2) => new $c_sjsr_AnonFunction1(((this$7) => ((x$6$2) => (void 0)))(this$6))))($thiz)), frameProcessor)
+    return $m_Linvaders_model_Model$().initial__Lindigo_shared_config_GameConfig__D__D__Linvaders_model_Model($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig(), $m_Linvaders_Settings$().shotSpeed__D(), $m_Linvaders_Settings$().grandmaSpeed__D())
+  }))($thiz)), new $c_sjsr_AnonFunction1(((this$3$1) => ((sd$3$2) => new $c_sjsr_AnonFunction1(((this$5, sd) => ((m$2) => {
+    $as_jl_Void(sd);
+    $as_Linvaders_model_Model(m$2)
+  }))(this$3$1, sd$3$2))))($thiz)), frameProcessor)
 });
-function $f_Lindigo_IndigoSandbox__ready__sci_Map__V($thiz, flags) {
-  $p_Lindigo_IndigoSandbox__indigoGame__Lindigo_gameengine_GameEngine($thiz).start__Lindigo_shared_config_GameConfig__s_concurrent_Future__sci_Set__s_concurrent_Future__V($thiz.config__Lindigo_shared_config_GameConfig(), $m_s_concurrent_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction0(((this$1) => (() => $m_s_None$()))($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor()), $thiz.assets__sci_Set(), $m_s_concurrent_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
+function $f_Lindigo_IndigoGame__ready__sci_Map__V($thiz, flags) {
+  const b = $thiz.boot__sci_Map__Lindigo_BootResult(flags);
+  $p_Lindigo_IndigoGame__indigoGame__Lindigo_BootResult__Lindigo_gameengine_GameEngine($thiz, b).start__Lindigo_shared_config_GameConfig__s_concurrent_Future__sci_Set__s_concurrent_Future__V(b.Lindigo_BootResult__f_gameConfig, $m_s_concurrent_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction0(((this$1) => (() => $m_s_None$()))($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor()), b.Lindigo_BootResult__f_assets, $m_s_concurrent_Future$().apply__F0__s_concurrent_ExecutionContext__s_concurrent_Future(new $c_sjsr_AnonFunction0(((this$2$1) => (() => {
     const this$3 = $m_s_Predef$().s_Predef$__f_Set;
     const elems = $m_sci_Nil$();
     return this$3.from__sc_IterableOnce__sci_Set(elems)
   }))($thiz)), $m_s_concurrent_ExecutionContext$().global__s_concurrent_ExecutionContextExecutor()))
 }
-class $c_Lindigo_entry_StandardFrameProcessor extends $c_O {
-  constructor(subSystemsRegister, eventFilters, modelUpdate, viewModelUpdate, viewUpdate) {
+function $f_Lindigo_IndigoGame__$init$__V($thiz) {
+  $thiz.indigo$IndigoGame$_setter_$indigo$IndigoGame$$subSystemsRegister_$eq__Lindigo_shared_subsystems_SubSystemsRegister__V(new $c_Lindigo_shared_subsystems_SubSystemsRegister($m_sci_Nil$()))
+}
+class $c_Lindigo_entry_ScenesFrameProcessor extends $c_O {
+  constructor(subSystemsRegister, sceneManager) {
     super();
-    this.Lindigo_entry_StandardFrameProcessor__f_subSystemsRegister = null;
-    this.Lindigo_entry_StandardFrameProcessor__f_eventFilters = null;
-    this.Lindigo_entry_StandardFrameProcessor__f_modelUpdate = null;
-    this.Lindigo_entry_StandardFrameProcessor__f_viewModelUpdate = null;
-    this.Lindigo_entry_StandardFrameProcessor__f_viewUpdate = null;
-    this.Lindigo_entry_StandardFrameProcessor__f_subSystemsRegister = subSystemsRegister;
-    this.Lindigo_entry_StandardFrameProcessor__f_eventFilters = eventFilters;
-    this.Lindigo_entry_StandardFrameProcessor__f_modelUpdate = modelUpdate;
-    this.Lindigo_entry_StandardFrameProcessor__f_viewModelUpdate = viewModelUpdate;
-    this.Lindigo_entry_StandardFrameProcessor__f_viewUpdate = viewUpdate
+    this.Lindigo_entry_ScenesFrameProcessor__f_subSystemsRegister = null;
+    this.Lindigo_entry_ScenesFrameProcessor__f_sceneManager = null;
+    this.Lindigo_entry_ScenesFrameProcessor__f_subSystemsRegister = subSystemsRegister;
+    this.Lindigo_entry_ScenesFrameProcessor__f_sceneManager = sceneManager
   };
 }
-const $d_Lindigo_entry_StandardFrameProcessor = new $TypeData().initClass({
-  Lindigo_entry_StandardFrameProcessor: 0
-}, false, "indigo.entry.StandardFrameProcessor", {
-  Lindigo_entry_StandardFrameProcessor: 1,
+const $d_Lindigo_entry_ScenesFrameProcessor = new $TypeData().initClass({
+  Lindigo_entry_ScenesFrameProcessor: 0
+}, false, "indigo.entry.ScenesFrameProcessor", {
+  Lindigo_entry_ScenesFrameProcessor: 1,
   O: 1,
   Lindigo_gameengine_FrameProcessor: 1
 });
-$c_Lindigo_entry_StandardFrameProcessor.prototype.$classData = $d_Lindigo_entry_StandardFrameProcessor;
+$c_Lindigo_entry_ScenesFrameProcessor.prototype.$classData = $d_Lindigo_entry_ScenesFrameProcessor;
 class $c_Lindigo_platform_assets_AtlasQuadDivision$ extends $c_O {
   empty__Lindigo_shared_PowerOfTwo__Lindigo_platform_assets_AtlasQuadDivision(size) {
     return new $c_Lindigo_platform_assets_AtlasQuadDivision(new $c_Lindigo_platform_assets_AtlasQuadEmpty(size), new $c_Lindigo_platform_assets_AtlasQuadEmpty(size), new $c_Lindigo_platform_assets_AtlasQuadEmpty(size), new $c_Lindigo_platform_assets_AtlasQuadEmpty(size))
@@ -23058,6 +24148,68 @@ function $m_Lindigo_platform_shaders_WebGL2StandardPixelArt$() {
   };
   return $n_Lindigo_platform_shaders_WebGL2StandardPixelArt$
 }
+class $c_Lindigo_scenes_Lens$$anon$1 extends $c_O {
+  constructor(getter$1, setter$1) {
+    super();
+    this.Lindigo_scenes_Lens$$anon$1__f_getter$1 = null;
+    this.Lindigo_scenes_Lens$$anon$1__f_setter$1 = null;
+    this.Lindigo_scenes_Lens$$anon$1__f_getter$1 = getter$1;
+    this.Lindigo_scenes_Lens$$anon$1__f_setter$1 = setter$1
+  };
+  get__O__O(from) {
+    return this.Lindigo_scenes_Lens$$anon$1__f_getter$1.apply__O__O(from)
+  };
+  set__O__O__O(into, value) {
+    return this.Lindigo_scenes_Lens$$anon$1__f_setter$1.apply__O__O__O(into, value)
+  };
+}
+const $d_Lindigo_scenes_Lens$$anon$1 = new $TypeData().initClass({
+  Lindigo_scenes_Lens$$anon$1: 0
+}, false, "indigo.scenes.Lens$$anon$1", {
+  Lindigo_scenes_Lens$$anon$1: 1,
+  O: 1,
+  Lindigo_scenes_Lens: 1
+});
+$c_Lindigo_scenes_Lens$$anon$1.prototype.$classData = $d_Lindigo_scenes_Lens$$anon$1;
+class $c_Lindigo_scenes_ScenePosition$ extends $c_O {
+  constructor() {
+    super();
+    this.Lindigo_scenes_ScenePosition$__f_EqScenePosition = null;
+    this.Lindigo_scenes_ScenePosition$__f_bitmap$init$0 = false;
+    $n_Lindigo_scenes_ScenePosition$ = this;
+    const e = $m_Lindigo_shared_EqualTo$().eqInt__Lindigo_shared_EqualTo();
+    const e$1 = $m_Lindigo_scenes_SceneName$().EqSceneName__Lindigo_shared_EqualTo();
+    $m_Lindigo_shared_EqualTo$();
+    const f = new $c_sjsr_AnonFunction2(((this$3, eqInt, eqName) => ((a$2, b$2) => {
+      const a = $as_Lindigo_scenes_ScenePosition(a$2);
+      const b = $as_Lindigo_scenes_ScenePosition(b$2);
+      return (eqInt.equal__O__O__Z(a.Lindigo_scenes_ScenePosition__f_index, b.Lindigo_scenes_ScenePosition__f_index) && eqName.equal__O__O__Z(new $c_Lindigo_scenes_SceneName(a.Lindigo_scenes_ScenePosition__f_name), new $c_Lindigo_scenes_SceneName(b.Lindigo_scenes_ScenePosition__f_name)))
+    }))(this, e, e$1));
+    this.Lindigo_scenes_ScenePosition$__f_EqScenePosition = new $c_Lindigo_shared_EqualTo$$anon$1(f);
+    this.Lindigo_scenes_ScenePosition$__f_bitmap$init$0 = true
+  };
+  EqScenePosition__Lindigo_shared_EqualTo() {
+    if ((!this.Lindigo_scenes_ScenePosition$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo/src/main/scala/indigo/scenes/SceneFinder.scala: 108")
+    };
+    return this.Lindigo_scenes_ScenePosition$__f_EqScenePosition
+  };
+}
+const $d_Lindigo_scenes_ScenePosition$ = new $TypeData().initClass({
+  Lindigo_scenes_ScenePosition$: 0
+}, false, "indigo.scenes.ScenePosition$", {
+  Lindigo_scenes_ScenePosition$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_scenes_ScenePosition$.prototype.$classData = $d_Lindigo_scenes_ScenePosition$;
+let $n_Lindigo_scenes_ScenePosition$ = (void 0);
+function $m_Lindigo_scenes_ScenePosition$() {
+  if ((!$n_Lindigo_scenes_ScenePosition$)) {
+    $n_Lindigo_scenes_ScenePosition$ = new $c_Lindigo_scenes_ScenePosition$()
+  };
+  return $n_Lindigo_scenes_ScenePosition$
+}
 class $c_Lindigo_shared_AsString$$anon$1 extends $c_O {
   constructor(f$1) {
     super();
@@ -23287,19 +24439,20 @@ class $c_Lindigo_shared_animation_AnimationRef$ extends $c_O {
     const $$x3 = animation.animationKey__T();
     const $$x2 = animation.material__Lindigo_shared_datatypes_Material();
     const $$x1 = animation.currentCycleLabel__T();
-    const this$2 = animation.cycles__Lindigo_shared_collections_NonEmptyList().toList__sci_List();
-    const f = ((this$1) => ((c$2) => {
+    const this$1 = animation.cycles__Lindigo_shared_collections_NonEmptyList();
+    const this$3 = $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1);
+    const f = ((this$2) => ((c$2) => {
       const c = $as_Lindigo_shared_animation_Cycle(c$2);
       return $ct_T2__O__O__(new $c_T2(), new $c_Lindigo_shared_animation_CycleLabel(c.label__T()), $m_Lindigo_shared_animation_CycleRef$().fromCycle__Lindigo_shared_animation_Cycle__Lindigo_shared_animation_CycleRef(c))
     }))(this);
-    let this$4;
-    if ((this$2 === $m_sci_Nil$())) {
-      this$4 = $m_sci_Nil$()
+    let this$5;
+    if ((this$3 === $m_sci_Nil$())) {
+      this$5 = $m_sci_Nil$()
     } else {
-      const arg1 = this$2.head__O();
+      const arg1 = this$3.head__O();
       const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
       let t = h;
-      let rest = $as_sci_List(this$2.tail__O());
+      let rest = $as_sci_List(this$3.tail__O());
       while ((rest !== $m_sci_Nil$())) {
         const arg1$1 = rest.head__O();
         const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
@@ -23307,10 +24460,10 @@ class $c_Lindigo_shared_animation_AnimationRef$ extends $c_O {
         t = nx;
         rest = $as_sci_List(rest.tail__O())
       };
-      this$4 = h
+      this$5 = h
     };
     $m_s_$less$colon$less$();
-    return new $c_Lindigo_shared_animation_AnimationRef($$x3, $$x2, $$x1, $m_sci_Map$().from__sc_IterableOnce__sci_Map(this$4))
+    return new $c_Lindigo_shared_animation_AnimationRef($$x3, $$x2, $$x1, $m_sci_Map$().from__sc_IterableOnce__sci_Map(this$5))
   };
 }
 const $d_Lindigo_shared_animation_AnimationRef$ = new $TypeData().initClass({
@@ -23330,7 +24483,9 @@ function $m_Lindigo_shared_animation_AnimationRef$() {
 }
 class $c_Lindigo_shared_animation_CycleRef$ extends $c_O {
   fromCycle__Lindigo_shared_animation_Cycle__Lindigo_shared_animation_CycleRef(cycle) {
-    return new $c_Lindigo_shared_animation_CycleRef(cycle.label__T(), cycle.frames__Lindigo_shared_collections_NonEmptyList().toList__sci_List(), cycle.playheadPosition__I(), cycle.lastFrameAdvance__J())
+    const $$x1 = cycle.label__T();
+    const this$1 = cycle.frames__Lindigo_shared_collections_NonEmptyList();
+    return new $c_Lindigo_shared_animation_CycleRef($$x1, $f_Lindigo_shared_collections_NonEmptyList__toList__sci_List(this$1), cycle.playheadPosition__I(), cycle.lastFrameAdvance__J())
   };
   calculateNextPlayheadPosition__I__J__I__J__F1(currentPosition, frameDuration, frameCount, lastFrameAdvance) {
     $m_Lindigo_shared_temporal_Signal$();
@@ -23391,6 +24546,41 @@ function $m_Lindigo_shared_audio_Track$() {
   };
   return $n_Lindigo_shared_audio_Track$
 }
+class $c_Lindigo_shared_collections_NonEmptyList$$anon$1 extends $c_O {
+  constructor(headItem$1, tailItems$1) {
+    super();
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_head = null;
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_tail = null;
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0 = 0;
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_head = headItem$1;
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0 = (((1 | this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0) << 24) >> 24);
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_tail = tailItems$1;
+    this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0 = (((2 | this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0) << 24) >> 24)
+  };
+  toString__T() {
+    return $f_Lindigo_shared_collections_NonEmptyList__toString__T(this)
+  };
+  head__O() {
+    if (((((1 & this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/collections/NonEmptyList.scala: 212")
+    };
+    return this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_head
+  };
+  tail__sci_List() {
+    if (((((2 & this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/shared/src/main/scala/indigo/shared/collections/NonEmptyList.scala: 213")
+    };
+    return this.Lindigo_shared_collections_NonEmptyList$$anon$1__f_tail
+  };
+}
+const $d_Lindigo_shared_collections_NonEmptyList$$anon$1 = new $TypeData().initClass({
+  Lindigo_shared_collections_NonEmptyList$$anon$1: 0
+}, false, "indigo.shared.collections.NonEmptyList$$anon$1", {
+  Lindigo_shared_collections_NonEmptyList$$anon$1: 1,
+  O: 1,
+  Lindigo_shared_collections_NonEmptyList: 1
+});
+$c_Lindigo_shared_collections_NonEmptyList$$anon$1.prototype.$classData = $d_Lindigo_shared_collections_NonEmptyList$$anon$1;
 class $c_Lindigo_shared_config_AdvancedGameConfig$ extends $c_O {
   constructor() {
     super();
@@ -24561,6 +25751,1094 @@ const $d_Lindigo_shared_scenegraph_SpotLight = new $TypeData().initClass({
   Lindigo_shared_scenegraph_Light: 1
 });
 $c_Lindigo_shared_scenegraph_SpotLight.prototype.$classData = $d_Lindigo_shared_scenegraph_SpotLight;
+class $c_Linvaders_model_Grandma$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_model_Grandma$__f_aboveScreen = 0.0;
+    this.Linvaders_model_Grandma$__f_bitmap$init$0 = false;
+    this.Linvaders_model_Grandma$__f_aboveScreen = (-50.0);
+    this.Linvaders_model_Grandma$__f_bitmap$init$0 = true
+  };
+  aboveScreen__D() {
+    if ((!this.Linvaders_model_Grandma$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Grandma.scala: 32")
+    };
+    return this.Linvaders_model_Grandma$__f_aboveScreen
+  };
+  initial__Lindigo_shared_config_GameConfig__Linvaders_model_Grandma(config) {
+    const initX = $m_s_util_Random$().between__I__I__I(0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width);
+    const initLocation = new $c_Linvaders_model_Location(initX, $m_Linvaders_model_Grandma$().aboveScreen__D());
+    const this$1 = $m_s_util_Random$();
+    let initDir;
+    if (this$1.s_util_Random__f_self.nextBoolean__Z()) {
+      initDir = $m_Linvaders_model_Horizontal$Left$()
+    } else {
+      initDir = $m_Linvaders_model_Horizontal$Right$()
+    };
+    $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$();
+    const position = initLocation.toPoint__Lindigo_shared_datatypes_Point();
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const size = new $c_Lindigo_shared_datatypes_Point(40, 50);
+    const initHitBox = new $c_Lindigo_shared_datatypes_Rectangle(position, size);
+    return new $c_Linvaders_model_Grandma(initLocation, new $c_Linvaders_model_Direction($m_Linvaders_model_Vertical$Down$(), $as_Linvaders_model_Horizontal(initDir)), initHitBox, false, 1.0, false)
+  };
+}
+const $d_Linvaders_model_Grandma$ = new $TypeData().initClass({
+  Linvaders_model_Grandma$: 0
+}, false, "invaders.model.Grandma$", {
+  Linvaders_model_Grandma$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Grandma$.prototype.$classData = $d_Linvaders_model_Grandma$;
+let $n_Linvaders_model_Grandma$ = (void 0);
+function $m_Linvaders_model_Grandma$() {
+  if ((!$n_Linvaders_model_Grandma$)) {
+    $n_Linvaders_model_Grandma$ = new $c_Linvaders_model_Grandma$()
+  };
+  return $n_Linvaders_model_Grandma$
+}
+class $c_Linvaders_model_Model$ extends $c_O {
+  initial__Lindigo_shared_config_GameConfig__D__D__Linvaders_model_Model(config, shotSpeed, grandmaSpeed) {
+    const $$x4 = $m_Linvaders_model_Skrillex$();
+    const point = config.Lindigo_shared_config_GameConfig__f_viewport.center__Lindigo_shared_datatypes_Point();
+    const $$x3 = $$x4.initial__Linvaders_model_Location__I__Linvaders_model_Skrillex(new $c_Linvaders_model_Location(point.Lindigo_shared_datatypes_Point__f_x, point.Lindigo_shared_datatypes_Point__f_y), (((-50) + config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height) | 0));
+    $m_sci_List$();
+    const $$x2 = $m_sci_Nil$();
+    $m_sci_List$();
+    const array = [new $c_Linvaders_model_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Magenta__Lindigo_shared_datatypes_RGB(), new $c_Linvaders_model_Location(0.0, 0.0), new $c_Linvaders_model_Direction($m_Linvaders_model_Vertical$Down$(), $m_Linvaders_model_Horizontal$Right$())), new $c_Linvaders_model_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Cyan__Lindigo_shared_datatypes_RGB(), new $c_Linvaders_model_Location(300.0, 700.0), new $c_Linvaders_model_Direction($m_Linvaders_model_Vertical$Down$(), $m_Linvaders_model_Horizontal$Right$())), new $c_Linvaders_model_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Yellow__Lindigo_shared_datatypes_RGB(), new $c_Linvaders_model_Location(800.0, 100.0), new $c_Linvaders_model_Direction($m_Linvaders_model_Vertical$Down$(), $m_Linvaders_model_Horizontal$Right$()))];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const $$x1 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
+    const b = $m_sci_IndexedSeq$().newBuilder__scm_Builder();
+    const it = new $c_sci_RangeIterator(0, 1, 9, false);
+    while (it.sci_RangeIterator__f__hasNext) {
+      it.next__I();
+      const elem = $m_Linvaders_model_Grandma$().initial__Lindigo_shared_config_GameConfig__Linvaders_model_Grandma(config);
+      b.addOne__O__scm_Growable(elem)
+    };
+    const this$13 = $as_sci_IndexedSeq(b.result__O());
+    $m_sci_List$();
+    return new $c_Linvaders_model_Model($$x3, $$x2, shotSpeed, $$x1, $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$13), grandmaSpeed, 0, $m_Linvaders_Settings$().lives__I(), ($m_sci_List$(), $m_sci_Nil$()))
+  };
+}
+const $d_Linvaders_model_Model$ = new $TypeData().initClass({
+  Linvaders_model_Model$: 0
+}, false, "invaders.model.Model$", {
+  Linvaders_model_Model$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Model$.prototype.$classData = $d_Linvaders_model_Model$;
+let $n_Linvaders_model_Model$ = (void 0);
+function $m_Linvaders_model_Model$() {
+  if ((!$n_Linvaders_model_Model$)) {
+    $n_Linvaders_model_Model$ = new $c_Linvaders_model_Model$()
+  };
+  return $n_Linvaders_model_Model$
+}
+class $c_Linvaders_model_Shot$ extends $c_O {
+  newShot__Linvaders_model_Location__Linvaders_model_Shot(location) {
+    $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$();
+    const position = location.toPoint__Lindigo_shared_datatypes_Point();
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const size = new $c_Lindigo_shared_datatypes_Point(20, 30);
+    return new $c_Linvaders_model_Shot(location, new $c_Lindigo_shared_datatypes_Rectangle(position, size))
+  };
+}
+const $d_Linvaders_model_Shot$ = new $TypeData().initClass({
+  Linvaders_model_Shot$: 0
+}, false, "invaders.model.Shot$", {
+  Linvaders_model_Shot$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Shot$.prototype.$classData = $d_Linvaders_model_Shot$;
+let $n_Linvaders_model_Shot$ = (void 0);
+function $m_Linvaders_model_Shot$() {
+  if ((!$n_Linvaders_model_Shot$)) {
+    $n_Linvaders_model_Shot$ = new $c_Linvaders_model_Shot$()
+  };
+  return $n_Linvaders_model_Shot$
+}
+class $c_Linvaders_model_Skrillex$ extends $c_O {
+  initial__Linvaders_model_Location__I__Linvaders_model_Skrillex(center, height) {
+    return new $c_Linvaders_model_Skrillex(new $c_Linvaders_model_Location(center.Linvaders_model_Location__f_x, height))
+  };
+}
+const $d_Linvaders_model_Skrillex$ = new $TypeData().initClass({
+  Linvaders_model_Skrillex$: 0
+}, false, "invaders.model.Skrillex$", {
+  Linvaders_model_Skrillex$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Skrillex$.prototype.$classData = $d_Linvaders_model_Skrillex$;
+let $n_Linvaders_model_Skrillex$ = (void 0);
+function $m_Linvaders_model_Skrillex$() {
+  if ((!$n_Linvaders_model_Skrillex$)) {
+    $n_Linvaders_model_Skrillex$ = new $c_Linvaders_model_Skrillex$()
+  };
+  return $n_Linvaders_model_Skrillex$
+}
+class $c_Linvaders_model_Splatter$ extends $c_O {
+  fromLocation__Linvaders_model_Location__Linvaders_model_Splatter(location) {
+    const rotation = $m_Lindigo_package$().Radians__Lindigo_shared_datatypes_Radians$().fromDegrees__D__D($m_s_util_Random$().between__D__D__D(0.0, 360.0));
+    const scale = $m_s_util_Random$().between__D__D__D(0.2, 2.0);
+    return new $c_Linvaders_model_Splatter(location, rotation, 0.0, 0.0, scale)
+  };
+}
+const $d_Linvaders_model_Splatter$ = new $TypeData().initClass({
+  Linvaders_model_Splatter$: 0
+}, false, "invaders.model.Splatter$", {
+  Linvaders_model_Splatter$: 1,
+  O: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Splatter$.prototype.$classData = $d_Linvaders_model_Splatter$;
+let $n_Linvaders_model_Splatter$ = (void 0);
+function $m_Linvaders_model_Splatter$() {
+  if ((!$n_Linvaders_model_Splatter$)) {
+    $n_Linvaders_model_Splatter$ = new $c_Linvaders_model_Splatter$()
+  };
+  return $n_Linvaders_model_Splatter$
+}
+class $c_Linvaders_scenes_GameOverScene$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_scenes_GameOverScene$__f_name = null;
+    this.Linvaders_scenes_GameOverScene$__f_modelLens = null;
+    this.Linvaders_scenes_GameOverScene$__f_viewModelLens = null;
+    this.Linvaders_scenes_GameOverScene$__f_eventFilters = null;
+    this.Linvaders_scenes_GameOverScene$__f_subSystems = null;
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = 0;
+    $n_Linvaders_scenes_GameOverScene$ = this;
+    this.Linvaders_scenes_GameOverScene$__f_name = ($m_Lindigo_scenes_SceneName$(), "game over");
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = (((1 | this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24);
+    const getter = new $c_sjsr_AnonFunction1(((this$2) => ((x$1$2) => {
+      const x$1 = $as_Linvaders_model_Model(x$1$2);
+      return x$1.Linvaders_model_Model__f_points
+    }))(this));
+    const setter = new $c_sjsr_AnonFunction2(((this$2$1) => ((m$2, x$2$2) => {
+      const m = $as_Linvaders_model_Model(m$2);
+      $uI(x$2$2);
+      return m
+    }))(this));
+    this.Linvaders_scenes_GameOverScene$__f_modelLens = new $c_Lindigo_scenes_Lens$$anon$1(getter, setter);
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = (((2 | this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_GameOverScene$__f_viewModelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = (((4 | this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_GameOverScene$__f_eventFilters = $m_Lindigo_package$().EventFilters__Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters().withViewModelFilter__F1__Lindigo_shared_events_EventFilters(new $c_sjsr_AnonFunction1(((this$3$1) => ((x$3$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$3$2);
+      return $m_s_None$()
+    }))(this)));
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = (((8 | this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24);
+    const this$4 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems = $m_sci_Nil$();
+    this.Linvaders_scenes_GameOverScene$__f_subSystems = this$4.from__sc_IterableOnce__sci_Set(elems);
+    this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0 = (((16 | this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24)
+  };
+  name__T() {
+    if (((((1 & this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/GameOverScene.scala: 12")
+    };
+    return this.Linvaders_scenes_GameOverScene$__f_name
+  };
+  modelLens__Lindigo_scenes_Lens() {
+    if (((((2 & this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/GameOverScene.scala: 14")
+    };
+    return this.Linvaders_scenes_GameOverScene$__f_modelLens
+  };
+  viewModelLens__Lindigo_scenes_Lens() {
+    if (((((4 & this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/GameOverScene.scala: 17")
+    };
+    return this.Linvaders_scenes_GameOverScene$__f_viewModelLens
+  };
+  eventFilters__Lindigo_shared_events_EventFilters() {
+    if (((((8 & this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/GameOverScene.scala: 19")
+    };
+    return this.Linvaders_scenes_GameOverScene$__f_eventFilters
+  };
+  subSystems__sci_Set() {
+    if (((((16 & this.Linvaders_scenes_GameOverScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/GameOverScene.scala: 23")
+    };
+    return this.Linvaders_scenes_GameOverScene$__f_subSystems
+  };
+  updateModel__Lindigo_shared_FrameContext__I__F1(context, model) {
+    return new $c_sjsr_AnonFunction1(((this$1, model$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
+      if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyUp)) {
+        const x2 = $as_Lindigo_shared_events_KeyboardEvent$KeyUp(x0$1);
+        const p3 = x2.Lindigo_shared_events_KeyboardEvent$KeyUp__f_keyCode;
+        const x = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SPACE__Lindigo_shared_constants_Key();
+        if (((x === null) ? (p3 === null) : x.equals__O__Z(p3))) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const this$6 = new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$());
+          const array = [new $c_Lindigo_scenes_SceneEvent$JumpTo($m_Linvaders_scenes_StartScene$().name__T())];
+          const newEvents = new $c_sjsr_WrappedVarArgs(array);
+          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$6, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents)))
+        }
+      };
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+    }))(this, model))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__I__jl_Void__F1(context, model, viewModel) {
+    return new $c_sjsr_AnonFunction1(((this$1) => ((x$4$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$4$2);
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome((void 0), $m_sci_Nil$())
+    }))(this))
+  };
+  present__Lindigo_shared_FrameContext__I__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    const horizontalCenter = (($intDiv($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_magnification) / 2) | 0);
+    const verticalMiddle = (($intDiv($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_magnification) / 2) | 0);
+    $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x8 = $m_sci_Nil$();
+    const $$x7 = $m_sci_Nil$();
+    const $$x6 = $m_sci_Nil$();
+    const $$x5 = $m_sci_Nil$();
+    const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+    const $$x3 = $m_sci_Nil$();
+    const $$x2 = $m_sci_Nil$();
+    const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+    const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    return $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addUiLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawTitleText__I__I__I__sci_List(horizontalCenter, verticalMiddle, model))
+  };
+  drawTitleText__I__I__I__sci_List(center, middle, score) {
+    $m_sci_List$();
+    const this$1 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Game Over!", center, (((-50) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text = this$1.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position = this$1.Lindigo_shared_scenegraph_Text__f_position;
+    const depth = this$1.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation = this$1.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this$1.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this$1.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this$1.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this$1.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x2 = new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler);
+    const this$3 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text((("You scored " + score) + "."), center, (((-10) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$1 = this$3.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$1 = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position$1 = this$3.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$1 = this$3.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$1 = this$3.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$1 = this$3.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$1 = this$3.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$1 = this$3.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$1 = this$3.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x1 = new $c_Lindigo_shared_scenegraph_Text(text$1, alignment$1, position$1, depth$1, rotation$1, scale$1, fontKey$1, effects$1, eventHandler$1);
+    const this$5 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Press Space to Restart.", center, ((30 + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$2 = this$5.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$2 = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position$2 = this$5.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$2 = this$5.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$2 = this$5.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$2 = this$5.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$2 = this$5.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$2 = this$5.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$2 = this$5.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const array = [$$x2, $$x1, new $c_Lindigo_shared_scenegraph_Text(text$2, alignment$2, position$2, depth$2, rotation$2, scale$2, fontKey$2, effects$2, eventHandler$2)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems)
+  };
+  present__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    return this.present__Lindigo_shared_FrameContext__I__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, $uI(model), $as_jl_Void(viewModel))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__O__O__F1(context, model, viewModel) {
+    return this.updateViewModel__Lindigo_shared_FrameContext__I__jl_Void__F1(context, $uI(model), $as_jl_Void(viewModel))
+  };
+  updateModel__Lindigo_shared_FrameContext__O__F1(context, model) {
+    return this.updateModel__Lindigo_shared_FrameContext__I__F1(context, $uI(model))
+  };
+}
+const $d_Linvaders_scenes_GameOverScene$ = new $TypeData().initClass({
+  Linvaders_scenes_GameOverScene$: 0
+}, false, "invaders.scenes.GameOverScene$", {
+  Linvaders_scenes_GameOverScene$: 1,
+  O: 1,
+  Lindigo_scenes_Scene: 1
+});
+$c_Linvaders_scenes_GameOverScene$.prototype.$classData = $d_Linvaders_scenes_GameOverScene$;
+let $n_Linvaders_scenes_GameOverScene$ = (void 0);
+function $m_Linvaders_scenes_GameOverScene$() {
+  if ((!$n_Linvaders_scenes_GameOverScene$)) {
+    $n_Linvaders_scenes_GameOverScene$ = new $c_Linvaders_scenes_GameOverScene$()
+  };
+  return $n_Linvaders_scenes_GameOverScene$
+}
+class $c_Linvaders_scenes_InterstitialScene$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_scenes_InterstitialScene$__f_name = null;
+    this.Linvaders_scenes_InterstitialScene$__f_modelLens = null;
+    this.Linvaders_scenes_InterstitialScene$__f_viewModelLens = null;
+    this.Linvaders_scenes_InterstitialScene$__f_eventFilters = null;
+    this.Linvaders_scenes_InterstitialScene$__f_subSystems = null;
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = 0;
+    $n_Linvaders_scenes_InterstitialScene$ = this;
+    this.Linvaders_scenes_InterstitialScene$__f_name = ($m_Lindigo_scenes_SceneName$(), "intro");
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = (((1 | this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_InterstitialScene$__f_modelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = (((2 | this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_InterstitialScene$__f_viewModelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = (((4 | this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_InterstitialScene$__f_eventFilters = $m_Lindigo_package$().EventFilters__Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters().withViewModelFilter__F1__Lindigo_shared_events_EventFilters(new $c_sjsr_AnonFunction1(((this$2) => ((x$1$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$1$2);
+      return $m_s_None$()
+    }))(this)));
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = (((8 | this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24);
+    const this$3 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems = $m_sci_Nil$();
+    this.Linvaders_scenes_InterstitialScene$__f_subSystems = this$3.from__sc_IterableOnce__sci_Set(elems);
+    this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0 = (((16 | this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24)
+  };
+  name__T() {
+    if (((((1 & this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/InterstitialScene.scala: 12")
+    };
+    return this.Linvaders_scenes_InterstitialScene$__f_name
+  };
+  modelLens__Lindigo_scenes_Lens() {
+    if (((((2 & this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/InterstitialScene.scala: 14")
+    };
+    return this.Linvaders_scenes_InterstitialScene$__f_modelLens
+  };
+  viewModelLens__Lindigo_scenes_Lens() {
+    if (((((4 & this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/InterstitialScene.scala: 17")
+    };
+    return this.Linvaders_scenes_InterstitialScene$__f_viewModelLens
+  };
+  eventFilters__Lindigo_shared_events_EventFilters() {
+    if (((((8 & this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/InterstitialScene.scala: 19")
+    };
+    return this.Linvaders_scenes_InterstitialScene$__f_eventFilters
+  };
+  subSystems__sci_Set() {
+    if (((((16 & this.Linvaders_scenes_InterstitialScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/InterstitialScene.scala: 23")
+    };
+    return this.Linvaders_scenes_InterstitialScene$__f_subSystems
+  };
+  updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, model) {
+    return new $c_sjsr_AnonFunction1(((this$1, model$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
+      if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyUp)) {
+        const x2 = $as_Lindigo_shared_events_KeyboardEvent$KeyUp(x0$1);
+        const p3 = x2.Lindigo_shared_events_KeyboardEvent$KeyUp__f_keyCode;
+        const x = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SPACE__Lindigo_shared_constants_Key();
+        if (((x === null) ? (p3 === null) : x.equals__O__Z(p3))) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const state = $m_Linvaders_model_Model$().initial__Lindigo_shared_config_GameConfig__D__D__Linvaders_model_Model($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig(), $m_Linvaders_Settings$().shotSpeed__D(), $m_Linvaders_Settings$().grandmaSpeed__D());
+          const this$6 = new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$());
+          const array = [new $c_Lindigo_scenes_SceneEvent$JumpTo($m_Linvaders_scenes_RoomScene$().name__T())];
+          const newEvents = new $c_sjsr_WrappedVarArgs(array);
+          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$6, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents)))
+        }
+      };
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+    }))(this, model))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, model, viewModel) {
+    return new $c_sjsr_AnonFunction1(((this$1) => ((x$2$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$2$2);
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome((void 0), $m_sci_Nil$())
+    }))(this))
+  };
+  present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    const verticalMiddle = (($intDiv($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_magnification) / 2) | 0);
+    $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x8 = $m_sci_Nil$();
+    const $$x7 = $m_sci_Nil$();
+    const $$x6 = $m_sci_Nil$();
+    const $$x5 = $m_sci_Nil$();
+    const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+    const $$x3 = $m_sci_Nil$();
+    const $$x2 = $m_sci_Nil$();
+    const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+    const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    return $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addUiLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawTitleText__I__I__sci_List(20, verticalMiddle))
+  };
+  drawTitleText__I__I__sci_List(leftAlign, middle) {
+    $m_sci_List$();
+    const $$x8 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+    const $$x7 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 40, 50);
+    const diffuse = $m_Linvaders_GameAssets$().grandmaAsset__T();
+    const this$3 = $$x8.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x7, 1, new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false));
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const refValue = new $c_Lindigo_shared_datatypes_Point(20, 0);
+    const position = this$3.Lindigo_shared_scenegraph_Graphic__f_position;
+    const depth = this$3.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this$3.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this$3.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const crop = this$3.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects = this$3.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material = this$3.Lindigo_shared_scenegraph_Graphic__f_material;
+    const $$x6 = new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, refValue, crop, effects, material).withAlpha__D__Lindigo_shared_scenegraph_Graphic(0.9).scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(4.0, 4.0).flipHorizontal__Z__Lindigo_shared_scenegraph_Graphic(true).moveTo__I__I__Lindigo_shared_scenegraph_Graphic((((-300) + $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width) | 0), 150);
+    const this$5 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Thats a mighty racket coming from your room!", leftAlign, (((-320) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text = this$5.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$1 = this$5.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$1 = this$5.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$1 = this$5.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$1 = this$5.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this$5.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$1 = this$5.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this$5.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x5 = new $c_Lindigo_shared_scenegraph_Text(text, alignment, position$1, depth$1, rotation$1, scale$1, fontKey, effects$1, eventHandler).withTint__D__D__D__Lindigo_shared_scenegraph_Text(0.9, 0.7, 0.7);
+    const this$7 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Is that even music?", leftAlign, (((-280) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$1 = this$7.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$1 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$2 = this$7.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$2 = this$7.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$2 = this$7.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$2 = this$7.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$1 = this$7.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$2 = this$7.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$1 = this$7.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x4 = new $c_Lindigo_shared_scenegraph_Text(text$1, alignment$1, position$2, depth$2, rotation$2, scale$2, fontKey$1, effects$2, eventHandler$1).withTint__D__D__D__Lindigo_shared_scenegraph_Text(0.9, 0.7, 0.7);
+    const this$9 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("If you dont shut it off, I will!", leftAlign, (((-240) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$2 = this$9.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$2 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$3 = this$9.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$3 = this$9.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$3 = this$9.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$3 = this$9.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$2 = this$9.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$3 = this$9.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$2 = this$9.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x3 = new $c_Lindigo_shared_scenegraph_Text(text$2, alignment$2, position$3, depth$3, rotation$3, scale$3, fontKey$2, effects$3, eventHandler$2).withTint__D__D__D__Lindigo_shared_scenegraph_Text(0.9, 0.7, 0.7);
+    const this$11 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Protect your right to party during grannys nap time.", leftAlign, ((40 + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$3 = this$11.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$3 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$4 = this$11.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$4 = this$11.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$4 = this$11.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$4 = this$11.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$3 = this$11.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$4 = this$11.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$3 = this$11.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x2 = new $c_Lindigo_shared_scenegraph_Text(text$3, alignment$3, position$4, depth$4, rotation$4, scale$4, fontKey$3, effects$4, eventHandler$3);
+    const this$13 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Move using the mouse or touchpad,", leftAlign, ((160 + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$4 = this$13.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$4 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$5 = this$13.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$5 = this$13.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$5 = this$13.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$5 = this$13.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$4 = this$13.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$5 = this$13.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$4 = this$13.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x1 = new $c_Lindigo_shared_scenegraph_Text(text$4, alignment$4, position$5, depth$5, rotation$5, scale$5, fontKey$4, effects$5, eventHandler$4);
+    const this$15 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("and drop heavy bass hits from the Space key.", leftAlign, ((200 + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$5 = this$15.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$5 = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position$6 = this$15.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$6 = this$15.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$6 = this$15.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$6 = this$15.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$5 = this$15.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$6 = this$15.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$5 = this$15.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const array = [$$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_Text(text$5, alignment$5, position$6, depth$6, rotation$6, scale$6, fontKey$5, effects$6, eventHandler$5)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems)
+  };
+  present__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    return this.present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__O__O__F1(context, model, viewModel) {
+    return this.updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+  updateModel__Lindigo_shared_FrameContext__O__F1(context, model) {
+    return this.updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, $as_Linvaders_model_Model(model))
+  };
+}
+const $d_Linvaders_scenes_InterstitialScene$ = new $TypeData().initClass({
+  Linvaders_scenes_InterstitialScene$: 0
+}, false, "invaders.scenes.InterstitialScene$", {
+  Linvaders_scenes_InterstitialScene$: 1,
+  O: 1,
+  Lindigo_scenes_Scene: 1
+});
+$c_Linvaders_scenes_InterstitialScene$.prototype.$classData = $d_Linvaders_scenes_InterstitialScene$;
+let $n_Linvaders_scenes_InterstitialScene$ = (void 0);
+function $m_Linvaders_scenes_InterstitialScene$() {
+  if ((!$n_Linvaders_scenes_InterstitialScene$)) {
+    $n_Linvaders_scenes_InterstitialScene$ = new $c_Linvaders_scenes_InterstitialScene$()
+  };
+  return $n_Linvaders_scenes_InterstitialScene$
+}
+class $c_Linvaders_scenes_RoomScene$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_scenes_RoomScene$__f_name = null;
+    this.Linvaders_scenes_RoomScene$__f_modelLens = null;
+    this.Linvaders_scenes_RoomScene$__f_viewModelLens = null;
+    this.Linvaders_scenes_RoomScene$__f_eventFilters = null;
+    this.Linvaders_scenes_RoomScene$__f_subSystems = null;
+    this.Linvaders_scenes_RoomScene$__f_shotGraphic = null;
+    this.Linvaders_scenes_RoomScene$__f_bgGraphic = null;
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = 0;
+    $n_Linvaders_scenes_RoomScene$ = this;
+    this.Linvaders_scenes_RoomScene$__f_name = ($m_Lindigo_scenes_SceneName$(), "room");
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((1 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_RoomScene$__f_modelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((2 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_RoomScene$__f_viewModelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((4 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_RoomScene$__f_eventFilters = $m_Lindigo_package$().EventFilters__Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters().withViewModelFilter__F1__Lindigo_shared_events_EventFilters(new $c_sjsr_AnonFunction1(((this$2) => ((x$1$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$1$2);
+      return $m_s_None$()
+    }))(this)));
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((8 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    const this$3 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems = $m_sci_Nil$();
+    this.Linvaders_scenes_RoomScene$__f_subSystems = this$3.from__sc_IterableOnce__sci_Set(elems);
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((16 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    const $$x2 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+    const $$x1 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 20, 30);
+    const diffuse = $m_Linvaders_GameAssets$().shotAsset__T();
+    const this$5 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false);
+    this.Linvaders_scenes_RoomScene$__f_shotGraphic = $$x2.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x1, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$5.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((32 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24);
+    const $$x4 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+    const $$x3 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height);
+    const diffuse$1 = $m_Linvaders_GameAssets$().bgAsset__T();
+    const this$7 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false);
+    this.Linvaders_scenes_RoomScene$__f_bgGraphic = $$x4.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x3, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$7.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
+    this.Linvaders_scenes_RoomScene$__f_bitmap$init$0 = (((64 | this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24)
+  };
+  name__T() {
+    if (((((1 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 12")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_name
+  };
+  modelLens__Lindigo_scenes_Lens() {
+    if (((((2 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 14")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_modelLens
+  };
+  viewModelLens__Lindigo_scenes_Lens() {
+    if (((((4 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 17")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_viewModelLens
+  };
+  eventFilters__Lindigo_shared_events_EventFilters() {
+    if (((((8 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 19")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_eventFilters
+  };
+  subSystems__sci_Set() {
+    if (((((16 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 23")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_subSystems
+  };
+  updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, model, viewModel) {
+    return new $c_sjsr_AnonFunction1(((this$1) => ((x$2$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$2$2);
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome((void 0), $m_sci_Nil$())
+    }))(this))
+  };
+  updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, model) {
+    return new $c_sjsr_AnonFunction1(((this$1, model$1, context$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
+      let rc9 = false;
+      let x6 = null;
+      if ((x0$1 instanceof $c_Lindigo_shared_events_MouseEvent$Move)) {
+        const x2 = $as_Lindigo_shared_events_MouseEvent$Move(x0$1);
+        const x = x2.Lindigo_shared_events_MouseEvent$Move__f_x;
+        const y = x2.Lindigo_shared_events_MouseEvent$Move__f_y;
+        $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+        const state = model$1.updateSkrillex__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Model(new $c_Linvaders_model_Location(x, y), $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig());
+        return new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$())
+      };
+      if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyDown)) {
+        const x3 = $as_Lindigo_shared_events_KeyboardEvent$KeyDown(x0$1);
+        const p4 = x3.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
+        const x$2 = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SPACE__Lindigo_shared_constants_Key();
+        if (((x$2 === null) ? (p4 === null) : x$2.equals__O__Z(p4))) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const state$1 = model$1.updateShot__Linvaders_model_Model();
+          const this$9 = new $c_Lindigo_shared_Outcome(state$1, $m_sci_Nil$());
+          $m_Lindigo_package$().PlaySound__Lindigo_shared_events_PlaySound$();
+          $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
+          const assetName = "shotSound";
+          const volume = $m_Lindigo_package$().Volume__Lindigo_shared_audio_Volume$().Max__D();
+          const array = [new $c_Lindigo_shared_events_PlaySound(assetName, volume)];
+          const newEvents = new $c_sjsr_WrappedVarArgs(array);
+          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$9, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents)))
+        }
+      };
+      const x$4 = $m_Lindigo_package$().FrameTick__Lindigo_shared_events_FrameTick$();
+      if ((x$4 === x0$1)) {
+        rc9 = true;
+        x6 = x0$1;
+        if ((model$1.Linvaders_model_Model__f_lives <= 0)) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const this$15 = new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$());
+          const array$1 = [new $c_Lindigo_scenes_SceneEvent$JumpTo($m_Linvaders_scenes_GameOverScene$().name__T())];
+          const newEvents$1 = new $c_sjsr_WrappedVarArgs(array$1);
+          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$15, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents$1)))
+        }
+      };
+      if (rc9) {
+        $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+        const state$2 = model$1.updateTick__Lindigo_shared_config_GameConfig__D__Linvaders_model_Model($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig(), context$1.delta__D());
+        return new $c_Lindigo_shared_Outcome(state$2, $m_sci_Nil$())
+      };
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+    }))(this, model, context))
+  };
+  present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x8 = $m_sci_Nil$();
+    const $$x7 = $m_sci_Nil$();
+    const $$x6 = $m_sci_Nil$();
+    const $$x5 = $m_sci_Nil$();
+    const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+    const $$x3 = $m_sci_Nil$();
+    const $$x2 = $m_sci_Nil$();
+    const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+    const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    const this$4 = $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Linvaders_model_Skrillex__sci_List__sci_List__sci_List__sci_List(model.Linvaders_model_Model__f_skrillex, model.Linvaders_model_Model__f_shots, model.Linvaders_model_Model__f_grandmas, model.Linvaders_model_Model__f_splats));
+    const newLights = this.drawLights__sci_List__sci_List(model.Linvaders_model_Model__f_lights);
+    const gameLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_gameLayer;
+    const lightingLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_lightingLayer;
+    const distortionLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_distortionLayer;
+    const uiLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_uiLayer;
+    const ambientLight = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_ambientLight;
+    const globalEvents = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_globalEvents;
+    const audio = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_audio;
+    const screenEffects = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_screenEffects;
+    const cloneBlanks = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_cloneBlanks;
+    return new $c_Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, lightingLayer, distortionLayer, uiLayer, ambientLight, newLights, globalEvents, audio, screenEffects, cloneBlanks).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawText__I__I__sci_List(model.Linvaders_model_Model__f_points, model.Linvaders_model_Model__f_lives))
+  };
+  drawText__I__I__sci_List(score, lives) {
+    $m_sci_List$();
+    const this$1 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(("Score " + score), 10, 20, 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text = this$1.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
+    const position = this$1.Lindigo_shared_scenegraph_Text__f_position;
+    const depth = this$1.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation = this$1.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this$1.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this$1.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this$1.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this$1.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const array = [new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const this$13 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
+    $m_sci_List$();
+    const this$7 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(("Lives " + lives), (((-10) + $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width) | 0), 20, 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$1 = this$7.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$1 = $m_Lindigo_shared_datatypes_TextAlignment$Right$();
+    const position$1 = this$7.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$1 = this$7.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$1 = this$7.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$1 = this$7.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$1 = this$7.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$1 = this$7.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$1 = this$7.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const array$1 = [new $c_Lindigo_shared_scenegraph_Text(text$1, alignment$1, position$1, depth$1, rotation$1, scale$1, fontKey$1, effects$1, eventHandler$1)];
+    const elems$1 = new $c_sjsr_WrappedVarArgs(array$1);
+    const suffix = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
+    return this$13.appendedAll__sc_IterableOnce__sci_List(suffix)
+  };
+  drawLights__sci_List__sci_List(lights) {
+    const f = ((this$1) => ((l$2) => {
+      const l = $as_Linvaders_model_LightWithLocation(l$2);
+      const this$2 = $m_Lindigo_package$().PointLight__Lindigo_shared_scenegraph_PointLight$().default__Lindigo_shared_scenegraph_PointLight();
+      const newPosition = l.Linvaders_model_LightWithLocation__f_location.toPoint__Lindigo_shared_datatypes_Point();
+      const this$3 = new $c_Lindigo_shared_scenegraph_PointLight(newPosition, this$2.Lindigo_shared_scenegraph_PointLight__f_height, this$2.Lindigo_shared_scenegraph_PointLight__f_color, this$2.Lindigo_shared_scenegraph_PointLight__f_power, this$2.Lindigo_shared_scenegraph_PointLight__f_attenuation);
+      const this$4 = new $c_Lindigo_shared_scenegraph_PointLight(this$3.Lindigo_shared_scenegraph_PointLight__f_position, this$3.Lindigo_shared_scenegraph_PointLight__f_height, this$3.Lindigo_shared_scenegraph_PointLight__f_color, this$3.Lindigo_shared_scenegraph_PointLight__f_power, 500);
+      const newColor = l.Linvaders_model_LightWithLocation__f_color;
+      const this$5 = new $c_Lindigo_shared_scenegraph_PointLight(this$4.Lindigo_shared_scenegraph_PointLight__f_position, this$4.Lindigo_shared_scenegraph_PointLight__f_height, newColor, this$4.Lindigo_shared_scenegraph_PointLight__f_power, this$4.Lindigo_shared_scenegraph_PointLight__f_attenuation);
+      const this$6 = new $c_Lindigo_shared_scenegraph_PointLight(this$5.Lindigo_shared_scenegraph_PointLight__f_position, 100, this$5.Lindigo_shared_scenegraph_PointLight__f_color, this$5.Lindigo_shared_scenegraph_PointLight__f_power, this$5.Lindigo_shared_scenegraph_PointLight__f_attenuation);
+      return new $c_Lindigo_shared_scenegraph_PointLight(this$6.Lindigo_shared_scenegraph_PointLight__f_position, this$6.Lindigo_shared_scenegraph_PointLight__f_height, this$6.Lindigo_shared_scenegraph_PointLight__f_color, 20.0, this$6.Lindigo_shared_scenegraph_PointLight__f_attenuation)
+    }))(this);
+    if ((lights === $m_sci_Nil$())) {
+      return $m_sci_Nil$()
+    } else {
+      const arg1 = lights.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(lights.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      return h
+    }
+  };
+  shotGraphic__Lindigo_shared_scenegraph_Graphic() {
+    if (((((32 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 70")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_shotGraphic
+  };
+  bgGraphic__Lindigo_shared_scenegraph_Graphic() {
+    if (((((64 & this.Linvaders_scenes_RoomScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/RoomScene.scala: 71")
+    };
+    return this.Linvaders_scenes_RoomScene$__f_bgGraphic
+  };
+  drawScene__Linvaders_model_Skrillex__sci_List__sci_List__sci_List__sci_List(skrillex, shots, grandmas, splats) {
+    $m_sci_List$();
+    const array = [this.bgGraphic__Lindigo_shared_scenegraph_Graphic()];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const this$12 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
+    const f = ((this$5) => ((splat$2) => {
+      const splat = $as_Linvaders_model_Splatter(splat$2);
+      const $$x2 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+      const $$x1 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 40, 40);
+      const diffuse = $m_Linvaders_GameAssets$().splatAsset__T();
+      const this$7 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false);
+      const this$8 = $$x2.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x1, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$7.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(20, 20);
+      const angle = splat.Linvaders_model_Splatter__f_rotation;
+      const position = this$8.Lindigo_shared_scenegraph_Graphic__f_position;
+      const depth = this$8.Lindigo_shared_scenegraph_Graphic__f_depth;
+      const scale = this$8.Lindigo_shared_scenegraph_Graphic__f_scale;
+      const ref = this$8.Lindigo_shared_scenegraph_Graphic__f_ref;
+      const crop = this$8.Lindigo_shared_scenegraph_Graphic__f_crop;
+      const effects = this$8.Lindigo_shared_scenegraph_Graphic__f_effects;
+      const material = this$8.Lindigo_shared_scenegraph_Graphic__f_material;
+      const this$10 = new $c_Lindigo_shared_scenegraph_Graphic(position, depth, angle, scale, ref, crop, effects, material).scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(splat.Linvaders_model_Splatter__f_scale, splat.Linvaders_model_Splatter__f_scale);
+      const pt = splat.Linvaders_model_Splatter__f_location.toPoint__Lindigo_shared_datatypes_Point();
+      const depth$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_depth;
+      const rotation = this$10.Lindigo_shared_scenegraph_Graphic__f_rotation;
+      const scale$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_scale;
+      const ref$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_ref;
+      const crop$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_crop;
+      const effects$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_effects;
+      const material$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_material;
+      return new $c_Lindigo_shared_scenegraph_Graphic(pt, depth$1, rotation, scale$1, ref$1, crop$1, effects$1, material$1)
+    }))(this);
+    let suffix;
+    if ((splats === $m_sci_Nil$())) {
+      suffix = $m_sci_Nil$()
+    } else {
+      const arg1 = splats.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(splats.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      suffix = h
+    };
+    const this$15 = this$12.appendedAll__sc_IterableOnce__sci_List(suffix);
+    const f$1 = ((this$2$1) => ((shot$2) => {
+      const shot = $as_Linvaders_model_Shot(shot$2);
+      const this$13 = $m_Linvaders_scenes_RoomScene$().shotGraphic__Lindigo_shared_scenegraph_Graphic().withRef__I__I__Lindigo_shared_scenegraph_Graphic(10, 0);
+      const pt$1 = shot.Linvaders_model_Shot__f_location.toPoint__Lindigo_shared_datatypes_Point();
+      const depth$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_depth;
+      const rotation$1 = this$13.Lindigo_shared_scenegraph_Graphic__f_rotation;
+      const scale$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_scale;
+      const ref$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_ref;
+      const crop$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_crop;
+      const effects$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_effects;
+      const material$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_material;
+      return new $c_Lindigo_shared_scenegraph_Graphic(pt$1, depth$2, rotation$1, scale$2, ref$2, crop$2, effects$2, material$2)
+    }))(this);
+    let suffix$1;
+    if ((shots === $m_sci_Nil$())) {
+      suffix$1 = $m_sci_Nil$()
+    } else {
+      const arg1$2 = shots.head__O();
+      const h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+      let t$1 = h$1;
+      let rest$1 = $as_sci_List(shots.tail__O());
+      while ((rest$1 !== $m_sci_Nil$())) {
+        const arg1$3 = rest$1.head__O();
+        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
+        t$1.sci_$colon$colon__f_next = nx$1;
+        t$1 = nx$1;
+        rest$1 = $as_sci_List(rest$1.tail__O())
+      };
+      suffix$1 = h$1
+    };
+    const this$23 = this$15.appendedAll__sc_IterableOnce__sci_List(suffix$1);
+    const f$2 = ((this$3$1) => ((grandma$2) => {
+      const grandma = $as_Linvaders_model_Grandma(grandma$2);
+      const $$x4 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+      const $$x3 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 40, 50);
+      const diffuse$1 = $m_Linvaders_GameAssets$().grandmaAsset__T();
+      const this$17 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false);
+      const this$19 = $$x4.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x3, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$17.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
+      $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+      const refValue = new $c_Lindigo_shared_datatypes_Point(20, 0);
+      const position$1 = this$19.Lindigo_shared_scenegraph_Graphic__f_position;
+      const depth$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_depth;
+      const rotation$2 = this$19.Lindigo_shared_scenegraph_Graphic__f_rotation;
+      const scale$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_scale;
+      const crop$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_crop;
+      const effects$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_effects;
+      const material$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_material;
+      const this$21 = new $c_Lindigo_shared_scenegraph_Graphic(position$1, depth$3, rotation$2, scale$3, refValue, crop$3, effects$3, material$3).withAlpha__D__Lindigo_shared_scenegraph_Graphic(grandma.Linvaders_model_Grandma__f_fade);
+      const pt$2 = grandma.Linvaders_model_Grandma__f_location.toPoint__Lindigo_shared_datatypes_Point();
+      const depth$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_depth;
+      const rotation$3 = this$21.Lindigo_shared_scenegraph_Graphic__f_rotation;
+      const scale$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_scale;
+      const ref$3 = this$21.Lindigo_shared_scenegraph_Graphic__f_ref;
+      const crop$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_crop;
+      const effects$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_effects;
+      const material$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_material;
+      return new $c_Lindigo_shared_scenegraph_Graphic(pt$2, depth$4, rotation$3, scale$4, ref$3, crop$4, effects$4, material$4)
+    }))(this);
+    let suffix$2;
+    if ((grandmas === $m_sci_Nil$())) {
+      suffix$2 = $m_sci_Nil$()
+    } else {
+      const arg1$4 = grandmas.head__O();
+      const h$2 = new $c_sci_$colon$colon(f$2(arg1$4), $m_sci_Nil$());
+      let t$2 = h$2;
+      let rest$2 = $as_sci_List(grandmas.tail__O());
+      while ((rest$2 !== $m_sci_Nil$())) {
+        const arg1$5 = rest$2.head__O();
+        const nx$2 = new $c_sci_$colon$colon(f$2(arg1$5), $m_sci_Nil$());
+        t$2.sci_$colon$colon__f_next = nx$2;
+        t$2 = nx$2;
+        rest$2 = $as_sci_List(rest$2.tail__O())
+      };
+      suffix$2 = h$2
+    };
+    const this$32 = this$23.appendedAll__sc_IterableOnce__sci_List(suffix$2);
+    $m_sci_List$();
+    const $$x6 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
+    const $$x5 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 120, 50);
+    const diffuse$2 = $m_Linvaders_GameAssets$().skrillexAsset__T();
+    const this$25 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$2, false);
+    const this$26 = $$x6.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x5, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$25.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(60, 0);
+    const pt$3 = skrillex.Linvaders_model_Skrillex__f_location.toPoint__Lindigo_shared_datatypes_Point();
+    const depth$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation$4 = this$26.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref$4 = this$26.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_material;
+    const array$1 = [new $c_Lindigo_shared_scenegraph_Graphic(pt$3, depth$5, rotation$4, scale$5, ref$4, crop$5, effects$5, material$5)];
+    const elems$1 = new $c_sjsr_WrappedVarArgs(array$1);
+    const suffix$3 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
+    return this$32.appendedAll__sc_IterableOnce__sci_List(suffix$3)
+  };
+  present__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    return this.present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+  updateModel__Lindigo_shared_FrameContext__O__F1(context, model) {
+    return this.updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, $as_Linvaders_model_Model(model))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__O__O__F1(context, model, viewModel) {
+    return this.updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+}
+const $d_Linvaders_scenes_RoomScene$ = new $TypeData().initClass({
+  Linvaders_scenes_RoomScene$: 0
+}, false, "invaders.scenes.RoomScene$", {
+  Linvaders_scenes_RoomScene$: 1,
+  O: 1,
+  Lindigo_scenes_Scene: 1
+});
+$c_Linvaders_scenes_RoomScene$.prototype.$classData = $d_Linvaders_scenes_RoomScene$;
+let $n_Linvaders_scenes_RoomScene$ = (void 0);
+function $m_Linvaders_scenes_RoomScene$() {
+  if ((!$n_Linvaders_scenes_RoomScene$)) {
+    $n_Linvaders_scenes_RoomScene$ = new $c_Linvaders_scenes_RoomScene$()
+  };
+  return $n_Linvaders_scenes_RoomScene$
+}
+class $c_Linvaders_scenes_StartScene$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_scenes_StartScene$__f_name = null;
+    this.Linvaders_scenes_StartScene$__f_modelLens = null;
+    this.Linvaders_scenes_StartScene$__f_viewModelLens = null;
+    this.Linvaders_scenes_StartScene$__f_eventFilters = null;
+    this.Linvaders_scenes_StartScene$__f_subSystems = null;
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = 0;
+    $n_Linvaders_scenes_StartScene$ = this;
+    this.Linvaders_scenes_StartScene$__f_name = ($m_Lindigo_scenes_SceneName$(), "start");
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = (((1 | this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_StartScene$__f_modelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = (((2 | this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_StartScene$__f_viewModelLens = $m_Lindigo_scenes_Lens$().keepLatest__Lindigo_scenes_Lens();
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = (((4 | this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_scenes_StartScene$__f_eventFilters = $m_Lindigo_package$().EventFilters__Lindigo_shared_events_EventFilters$().Default__Lindigo_shared_events_EventFilters().withViewModelFilter__F1__Lindigo_shared_events_EventFilters(new $c_sjsr_AnonFunction1(((this$2) => ((x$1$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$1$2);
+      return $m_s_None$()
+    }))(this)));
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = (((8 | this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24);
+    const this$3 = $m_s_Predef$().s_Predef$__f_Set;
+    const elems = $m_sci_Nil$();
+    this.Linvaders_scenes_StartScene$__f_subSystems = this$3.from__sc_IterableOnce__sci_Set(elems);
+    this.Linvaders_scenes_StartScene$__f_bitmap$init$0 = (((16 | this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24)
+  };
+  name__T() {
+    if (((((1 & this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/StartScene.scala: 12")
+    };
+    return this.Linvaders_scenes_StartScene$__f_name
+  };
+  modelLens__Lindigo_scenes_Lens() {
+    if (((((2 & this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/StartScene.scala: 14")
+    };
+    return this.Linvaders_scenes_StartScene$__f_modelLens
+  };
+  viewModelLens__Lindigo_scenes_Lens() {
+    if (((((4 & this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/StartScene.scala: 17")
+    };
+    return this.Linvaders_scenes_StartScene$__f_viewModelLens
+  };
+  eventFilters__Lindigo_shared_events_EventFilters() {
+    if (((((8 & this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/StartScene.scala: 19")
+    };
+    return this.Linvaders_scenes_StartScene$__f_eventFilters
+  };
+  subSystems__sci_Set() {
+    if (((((16 & this.Linvaders_scenes_StartScene$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/scenes/StartScene.scala: 23")
+    };
+    return this.Linvaders_scenes_StartScene$__f_subSystems
+  };
+  updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, model) {
+    return new $c_sjsr_AnonFunction1(((this$1, model$1) => ((x0$1$2) => {
+      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
+      if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyUp)) {
+        const x2 = $as_Lindigo_shared_events_KeyboardEvent$KeyUp(x0$1);
+        const p3 = x2.Lindigo_shared_events_KeyboardEvent$KeyUp__f_keyCode;
+        const x = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SPACE__Lindigo_shared_constants_Key();
+        if (((x === null) ? (p3 === null) : x.equals__O__Z(p3))) {
+          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+          const this$6 = new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$());
+          const array = [new $c_Lindigo_scenes_SceneEvent$JumpTo($m_Linvaders_scenes_InterstitialScene$().name__T())];
+          const newEvents = new $c_sjsr_WrappedVarArgs(array);
+          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$6, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents)))
+        }
+      };
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
+    }))(this, model))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, model, viewModel) {
+    return new $c_sjsr_AnonFunction1(((this$1) => ((x$2$2) => {
+      $as_Lindigo_shared_events_GlobalEvent(x$2$2);
+      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
+      return new $c_Lindigo_shared_Outcome((void 0), $m_sci_Nil$())
+    }))(this))
+  };
+  present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    const horizontalCenter = (($intDiv($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_magnification) / 2) | 0);
+    const verticalMiddle = (($intDiv($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height, $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_magnification) / 2) | 0);
+    $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
+    const $$x8 = $m_sci_Nil$();
+    const $$x7 = $m_sci_Nil$();
+    const $$x6 = $m_sci_Nil$();
+    const $$x5 = $m_sci_Nil$();
+    const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
+    const $$x3 = $m_sci_Nil$();
+    const $$x2 = $m_sci_Nil$();
+    const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
+    const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
+    return $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addUiLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawTitleText__I__I__sci_List(horizontalCenter, verticalMiddle))
+  };
+  drawTitleText__I__I__sci_List(center, middle) {
+    $m_sci_List$();
+    const this$1 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Bass Invaders", center, (((-50) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text = this$1.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position = this$1.Lindigo_shared_scenegraph_Text__f_position;
+    const depth = this$1.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation = this$1.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this$1.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this$1.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects = this$1.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler = this$1.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x2 = new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler);
+    const this$3 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Press Space to Start.", center, (((-10) + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$1 = this$3.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$1 = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position$1 = this$3.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$1 = this$3.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$1 = this$3.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$1 = this$3.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$1 = this$3.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$1 = this$3.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$1 = this$3.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const $$x1 = new $c_Lindigo_shared_scenegraph_Text(text$1, alignment$1, position$1, depth$1, rotation$1, scale$1, fontKey$1, effects$1, eventHandler$1);
+    const this$5 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text("Made by Jon using the lovely Indigo Engine.", center, ((30 + middle) | 0), 1, $m_Linvaders_GameAssets$().fontKey__T());
+    const text$2 = this$5.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment$2 = $m_Lindigo_shared_datatypes_TextAlignment$Center$();
+    const position$2 = this$5.Lindigo_shared_scenegraph_Text__f_position;
+    const depth$2 = this$5.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation$2 = this$5.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale$2 = this$5.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey$2 = this$5.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const effects$2 = this$5.Lindigo_shared_scenegraph_Text__f_effects;
+    const eventHandler$2 = this$5.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    const array = [$$x2, $$x1, new $c_Lindigo_shared_scenegraph_Text(text$2, alignment$2, position$2, depth$2, rotation$2, scale$2, fontKey$2, effects$2, eventHandler$2)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    return $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems)
+  };
+  present__Lindigo_shared_FrameContext__O__O__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model, viewModel) {
+    return this.present__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__Lindigo_shared_scenegraph_SceneUpdateFragment(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+  updateViewModel__Lindigo_shared_FrameContext__O__O__F1(context, model, viewModel) {
+    return this.updateViewModel__Lindigo_shared_FrameContext__Linvaders_model_Model__jl_Void__F1(context, $as_Linvaders_model_Model(model), $as_jl_Void(viewModel))
+  };
+  updateModel__Lindigo_shared_FrameContext__O__F1(context, model) {
+    return this.updateModel__Lindigo_shared_FrameContext__Linvaders_model_Model__F1(context, $as_Linvaders_model_Model(model))
+  };
+}
+const $d_Linvaders_scenes_StartScene$ = new $TypeData().initClass({
+  Linvaders_scenes_StartScene$: 0
+}, false, "invaders.scenes.StartScene$", {
+  Linvaders_scenes_StartScene$: 1,
+  O: 1,
+  Lindigo_scenes_Scene: 1
+});
+$c_Linvaders_scenes_StartScene$.prototype.$classData = $d_Linvaders_scenes_StartScene$;
+let $n_Linvaders_scenes_StartScene$ = (void 0);
+function $m_Linvaders_scenes_StartScene$() {
+  if ((!$n_Linvaders_scenes_StartScene$)) {
+    $n_Linvaders_scenes_StartScene$ = new $c_Linvaders_scenes_StartScene$()
+  };
+  return $n_Linvaders_scenes_StartScene$
+}
 const $p_jl_Character$__nonASCIIZeroDigitCodePoints$lzycompute__AI = (function($thiz) {
   if (((((16 & $thiz.jl_Character$__f_bitmap$0) << 24) >> 24) === 0)) {
     $thiz.jl_Character$__f_nonASCIIZeroDigitCodePoints = $makeNativeArrayWrapper($d_I.getArrayOf(), [1632, 1776, 1984, 2406, 2534, 2662, 2790, 2918, 3046, 3174, 3302, 3430, 3664, 3792, 3872, 4160, 4240, 6112, 6160, 6470, 6608, 6784, 6800, 6992, 7088, 7232, 7248, 42528, 43216, 43264, 43472, 43600, 44016, 65296, 66720, 69734, 69872, 69942, 70096, 71360, 120782, 120792, 120802, 120812, 120822]);
@@ -25459,157 +27737,6 @@ function $m_ju_regex_Pattern$() {
     $n_ju_regex_Pattern$ = new $c_ju_regex_Pattern$()
   };
   return $n_ju_regex_Pattern$
-}
-class $c_Lmodel_Grandma$ extends $c_O {
-  constructor() {
-    super();
-    this.Lmodel_Grandma$__f_aboveScreen = 0.0;
-    this.Lmodel_Grandma$__f_bitmap$init$0 = false;
-    this.Lmodel_Grandma$__f_aboveScreen = (-50.0);
-    this.Lmodel_Grandma$__f_bitmap$init$0 = true
-  };
-  aboveScreen__D() {
-    if ((!this.Lmodel_Grandma$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/model/Grandma.scala: 16")
-    };
-    return this.Lmodel_Grandma$__f_aboveScreen
-  };
-  initial__Lindigo_shared_config_GameConfig__Lmodel_Grandma(config) {
-    const initX = $m_s_util_Random$().between__I__I__I(0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width);
-    const initLocation = new $c_Lmodel_Location(initX, $m_Lmodel_Grandma$().aboveScreen__D());
-    const this$1 = $m_s_util_Random$();
-    let initDir;
-    if (this$1.s_util_Random__f_self.nextBoolean__Z()) {
-      initDir = $m_Lmodel_Horizontal$Left$()
-    } else {
-      initDir = $m_Lmodel_Horizontal$Right$()
-    };
-    $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$();
-    const position = initLocation.toPoint__Lindigo_shared_datatypes_Point();
-    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-    const size = new $c_Lindigo_shared_datatypes_Point(40, 50);
-    const initHitBox = new $c_Lindigo_shared_datatypes_Rectangle(position, size);
-    return new $c_Lmodel_Grandma(initLocation, new $c_Lmodel_Direction($m_Lmodel_Vertical$Down$(), $as_Lmodel_Horizontal(initDir)), initHitBox)
-  };
-}
-const $d_Lmodel_Grandma$ = new $TypeData().initClass({
-  Lmodel_Grandma$: 0
-}, false, "model.Grandma$", {
-  Lmodel_Grandma$: 1,
-  O: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Grandma$.prototype.$classData = $d_Lmodel_Grandma$;
-let $n_Lmodel_Grandma$ = (void 0);
-function $m_Lmodel_Grandma$() {
-  if ((!$n_Lmodel_Grandma$)) {
-    $n_Lmodel_Grandma$ = new $c_Lmodel_Grandma$()
-  };
-  return $n_Lmodel_Grandma$
-}
-class $c_Lmodel_Model$ extends $c_O {
-  initial__Lindigo_shared_config_GameConfig__D__D__Lmodel_Model(config, shotSpeed, grandmaSpeed) {
-    const $$x4 = $m_Lmodel_Skrillex$();
-    const point = config.Lindigo_shared_config_GameConfig__f_viewport.center__Lindigo_shared_datatypes_Point();
-    const $$x3 = $$x4.initial__Lmodel_Location__I__Lmodel_Skrillex(new $c_Lmodel_Location(point.Lindigo_shared_datatypes_Point__f_x, point.Lindigo_shared_datatypes_Point__f_y), (((-50) + config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height) | 0));
-    $m_sci_List$();
-    const $$x2 = $m_sci_Nil$();
-    $m_sci_List$();
-    const array = [new $c_Lmodel_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Magenta__Lindigo_shared_datatypes_RGB(), new $c_Lmodel_Location(0.0, 0.0), new $c_Lmodel_Direction($m_Lmodel_Vertical$Down$(), $m_Lmodel_Horizontal$Right$())), new $c_Lmodel_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Cyan__Lindigo_shared_datatypes_RGB(), new $c_Lmodel_Location(300.0, 700.0), new $c_Lmodel_Direction($m_Lmodel_Vertical$Down$(), $m_Lmodel_Horizontal$Right$())), new $c_Lmodel_LightWithLocation($m_Lindigo_package$().RGB__Lindigo_shared_datatypes_RGB$().Yellow__Lindigo_shared_datatypes_RGB(), new $c_Lmodel_Location(800.0, 100.0), new $c_Lmodel_Direction($m_Lmodel_Vertical$Down$(), $m_Lmodel_Horizontal$Right$()))];
-    const elems = new $c_sjsr_WrappedVarArgs(array);
-    const $$x1 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
-    const b = $m_sci_IndexedSeq$().newBuilder__scm_Builder();
-    const it = new $c_sci_RangeIterator(0, 1, 9, false);
-    while (it.sci_RangeIterator__f__hasNext) {
-      it.next__I();
-      const elem = $m_Lmodel_Grandma$().initial__Lindigo_shared_config_GameConfig__Lmodel_Grandma(config);
-      b.addOne__O__scm_Growable(elem)
-    };
-    const this$13 = $as_sci_IndexedSeq(b.result__O());
-    $m_sci_List$();
-    return new $c_Lmodel_Model($$x3, $$x2, shotSpeed, $$x1, $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(this$13), grandmaSpeed, 0, 0, ($m_sci_List$(), $m_sci_Nil$()))
-  };
-}
-const $d_Lmodel_Model$ = new $TypeData().initClass({
-  Lmodel_Model$: 0
-}, false, "model.Model$", {
-  Lmodel_Model$: 1,
-  O: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Model$.prototype.$classData = $d_Lmodel_Model$;
-let $n_Lmodel_Model$ = (void 0);
-function $m_Lmodel_Model$() {
-  if ((!$n_Lmodel_Model$)) {
-    $n_Lmodel_Model$ = new $c_Lmodel_Model$()
-  };
-  return $n_Lmodel_Model$
-}
-class $c_Lmodel_Shot$ extends $c_O {
-  newShot__Lmodel_Location__Lmodel_Shot(location) {
-    $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$();
-    const position = location.toPoint__Lindigo_shared_datatypes_Point();
-    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-    const size = new $c_Lindigo_shared_datatypes_Point(20, 30);
-    return new $c_Lmodel_Shot(location, new $c_Lindigo_shared_datatypes_Rectangle(position, size))
-  };
-}
-const $d_Lmodel_Shot$ = new $TypeData().initClass({
-  Lmodel_Shot$: 0
-}, false, "model.Shot$", {
-  Lmodel_Shot$: 1,
-  O: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Shot$.prototype.$classData = $d_Lmodel_Shot$;
-let $n_Lmodel_Shot$ = (void 0);
-function $m_Lmodel_Shot$() {
-  if ((!$n_Lmodel_Shot$)) {
-    $n_Lmodel_Shot$ = new $c_Lmodel_Shot$()
-  };
-  return $n_Lmodel_Shot$
-}
-class $c_Lmodel_Skrillex$ extends $c_O {
-  initial__Lmodel_Location__I__Lmodel_Skrillex(center, height) {
-    return new $c_Lmodel_Skrillex(new $c_Lmodel_Location(center.Lmodel_Location__f_x, height))
-  };
-}
-const $d_Lmodel_Skrillex$ = new $TypeData().initClass({
-  Lmodel_Skrillex$: 0
-}, false, "model.Skrillex$", {
-  Lmodel_Skrillex$: 1,
-  O: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Skrillex$.prototype.$classData = $d_Lmodel_Skrillex$;
-let $n_Lmodel_Skrillex$ = (void 0);
-function $m_Lmodel_Skrillex$() {
-  if ((!$n_Lmodel_Skrillex$)) {
-    $n_Lmodel_Skrillex$ = new $c_Lmodel_Skrillex$()
-  };
-  return $n_Lmodel_Skrillex$
-}
-class $c_Lmodel_Splatter$ extends $c_O {
-  fromLocation__Lmodel_Location__Lmodel_Splatter(location) {
-    const rotation = $m_Lindigo_package$().Radians__Lindigo_shared_datatypes_Radians$().fromDegrees__D__D($m_s_util_Random$().between__D__D__D(0.0, 360.0));
-    const scale = $m_s_util_Random$().between__D__D__D(0.2, 2.0);
-    return new $c_Lmodel_Splatter(location, rotation, scale)
-  };
-}
-const $d_Lmodel_Splatter$ = new $TypeData().initClass({
-  Lmodel_Splatter$: 0
-}, false, "model.Splatter$", {
-  Lmodel_Splatter$: 1,
-  O: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Splatter$.prototype.$classData = $d_Lmodel_Splatter$;
-let $n_Lmodel_Splatter$ = (void 0);
-function $m_Lmodel_Splatter$() {
-  if ((!$n_Lmodel_Splatter$)) {
-    $n_Lmodel_Splatter$ = new $c_Lmodel_Splatter$()
-  };
-  return $n_Lmodel_Splatter$
 }
 const $p_RTLong$__toUnsignedString__I__I__T = (function($thiz, lo, hi) {
   if ((((-2097152) & hi) === 0)) {
@@ -26915,527 +29042,6 @@ const $d_s_util_hashing_MurmurHash3$accum$1 = new $TypeData().initClass({
   F2: 1
 });
 $c_s_util_hashing_MurmurHash3$accum$1.prototype.$classData = $d_s_util_hashing_MurmurHash3$accum$1;
-class $c_LBassInvader$ extends $c_O {
-  constructor() {
-    super();
-    this.LBassInvader$__f_magnification = 0;
-    this.LBassInvader$__f_width = 0;
-    this.LBassInvader$__f_height = 0;
-    this.LBassInvader$__f_speed = 0.0;
-    this.LBassInvader$__f_shotSpeed = 0.0;
-    this.LBassInvader$__f_grandmaSpeed = 0.0;
-    this.LBassInvader$__f_config = null;
-    this.LBassInvader$__f_animations = null;
-    this.LBassInvader$__f_skrillexAsset = null;
-    this.LBassInvader$__f_shotAsset = null;
-    this.LBassInvader$__f_grandmaAsset = null;
-    this.LBassInvader$__f_splatAsset = null;
-    this.LBassInvader$__f_bgAsset = null;
-    this.LBassInvader$__f_shotSoundAsset = null;
-    this.LBassInvader$__f_fontAssetName = null;
-    this.LBassInvader$__f_assets = null;
-    this.LBassInvader$__f_fonts = null;
-    this.LBassInvader$__f_shotGraphic = null;
-    this.LBassInvader$__f_bgGraphic = null;
-    this.LBassInvader$__f_bitmap$init$0 = 0;
-    $n_LBassInvader$ = this;
-    this.LBassInvader$__f_magnification = 1;
-    this.LBassInvader$__f_bitmap$init$0 = (1 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_width = 1200;
-    this.LBassInvader$__f_bitmap$init$0 = (2 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_height = 800;
-    this.LBassInvader$__f_bitmap$init$0 = (4 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_speed = 40.0;
-    this.LBassInvader$__f_bitmap$init$0 = (8 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_shotSpeed = 3.0;
-    this.LBassInvader$__f_bitmap$init$0 = (16 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_grandmaSpeed = 3.0;
-    this.LBassInvader$__f_bitmap$init$0 = (32 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_config = $m_Lindigo_package$().GameConfig__Lindigo_shared_config_GameConfig$().default__Lindigo_shared_config_GameConfig().withMagnification__I__Lindigo_shared_config_GameConfig(this.magnification__I()).withViewport__I__I__Lindigo_shared_config_GameConfig(this.width__I(), this.height__I());
-    this.LBassInvader$__f_bitmap$init$0 = (64 | this.LBassInvader$__f_bitmap$init$0);
-    const this$1 = $m_s_Predef$().s_Predef$__f_Set;
-    const elems = $m_sci_Nil$();
-    this.LBassInvader$__f_animations = this$1.from__sc_IterableOnce__sci_Set(elems);
-    this.LBassInvader$__f_bitmap$init$0 = (128 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_skrillexAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "skrillex");
-    this.LBassInvader$__f_bitmap$init$0 = (256 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_shotAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "shot");
-    this.LBassInvader$__f_bitmap$init$0 = (512 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_grandmaAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "grandma");
-    this.LBassInvader$__f_bitmap$init$0 = (1024 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_splatAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "splat");
-    this.LBassInvader$__f_bitmap$init$0 = (2048 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_bgAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "bg");
-    this.LBassInvader$__f_bitmap$init$0 = (4096 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_shotSoundAsset = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "shotSound");
-    this.LBassInvader$__f_bitmap$init$0 = (8192 | this.LBassInvader$__f_bitmap$init$0);
-    this.LBassInvader$__f_fontAssetName = ($m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$(), "font");
-    this.LBassInvader$__f_bitmap$init$0 = (16384 | this.LBassInvader$__f_bitmap$init$0);
-    const this$26 = $m_s_Predef$().s_Predef$__f_Set;
-    const name = this.skrillexAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path = "assets/skrillex.png";
-    const $$x6 = new $c_Lindigo_shared_assets_AssetType$Image(name, path, $m_s_None$());
-    const name$1 = this.shotAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$1 = "assets/Wave2.png";
-    const $$x5 = new $c_Lindigo_shared_assets_AssetType$Image(name$1, path$1, $m_s_None$());
-    const name$2 = this.grandmaAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$2 = "assets/Granny.png";
-    const $$x4 = new $c_Lindigo_shared_assets_AssetType$Image(name$2, path$2, $m_s_None$());
-    const name$3 = this.splatAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$3 = "assets/splat.png";
-    const $$x3 = new $c_Lindigo_shared_assets_AssetType$Image(name$3, path$3, $m_s_None$());
-    const name$4 = this.bgAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$4 = "assets/bg.png";
-    const $$x2 = new $c_Lindigo_shared_assets_AssetType$Image(name$4, path$4, $m_s_None$());
-    const name$5 = this.shotSoundAsset__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$5 = "assets/drop.m4a";
-    const $$x1 = new $c_Lindigo_shared_assets_AssetType$Audio(name$5, path$5);
-    const name$6 = this.fontAssetName__T();
-    $m_Lindigo_package$().AssetPath__Lindigo_shared_assets_AssetPath$();
-    const path$6 = "assets/boxy_font.png";
-    const array = [$$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_assets_AssetType$Image(name$6, path$6, $m_s_None$())];
-    const elems$1 = new $c_sjsr_WrappedVarArgs(array);
-    this.LBassInvader$__f_assets = this$26.from__sc_IterableOnce__sci_Set(elems$1);
-    this.LBassInvader$__f_bitmap$init$0 = (32768 | this.LBassInvader$__f_bitmap$init$0);
-    const this$30 = $m_s_Predef$().s_Predef$__f_Set;
-    const array$1 = [$m_LFont$().fontInfo__T__Lindigo_shared_datatypes_FontInfo(this.fontAssetName__T())];
-    const elems$2 = new $c_sjsr_WrappedVarArgs(array$1);
-    this.LBassInvader$__f_fonts = this$30.from__sc_IterableOnce__sci_Set(elems$2);
-    this.LBassInvader$__f_bitmap$init$0 = (65536 | this.LBassInvader$__f_bitmap$init$0);
-    const $$x8 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-    const $$x7 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 20, 30);
-    const diffuse = this.shotAsset__T();
-    const this$32 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false);
-    this.LBassInvader$__f_shotGraphic = $$x8.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x7, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$32.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
-    this.LBassInvader$__f_bitmap$init$0 = (131072 | this.LBassInvader$__f_bitmap$init$0);
-    const $$x10 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-    const $$x9 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, this.config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width, this.config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height);
-    const diffuse$1 = this.bgAsset__T();
-    const this$34 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false);
-    this.LBassInvader$__f_bgGraphic = $$x10.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x9, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$34.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
-    this.LBassInvader$__f_bitmap$init$0 = (262144 | this.LBassInvader$__f_bitmap$init$0)
-  };
-  $js$exported$meth$launch__O() {
-    $f_Lindigo_GameLauncher__launch__V(this)
-  };
-  $js$exported$meth$launch__sjs_js_Dictionary__O(flags) {
-    $f_Lindigo_GameLauncher__launch__sjs_js_Dictionary__V(this, flags)
-  };
-  magnification__I() {
-    if (((1 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 8")
-    };
-    return this.LBassInvader$__f_magnification
-  };
-  width__I() {
-    if (((2 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 9")
-    };
-    return this.LBassInvader$__f_width
-  };
-  height__I() {
-    if (((4 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 10")
-    };
-    return this.LBassInvader$__f_height
-  };
-  shotSpeed__D() {
-    if (((16 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 12")
-    };
-    return this.LBassInvader$__f_shotSpeed
-  };
-  grandmaSpeed__D() {
-    if (((32 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 13")
-    };
-    return this.LBassInvader$__f_grandmaSpeed
-  };
-  config__Lindigo_shared_config_GameConfig() {
-    if (((64 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 14")
-    };
-    return this.LBassInvader$__f_config
-  };
-  animations__sci_Set() {
-    if (((128 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 19")
-    };
-    return this.LBassInvader$__f_animations
-  };
-  skrillexAsset__T() {
-    if (((256 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 22")
-    };
-    return this.LBassInvader$__f_skrillexAsset
-  };
-  shotAsset__T() {
-    if (((512 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 23")
-    };
-    return this.LBassInvader$__f_shotAsset
-  };
-  grandmaAsset__T() {
-    if (((1024 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 24")
-    };
-    return this.LBassInvader$__f_grandmaAsset
-  };
-  splatAsset__T() {
-    if (((2048 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 25")
-    };
-    return this.LBassInvader$__f_splatAsset
-  };
-  bgAsset__T() {
-    if (((4096 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 26")
-    };
-    return this.LBassInvader$__f_bgAsset
-  };
-  shotSoundAsset__T() {
-    if (((8192 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 27")
-    };
-    return this.LBassInvader$__f_shotSoundAsset
-  };
-  fontAssetName__T() {
-    if (((16384 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 28")
-    };
-    return this.LBassInvader$__f_fontAssetName
-  };
-  assets__sci_Set() {
-    if (((32768 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 29")
-    };
-    return this.LBassInvader$__f_assets
-  };
-  fonts__sci_Set() {
-    if (((65536 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 40")
-    };
-    return this.LBassInvader$__f_fonts
-  };
-  updateModel__Lindigo_shared_FrameContext__Lmodel_Model__F1(context, model) {
-    return new $c_sjsr_AnonFunction1(((this$1, model$1, context$1) => ((x0$1$2) => {
-      const x0$1 = $as_Lindigo_shared_events_GlobalEvent(x0$1$2);
-      if ((x0$1 instanceof $c_Lindigo_shared_events_MouseEvent$Move)) {
-        const x2 = $as_Lindigo_shared_events_MouseEvent$Move(x0$1);
-        const x = x2.Lindigo_shared_events_MouseEvent$Move__f_x;
-        const y = x2.Lindigo_shared_events_MouseEvent$Move__f_y;
-        $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-        const state = model$1.updateSkrillex__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Model(new $c_Lmodel_Location(x, y), $m_LBassInvader$().config__Lindigo_shared_config_GameConfig());
-        return new $c_Lindigo_shared_Outcome(state, $m_sci_Nil$())
-      };
-      if ((x0$1 instanceof $c_Lindigo_shared_events_KeyboardEvent$KeyDown)) {
-        const x3 = $as_Lindigo_shared_events_KeyboardEvent$KeyDown(x0$1);
-        const p4 = x3.Lindigo_shared_events_KeyboardEvent$KeyDown__f_keyCode;
-        const x$2 = $m_Lindigo_package$().Keys__Lindigo_shared_constants_Keys$().SPACE__Lindigo_shared_constants_Key();
-        if (((x$2 === null) ? (p4 === null) : x$2.equals__O__Z(p4))) {
-          $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-          const state$1 = model$1.updateShot__Lmodel_Model();
-          const this$9 = new $c_Lindigo_shared_Outcome(state$1, $m_sci_Nil$());
-          $m_Lindigo_package$().PlaySound__Lindigo_shared_events_PlaySound$();
-          $m_Lindigo_package$().AssetName__Lindigo_shared_assets_AssetName$();
-          const assetName = "shotSound";
-          const volume = $m_Lindigo_package$().Volume__Lindigo_shared_audio_Volume$().Max__D();
-          const array = [new $c_Lindigo_shared_events_PlaySound(assetName, volume)];
-          const newEvents = new $c_sjsr_WrappedVarArgs(array);
-          return $m_Lindigo_shared_Outcome$().addGlobalEvents__Lindigo_shared_Outcome__sci_List__Lindigo_shared_Outcome(this$9, ($m_sci_List$(), $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(newEvents)))
-        }
-      };
-      const x$4 = $m_Lindigo_package$().FrameTick__Lindigo_shared_events_FrameTick$();
-      if ((x$4 === x0$1)) {
-        $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-        const state$2 = model$1.updateTick__Lindigo_shared_config_GameConfig__D__Lmodel_Model($m_LBassInvader$().config__Lindigo_shared_config_GameConfig(), context$1.delta__D());
-        return new $c_Lindigo_shared_Outcome(state$2, $m_sci_Nil$())
-      };
-      $m_Lindigo_package$().Outcome__Lindigo_shared_Outcome$();
-      return new $c_Lindigo_shared_Outcome(model$1, $m_sci_Nil$())
-    }))(this, model, context))
-  };
-  present__Lindigo_shared_FrameContext__Lmodel_Model__Lindigo_shared_scenegraph_SceneUpdateFragment(context, model) {
-    $m_Lindigo_package$().SceneUpdateFragment__Lindigo_shared_scenegraph_SceneUpdateFragment$();
-    const $$x9 = $m_Lindigo_shared_scenegraph_SceneUpdateFragment$();
-    const $$x8 = $m_sci_Nil$();
-    const $$x7 = $m_sci_Nil$();
-    const $$x6 = $m_sci_Nil$();
-    const $$x5 = $m_sci_Nil$();
-    const $$x4 = $m_Lindigo_shared_datatypes_RGBA$().None__Lindigo_shared_datatypes_RGBA();
-    const $$x3 = $m_sci_Nil$();
-    const $$x2 = $m_sci_Nil$();
-    const $$x1 = $m_Lindigo_shared_scenegraph_SceneAudio$().None__Lindigo_shared_scenegraph_SceneAudio();
-    const gameColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
-    const uiColorOverlay = $m_Lindigo_shared_datatypes_RGBA$().Zero__Lindigo_shared_datatypes_RGBA();
-    const this$4 = $$x9.apply__sci_List__sci_List__sci_List__sci_List__Lindigo_shared_datatypes_RGBA__sci_List__sci_List__Lindigo_shared_scenegraph_SceneAudio__Lindigo_shared_scenegraph_ScreenEffects__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment($$x8, $$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_Lindigo_shared_scenegraph_ScreenEffects(gameColorOverlay, uiColorOverlay), $m_sci_Nil$()).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawScene__Lmodel_Skrillex__sci_List__sci_List__sci_List__sci_List(model.Lmodel_Model__f_skrillex, model.Lmodel_Model__f_shots, model.Lmodel_Model__f_grandmas, model.Lmodel_Model__f_splats));
-    const newLights = this.drawLights__sci_List__sci_List(model.Lmodel_Model__f_lights);
-    const gameLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_gameLayer;
-    const lightingLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_lightingLayer;
-    const distortionLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_distortionLayer;
-    const uiLayer = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_uiLayer;
-    const ambientLight = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_ambientLight;
-    const globalEvents = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_globalEvents;
-    const audio = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_audio;
-    const screenEffects = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_screenEffects;
-    const cloneBlanks = this$4.Lindigo_shared_scenegraph_SceneUpdateFragment__f_cloneBlanks;
-    return new $c_Lindigo_shared_scenegraph_SceneUpdateFragment(gameLayer, lightingLayer, distortionLayer, uiLayer, ambientLight, newLights, globalEvents, audio, screenEffects, cloneBlanks).addGameLayerNodes__sci_List__Lindigo_shared_scenegraph_SceneUpdateFragment(this.drawText__I__I__sci_List(model.Lmodel_Model__f_points, model.Lmodel_Model__f_strikes))
-  };
-  drawText__I__I__sci_List(score, strikes) {
-    $m_sci_List$();
-    const this$1 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(("Score " + score), 10, 20, 1, $m_LFont$().fontKey__T());
-    const text = this$1.Lindigo_shared_scenegraph_Text__f_text;
-    const alignment = $m_Lindigo_shared_datatypes_TextAlignment$Left$();
-    const position = this$1.Lindigo_shared_scenegraph_Text__f_position;
-    const depth = this$1.Lindigo_shared_scenegraph_Text__f_depth;
-    const rotation = this$1.Lindigo_shared_scenegraph_Text__f_rotation;
-    const scale = this$1.Lindigo_shared_scenegraph_Text__f_scale;
-    const fontKey = this$1.Lindigo_shared_scenegraph_Text__f_fontKey;
-    const effects = this$1.Lindigo_shared_scenegraph_Text__f_effects;
-    const eventHandler = this$1.Lindigo_shared_scenegraph_Text__f_eventHandler;
-    const array = [new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)];
-    const elems = new $c_sjsr_WrappedVarArgs(array);
-    const this$13 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
-    $m_sci_List$();
-    const this$7 = $m_Lindigo_package$().Text__Lindigo_shared_scenegraph_Text$().apply__T__I__I__I__T__Lindigo_shared_scenegraph_Text(("Strikes " + strikes), (((-10) + this.config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width) | 0), 20, 1, $m_LFont$().fontKey__T());
-    const text$1 = this$7.Lindigo_shared_scenegraph_Text__f_text;
-    const alignment$1 = $m_Lindigo_shared_datatypes_TextAlignment$Right$();
-    const position$1 = this$7.Lindigo_shared_scenegraph_Text__f_position;
-    const depth$1 = this$7.Lindigo_shared_scenegraph_Text__f_depth;
-    const rotation$1 = this$7.Lindigo_shared_scenegraph_Text__f_rotation;
-    const scale$1 = this$7.Lindigo_shared_scenegraph_Text__f_scale;
-    const fontKey$1 = this$7.Lindigo_shared_scenegraph_Text__f_fontKey;
-    const effects$1 = this$7.Lindigo_shared_scenegraph_Text__f_effects;
-    const eventHandler$1 = this$7.Lindigo_shared_scenegraph_Text__f_eventHandler;
-    const array$1 = [new $c_Lindigo_shared_scenegraph_Text(text$1, alignment$1, position$1, depth$1, rotation$1, scale$1, fontKey$1, effects$1, eventHandler$1)];
-    const elems$1 = new $c_sjsr_WrappedVarArgs(array$1);
-    const suffix = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
-    return this$13.appendedAll__sc_IterableOnce__sci_List(suffix)
-  };
-  drawLights__sci_List__sci_List(lights) {
-    const f = ((this$1) => ((l$2) => {
-      const l = $as_Lmodel_LightWithLocation(l$2);
-      const this$2 = $m_Lindigo_package$().PointLight__Lindigo_shared_scenegraph_PointLight$().default__Lindigo_shared_scenegraph_PointLight();
-      const newPosition = l.Lmodel_LightWithLocation__f_location.toPoint__Lindigo_shared_datatypes_Point();
-      const this$3 = new $c_Lindigo_shared_scenegraph_PointLight(newPosition, this$2.Lindigo_shared_scenegraph_PointLight__f_height, this$2.Lindigo_shared_scenegraph_PointLight__f_color, this$2.Lindigo_shared_scenegraph_PointLight__f_power, this$2.Lindigo_shared_scenegraph_PointLight__f_attenuation);
-      const this$4 = new $c_Lindigo_shared_scenegraph_PointLight(this$3.Lindigo_shared_scenegraph_PointLight__f_position, this$3.Lindigo_shared_scenegraph_PointLight__f_height, this$3.Lindigo_shared_scenegraph_PointLight__f_color, this$3.Lindigo_shared_scenegraph_PointLight__f_power, 500);
-      const newColor = l.Lmodel_LightWithLocation__f_color;
-      const this$5 = new $c_Lindigo_shared_scenegraph_PointLight(this$4.Lindigo_shared_scenegraph_PointLight__f_position, this$4.Lindigo_shared_scenegraph_PointLight__f_height, newColor, this$4.Lindigo_shared_scenegraph_PointLight__f_power, this$4.Lindigo_shared_scenegraph_PointLight__f_attenuation);
-      const this$6 = new $c_Lindigo_shared_scenegraph_PointLight(this$5.Lindigo_shared_scenegraph_PointLight__f_position, 100, this$5.Lindigo_shared_scenegraph_PointLight__f_color, this$5.Lindigo_shared_scenegraph_PointLight__f_power, this$5.Lindigo_shared_scenegraph_PointLight__f_attenuation);
-      return new $c_Lindigo_shared_scenegraph_PointLight(this$6.Lindigo_shared_scenegraph_PointLight__f_position, this$6.Lindigo_shared_scenegraph_PointLight__f_height, this$6.Lindigo_shared_scenegraph_PointLight__f_color, 20.0, this$6.Lindigo_shared_scenegraph_PointLight__f_attenuation)
-    }))(this);
-    if ((lights === $m_sci_Nil$())) {
-      return $m_sci_Nil$()
-    } else {
-      const arg1 = lights.head__O();
-      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-      let t = h;
-      let rest = $as_sci_List(lights.tail__O());
-      while ((rest !== $m_sci_Nil$())) {
-        const arg1$1 = rest.head__O();
-        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-        t.sci_$colon$colon__f_next = nx;
-        t = nx;
-        rest = $as_sci_List(rest.tail__O())
-      };
-      return h
-    }
-  };
-  shotGraphic__Lindigo_shared_scenegraph_Graphic() {
-    if (((131072 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 82")
-    };
-    return this.LBassInvader$__f_shotGraphic
-  };
-  bgGraphic__Lindigo_shared_scenegraph_Graphic() {
-    if (((262144 & this.LBassInvader$__f_bitmap$init$0) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/BassInvader.scala: 83")
-    };
-    return this.LBassInvader$__f_bgGraphic
-  };
-  drawScene__Lmodel_Skrillex__sci_List__sci_List__sci_List__sci_List(skrillex, shots, grandmas, splats) {
-    $m_sci_List$();
-    const array = [this.bgGraphic__Lindigo_shared_scenegraph_Graphic()];
-    const elems = new $c_sjsr_WrappedVarArgs(array);
-    const this$12 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
-    const f = ((this$5) => ((splat$2) => {
-      const splat = $as_Lmodel_Splatter(splat$2);
-      const $$x2 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-      const $$x1 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 40, 40);
-      const diffuse = $m_LBassInvader$().splatAsset__T();
-      const this$7 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse, false);
-      const this$8 = $$x2.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x1, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$7.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(20, 0);
-      const angle = splat.Lmodel_Splatter__f_rotation;
-      const position = this$8.Lindigo_shared_scenegraph_Graphic__f_position;
-      const depth = this$8.Lindigo_shared_scenegraph_Graphic__f_depth;
-      const scale = this$8.Lindigo_shared_scenegraph_Graphic__f_scale;
-      const ref = this$8.Lindigo_shared_scenegraph_Graphic__f_ref;
-      const crop = this$8.Lindigo_shared_scenegraph_Graphic__f_crop;
-      const effects = this$8.Lindigo_shared_scenegraph_Graphic__f_effects;
-      const material = this$8.Lindigo_shared_scenegraph_Graphic__f_material;
-      const this$10 = new $c_Lindigo_shared_scenegraph_Graphic(position, depth, angle, scale, ref, crop, effects, material).scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(splat.Lmodel_Splatter__f_scale, splat.Lmodel_Splatter__f_scale);
-      const pt = splat.Lmodel_Splatter__f_location.toPoint__Lindigo_shared_datatypes_Point();
-      const depth$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_depth;
-      const rotation = this$10.Lindigo_shared_scenegraph_Graphic__f_rotation;
-      const scale$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_scale;
-      const ref$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_ref;
-      const crop$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_crop;
-      const effects$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_effects;
-      const material$1 = this$10.Lindigo_shared_scenegraph_Graphic__f_material;
-      return new $c_Lindigo_shared_scenegraph_Graphic(pt, depth$1, rotation, scale$1, ref$1, crop$1, effects$1, material$1)
-    }))(this);
-    let suffix;
-    if ((splats === $m_sci_Nil$())) {
-      suffix = $m_sci_Nil$()
-    } else {
-      const arg1 = splats.head__O();
-      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-      let t = h;
-      let rest = $as_sci_List(splats.tail__O());
-      while ((rest !== $m_sci_Nil$())) {
-        const arg1$1 = rest.head__O();
-        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-        t.sci_$colon$colon__f_next = nx;
-        t = nx;
-        rest = $as_sci_List(rest.tail__O())
-      };
-      suffix = h
-    };
-    const this$15 = this$12.appendedAll__sc_IterableOnce__sci_List(suffix);
-    const f$1 = ((this$2$1) => ((shot$2) => {
-      const shot = $as_Lmodel_Shot(shot$2);
-      const this$13 = $m_LBassInvader$().shotGraphic__Lindigo_shared_scenegraph_Graphic().withRef__I__I__Lindigo_shared_scenegraph_Graphic(10, 0);
-      const pt$1 = shot.Lmodel_Shot__f_location.toPoint__Lindigo_shared_datatypes_Point();
-      const depth$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_depth;
-      const rotation$1 = this$13.Lindigo_shared_scenegraph_Graphic__f_rotation;
-      const scale$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_scale;
-      const ref$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_ref;
-      const crop$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_crop;
-      const effects$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_effects;
-      const material$2 = this$13.Lindigo_shared_scenegraph_Graphic__f_material;
-      return new $c_Lindigo_shared_scenegraph_Graphic(pt$1, depth$2, rotation$1, scale$2, ref$2, crop$2, effects$2, material$2)
-    }))(this);
-    let suffix$1;
-    if ((shots === $m_sci_Nil$())) {
-      suffix$1 = $m_sci_Nil$()
-    } else {
-      const arg1$2 = shots.head__O();
-      const h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
-      let t$1 = h$1;
-      let rest$1 = $as_sci_List(shots.tail__O());
-      while ((rest$1 !== $m_sci_Nil$())) {
-        const arg1$3 = rest$1.head__O();
-        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
-        t$1.sci_$colon$colon__f_next = nx$1;
-        t$1 = nx$1;
-        rest$1 = $as_sci_List(rest$1.tail__O())
-      };
-      suffix$1 = h$1
-    };
-    const this$23 = this$15.appendedAll__sc_IterableOnce__sci_List(suffix$1);
-    const f$2 = ((this$3$1) => ((grandma$2) => {
-      const grandma = $as_Lmodel_Grandma(grandma$2);
-      const $$x4 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-      const $$x3 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 40, 50);
-      const diffuse$1 = $m_LBassInvader$().grandmaAsset__T();
-      const this$17 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$1, false);
-      const this$19 = $$x4.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x3, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$17.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true));
-      $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-      const refValue = new $c_Lindigo_shared_datatypes_Point(20, 0);
-      const position$1 = this$19.Lindigo_shared_scenegraph_Graphic__f_position;
-      const depth$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_depth;
-      const rotation$2 = this$19.Lindigo_shared_scenegraph_Graphic__f_rotation;
-      const scale$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_scale;
-      const crop$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_crop;
-      const effects$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_effects;
-      const material$3 = this$19.Lindigo_shared_scenegraph_Graphic__f_material;
-      const this$21 = new $c_Lindigo_shared_scenegraph_Graphic(position$1, depth$3, rotation$2, scale$3, refValue, crop$3, effects$3, material$3);
-      const pt$2 = grandma.Lmodel_Grandma__f_location.toPoint__Lindigo_shared_datatypes_Point();
-      const depth$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_depth;
-      const rotation$3 = this$21.Lindigo_shared_scenegraph_Graphic__f_rotation;
-      const scale$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_scale;
-      const ref$3 = this$21.Lindigo_shared_scenegraph_Graphic__f_ref;
-      const crop$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_crop;
-      const effects$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_effects;
-      const material$4 = this$21.Lindigo_shared_scenegraph_Graphic__f_material;
-      return new $c_Lindigo_shared_scenegraph_Graphic(pt$2, depth$4, rotation$3, scale$4, ref$3, crop$4, effects$4, material$4)
-    }))(this);
-    let suffix$2;
-    if ((grandmas === $m_sci_Nil$())) {
-      suffix$2 = $m_sci_Nil$()
-    } else {
-      const arg1$4 = grandmas.head__O();
-      const h$2 = new $c_sci_$colon$colon(f$2(arg1$4), $m_sci_Nil$());
-      let t$2 = h$2;
-      let rest$2 = $as_sci_List(grandmas.tail__O());
-      while ((rest$2 !== $m_sci_Nil$())) {
-        const arg1$5 = rest$2.head__O();
-        const nx$2 = new $c_sci_$colon$colon(f$2(arg1$5), $m_sci_Nil$());
-        t$2.sci_$colon$colon__f_next = nx$2;
-        t$2 = nx$2;
-        rest$2 = $as_sci_List(rest$2.tail__O())
-      };
-      suffix$2 = h$2
-    };
-    const this$32 = this$23.appendedAll__sc_IterableOnce__sci_List(suffix$2);
-    $m_sci_List$();
-    const $$x6 = $m_Lindigo_package$().Graphic__Lindigo_shared_scenegraph_Graphic$();
-    const $$x5 = $m_Lindigo_package$().Rectangle__Lindigo_shared_datatypes_Rectangle$().apply__I__I__I__I__Lindigo_shared_datatypes_Rectangle(0, 0, 120, 50);
-    const diffuse$2 = this.skrillexAsset__T();
-    const this$25 = new $c_Lindigo_shared_datatypes_Material$Textured(diffuse$2, false);
-    const this$26 = $$x6.apply__Lindigo_shared_datatypes_Rectangle__I__Lindigo_shared_datatypes_Material__Lindigo_shared_scenegraph_Graphic($$x5, 1, new $c_Lindigo_shared_datatypes_Material$Textured(this$25.Lindigo_shared_datatypes_Material$Textured__f_diffuse, true)).withRef__I__I__Lindigo_shared_scenegraph_Graphic(60, 0);
-    const pt$3 = skrillex.Lmodel_Skrillex__f_location.toPoint__Lindigo_shared_datatypes_Point();
-    const depth$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_depth;
-    const rotation$4 = this$26.Lindigo_shared_scenegraph_Graphic__f_rotation;
-    const scale$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_scale;
-    const ref$4 = this$26.Lindigo_shared_scenegraph_Graphic__f_ref;
-    const crop$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_crop;
-    const effects$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_effects;
-    const material$5 = this$26.Lindigo_shared_scenegraph_Graphic__f_material;
-    const array$1 = [new $c_Lindigo_shared_scenegraph_Graphic(pt$3, depth$5, rotation$4, scale$5, ref$4, crop$5, effects$5, material$5)];
-    const elems$1 = new $c_sjsr_WrappedVarArgs(array$1);
-    const suffix$3 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
-    return this$32.appendedAll__sc_IterableOnce__sci_List(suffix$3)
-  };
-  "launch"(...rest) {
-    switch ($uI(rest.length)) {
-      case 0: {
-        return this.$js$exported$meth$launch__O();
-        break
-      }
-      case 1: {
-        const prep0 = rest[0];
-        return this.$js$exported$meth$launch__sjs_js_Dictionary__O(prep0);
-        break
-      }
-      default: {
-        throw "No matching overload"
-      }
-    }
-  };
-}
-const $d_LBassInvader$ = new $TypeData().initClass({
-  LBassInvader$: 0
-}, false, "BassInvader$", {
-  LBassInvader$: 1,
-  O: 1,
-  Lindigo_IndigoSandbox: 1,
-  Lindigo_GameLauncher: 1
-});
-$c_LBassInvader$.prototype.$classData = $d_LBassInvader$;
-let $n_LBassInvader$ = (void 0);
-function $m_LBassInvader$() {
-  if ((!$n_LBassInvader$)) {
-    $n_LBassInvader$ = new $c_LBassInvader$()
-  };
-  return $n_LBassInvader$
-}
 class $c_Lindigo_shared_assets_AssetType$Audio extends $c_O {
   constructor(name, path) {
     super();
@@ -27543,6 +29149,84 @@ function $isArrayOf_Lindigo_shared_scenegraph_Group(obj, depth) {
 }
 function $asArrayOf_Lindigo_shared_scenegraph_Group(obj, depth) {
   return (($isArrayOf_Lindigo_shared_scenegraph_Group(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.shared.scenegraph.Group;", depth))
+}
+class $c_Linvaders_BassInvader$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_BassInvader$__f_indigo$IndigoGame$$subSystemsRegister = null;
+    this.Linvaders_BassInvader$__f_bitmap$init$0 = false;
+    $n_Linvaders_BassInvader$ = this;
+    $f_Lindigo_IndigoGame__$init$__V(this)
+  };
+  $js$exported$meth$launch__O() {
+    $f_Lindigo_GameLauncher__launch__V(this)
+  };
+  $js$exported$meth$launch__sjs_js_Dictionary__O(flags) {
+    $f_Lindigo_GameLauncher__launch__sjs_js_Dictionary__V(this, flags)
+  };
+  indigo$IndigoGame$$subSystemsRegister__Lindigo_shared_subsystems_SubSystemsRegister() {
+    if ((!this.Linvaders_BassInvader$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/BassInvader.scala: 10")
+    };
+    return this.Linvaders_BassInvader$__f_indigo$IndigoGame$$subSystemsRegister
+  };
+  indigo$IndigoGame$_setter_$indigo$IndigoGame$$subSystemsRegister_$eq__Lindigo_shared_subsystems_SubSystemsRegister__V(x$1) {
+    this.Linvaders_BassInvader$__f_indigo$IndigoGame$$subSystemsRegister = x$1;
+    this.Linvaders_BassInvader$__f_bitmap$init$0 = true
+  };
+  boot__sci_Map__Lindigo_BootResult(flags) {
+    const this$1 = $m_Lindigo_BootResult$().apply__Lindigo_shared_config_GameConfig__O__Lindigo_BootResult($m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig(), $m_Linvaders_Settings$().config__Lindigo_shared_config_GameConfig().Lindigo_shared_config_GameConfig__f_viewport);
+    const newAssets = $m_Linvaders_GameAssets$().assets__sci_Set();
+    const this$5 = new $c_Lindigo_BootResult(this$1.Lindigo_BootResult__f_gameConfig, this$1.Lindigo_BootResult__f_bootData, this$1.Lindigo_BootResult__f_animations, newAssets, this$1.Lindigo_BootResult__f_fonts, this$1.Lindigo_BootResult__f_subSystems);
+    const array = [$m_Linvaders_GameAssets$().fontInfo__T__Lindigo_shared_datatypes_FontInfo($m_Linvaders_GameAssets$().fontAssetName__T())];
+    const newFonts = new $c_sjsr_WrappedVarArgs(array);
+    const newFonts$1 = $m_sci_Set$().from__sc_IterableOnce__sci_Set(newFonts);
+    return new $c_Lindigo_BootResult(this$5.Lindigo_BootResult__f_gameConfig, this$5.Lindigo_BootResult__f_bootData, this$5.Lindigo_BootResult__f_animations, this$5.Lindigo_BootResult__f_assets, newFonts$1, this$5.Lindigo_BootResult__f_subSystems)
+  };
+  initialScene__Lindigo_shared_config_GameViewport__s_Option(bootData) {
+    return $m_s_Option$().apply__O__s_Option(new $c_Lindigo_scenes_SceneName($m_Linvaders_scenes_StartScene$().name__T()))
+  };
+  scenes__Lindigo_shared_config_GameViewport__Lindigo_shared_collections_NonEmptyList(bootData) {
+    $m_Lindigo_package$().NonEmptyList__Lindigo_shared_collections_NonEmptyList$();
+    const head = $m_Linvaders_scenes_StartScene$();
+    const array = [$m_Linvaders_scenes_InterstitialScene$(), $m_Linvaders_scenes_RoomScene$(), $m_Linvaders_scenes_GameOverScene$()];
+    const tail = new $c_sjsr_WrappedVarArgs(array);
+    $m_sci_List$();
+    const tailItems = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(tail);
+    return new $c_Lindigo_shared_collections_NonEmptyList$$anon$1(head, tailItems)
+  };
+  "launch"(...rest) {
+    switch ($uI(rest.length)) {
+      case 0: {
+        return this.$js$exported$meth$launch__O();
+        break
+      }
+      case 1: {
+        const prep0 = rest[0];
+        return this.$js$exported$meth$launch__sjs_js_Dictionary__O(prep0);
+        break
+      }
+      default: {
+        throw "No matching overload"
+      }
+    }
+  };
+}
+const $d_Linvaders_BassInvader$ = new $TypeData().initClass({
+  Linvaders_BassInvader$: 0
+}, false, "invaders.BassInvader$", {
+  Linvaders_BassInvader$: 1,
+  O: 1,
+  Lindigo_IndigoGame: 1,
+  Lindigo_GameLauncher: 1
+});
+$c_Linvaders_BassInvader$.prototype.$classData = $d_Linvaders_BassInvader$;
+let $n_Linvaders_BassInvader$ = (void 0);
+function $m_Linvaders_BassInvader$() {
+  if ((!$n_Linvaders_BassInvader$)) {
+    $n_Linvaders_BassInvader$ = new $c_Linvaders_BassInvader$()
+  };
+  return $n_Linvaders_BassInvader$
 }
 function $f_jl_Boolean__equals__O__Z($thiz, that) {
   return ($thiz === that)
@@ -31395,6 +33079,86 @@ const $d_Lindigo_platform_assets_TextureMap = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lindigo_platform_assets_TextureMap.prototype.$classData = $d_Lindigo_platform_assets_TextureMap;
+class $c_Lindigo_scenes_ScenePosition extends $c_O {
+  constructor(index, name) {
+    super();
+    this.Lindigo_scenes_ScenePosition__f_index = 0;
+    this.Lindigo_scenes_ScenePosition__f_name = null;
+    this.Lindigo_scenes_ScenePosition__f_index = index;
+    this.Lindigo_scenes_ScenePosition__f_name = name
+  };
+  productPrefix__T() {
+    return "ScenePosition"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Lindigo_scenes_ScenePosition__f_index;
+        break
+      }
+      case 1: {
+        return new $c_Lindigo_scenes_SceneName(this.Lindigo_scenes_ScenePosition__f_name);
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("ScenePosition");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const data$1 = this.Lindigo_scenes_ScenePosition__f_index;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x = new $c_Lindigo_scenes_SceneName(this.Lindigo_scenes_ScenePosition__f_name);
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lindigo_scenes_ScenePosition)) {
+      const ScenePosition$1 = $as_Lindigo_scenes_ScenePosition(x$1);
+      return ((this.Lindigo_scenes_ScenePosition__f_index === ScenePosition$1.Lindigo_scenes_ScenePosition__f_index) && (this.Lindigo_scenes_ScenePosition__f_name === ScenePosition$1.Lindigo_scenes_ScenePosition__f_name))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lindigo_scenes_ScenePosition(obj) {
+  return (((obj instanceof $c_Lindigo_scenes_ScenePosition) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.scenes.ScenePosition"))
+}
+function $isArrayOf_Lindigo_scenes_ScenePosition(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_scenes_ScenePosition)))
+}
+function $asArrayOf_Lindigo_scenes_ScenePosition(obj, depth) {
+  return (($isArrayOf_Lindigo_scenes_ScenePosition(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.scenes.ScenePosition;", depth))
+}
+const $d_Lindigo_scenes_ScenePosition = new $TypeData().initClass({
+  Lindigo_scenes_ScenePosition: 0
+}, false, "indigo.scenes.ScenePosition", {
+  Lindigo_scenes_ScenePosition: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_scenes_ScenePosition.prototype.$classData = $d_Lindigo_scenes_ScenePosition;
 class $c_Lindigo_shared_ClearColor extends $c_O {
   constructor(r, g, b, a) {
     super();
@@ -32188,21 +33952,6 @@ class $c_Lindigo_shared_config_GameConfig extends $c_O {
     };
     return this.Lindigo_shared_config_GameConfig__f_asString
   };
-  withViewport__I__I__Lindigo_shared_config_GameConfig(width, height) {
-    const viewport = new $c_Lindigo_shared_config_GameViewport(width, height);
-    const frameRate = this.Lindigo_shared_config_GameConfig__f_frameRate;
-    const clearColor = this.Lindigo_shared_config_GameConfig__f_clearColor;
-    const magnification = this.Lindigo_shared_config_GameConfig__f_magnification;
-    const advanced = this.Lindigo_shared_config_GameConfig__f_advanced;
-    return new $c_Lindigo_shared_config_GameConfig(viewport, frameRate, clearColor, magnification, advanced)
-  };
-  withMagnification__I__Lindigo_shared_config_GameConfig(magnification) {
-    const x$2 = this.Lindigo_shared_config_GameConfig__f_viewport;
-    const x$3 = this.Lindigo_shared_config_GameConfig__f_frameRate;
-    const x$4 = this.Lindigo_shared_config_GameConfig__f_clearColor;
-    const x$5 = this.Lindigo_shared_config_GameConfig__f_advanced;
-    return new $c_Lindigo_shared_config_GameConfig(x$2, x$3, x$4, magnification, x$5)
-  };
   productPrefix__T() {
     return "GameConfig"
   };
@@ -32722,6 +34471,10 @@ class $c_Lindigo_shared_events_EventFilters extends $c_O {
     this.Lindigo_shared_events_EventFilters__f_viewModelFilter = null;
     this.Lindigo_shared_events_EventFilters__f_modelFilter = modelFilter;
     this.Lindigo_shared_events_EventFilters__f_viewModelFilter = viewModelFilter
+  };
+  withViewModelFilter__F1__Lindigo_shared_events_EventFilters(filter) {
+    const x$2 = this.Lindigo_shared_events_EventFilters__f_modelFilter;
+    return new $c_Lindigo_shared_events_EventFilters(x$2, filter)
   };
   productPrefix__T() {
     return "EventFilters"
@@ -33430,6 +35183,1483 @@ const $d_Lindigo_shared_subsystems_RegisteredSubSystem = new $TypeData().initCla
   Ljava_io_Serializable: 1
 });
 $c_Lindigo_shared_subsystems_RegisteredSubSystem.prototype.$classData = $d_Lindigo_shared_subsystems_RegisteredSubSystem;
+class $c_Linvaders_model_CheckHitsResult extends $c_O {
+  constructor(shots, remainingGrandmas, resetGrandmas, points) {
+    super();
+    this.Linvaders_model_CheckHitsResult__f_shots = null;
+    this.Linvaders_model_CheckHitsResult__f_remainingGrandmas = null;
+    this.Linvaders_model_CheckHitsResult__f_resetGrandmas = null;
+    this.Linvaders_model_CheckHitsResult__f_points = 0;
+    this.Linvaders_model_CheckHitsResult__f_shots = shots;
+    this.Linvaders_model_CheckHitsResult__f_remainingGrandmas = remainingGrandmas;
+    this.Linvaders_model_CheckHitsResult__f_resetGrandmas = resetGrandmas;
+    this.Linvaders_model_CheckHitsResult__f_points = points
+  };
+  productPrefix__T() {
+    return "CheckHitsResult"
+  };
+  productArity__I() {
+    return 4
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_CheckHitsResult__f_shots;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_CheckHitsResult__f_remainingGrandmas;
+        break
+      }
+      case 2: {
+        return this.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+        break
+      }
+      case 3: {
+        return this.Linvaders_model_CheckHitsResult__f_points;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("CheckHitsResult");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Linvaders_model_CheckHitsResult__f_shots;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Linvaders_model_CheckHitsResult__f_remainingGrandmas;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$2 = this.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const data$4 = this.Linvaders_model_CheckHitsResult__f_points;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 4)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_CheckHitsResult)) {
+      const CheckHitsResult$1 = $as_Linvaders_model_CheckHitsResult(x$1);
+      let $$x2;
+      if ((this.Linvaders_model_CheckHitsResult__f_points === CheckHitsResult$1.Linvaders_model_CheckHitsResult__f_points)) {
+        const x = this.Linvaders_model_CheckHitsResult__f_shots;
+        const x$2 = CheckHitsResult$1.Linvaders_model_CheckHitsResult__f_shots;
+        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$3 = this.Linvaders_model_CheckHitsResult__f_remainingGrandmas;
+        const x$4 = CheckHitsResult$1.Linvaders_model_CheckHitsResult__f_remainingGrandmas;
+        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+        const x$6 = CheckHitsResult$1.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_CheckHitsResult(obj) {
+  return (((obj instanceof $c_Linvaders_model_CheckHitsResult) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.CheckHitsResult"))
+}
+function $isArrayOf_Linvaders_model_CheckHitsResult(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_CheckHitsResult)))
+}
+function $asArrayOf_Linvaders_model_CheckHitsResult(obj, depth) {
+  return (($isArrayOf_Linvaders_model_CheckHitsResult(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.CheckHitsResult;", depth))
+}
+const $d_Linvaders_model_CheckHitsResult = new $TypeData().initClass({
+  Linvaders_model_CheckHitsResult: 0
+}, false, "invaders.model.CheckHitsResult", {
+  Linvaders_model_CheckHitsResult: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_CheckHitsResult.prototype.$classData = $d_Linvaders_model_CheckHitsResult;
+class $c_Linvaders_model_Direction extends $c_O {
+  constructor(vertical, horizontal) {
+    super();
+    this.Linvaders_model_Direction__f_vertical = null;
+    this.Linvaders_model_Direction__f_horizontal = null;
+    this.Linvaders_model_Direction__f_vertical = vertical;
+    this.Linvaders_model_Direction__f_horizontal = horizontal
+  };
+  fromLocation__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Direction(location, config) {
+    const $$x2 = location.Linvaders_model_Location__f_y;
+    const this$1 = config.Lindigo_shared_config_GameConfig__f_viewport;
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const position = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+    const size = this$1.size__Lindigo_shared_datatypes_Point();
+    let $$x1;
+    if (($$x2 > new $c_Lindigo_shared_datatypes_Rectangle(position, size).bottom__I())) {
+      $$x1 = true
+    } else {
+      const $$x3 = location.Linvaders_model_Location__f_y;
+      const this$3 = config.Lindigo_shared_config_GameConfig__f_viewport;
+      $m_Lindigo_shared_datatypes_Rectangle$();
+      const position$1 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+      const size$1 = this$3.size__Lindigo_shared_datatypes_Point();
+      $$x1 = ($$x3 < new $c_Lindigo_shared_datatypes_Rectangle(position$1, size$1).top__I())
+    };
+    let newVertical;
+    if ($$x1) {
+      newVertical = this.Linvaders_model_Direction__f_vertical.opposite__Linvaders_model_Vertical()
+    } else {
+      newVertical = this.Linvaders_model_Direction__f_vertical
+    };
+    const $$x5 = location.Linvaders_model_Location__f_x;
+    const this$5 = config.Lindigo_shared_config_GameConfig__f_viewport;
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const position$2 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+    const size$2 = this$5.size__Lindigo_shared_datatypes_Point();
+    let $$x4;
+    if (($$x5 > new $c_Lindigo_shared_datatypes_Rectangle(position$2, size$2).right__I())) {
+      $$x4 = true
+    } else {
+      const $$x6 = location.Linvaders_model_Location__f_x;
+      const this$7 = config.Lindigo_shared_config_GameConfig__f_viewport;
+      $m_Lindigo_shared_datatypes_Rectangle$();
+      const position$3 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+      const size$3 = this$7.size__Lindigo_shared_datatypes_Point();
+      $$x4 = ($$x6 < new $c_Lindigo_shared_datatypes_Rectangle(position$3, size$3).left__I())
+    };
+    let newHorizontal;
+    if ($$x4) {
+      newHorizontal = this.Linvaders_model_Direction__f_horizontal.opposite__Linvaders_model_Horizontal()
+    } else {
+      newHorizontal = this.Linvaders_model_Direction__f_horizontal
+    };
+    return new $c_Linvaders_model_Direction(newVertical, newHorizontal)
+  };
+  fromLocationWithNegativeY__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Direction(location, config) {
+    const $$x1 = location.Linvaders_model_Location__f_y;
+    const this$1 = config.Lindigo_shared_config_GameConfig__f_viewport;
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const position = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+    const size = this$1.size__Lindigo_shared_datatypes_Point();
+    let newVertical;
+    if (($$x1 > new $c_Lindigo_shared_datatypes_Rectangle(position, size).bottom__I())) {
+      newVertical = this.Linvaders_model_Direction__f_vertical.opposite__Linvaders_model_Vertical()
+    } else {
+      newVertical = this.Linvaders_model_Direction__f_vertical
+    };
+    const $$x3 = location.Linvaders_model_Location__f_x;
+    const this$3 = config.Lindigo_shared_config_GameConfig__f_viewport;
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const position$1 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+    const size$1 = this$3.size__Lindigo_shared_datatypes_Point();
+    let $$x2;
+    if (($$x3 > new $c_Lindigo_shared_datatypes_Rectangle(position$1, size$1).right__I())) {
+      $$x2 = true
+    } else {
+      const $$x4 = location.Linvaders_model_Location__f_x;
+      const this$5 = config.Lindigo_shared_config_GameConfig__f_viewport;
+      $m_Lindigo_shared_datatypes_Rectangle$();
+      const position$2 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
+      const size$2 = this$5.size__Lindigo_shared_datatypes_Point();
+      $$x2 = ($$x4 < new $c_Lindigo_shared_datatypes_Rectangle(position$2, size$2).left__I())
+    };
+    let newHorizontal;
+    if ($$x2) {
+      newHorizontal = this.Linvaders_model_Direction__f_horizontal.opposite__Linvaders_model_Horizontal()
+    } else {
+      newHorizontal = this.Linvaders_model_Direction__f_horizontal
+    };
+    return new $c_Linvaders_model_Direction(newVertical, newHorizontal)
+  };
+  productPrefix__T() {
+    return "Direction"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Direction__f_vertical;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_Direction__f_horizontal;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Direction)) {
+      const Direction$1 = $as_Linvaders_model_Direction(x$1);
+      const x = this.Linvaders_model_Direction__f_vertical;
+      const x$2 = Direction$1.Linvaders_model_Direction__f_vertical;
+      if ((x === x$2)) {
+        const x$3 = this.Linvaders_model_Direction__f_horizontal;
+        const x$4 = Direction$1.Linvaders_model_Direction__f_horizontal;
+        return (x$3 === x$4)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Direction(obj) {
+  return (((obj instanceof $c_Linvaders_model_Direction) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Direction"))
+}
+function $isArrayOf_Linvaders_model_Direction(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Direction)))
+}
+function $asArrayOf_Linvaders_model_Direction(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Direction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Direction;", depth))
+}
+const $d_Linvaders_model_Direction = new $TypeData().initClass({
+  Linvaders_model_Direction: 0
+}, false, "invaders.model.Direction", {
+  Linvaders_model_Direction: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Direction.prototype.$classData = $d_Linvaders_model_Direction;
+class $c_Linvaders_model_Grandma extends $c_O {
+  constructor(location, direction, hitBox, dead, fade, didHitFloor) {
+    super();
+    this.Linvaders_model_Grandma__f_location = null;
+    this.Linvaders_model_Grandma__f_direction = null;
+    this.Linvaders_model_Grandma__f_hitBox = null;
+    this.Linvaders_model_Grandma__f_dead = false;
+    this.Linvaders_model_Grandma__f_fade = 0.0;
+    this.Linvaders_model_Grandma__f_didHitFloor = false;
+    this.Linvaders_model_Grandma__f_location = location;
+    this.Linvaders_model_Grandma__f_direction = direction;
+    this.Linvaders_model_Grandma__f_hitBox = hitBox;
+    this.Linvaders_model_Grandma__f_dead = dead;
+    this.Linvaders_model_Grandma__f_fade = fade;
+    this.Linvaders_model_Grandma__f_didHitFloor = didHitFloor
+  };
+  kill__Linvaders_model_Grandma() {
+    const x$3 = this.Linvaders_model_Grandma__f_location;
+    const x$4 = this.Linvaders_model_Grandma__f_direction;
+    const x$5 = this.Linvaders_model_Grandma__f_hitBox;
+    const x$6 = this.Linvaders_model_Grandma__f_didHitFloor;
+    return new $c_Linvaders_model_Grandma(x$3, x$4, x$5, true, 1.0, x$6)
+  };
+  hitFloor__Linvaders_model_Grandma() {
+    const x$1 = new $c_Linvaders_model_Location(this.Linvaders_model_Grandma__f_location.Linvaders_model_Location__f_x, $m_Linvaders_model_Grandma$().aboveScreen__D());
+    const x$3 = this.Linvaders_model_Grandma__f_direction;
+    const x$4 = this.Linvaders_model_Grandma__f_hitBox;
+    const x$5 = this.Linvaders_model_Grandma__f_dead;
+    const x$6 = this.Linvaders_model_Grandma__f_fade;
+    return new $c_Linvaders_model_Grandma(x$1, x$3, x$4, x$5, x$6, true)
+  };
+  faded__Linvaders_model_Grandma() {
+    const x$1 = new $c_Linvaders_model_Location(this.Linvaders_model_Grandma__f_location.Linvaders_model_Location__f_x, $m_Linvaders_model_Grandma$().aboveScreen__D());
+    const x$4 = this.Linvaders_model_Grandma__f_direction;
+    const x$5 = this.Linvaders_model_Grandma__f_hitBox;
+    const x$6 = this.Linvaders_model_Grandma__f_didHitFloor;
+    return new $c_Linvaders_model_Grandma(x$1, x$4, x$5, false, 1.0, x$6)
+  };
+  moveBy__D__D__Lindigo_shared_config_GameConfig__Linvaders_model_Grandma(x, y, config) {
+    if (((this.Linvaders_model_Grandma__f_dead === true) && (this.Linvaders_model_Grandma__f_fade <= 0.0))) {
+      return this.faded__Linvaders_model_Grandma()
+    } else if ((this.Linvaders_model_Grandma__f_dead === true)) {
+      const x$1 = (this.Linvaders_model_Grandma__f_fade - $m_Linvaders_Settings$().grandmaFadeSpeed__D());
+      const x$2 = this.Linvaders_model_Grandma__f_location;
+      const x$3 = this.Linvaders_model_Grandma__f_direction;
+      const x$4 = this.Linvaders_model_Grandma__f_hitBox;
+      const x$5 = this.Linvaders_model_Grandma__f_dead;
+      const x$6 = this.Linvaders_model_Grandma__f_didHitFloor;
+      return new $c_Linvaders_model_Grandma(x$2, x$3, x$4, x$5, x$1, x$6)
+    } else {
+      const newDirection = this.Linvaders_model_Grandma__f_direction.fromLocationWithNegativeY__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Direction(this.Linvaders_model_Grandma__f_location, config);
+      const newY = (this.Linvaders_model_Grandma__f_location.Linvaders_model_Location__f_y + newDirection.Linvaders_model_Direction__f_vertical.inDirection__D__D(y));
+      if ((newY > config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height)) {
+        return this.hitFloor__Linvaders_model_Grandma()
+      } else {
+        const newLocation = new $c_Linvaders_model_Location((this.Linvaders_model_Grandma__f_location.Linvaders_model_Location__f_x + newDirection.Linvaders_model_Direction__f_horizontal.inDirection__D__D(x)), newY);
+        const this$1 = this.Linvaders_model_Grandma__f_hitBox;
+        const point = newLocation.toPoint__Lindigo_shared_datatypes_Point();
+        $m_Lindigo_shared_datatypes_Rectangle$();
+        const size = this$1.Lindigo_shared_datatypes_Rectangle__f_size;
+        return new $c_Linvaders_model_Grandma(newLocation, newDirection, new $c_Lindigo_shared_datatypes_Rectangle(point, size), false, 1.0, false)
+      }
+    }
+  };
+  productPrefix__T() {
+    return "Grandma"
+  };
+  productArity__I() {
+    return 6
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Grandma__f_location;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_Grandma__f_direction;
+        break
+      }
+      case 2: {
+        return this.Linvaders_model_Grandma__f_hitBox;
+        break
+      }
+      case 3: {
+        return this.Linvaders_model_Grandma__f_dead;
+        break
+      }
+      case 4: {
+        return this.Linvaders_model_Grandma__f_fade;
+        break
+      }
+      case 5: {
+        return this.Linvaders_model_Grandma__f_didHitFloor;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("Grandma");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Linvaders_model_Grandma__f_location;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Linvaders_model_Grandma__f_direction;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const x$2 = this.Linvaders_model_Grandma__f_hitBox;
+    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const data$4 = (this.Linvaders_model_Grandma__f_dead ? 1231 : 1237);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const dv = this.Linvaders_model_Grandma__f_fade;
+    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const data$6 = (this.Linvaders_model_Grandma__f_didHitFloor ? 1231 : 1237);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$7, 6)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Grandma)) {
+      const Grandma$1 = $as_Linvaders_model_Grandma(x$1);
+      let $$x2;
+      if ((((this.Linvaders_model_Grandma__f_dead === Grandma$1.Linvaders_model_Grandma__f_dead) && (this.Linvaders_model_Grandma__f_fade === Grandma$1.Linvaders_model_Grandma__f_fade)) && (this.Linvaders_model_Grandma__f_didHitFloor === Grandma$1.Linvaders_model_Grandma__f_didHitFloor))) {
+        const x = this.Linvaders_model_Grandma__f_location;
+        const x$2 = Grandma$1.Linvaders_model_Grandma__f_location;
+        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$3 = this.Linvaders_model_Grandma__f_direction;
+        const x$4 = Grandma$1.Linvaders_model_Grandma__f_direction;
+        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Linvaders_model_Grandma__f_hitBox;
+        const x$6 = Grandma$1.Linvaders_model_Grandma__f_hitBox;
+        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Grandma(obj) {
+  return (((obj instanceof $c_Linvaders_model_Grandma) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Grandma"))
+}
+function $isArrayOf_Linvaders_model_Grandma(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Grandma)))
+}
+function $asArrayOf_Linvaders_model_Grandma(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Grandma(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Grandma;", depth))
+}
+const $d_Linvaders_model_Grandma = new $TypeData().initClass({
+  Linvaders_model_Grandma: 0
+}, false, "invaders.model.Grandma", {
+  Linvaders_model_Grandma: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Grandma.prototype.$classData = $d_Linvaders_model_Grandma;
+class $c_Linvaders_model_LightWithLocation extends $c_O {
+  constructor(color, location, direction) {
+    super();
+    this.Linvaders_model_LightWithLocation__f_color = null;
+    this.Linvaders_model_LightWithLocation__f_location = null;
+    this.Linvaders_model_LightWithLocation__f_direction = null;
+    this.Linvaders_model_LightWithLocation__f_color = color;
+    this.Linvaders_model_LightWithLocation__f_location = location;
+    this.Linvaders_model_LightWithLocation__f_direction = direction
+  };
+  moveBy__D__D__Lindigo_shared_config_GameConfig__Linvaders_model_LightWithLocation(x, y, config) {
+    const newDirection = this.Linvaders_model_LightWithLocation__f_direction.fromLocation__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Direction(this.Linvaders_model_LightWithLocation__f_location, config);
+    const newLocation = new $c_Linvaders_model_Location((this.Linvaders_model_LightWithLocation__f_location.Linvaders_model_Location__f_x + newDirection.Linvaders_model_Direction__f_horizontal.inDirection__D__D(x)), (this.Linvaders_model_LightWithLocation__f_location.Linvaders_model_Location__f_y + newDirection.Linvaders_model_Direction__f_vertical.inDirection__D__D(y)));
+    return new $c_Linvaders_model_LightWithLocation(this.Linvaders_model_LightWithLocation__f_color, newLocation, newDirection)
+  };
+  productPrefix__T() {
+    return "LightWithLocation"
+  };
+  productArity__I() {
+    return 3
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_LightWithLocation__f_color;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_LightWithLocation__f_location;
+        break
+      }
+      case 2: {
+        return this.Linvaders_model_LightWithLocation__f_direction;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_LightWithLocation)) {
+      const LightWithLocation$1 = $as_Linvaders_model_LightWithLocation(x$1);
+      const x = this.Linvaders_model_LightWithLocation__f_color;
+      const x$2 = LightWithLocation$1.Linvaders_model_LightWithLocation__f_color;
+      let $$x1;
+      if ((x === x$2)) {
+        const x$3 = this.Linvaders_model_LightWithLocation__f_location;
+        const x$4 = LightWithLocation$1.Linvaders_model_LightWithLocation__f_location;
+        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$5 = this.Linvaders_model_LightWithLocation__f_direction;
+        const x$6 = LightWithLocation$1.Linvaders_model_LightWithLocation__f_direction;
+        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_LightWithLocation(obj) {
+  return (((obj instanceof $c_Linvaders_model_LightWithLocation) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.LightWithLocation"))
+}
+function $isArrayOf_Linvaders_model_LightWithLocation(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_LightWithLocation)))
+}
+function $asArrayOf_Linvaders_model_LightWithLocation(obj, depth) {
+  return (($isArrayOf_Linvaders_model_LightWithLocation(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.LightWithLocation;", depth))
+}
+const $d_Linvaders_model_LightWithLocation = new $TypeData().initClass({
+  Linvaders_model_LightWithLocation: 0
+}, false, "invaders.model.LightWithLocation", {
+  Linvaders_model_LightWithLocation: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_LightWithLocation.prototype.$classData = $d_Linvaders_model_LightWithLocation;
+class $c_Linvaders_model_Location extends $c_O {
+  constructor(x, y) {
+    super();
+    this.Linvaders_model_Location__f_x = 0.0;
+    this.Linvaders_model_Location__f_y = 0.0;
+    this.Linvaders_model_Location__f_x = x;
+    this.Linvaders_model_Location__f_y = y
+  };
+  toPoint__Lindigo_shared_datatypes_Point() {
+    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
+    const a = this.Linvaders_model_Location__f_x;
+    const this$2 = $m_RTLong$();
+    const value = $uD(Math.round(a));
+    const lo = this$2.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
+    const a$1 = this.Linvaders_model_Location__f_y;
+    const this$4 = $m_RTLong$();
+    const value$1 = $uD(Math.round(a$1));
+    const lo$1 = this$4.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
+    return new $c_Lindigo_shared_datatypes_Point(lo, lo$1)
+  };
+  productPrefix__T() {
+    return "Location"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Location__f_x;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_Location__f_y;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("Location");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const dv = this.Linvaders_model_Location__f_x;
+    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const dv$1 = this.Linvaders_model_Location__f_y;
+    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 2)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Location)) {
+      const Location$1 = $as_Linvaders_model_Location(x$1);
+      return ((this.Linvaders_model_Location__f_x === Location$1.Linvaders_model_Location__f_x) && (this.Linvaders_model_Location__f_y === Location$1.Linvaders_model_Location__f_y))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Location(obj) {
+  return (((obj instanceof $c_Linvaders_model_Location) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Location"))
+}
+function $isArrayOf_Linvaders_model_Location(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Location)))
+}
+function $asArrayOf_Linvaders_model_Location(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Location(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Location;", depth))
+}
+const $d_Linvaders_model_Location = new $TypeData().initClass({
+  Linvaders_model_Location: 0
+}, false, "invaders.model.Location", {
+  Linvaders_model_Location: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Location.prototype.$classData = $d_Linvaders_model_Location;
+const $p_Linvaders_model_Model__boundedX__D__D__D__D = (function($thiz, x, minX, maxX) {
+  return ((x > maxX) ? maxX : ((x < minX) ? minX : x))
+});
+const $p_Linvaders_model_Model__checkHits__sci_List__sci_List__Linvaders_model_CheckHitsResult = (function($thiz, shotsToCheck, grandmasToCheck) {
+  const f = ((this$1, grandmasToCheck$1) => ((shot$2) => {
+    const shot = $as_Linvaders_model_Shot(shot$2);
+    let these = grandmasToCheck$1;
+    while ((!these.isEmpty__Z())) {
+      const arg1 = these.head__O();
+      const grandma = $as_Linvaders_model_Grandma(arg1);
+      const this$2 = shot.Linvaders_model_Shot__f_hitBox;
+      const other = grandma.Linvaders_model_Grandma__f_hitBox;
+      if ($m_Lindigo_shared_datatypes_Rectangle$().overlapping__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Rectangle__Z(this$2, other)) {
+        return true
+      };
+      these = $as_sci_List(these.tail__O())
+    };
+    return false
+  }))($thiz, grandmasToCheck);
+  let l = shotsToCheck;
+  let result;
+  block: {
+    while (true) {
+      if (l.isEmpty__Z()) {
+        result = $m_sci_Nil$();
+        break
+      } else {
+        const h = l.head__O();
+        const t = $as_sci_List(l.tail__O());
+        if (($uZ(f(h)) === true)) {
+          l = t;
+          continue
+        };
+        const start = l;
+        let remaining = t;
+        while (true) {
+          if (remaining.isEmpty__Z()) {
+            result = start;
+            break block
+          } else {
+            const x = remaining.head__O();
+            if (($uZ(f(x)) !== true)) {
+              remaining = $as_sci_List(remaining.tail__O());
+              continue
+            };
+            const firstMiss = remaining;
+            const newHead = new $c_sci_$colon$colon(start.head__O(), $m_sci_Nil$());
+            let toProcess = $as_sci_List(start.tail__O());
+            let currentLast = newHead;
+            while ((toProcess !== firstMiss)) {
+              const newElem = new $c_sci_$colon$colon(toProcess.head__O(), $m_sci_Nil$());
+              currentLast.sci_$colon$colon__f_next = newElem;
+              currentLast = newElem;
+              toProcess = $as_sci_List(toProcess.tail__O())
+            };
+            let next = $as_sci_List(firstMiss.tail__O());
+            let nextToCopy = next;
+            while ((!next.isEmpty__Z())) {
+              const head = next.head__O();
+              if (($uZ(f(head)) !== true)) {
+                next = $as_sci_List(next.tail__O())
+              } else {
+                while ((nextToCopy !== next)) {
+                  const newElem$2 = new $c_sci_$colon$colon(nextToCopy.head__O(), $m_sci_Nil$());
+                  currentLast.sci_$colon$colon__f_next = newElem$2;
+                  currentLast = newElem$2;
+                  nextToCopy = $as_sci_List(nextToCopy.tail__O())
+                };
+                nextToCopy = $as_sci_List(next.tail__O());
+                next = $as_sci_List(next.tail__O())
+              }
+            };
+            if ((!nextToCopy.isEmpty__Z())) {
+              currentLast.sci_$colon$colon__f_next = nextToCopy
+            };
+            result = newHead;
+            break block
+          }
+        }
+      }
+    }
+  };
+  let x1$1;
+  if (grandmasToCheck.isEmpty__Z()) {
+    x1$1 = $m_sci_List$().sci_List$__f_scala$collection$immutable$List$$TupleOfNil
+  } else {
+    $m_sci_List$();
+    const l$1 = new $c_scm_ListBuffer();
+    $m_sci_List$();
+    const r = new $c_scm_ListBuffer();
+    const this$5 = grandmasToCheck.iterator__sc_Iterator();
+    while (this$5.hasNext__Z()) {
+      const arg1$1 = this$5.next__O();
+      const grandma$1 = $as_Linvaders_model_Grandma(arg1$1);
+      let $$x1;
+      _return$1: {
+        let these$1 = shotsToCheck;
+        while ((!these$1.isEmpty__Z())) {
+          const arg1$2 = these$1.head__O();
+          const shot$1 = $as_Linvaders_model_Shot(arg1$2);
+          const this$6 = grandma$1.Linvaders_model_Grandma__f_hitBox;
+          const other$1 = shot$1.Linvaders_model_Shot__f_hitBox;
+          if (($m_Lindigo_shared_datatypes_Rectangle$().overlapping__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Rectangle__Z(this$6, other$1) && (!grandma$1.Linvaders_model_Grandma__f_dead))) {
+            $$x1 = true;
+            break _return$1
+          };
+          these$1 = $as_sci_List(these$1.tail__O())
+        };
+        $$x1 = false
+      };
+      let this$7;
+      if ($$x1) {
+        this$7 = l$1
+      } else {
+        this$7 = r
+      };
+      this$7.addOne__O__scm_ListBuffer(arg1$1)
+    };
+    const x1 = $ct_T2__O__O__(new $c_T2(), l$1.toList__sci_List(), r.toList__sci_List());
+    matchEnd7$1: {
+      const p2 = $as_sci_List(x1.T2__f__1);
+      const x$1 = $m_sci_Nil$();
+      if (x$1.equals__O__Z(p2)) {
+        x1$1 = $ct_T2__O__O__(new $c_T2(), $m_sci_Nil$(), grandmasToCheck);
+        break matchEnd7$1
+      };
+      const p3 = $as_sci_List(x1.T2__f__2);
+      const x$3 = $m_sci_Nil$();
+      if (x$3.equals__O__Z(p3)) {
+        x1$1 = $ct_T2__O__O__(new $c_T2(), grandmasToCheck, $m_sci_Nil$());
+        break matchEnd7$1
+      };
+      x1$1 = x1
+    }
+  };
+  if ((x1$1 === null)) {
+    throw new $c_s_MatchError(x1$1)
+  };
+  const resetGrandmas = $as_sci_List(x1$1._1__O());
+  const remainingGrandmas = $as_sci_List(x1$1._2__O());
+  return new $c_Linvaders_model_CheckHitsResult(result, remainingGrandmas, resetGrandmas, resetGrandmas.length__I())
+});
+const $p_Linvaders_model_Model__moveAndCheckStrikes__sci_List__D__Lindigo_shared_config_GameConfig__T2 = (function($thiz, grandmasToMove, delta, config) {
+  const f = ((this$1, delta$1, config$1) => ((x$2$2) => {
+    const x$2 = $as_Linvaders_model_Grandma(x$2$2);
+    return x$2.moveBy__D__D__Lindigo_shared_config_GameConfig__Linvaders_model_Grandma(this$1.distanceFromDelta__D__D__D(this$1.Linvaders_model_Model__f_grandmaSpeed, delta$1), this$1.distanceFromDelta__D__D__D(this$1.Linvaders_model_Model__f_grandmaSpeed, delta$1), config$1)
+  }))($thiz, delta, config);
+  let movedGrandmas;
+  if ((grandmasToMove === $m_sci_Nil$())) {
+    movedGrandmas = $m_sci_Nil$()
+  } else {
+    const arg1 = grandmasToMove.head__O();
+    const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+    let t = h;
+    let rest = $as_sci_List(grandmasToMove.tail__O());
+    while ((rest !== $m_sci_Nil$())) {
+      const arg1$1 = rest.head__O();
+      const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+      t.sci_$colon$colon__f_next = nx;
+      t = nx;
+      rest = $as_sci_List(rest.tail__O())
+    };
+    movedGrandmas = h
+  };
+  let res = 0;
+  const it = movedGrandmas.iterator__sc_Iterator();
+  while (it.hasNext__Z()) {
+    const arg1$2 = it.next__O();
+    const x$3 = $as_Linvaders_model_Grandma(arg1$2);
+    if (x$3.Linvaders_model_Grandma__f_didHitFloor) {
+      res = ((1 + res) | 0)
+    }
+  };
+  const strikes = res;
+  return $ct_T2__O__O__(new $c_T2(), movedGrandmas, strikes)
+});
+class $c_Linvaders_model_Model extends $c_O {
+  constructor(skrillex, shots, shotSpeed, lights, grandmas, grandmaSpeed, points, lives, splats) {
+    super();
+    this.Linvaders_model_Model__f_skrillex = null;
+    this.Linvaders_model_Model__f_shots = null;
+    this.Linvaders_model_Model__f_shotSpeed = 0.0;
+    this.Linvaders_model_Model__f_lights = null;
+    this.Linvaders_model_Model__f_grandmas = null;
+    this.Linvaders_model_Model__f_grandmaSpeed = 0.0;
+    this.Linvaders_model_Model__f_points = 0;
+    this.Linvaders_model_Model__f_lives = 0;
+    this.Linvaders_model_Model__f_splats = null;
+    this.Linvaders_model_Model__f_skrillex = skrillex;
+    this.Linvaders_model_Model__f_shots = shots;
+    this.Linvaders_model_Model__f_shotSpeed = shotSpeed;
+    this.Linvaders_model_Model__f_lights = lights;
+    this.Linvaders_model_Model__f_grandmas = grandmas;
+    this.Linvaders_model_Model__f_grandmaSpeed = grandmaSpeed;
+    this.Linvaders_model_Model__f_points = points;
+    this.Linvaders_model_Model__f_lives = lives;
+    this.Linvaders_model_Model__f_splats = splats
+  };
+  distanceFromDelta__D__D__D(pxPerSec, delta) {
+    return ((60.0 * pxPerSec) * delta)
+  };
+  updateSkrillex__Linvaders_model_Location__Lindigo_shared_config_GameConfig__Linvaders_model_Model(skrillexChange, config) {
+    const newSkrillex = new $c_Linvaders_model_Skrillex(new $c_Linvaders_model_Location($p_Linvaders_model_Model__boundedX__D__D__D__D(this, skrillexChange.Linvaders_model_Location__f_x, 0.0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width), this.Linvaders_model_Model__f_skrillex.Linvaders_model_Skrillex__f_location.Linvaders_model_Location__f_y));
+    const shots = this.Linvaders_model_Model__f_shots;
+    const shotSpeed = this.Linvaders_model_Model__f_shotSpeed;
+    const lights = this.Linvaders_model_Model__f_lights;
+    const grandmas = this.Linvaders_model_Model__f_grandmas;
+    const grandmaSpeed = this.Linvaders_model_Model__f_grandmaSpeed;
+    const points = this.Linvaders_model_Model__f_points;
+    const lives = this.Linvaders_model_Model__f_lives;
+    const splats = this.Linvaders_model_Model__f_splats;
+    return new $c_Linvaders_model_Model(newSkrillex, shots, shotSpeed, lights, grandmas, grandmaSpeed, points, lives, splats)
+  };
+  updateShot__Linvaders_model_Model() {
+    $m_sci_List$();
+    const array = [$m_Linvaders_model_Shot$().newShot__Linvaders_model_Location__Linvaders_model_Shot(this.Linvaders_model_Model__f_skrillex.Linvaders_model_Skrillex__f_location)];
+    const elems = new $c_sjsr_WrappedVarArgs(array);
+    const this$5 = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
+    const suffix = this.Linvaders_model_Model__f_shots;
+    const newShots = this$5.appendedAll__sc_IterableOnce__sci_List(suffix).take__I__sci_List(300);
+    const x$2 = this.Linvaders_model_Model__f_skrillex;
+    const x$3 = this.Linvaders_model_Model__f_shotSpeed;
+    const x$4 = this.Linvaders_model_Model__f_lights;
+    const x$5 = this.Linvaders_model_Model__f_grandmas;
+    const x$6 = this.Linvaders_model_Model__f_grandmaSpeed;
+    const x$7 = this.Linvaders_model_Model__f_points;
+    const x$8 = this.Linvaders_model_Model__f_lives;
+    const x$9 = this.Linvaders_model_Model__f_splats;
+    return new $c_Linvaders_model_Model(x$2, newShots, x$3, x$4, x$5, x$6, x$7, x$8, x$9)
+  };
+  updateTick__Lindigo_shared_config_GameConfig__D__Linvaders_model_Model(config, delta) {
+    const this$2 = this.Linvaders_model_Model__f_lights;
+    const f = ((this$1, delta$1, config$1) => ((x$4$2) => {
+      const x$4 = $as_Linvaders_model_LightWithLocation(x$4$2);
+      return x$4.moveBy__D__D__Lindigo_shared_config_GameConfig__Linvaders_model_LightWithLocation(this$1.distanceFromDelta__D__D__D(10.0, delta$1), this$1.distanceFromDelta__D__D__D(10.0, delta$1), config$1)
+    }))(this, delta, config);
+    let newLights;
+    if ((this$2 === $m_sci_Nil$())) {
+      newLights = $m_sci_Nil$()
+    } else {
+      const arg1 = this$2.head__O();
+      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
+      let t = h;
+      let rest = $as_sci_List(this$2.tail__O());
+      while ((rest !== $m_sci_Nil$())) {
+        const arg1$1 = rest.head__O();
+        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
+        t.sci_$colon$colon__f_next = nx;
+        t = nx;
+        rest = $as_sci_List(rest.tail__O())
+      };
+      newLights = h
+    };
+    const hitsChecked = $p_Linvaders_model_Model__checkHits__sci_List__sci_List__Linvaders_model_CheckHitsResult(this, this.Linvaders_model_Model__f_shots, this.Linvaders_model_Model__f_grandmas);
+    const this$3 = hitsChecked.Linvaders_model_CheckHitsResult__f_shots;
+    const f$1 = ((this$2$1, delta$2) => ((x$5$2) => {
+      const x$5 = $as_Linvaders_model_Shot(x$5$2);
+      return x$5.moveBy__D__Linvaders_model_Shot(this$2$1.distanceFromDelta__D__D__D(this$2$1.Linvaders_model_Model__f_shotSpeed, delta$2))
+    }))(this, delta);
+    let newShots;
+    if ((this$3 === $m_sci_Nil$())) {
+      newShots = $m_sci_Nil$()
+    } else {
+      const arg1$2 = this$3.head__O();
+      const h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
+      let t$1 = h$1;
+      let rest$1 = $as_sci_List(this$3.tail__O());
+      while ((rest$1 !== $m_sci_Nil$())) {
+        const arg1$3 = rest$1.head__O();
+        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
+        t$1.sci_$colon$colon__f_next = nx$1;
+        t$1 = nx$1;
+        rest$1 = $as_sci_List(rest$1.tail__O())
+      };
+      newShots = h$1
+    };
+    const x1 = $p_Linvaders_model_Model__moveAndCheckStrikes__sci_List__D__Lindigo_shared_config_GameConfig__T2(this, hitsChecked.Linvaders_model_CheckHitsResult__f_remainingGrandmas, delta, config);
+    if ((x1 === null)) {
+      throw new $c_s_MatchError(x1)
+    };
+    const grandmasMoved = $as_sci_List(x1._1__O());
+    const newStrikes = $uI(x1._2__O());
+    const this$4 = hitsChecked.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+    const f$2 = ((this$3$1) => ((x$7$2) => {
+      const x$7 = $as_Linvaders_model_Grandma(x$7$2);
+      return x$7.kill__Linvaders_model_Grandma()
+    }))(this);
+    let this$5;
+    if ((this$4 === $m_sci_Nil$())) {
+      this$5 = $m_sci_Nil$()
+    } else {
+      const arg1$4 = this$4.head__O();
+      const h$2 = new $c_sci_$colon$colon(f$2(arg1$4), $m_sci_Nil$());
+      let t$2 = h$2;
+      let rest$2 = $as_sci_List(this$4.tail__O());
+      while ((rest$2 !== $m_sci_Nil$())) {
+        const arg1$5 = rest$2.head__O();
+        const nx$2 = new $c_sci_$colon$colon(f$2(arg1$5), $m_sci_Nil$());
+        t$2.sci_$colon$colon__f_next = nx$2;
+        t$2 = nx$2;
+        rest$2 = $as_sci_List(rest$2.tail__O())
+      };
+      this$5 = h$2
+    };
+    const newGrandmas = this$5.appendedAll__sc_IterableOnce__sci_List(grandmasMoved);
+    const this$6 = hitsChecked.Linvaders_model_CheckHitsResult__f_resetGrandmas;
+    const f$3 = ((this$4$1) => ((x$8$2) => {
+      const x$8 = $as_Linvaders_model_Grandma(x$8$2);
+      return x$8.Linvaders_model_Grandma__f_location
+    }))(this);
+    let this$7;
+    if ((this$6 === $m_sci_Nil$())) {
+      this$7 = $m_sci_Nil$()
+    } else {
+      const arg1$6 = this$6.head__O();
+      const h$3 = new $c_sci_$colon$colon(f$3(arg1$6), $m_sci_Nil$());
+      let t$3 = h$3;
+      let rest$3 = $as_sci_List(this$6.tail__O());
+      while ((rest$3 !== $m_sci_Nil$())) {
+        const arg1$7 = rest$3.head__O();
+        const nx$3 = new $c_sci_$colon$colon(f$3(arg1$7), $m_sci_Nil$());
+        t$3.sci_$colon$colon__f_next = nx$3;
+        t$3 = nx$3;
+        rest$3 = $as_sci_List(rest$3.tail__O())
+      };
+      this$7 = h$3
+    };
+    const f$4 = ((this$5$1) => ((location$2) => {
+      const location = $as_Linvaders_model_Location(location$2);
+      return $m_Linvaders_model_Splatter$().fromLocation__Linvaders_model_Location__Linvaders_model_Splatter(location)
+    }))(this);
+    let newSplats;
+    if ((this$7 === $m_sci_Nil$())) {
+      newSplats = $m_sci_Nil$()
+    } else {
+      const arg1$8 = this$7.head__O();
+      const h$4 = new $c_sci_$colon$colon(f$4(arg1$8), $m_sci_Nil$());
+      let t$4 = h$4;
+      let rest$4 = $as_sci_List(this$7.tail__O());
+      while ((rest$4 !== $m_sci_Nil$())) {
+        const arg1$9 = rest$4.head__O();
+        const nx$4 = new $c_sci_$colon$colon(f$4(arg1$9), $m_sci_Nil$());
+        t$4.sci_$colon$colon__f_next = nx$4;
+        t$4 = nx$4;
+        rest$4 = $as_sci_List(rest$4.tail__O())
+      };
+      newSplats = h$4
+    };
+    const skrillex = this.Linvaders_model_Model__f_skrillex;
+    const shotSpeed = this.Linvaders_model_Model__f_shotSpeed;
+    const grandmaSpeed = this.Linvaders_model_Model__f_grandmaSpeed;
+    const points = ((this.Linvaders_model_Model__f_points + hitsChecked.Linvaders_model_CheckHitsResult__f_points) | 0);
+    const lives = ((this.Linvaders_model_Model__f_lives - newStrikes) | 0);
+    const suffix = this.Linvaders_model_Model__f_splats;
+    const this$8 = newSplats.appendedAll__sc_IterableOnce__sci_List(suffix).take__I__sci_List(200);
+    const f$5 = ((this$6$1) => ((x$9$2) => {
+      const x$9 = $as_Linvaders_model_Splatter(x$9$2);
+      return x$9.explode__Linvaders_model_Splatter()
+    }))(this);
+    let splats;
+    if ((this$8 === $m_sci_Nil$())) {
+      splats = $m_sci_Nil$()
+    } else {
+      const arg1$10 = this$8.head__O();
+      const h$5 = new $c_sci_$colon$colon(f$5(arg1$10), $m_sci_Nil$());
+      let t$5 = h$5;
+      let rest$5 = $as_sci_List(this$8.tail__O());
+      while ((rest$5 !== $m_sci_Nil$())) {
+        const arg1$11 = rest$5.head__O();
+        const nx$5 = new $c_sci_$colon$colon(f$5(arg1$11), $m_sci_Nil$());
+        t$5.sci_$colon$colon__f_next = nx$5;
+        t$5 = nx$5;
+        rest$5 = $as_sci_List(rest$5.tail__O())
+      };
+      splats = h$5
+    };
+    return new $c_Linvaders_model_Model(skrillex, newShots, shotSpeed, newLights, newGrandmas, grandmaSpeed, points, lives, splats)
+  };
+  productPrefix__T() {
+    return "Model"
+  };
+  productArity__I() {
+    return 9
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Model__f_skrillex;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_Model__f_shots;
+        break
+      }
+      case 2: {
+        return this.Linvaders_model_Model__f_shotSpeed;
+        break
+      }
+      case 3: {
+        return this.Linvaders_model_Model__f_lights;
+        break
+      }
+      case 4: {
+        return this.Linvaders_model_Model__f_grandmas;
+        break
+      }
+      case 5: {
+        return this.Linvaders_model_Model__f_grandmaSpeed;
+        break
+      }
+      case 6: {
+        return this.Linvaders_model_Model__f_points;
+        break
+      }
+      case 7: {
+        return this.Linvaders_model_Model__f_lives;
+        break
+      }
+      case 8: {
+        return this.Linvaders_model_Model__f_splats;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("Model");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Linvaders_model_Model__f_skrillex;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = this.Linvaders_model_Model__f_shots;
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv = this.Linvaders_model_Model__f_shotSpeed;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const x$2 = this.Linvaders_model_Model__f_lights;
+    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const x$3 = this.Linvaders_model_Model__f_grandmas;
+    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    const dv$1 = this.Linvaders_model_Model__f_grandmaSpeed;
+    const data$6 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
+    const hash$7 = acc;
+    const data$7 = this.Linvaders_model_Model__f_points;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
+    const hash$8 = acc;
+    const data$8 = this.Linvaders_model_Model__f_lives;
+    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
+    const hash$9 = acc;
+    const x$4 = this.Linvaders_model_Model__f_splats;
+    const data$9 = $m_sr_Statics$().anyHash__O__I(x$4);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
+    const hash$10 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$10, 9)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Model)) {
+      const Model$1 = $as_Linvaders_model_Model(x$1);
+      let $$x4;
+      if (((((this.Linvaders_model_Model__f_shotSpeed === Model$1.Linvaders_model_Model__f_shotSpeed) && (this.Linvaders_model_Model__f_grandmaSpeed === Model$1.Linvaders_model_Model__f_grandmaSpeed)) && (this.Linvaders_model_Model__f_points === Model$1.Linvaders_model_Model__f_points)) && (this.Linvaders_model_Model__f_lives === Model$1.Linvaders_model_Model__f_lives))) {
+        const x = this.Linvaders_model_Model__f_skrillex;
+        const x$2 = Model$1.Linvaders_model_Model__f_skrillex;
+        $$x4 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x4 = false
+      };
+      let $$x3;
+      if ($$x4) {
+        const x$3 = this.Linvaders_model_Model__f_shots;
+        const x$4 = Model$1.Linvaders_model_Model__f_shots;
+        $$x3 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        $$x3 = false
+      };
+      let $$x2;
+      if ($$x3) {
+        const x$5 = this.Linvaders_model_Model__f_lights;
+        const x$6 = Model$1.Linvaders_model_Model__f_lights;
+        $$x2 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
+      } else {
+        $$x2 = false
+      };
+      let $$x1;
+      if ($$x2) {
+        const x$7 = this.Linvaders_model_Model__f_grandmas;
+        const x$8 = Model$1.Linvaders_model_Model__f_grandmas;
+        $$x1 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        const x$9 = this.Linvaders_model_Model__f_splats;
+        const x$10 = Model$1.Linvaders_model_Model__f_splats;
+        return ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Model(obj) {
+  return (((obj instanceof $c_Linvaders_model_Model) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Model"))
+}
+function $isArrayOf_Linvaders_model_Model(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Model)))
+}
+function $asArrayOf_Linvaders_model_Model(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Model(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Model;", depth))
+}
+const $d_Linvaders_model_Model = new $TypeData().initClass({
+  Linvaders_model_Model: 0
+}, false, "invaders.model.Model", {
+  Linvaders_model_Model: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Model.prototype.$classData = $d_Linvaders_model_Model;
+class $c_Linvaders_model_Shot extends $c_O {
+  constructor(location, hitBox) {
+    super();
+    this.Linvaders_model_Shot__f_location = null;
+    this.Linvaders_model_Shot__f_hitBox = null;
+    this.Linvaders_model_Shot__f_location = location;
+    this.Linvaders_model_Shot__f_hitBox = hitBox
+  };
+  moveBy__D__Linvaders_model_Shot(shotSpeed) {
+    const newLocation = new $c_Linvaders_model_Location(this.Linvaders_model_Shot__f_location.Linvaders_model_Location__f_x, (this.Linvaders_model_Shot__f_location.Linvaders_model_Location__f_y - shotSpeed));
+    const this$1 = this.Linvaders_model_Shot__f_hitBox;
+    const point = newLocation.toPoint__Lindigo_shared_datatypes_Point();
+    $m_Lindigo_shared_datatypes_Rectangle$();
+    const size = this$1.Lindigo_shared_datatypes_Rectangle__f_size;
+    return new $c_Linvaders_model_Shot(newLocation, new $c_Lindigo_shared_datatypes_Rectangle(point, size))
+  };
+  productPrefix__T() {
+    return "Shot"
+  };
+  productArity__I() {
+    return 2
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Shot__f_location;
+        break
+      }
+      case 1: {
+        return this.Linvaders_model_Shot__f_hitBox;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Shot)) {
+      const Shot$1 = $as_Linvaders_model_Shot(x$1);
+      const x = this.Linvaders_model_Shot__f_location;
+      const x$2 = Shot$1.Linvaders_model_Shot__f_location;
+      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
+        const x$3 = this.Linvaders_model_Shot__f_hitBox;
+        const x$4 = Shot$1.Linvaders_model_Shot__f_hitBox;
+        return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Shot(obj) {
+  return (((obj instanceof $c_Linvaders_model_Shot) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Shot"))
+}
+function $isArrayOf_Linvaders_model_Shot(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Shot)))
+}
+function $asArrayOf_Linvaders_model_Shot(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Shot(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Shot;", depth))
+}
+const $d_Linvaders_model_Shot = new $TypeData().initClass({
+  Linvaders_model_Shot: 0
+}, false, "invaders.model.Shot", {
+  Linvaders_model_Shot: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Shot.prototype.$classData = $d_Linvaders_model_Shot;
+class $c_Linvaders_model_Skrillex extends $c_O {
+  constructor(location) {
+    super();
+    this.Linvaders_model_Skrillex__f_location = null;
+    this.Linvaders_model_Skrillex__f_location = location
+  };
+  productPrefix__T() {
+    return "Skrillex"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? this.Linvaders_model_Skrillex__f_location : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Skrillex)) {
+      const Skrillex$1 = $as_Linvaders_model_Skrillex(x$1);
+      const x = this.Linvaders_model_Skrillex__f_location;
+      const x$2 = Skrillex$1.Linvaders_model_Skrillex__f_location;
+      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Skrillex(obj) {
+  return (((obj instanceof $c_Linvaders_model_Skrillex) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Skrillex"))
+}
+function $isArrayOf_Linvaders_model_Skrillex(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Skrillex)))
+}
+function $asArrayOf_Linvaders_model_Skrillex(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Skrillex(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Skrillex;", depth))
+}
+const $d_Linvaders_model_Skrillex = new $TypeData().initClass({
+  Linvaders_model_Skrillex: 0
+}, false, "invaders.model.Skrillex", {
+  Linvaders_model_Skrillex: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Skrillex.prototype.$classData = $d_Linvaders_model_Skrillex;
+class $c_Linvaders_model_Splatter extends $c_O {
+  constructor(location, rotation, scale, level, initScale) {
+    super();
+    this.Linvaders_model_Splatter__f_location = null;
+    this.Linvaders_model_Splatter__f_rotation = 0.0;
+    this.Linvaders_model_Splatter__f_scale = 0.0;
+    this.Linvaders_model_Splatter__f_level = 0.0;
+    this.Linvaders_model_Splatter__f_initScale = 0.0;
+    this.Linvaders_model_Splatter__f_location = location;
+    this.Linvaders_model_Splatter__f_rotation = rotation;
+    this.Linvaders_model_Splatter__f_scale = scale;
+    this.Linvaders_model_Splatter__f_level = level;
+    this.Linvaders_model_Splatter__f_initScale = initScale
+  };
+  explode__Linvaders_model_Splatter() {
+    const a = (this.Linvaders_model_Splatter__f_level + $m_Linvaders_Settings$().bloodFadeSpeed__D());
+    const newLevel = $uD(Math.min(a, 1.0));
+    const newScale = (newLevel * this.Linvaders_model_Splatter__f_initScale);
+    const x$3 = this.Linvaders_model_Splatter__f_location;
+    const x$4 = this.Linvaders_model_Splatter__f_rotation;
+    const x$5 = this.Linvaders_model_Splatter__f_initScale;
+    return new $c_Linvaders_model_Splatter(x$3, x$4, newScale, newLevel, x$5)
+  };
+  productPrefix__T() {
+    return "Splatter"
+  };
+  productArity__I() {
+    return 5
+  };
+  productElement__I__O(x$1) {
+    switch (x$1) {
+      case 0: {
+        return this.Linvaders_model_Splatter__f_location;
+        break
+      }
+      case 1: {
+        return new $c_Lindigo_shared_datatypes_Radians(this.Linvaders_model_Splatter__f_rotation);
+        break
+      }
+      case 2: {
+        return this.Linvaders_model_Splatter__f_scale;
+        break
+      }
+      case 3: {
+        return this.Linvaders_model_Splatter__f_level;
+        break
+      }
+      case 4: {
+        return this.Linvaders_model_Splatter__f_initScale;
+        break
+      }
+      default: {
+        return $m_sr_Statics$().ioobe__I__O(x$1)
+      }
+    }
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    let acc = (-889275714);
+    const hash = acc;
+    const data = $f_T__hashCode__I("Splatter");
+    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
+    const hash$1 = acc;
+    const x = this.Linvaders_model_Splatter__f_location;
+    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
+    const hash$2 = acc;
+    const x$1 = new $c_Lindigo_shared_datatypes_Radians(this.Linvaders_model_Splatter__f_rotation);
+    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
+    const hash$3 = acc;
+    const dv = this.Linvaders_model_Splatter__f_scale;
+    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
+    const hash$4 = acc;
+    const dv$1 = this.Linvaders_model_Splatter__f_level;
+    const data$4 = $m_sr_Statics$().doubleHash__D__I(dv$1);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
+    const hash$5 = acc;
+    const dv$2 = this.Linvaders_model_Splatter__f_initScale;
+    const data$5 = $m_sr_Statics$().doubleHash__D__I(dv$2);
+    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
+    const hash$6 = acc;
+    return $m_sr_Statics$().finalizeHash__I__I__I(hash$6, 5)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Linvaders_model_Splatter)) {
+      const Splatter$1 = $as_Linvaders_model_Splatter(x$1);
+      let $$x1;
+      if ((((this.Linvaders_model_Splatter__f_scale === Splatter$1.Linvaders_model_Splatter__f_scale) && (this.Linvaders_model_Splatter__f_level === Splatter$1.Linvaders_model_Splatter__f_level)) && (this.Linvaders_model_Splatter__f_initScale === Splatter$1.Linvaders_model_Splatter__f_initScale))) {
+        const x = this.Linvaders_model_Splatter__f_location;
+        const x$2 = Splatter$1.Linvaders_model_Splatter__f_location;
+        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+      } else {
+        $$x1 = false
+      };
+      if ($$x1) {
+        return (this.Linvaders_model_Splatter__f_rotation === Splatter$1.Linvaders_model_Splatter__f_rotation)
+      } else {
+        return false
+      }
+    } else {
+      return false
+    }
+  };
+}
+function $as_Linvaders_model_Splatter(obj) {
+  return (((obj instanceof $c_Linvaders_model_Splatter) || (obj === null)) ? obj : $throwClassCastException(obj, "invaders.model.Splatter"))
+}
+function $isArrayOf_Linvaders_model_Splatter(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Linvaders_model_Splatter)))
+}
+function $asArrayOf_Linvaders_model_Splatter(obj, depth) {
+  return (($isArrayOf_Linvaders_model_Splatter(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Linvaders.model.Splatter;", depth))
+}
+const $d_Linvaders_model_Splatter = new $TypeData().initClass({
+  Linvaders_model_Splatter: 0
+}, false, "invaders.model.Splatter", {
+  Linvaders_model_Splatter: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Splatter.prototype.$classData = $d_Linvaders_model_Splatter;
 class $c_Ljava_io_OutputStream extends $c_O {
 }
 class $c_jl_AssertionError extends $c_jl_Error {
@@ -33818,1357 +37048,6 @@ const $d_ju_concurrent_ExecutionException = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_ju_concurrent_ExecutionException.prototype.$classData = $d_ju_concurrent_ExecutionException;
-class $c_Lmodel_CheckHitsResult extends $c_O {
-  constructor(shots, remainingGrandmas, resetGrandmas, points) {
-    super();
-    this.Lmodel_CheckHitsResult__f_shots = null;
-    this.Lmodel_CheckHitsResult__f_remainingGrandmas = null;
-    this.Lmodel_CheckHitsResult__f_resetGrandmas = null;
-    this.Lmodel_CheckHitsResult__f_points = 0;
-    this.Lmodel_CheckHitsResult__f_shots = shots;
-    this.Lmodel_CheckHitsResult__f_remainingGrandmas = remainingGrandmas;
-    this.Lmodel_CheckHitsResult__f_resetGrandmas = resetGrandmas;
-    this.Lmodel_CheckHitsResult__f_points = points
-  };
-  productPrefix__T() {
-    return "CheckHitsResult"
-  };
-  productArity__I() {
-    return 4
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_CheckHitsResult__f_shots;
-        break
-      }
-      case 1: {
-        return this.Lmodel_CheckHitsResult__f_remainingGrandmas;
-        break
-      }
-      case 2: {
-        return this.Lmodel_CheckHitsResult__f_resetGrandmas;
-        break
-      }
-      case 3: {
-        return this.Lmodel_CheckHitsResult__f_points;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const data = $f_T__hashCode__I("CheckHitsResult");
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x = this.Lmodel_CheckHitsResult__f_shots;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const x$1 = this.Lmodel_CheckHitsResult__f_remainingGrandmas;
-    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const x$2 = this.Lmodel_CheckHitsResult__f_resetGrandmas;
-    const data$3 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const data$4 = this.Lmodel_CheckHitsResult__f_points;
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$5, 4)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_CheckHitsResult)) {
-      const CheckHitsResult$1 = $as_Lmodel_CheckHitsResult(x$1);
-      let $$x2;
-      if ((this.Lmodel_CheckHitsResult__f_points === CheckHitsResult$1.Lmodel_CheckHitsResult__f_points)) {
-        const x = this.Lmodel_CheckHitsResult__f_shots;
-        const x$2 = CheckHitsResult$1.Lmodel_CheckHitsResult__f_shots;
-        $$x2 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        $$x2 = false
-      };
-      let $$x1;
-      if ($$x2) {
-        const x$3 = this.Lmodel_CheckHitsResult__f_remainingGrandmas;
-        const x$4 = CheckHitsResult$1.Lmodel_CheckHitsResult__f_remainingGrandmas;
-        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        const x$5 = this.Lmodel_CheckHitsResult__f_resetGrandmas;
-        const x$6 = CheckHitsResult$1.Lmodel_CheckHitsResult__f_resetGrandmas;
-        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_CheckHitsResult(obj) {
-  return (((obj instanceof $c_Lmodel_CheckHitsResult) || (obj === null)) ? obj : $throwClassCastException(obj, "model.CheckHitsResult"))
-}
-function $isArrayOf_Lmodel_CheckHitsResult(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_CheckHitsResult)))
-}
-function $asArrayOf_Lmodel_CheckHitsResult(obj, depth) {
-  return (($isArrayOf_Lmodel_CheckHitsResult(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.CheckHitsResult;", depth))
-}
-const $d_Lmodel_CheckHitsResult = new $TypeData().initClass({
-  Lmodel_CheckHitsResult: 0
-}, false, "model.CheckHitsResult", {
-  Lmodel_CheckHitsResult: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_CheckHitsResult.prototype.$classData = $d_Lmodel_CheckHitsResult;
-class $c_Lmodel_Direction extends $c_O {
-  constructor(vertical, horizontal) {
-    super();
-    this.Lmodel_Direction__f_vertical = null;
-    this.Lmodel_Direction__f_horizontal = null;
-    this.Lmodel_Direction__f_vertical = vertical;
-    this.Lmodel_Direction__f_horizontal = horizontal
-  };
-  fromLocation__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Direction(location, config) {
-    const $$x2 = location.Lmodel_Location__f_y;
-    const this$1 = config.Lindigo_shared_config_GameConfig__f_viewport;
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const position = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-    const size = this$1.size__Lindigo_shared_datatypes_Point();
-    let $$x1;
-    if (($$x2 > new $c_Lindigo_shared_datatypes_Rectangle(position, size).bottom__I())) {
-      $$x1 = true
-    } else {
-      const $$x3 = location.Lmodel_Location__f_y;
-      const this$3 = config.Lindigo_shared_config_GameConfig__f_viewport;
-      $m_Lindigo_shared_datatypes_Rectangle$();
-      const position$1 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-      const size$1 = this$3.size__Lindigo_shared_datatypes_Point();
-      $$x1 = ($$x3 < new $c_Lindigo_shared_datatypes_Rectangle(position$1, size$1).top__I())
-    };
-    let newVertical;
-    if ($$x1) {
-      newVertical = this.Lmodel_Direction__f_vertical.opposite__Lmodel_Vertical()
-    } else {
-      newVertical = this.Lmodel_Direction__f_vertical
-    };
-    const $$x5 = location.Lmodel_Location__f_x;
-    const this$5 = config.Lindigo_shared_config_GameConfig__f_viewport;
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const position$2 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-    const size$2 = this$5.size__Lindigo_shared_datatypes_Point();
-    let $$x4;
-    if (($$x5 > new $c_Lindigo_shared_datatypes_Rectangle(position$2, size$2).right__I())) {
-      $$x4 = true
-    } else {
-      const $$x6 = location.Lmodel_Location__f_x;
-      const this$7 = config.Lindigo_shared_config_GameConfig__f_viewport;
-      $m_Lindigo_shared_datatypes_Rectangle$();
-      const position$3 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-      const size$3 = this$7.size__Lindigo_shared_datatypes_Point();
-      $$x4 = ($$x6 < new $c_Lindigo_shared_datatypes_Rectangle(position$3, size$3).left__I())
-    };
-    let newHorizontal;
-    if ($$x4) {
-      newHorizontal = this.Lmodel_Direction__f_horizontal.opposite__Lmodel_Horizontal()
-    } else {
-      newHorizontal = this.Lmodel_Direction__f_horizontal
-    };
-    return new $c_Lmodel_Direction(newVertical, newHorizontal)
-  };
-  fromLocationWithNegativeY__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Direction(location, config) {
-    const $$x1 = location.Lmodel_Location__f_y;
-    const this$1 = config.Lindigo_shared_config_GameConfig__f_viewport;
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const position = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-    const size = this$1.size__Lindigo_shared_datatypes_Point();
-    let newVertical;
-    if (($$x1 > new $c_Lindigo_shared_datatypes_Rectangle(position, size).bottom__I())) {
-      newVertical = this.Lmodel_Direction__f_vertical.opposite__Lmodel_Vertical()
-    } else {
-      newVertical = this.Lmodel_Direction__f_vertical
-    };
-    const $$x3 = location.Lmodel_Location__f_x;
-    const this$3 = config.Lindigo_shared_config_GameConfig__f_viewport;
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const position$1 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-    const size$1 = this$3.size__Lindigo_shared_datatypes_Point();
-    let $$x2;
-    if (($$x3 > new $c_Lindigo_shared_datatypes_Rectangle(position$1, size$1).right__I())) {
-      $$x2 = true
-    } else {
-      const $$x4 = location.Lmodel_Location__f_x;
-      const this$5 = config.Lindigo_shared_config_GameConfig__f_viewport;
-      $m_Lindigo_shared_datatypes_Rectangle$();
-      const position$2 = $m_Lindigo_shared_datatypes_Point$().zero__Lindigo_shared_datatypes_Point();
-      const size$2 = this$5.size__Lindigo_shared_datatypes_Point();
-      $$x2 = ($$x4 < new $c_Lindigo_shared_datatypes_Rectangle(position$2, size$2).left__I())
-    };
-    let newHorizontal;
-    if ($$x2) {
-      newHorizontal = this.Lmodel_Direction__f_horizontal.opposite__Lmodel_Horizontal()
-    } else {
-      newHorizontal = this.Lmodel_Direction__f_horizontal
-    };
-    return new $c_Lmodel_Direction(newVertical, newHorizontal)
-  };
-  productPrefix__T() {
-    return "Direction"
-  };
-  productArity__I() {
-    return 2
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Direction__f_vertical;
-        break
-      }
-      case 1: {
-        return this.Lmodel_Direction__f_horizontal;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Direction)) {
-      const Direction$1 = $as_Lmodel_Direction(x$1);
-      const x = this.Lmodel_Direction__f_vertical;
-      const x$2 = Direction$1.Lmodel_Direction__f_vertical;
-      if ((x === x$2)) {
-        const x$3 = this.Lmodel_Direction__f_horizontal;
-        const x$4 = Direction$1.Lmodel_Direction__f_horizontal;
-        return (x$3 === x$4)
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Direction(obj) {
-  return (((obj instanceof $c_Lmodel_Direction) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Direction"))
-}
-function $isArrayOf_Lmodel_Direction(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Direction)))
-}
-function $asArrayOf_Lmodel_Direction(obj, depth) {
-  return (($isArrayOf_Lmodel_Direction(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Direction;", depth))
-}
-const $d_Lmodel_Direction = new $TypeData().initClass({
-  Lmodel_Direction: 0
-}, false, "model.Direction", {
-  Lmodel_Direction: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Direction.prototype.$classData = $d_Lmodel_Direction;
-class $c_Lmodel_Grandma extends $c_O {
-  constructor(location, direction, hitBox) {
-    super();
-    this.Lmodel_Grandma__f_location = null;
-    this.Lmodel_Grandma__f_direction = null;
-    this.Lmodel_Grandma__f_hitBox = null;
-    this.Lmodel_Grandma__f_location = location;
-    this.Lmodel_Grandma__f_direction = direction;
-    this.Lmodel_Grandma__f_hitBox = hitBox
-  };
-  moveBy__D__D__Lindigo_shared_config_GameConfig__Lmodel_Grandma(x, y, config) {
-    const newDirection = this.Lmodel_Grandma__f_direction.fromLocationWithNegativeY__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Direction(this.Lmodel_Grandma__f_location, config);
-    const newY = (((this.Lmodel_Grandma__f_location.Lmodel_Location__f_y + newDirection.Lmodel_Direction__f_vertical.inDirection__D__D(y)) > config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_height) ? $m_Lmodel_Grandma$().aboveScreen__D() : (this.Lmodel_Grandma__f_location.Lmodel_Location__f_y + newDirection.Lmodel_Direction__f_vertical.inDirection__D__D(y)));
-    const newLocation = new $c_Lmodel_Location((this.Lmodel_Grandma__f_location.Lmodel_Location__f_x + newDirection.Lmodel_Direction__f_horizontal.inDirection__D__D(x)), newY);
-    const this$1 = this.Lmodel_Grandma__f_hitBox;
-    const point = newLocation.toPoint__Lindigo_shared_datatypes_Point();
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const size = this$1.Lindigo_shared_datatypes_Rectangle__f_size;
-    return new $c_Lmodel_Grandma(newLocation, newDirection, new $c_Lindigo_shared_datatypes_Rectangle(point, size))
-  };
-  reset__Lmodel_Grandma() {
-    const $$x2 = new $c_Lmodel_Location(this.Lmodel_Grandma__f_location.Lmodel_Location__f_x, $m_Lmodel_Grandma$().aboveScreen__D());
-    const $$x1 = this.Lmodel_Grandma__f_direction;
-    const this$2 = this.Lmodel_Grandma__f_hitBox;
-    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-    const x = this.Lmodel_Grandma__f_location.toPoint__Lindigo_shared_datatypes_Point().Lindigo_shared_datatypes_Point__f_x;
-    const y = $doubleToInt($m_Lmodel_Grandma$().aboveScreen__D());
-    const point = new $c_Lindigo_shared_datatypes_Point(x, y);
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const size = this$2.Lindigo_shared_datatypes_Rectangle__f_size;
-    return new $c_Lmodel_Grandma($$x2, $$x1, new $c_Lindigo_shared_datatypes_Rectangle(point, size))
-  };
-  productPrefix__T() {
-    return "Grandma"
-  };
-  productArity__I() {
-    return 3
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Grandma__f_location;
-        break
-      }
-      case 1: {
-        return this.Lmodel_Grandma__f_direction;
-        break
-      }
-      case 2: {
-        return this.Lmodel_Grandma__f_hitBox;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Grandma)) {
-      const Grandma$1 = $as_Lmodel_Grandma(x$1);
-      const x = this.Lmodel_Grandma__f_location;
-      const x$2 = Grandma$1.Lmodel_Grandma__f_location;
-      let $$x1;
-      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-        const x$3 = this.Lmodel_Grandma__f_direction;
-        const x$4 = Grandma$1.Lmodel_Grandma__f_direction;
-        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        const x$5 = this.Lmodel_Grandma__f_hitBox;
-        const x$6 = Grandma$1.Lmodel_Grandma__f_hitBox;
-        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Grandma(obj) {
-  return (((obj instanceof $c_Lmodel_Grandma) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Grandma"))
-}
-function $isArrayOf_Lmodel_Grandma(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Grandma)))
-}
-function $asArrayOf_Lmodel_Grandma(obj, depth) {
-  return (($isArrayOf_Lmodel_Grandma(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Grandma;", depth))
-}
-const $d_Lmodel_Grandma = new $TypeData().initClass({
-  Lmodel_Grandma: 0
-}, false, "model.Grandma", {
-  Lmodel_Grandma: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Grandma.prototype.$classData = $d_Lmodel_Grandma;
-class $c_Lmodel_LightWithLocation extends $c_O {
-  constructor(color, location, direction) {
-    super();
-    this.Lmodel_LightWithLocation__f_color = null;
-    this.Lmodel_LightWithLocation__f_location = null;
-    this.Lmodel_LightWithLocation__f_direction = null;
-    this.Lmodel_LightWithLocation__f_color = color;
-    this.Lmodel_LightWithLocation__f_location = location;
-    this.Lmodel_LightWithLocation__f_direction = direction
-  };
-  moveBy__D__D__Lindigo_shared_config_GameConfig__Lmodel_LightWithLocation(x, y, config) {
-    const newDirection = this.Lmodel_LightWithLocation__f_direction.fromLocation__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Direction(this.Lmodel_LightWithLocation__f_location, config);
-    const newLocation = new $c_Lmodel_Location((this.Lmodel_LightWithLocation__f_location.Lmodel_Location__f_x + newDirection.Lmodel_Direction__f_horizontal.inDirection__D__D(x)), (this.Lmodel_LightWithLocation__f_location.Lmodel_Location__f_y + newDirection.Lmodel_Direction__f_vertical.inDirection__D__D(y)));
-    return new $c_Lmodel_LightWithLocation(this.Lmodel_LightWithLocation__f_color, newLocation, newDirection)
-  };
-  productPrefix__T() {
-    return "LightWithLocation"
-  };
-  productArity__I() {
-    return 3
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_LightWithLocation__f_color;
-        break
-      }
-      case 1: {
-        return this.Lmodel_LightWithLocation__f_location;
-        break
-      }
-      case 2: {
-        return this.Lmodel_LightWithLocation__f_direction;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_LightWithLocation)) {
-      const LightWithLocation$1 = $as_Lmodel_LightWithLocation(x$1);
-      const x = this.Lmodel_LightWithLocation__f_color;
-      const x$2 = LightWithLocation$1.Lmodel_LightWithLocation__f_color;
-      let $$x1;
-      if ((x === x$2)) {
-        const x$3 = this.Lmodel_LightWithLocation__f_location;
-        const x$4 = LightWithLocation$1.Lmodel_LightWithLocation__f_location;
-        $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        const x$5 = this.Lmodel_LightWithLocation__f_direction;
-        const x$6 = LightWithLocation$1.Lmodel_LightWithLocation__f_direction;
-        return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_LightWithLocation(obj) {
-  return (((obj instanceof $c_Lmodel_LightWithLocation) || (obj === null)) ? obj : $throwClassCastException(obj, "model.LightWithLocation"))
-}
-function $isArrayOf_Lmodel_LightWithLocation(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_LightWithLocation)))
-}
-function $asArrayOf_Lmodel_LightWithLocation(obj, depth) {
-  return (($isArrayOf_Lmodel_LightWithLocation(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.LightWithLocation;", depth))
-}
-const $d_Lmodel_LightWithLocation = new $TypeData().initClass({
-  Lmodel_LightWithLocation: 0
-}, false, "model.LightWithLocation", {
-  Lmodel_LightWithLocation: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_LightWithLocation.prototype.$classData = $d_Lmodel_LightWithLocation;
-class $c_Lmodel_Location extends $c_O {
-  constructor(x, y) {
-    super();
-    this.Lmodel_Location__f_x = 0.0;
-    this.Lmodel_Location__f_y = 0.0;
-    this.Lmodel_Location__f_x = x;
-    this.Lmodel_Location__f_y = y
-  };
-  toPoint__Lindigo_shared_datatypes_Point() {
-    $m_Lindigo_package$().Point__Lindigo_shared_datatypes_Point$();
-    const a = this.Lmodel_Location__f_x;
-    const this$2 = $m_RTLong$();
-    const value = $uD(Math.round(a));
-    const lo = this$2.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
-    const a$1 = this.Lmodel_Location__f_y;
-    const this$4 = $m_RTLong$();
-    const value$1 = $uD(Math.round(a$1));
-    const lo$1 = this$4.org$scalajs$linker$runtime$RuntimeLong$$fromDoubleImpl__D__I(value$1);
-    return new $c_Lindigo_shared_datatypes_Point(lo, lo$1)
-  };
-  productPrefix__T() {
-    return "Location"
-  };
-  productArity__I() {
-    return 2
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Location__f_x;
-        break
-      }
-      case 1: {
-        return this.Lmodel_Location__f_y;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const data = $f_T__hashCode__I("Location");
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const dv = this.Lmodel_Location__f_x;
-    const data$1 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const dv$1 = this.Lmodel_Location__f_y;
-    const data$2 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$3, 2)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Location)) {
-      const Location$1 = $as_Lmodel_Location(x$1);
-      return ((this.Lmodel_Location__f_x === Location$1.Lmodel_Location__f_x) && (this.Lmodel_Location__f_y === Location$1.Lmodel_Location__f_y))
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Location(obj) {
-  return (((obj instanceof $c_Lmodel_Location) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Location"))
-}
-function $isArrayOf_Lmodel_Location(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Location)))
-}
-function $asArrayOf_Lmodel_Location(obj, depth) {
-  return (($isArrayOf_Lmodel_Location(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Location;", depth))
-}
-const $d_Lmodel_Location = new $TypeData().initClass({
-  Lmodel_Location: 0
-}, false, "model.Location", {
-  Lmodel_Location: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Location.prototype.$classData = $d_Lmodel_Location;
-const $p_Lmodel_Model__boundedX__D__D__D__D = (function($thiz, x, minX, maxX) {
-  return ((x > maxX) ? maxX : ((x < minX) ? minX : x))
-});
-const $p_Lmodel_Model__checkHits__sci_List__sci_List__Lmodel_CheckHitsResult = (function($thiz, shotsToCheck, grandmasToCheck) {
-  const f = ((this$1, grandmasToCheck$1) => ((shot$2) => {
-    const shot = $as_Lmodel_Shot(shot$2);
-    let these = grandmasToCheck$1;
-    while ((!these.isEmpty__Z())) {
-      const arg1 = these.head__O();
-      const grandma = $as_Lmodel_Grandma(arg1);
-      const this$2 = shot.Lmodel_Shot__f_hitBox;
-      const other = grandma.Lmodel_Grandma__f_hitBox;
-      if ($m_Lindigo_shared_datatypes_Rectangle$().overlapping__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Rectangle__Z(this$2, other)) {
-        return true
-      };
-      these = $as_sci_List(these.tail__O())
-    };
-    return false
-  }))($thiz, grandmasToCheck);
-  let l = shotsToCheck;
-  let result;
-  block: {
-    while (true) {
-      if (l.isEmpty__Z()) {
-        result = $m_sci_Nil$();
-        break
-      } else {
-        const h = l.head__O();
-        const t = $as_sci_List(l.tail__O());
-        if (($uZ(f(h)) === true)) {
-          l = t;
-          continue
-        };
-        const start = l;
-        let remaining = t;
-        while (true) {
-          if (remaining.isEmpty__Z()) {
-            result = start;
-            break block
-          } else {
-            const x = remaining.head__O();
-            if (($uZ(f(x)) !== true)) {
-              remaining = $as_sci_List(remaining.tail__O());
-              continue
-            };
-            const firstMiss = remaining;
-            const newHead = new $c_sci_$colon$colon(start.head__O(), $m_sci_Nil$());
-            let toProcess = $as_sci_List(start.tail__O());
-            let currentLast = newHead;
-            while ((toProcess !== firstMiss)) {
-              const newElem = new $c_sci_$colon$colon(toProcess.head__O(), $m_sci_Nil$());
-              currentLast.sci_$colon$colon__f_next = newElem;
-              currentLast = newElem;
-              toProcess = $as_sci_List(toProcess.tail__O())
-            };
-            let next = $as_sci_List(firstMiss.tail__O());
-            let nextToCopy = next;
-            while ((!next.isEmpty__Z())) {
-              const head = next.head__O();
-              if (($uZ(f(head)) !== true)) {
-                next = $as_sci_List(next.tail__O())
-              } else {
-                while ((nextToCopy !== next)) {
-                  const newElem$2 = new $c_sci_$colon$colon(nextToCopy.head__O(), $m_sci_Nil$());
-                  currentLast.sci_$colon$colon__f_next = newElem$2;
-                  currentLast = newElem$2;
-                  nextToCopy = $as_sci_List(nextToCopy.tail__O())
-                };
-                nextToCopy = $as_sci_List(next.tail__O());
-                next = $as_sci_List(next.tail__O())
-              }
-            };
-            if ((!nextToCopy.isEmpty__Z())) {
-              currentLast.sci_$colon$colon__f_next = nextToCopy
-            };
-            result = newHead;
-            break block
-          }
-        }
-      }
-    }
-  };
-  let x1$1;
-  if (grandmasToCheck.isEmpty__Z()) {
-    x1$1 = $m_sci_List$().sci_List$__f_scala$collection$immutable$List$$TupleOfNil
-  } else {
-    $m_sci_List$();
-    const l$1 = new $c_scm_ListBuffer();
-    $m_sci_List$();
-    const r = new $c_scm_ListBuffer();
-    const this$5 = grandmasToCheck.iterator__sc_Iterator();
-    while (this$5.hasNext__Z()) {
-      const arg1$1 = this$5.next__O();
-      const grandma$1 = $as_Lmodel_Grandma(arg1$1);
-      let $$x1;
-      _return$1: {
-        let these$1 = shotsToCheck;
-        while ((!these$1.isEmpty__Z())) {
-          const arg1$2 = these$1.head__O();
-          const shot$1 = $as_Lmodel_Shot(arg1$2);
-          const this$6 = grandma$1.Lmodel_Grandma__f_hitBox;
-          const other$1 = shot$1.Lmodel_Shot__f_hitBox;
-          if ($m_Lindigo_shared_datatypes_Rectangle$().overlapping__Lindigo_shared_datatypes_Rectangle__Lindigo_shared_datatypes_Rectangle__Z(this$6, other$1)) {
-            $$x1 = true;
-            break _return$1
-          };
-          these$1 = $as_sci_List(these$1.tail__O())
-        };
-        $$x1 = false
-      };
-      let this$7;
-      if ($$x1) {
-        this$7 = l$1
-      } else {
-        this$7 = r
-      };
-      this$7.addOne__O__scm_ListBuffer(arg1$1)
-    };
-    const x1 = $ct_T2__O__O__(new $c_T2(), l$1.toList__sci_List(), r.toList__sci_List());
-    matchEnd7$1: {
-      const p2 = $as_sci_List(x1.T2__f__1);
-      const x$1 = $m_sci_Nil$();
-      if (x$1.equals__O__Z(p2)) {
-        x1$1 = $ct_T2__O__O__(new $c_T2(), $m_sci_Nil$(), grandmasToCheck);
-        break matchEnd7$1
-      };
-      const p3 = $as_sci_List(x1.T2__f__2);
-      const x$3 = $m_sci_Nil$();
-      if (x$3.equals__O__Z(p3)) {
-        x1$1 = $ct_T2__O__O__(new $c_T2(), grandmasToCheck, $m_sci_Nil$());
-        break matchEnd7$1
-      };
-      x1$1 = x1
-    }
-  };
-  if ((x1$1 === null)) {
-    throw new $c_s_MatchError(x1$1)
-  };
-  const resetGrandmas = $as_sci_List(x1$1._1__O());
-  const remainingGrandmas = $as_sci_List(x1$1._2__O());
-  return new $c_Lmodel_CheckHitsResult(result, remainingGrandmas, resetGrandmas, resetGrandmas.length__I())
-});
-const $p_Lmodel_Model__moveAndCheckStrikes__sci_List__D__Lindigo_shared_config_GameConfig__T2 = (function($thiz, grandmasToMove, delta, config) {
-  const f = ((this$1, delta$1, config$1) => ((x$2$2) => {
-    const x$2 = $as_Lmodel_Grandma(x$2$2);
-    return x$2.moveBy__D__D__Lindigo_shared_config_GameConfig__Lmodel_Grandma(this$1.distanceFromDelta__D__D__D(this$1.Lmodel_Model__f_grandmaSpeed, delta$1), this$1.distanceFromDelta__D__D__D(this$1.Lmodel_Model__f_grandmaSpeed, delta$1), config$1)
-  }))($thiz, delta, config);
-  let movedGrandmas;
-  if ((grandmasToMove === $m_sci_Nil$())) {
-    movedGrandmas = $m_sci_Nil$()
-  } else {
-    const arg1 = grandmasToMove.head__O();
-    const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-    let t = h;
-    let rest = $as_sci_List(grandmasToMove.tail__O());
-    while ((rest !== $m_sci_Nil$())) {
-      const arg1$1 = rest.head__O();
-      const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-      t.sci_$colon$colon__f_next = nx;
-      t = nx;
-      rest = $as_sci_List(rest.tail__O())
-    };
-    movedGrandmas = h
-  };
-  let res = 0;
-  const it = movedGrandmas.iterator__sc_Iterator();
-  while (it.hasNext__Z()) {
-    const arg1$2 = it.next__O();
-    const x$3 = $as_Lmodel_Grandma(arg1$2);
-    if ((x$3.Lmodel_Grandma__f_location.Lmodel_Location__f_y === $m_Lmodel_Grandma$().aboveScreen__D())) {
-      res = ((1 + res) | 0)
-    }
-  };
-  const strikes = res;
-  return $ct_T2__O__O__(new $c_T2(), movedGrandmas, strikes)
-});
-class $c_Lmodel_Model extends $c_O {
-  constructor(skrillex, shots, shotSpeed, lights, grandmas, grandmaSpeed, points, strikes, splats) {
-    super();
-    this.Lmodel_Model__f_skrillex = null;
-    this.Lmodel_Model__f_shots = null;
-    this.Lmodel_Model__f_shotSpeed = 0.0;
-    this.Lmodel_Model__f_lights = null;
-    this.Lmodel_Model__f_grandmas = null;
-    this.Lmodel_Model__f_grandmaSpeed = 0.0;
-    this.Lmodel_Model__f_points = 0;
-    this.Lmodel_Model__f_strikes = 0;
-    this.Lmodel_Model__f_splats = null;
-    this.Lmodel_Model__f_skrillex = skrillex;
-    this.Lmodel_Model__f_shots = shots;
-    this.Lmodel_Model__f_shotSpeed = shotSpeed;
-    this.Lmodel_Model__f_lights = lights;
-    this.Lmodel_Model__f_grandmas = grandmas;
-    this.Lmodel_Model__f_grandmaSpeed = grandmaSpeed;
-    this.Lmodel_Model__f_points = points;
-    this.Lmodel_Model__f_strikes = strikes;
-    this.Lmodel_Model__f_splats = splats
-  };
-  distanceFromDelta__D__D__D(pxPerSec, delta) {
-    return ((60.0 * pxPerSec) * delta)
-  };
-  updateSkrillex__Lmodel_Location__Lindigo_shared_config_GameConfig__Lmodel_Model(skrillexChange, config) {
-    const newSkrillex = new $c_Lmodel_Skrillex(new $c_Lmodel_Location($p_Lmodel_Model__boundedX__D__D__D__D(this, skrillexChange.Lmodel_Location__f_x, 0.0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width), this.Lmodel_Model__f_skrillex.Lmodel_Skrillex__f_location.Lmodel_Location__f_y));
-    const shots = this.Lmodel_Model__f_shots;
-    const shotSpeed = this.Lmodel_Model__f_shotSpeed;
-    const lights = this.Lmodel_Model__f_lights;
-    const grandmas = this.Lmodel_Model__f_grandmas;
-    const grandmaSpeed = this.Lmodel_Model__f_grandmaSpeed;
-    const points = this.Lmodel_Model__f_points;
-    const strikes = this.Lmodel_Model__f_strikes;
-    const splats = this.Lmodel_Model__f_splats;
-    return new $c_Lmodel_Model(newSkrillex, shots, shotSpeed, lights, grandmas, grandmaSpeed, points, strikes, splats)
-  };
-  updateShot__Lmodel_Model() {
-    const this$5 = this.Lmodel_Model__f_shots;
-    $m_sci_List$();
-    const array = [$m_Lmodel_Shot$().newShot__Lmodel_Location__Lmodel_Shot(this.Lmodel_Model__f_skrillex.Lmodel_Skrillex__f_location)];
-    const elems = new $c_sjsr_WrappedVarArgs(array);
-    const suffix = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
-    const newShots = this$5.appendedAll__sc_IterableOnce__sci_List(suffix);
-    const x$2 = this.Lmodel_Model__f_skrillex;
-    const x$3 = this.Lmodel_Model__f_shotSpeed;
-    const x$4 = this.Lmodel_Model__f_lights;
-    const x$5 = this.Lmodel_Model__f_grandmas;
-    const x$6 = this.Lmodel_Model__f_grandmaSpeed;
-    const x$7 = this.Lmodel_Model__f_points;
-    const x$8 = this.Lmodel_Model__f_strikes;
-    const x$9 = this.Lmodel_Model__f_splats;
-    return new $c_Lmodel_Model(x$2, newShots, x$3, x$4, x$5, x$6, x$7, x$8, x$9)
-  };
-  updateTick__Lindigo_shared_config_GameConfig__D__Lmodel_Model(config, delta) {
-    const this$2 = this.Lmodel_Model__f_lights;
-    const f = ((this$1, delta$1, config$1) => ((x$4$2) => {
-      const x$4 = $as_Lmodel_LightWithLocation(x$4$2);
-      return x$4.moveBy__D__D__Lindigo_shared_config_GameConfig__Lmodel_LightWithLocation(this$1.distanceFromDelta__D__D__D(10.0, delta$1), this$1.distanceFromDelta__D__D__D(10.0, delta$1), config$1)
-    }))(this, delta, config);
-    let newLights;
-    if ((this$2 === $m_sci_Nil$())) {
-      newLights = $m_sci_Nil$()
-    } else {
-      const arg1 = this$2.head__O();
-      const h = new $c_sci_$colon$colon(f(arg1), $m_sci_Nil$());
-      let t = h;
-      let rest = $as_sci_List(this$2.tail__O());
-      while ((rest !== $m_sci_Nil$())) {
-        const arg1$1 = rest.head__O();
-        const nx = new $c_sci_$colon$colon(f(arg1$1), $m_sci_Nil$());
-        t.sci_$colon$colon__f_next = nx;
-        t = nx;
-        rest = $as_sci_List(rest.tail__O())
-      };
-      newLights = h
-    };
-    const hitsChecked = $p_Lmodel_Model__checkHits__sci_List__sci_List__Lmodel_CheckHitsResult(this, this.Lmodel_Model__f_shots, this.Lmodel_Model__f_grandmas);
-    const this$3 = hitsChecked.Lmodel_CheckHitsResult__f_shots;
-    const f$1 = ((this$2$1, delta$2) => ((x$5$2) => {
-      const x$5 = $as_Lmodel_Shot(x$5$2);
-      return x$5.moveBy__D__Lmodel_Shot(this$2$1.distanceFromDelta__D__D__D(this$2$1.Lmodel_Model__f_shotSpeed, delta$2))
-    }))(this, delta);
-    let newShots;
-    if ((this$3 === $m_sci_Nil$())) {
-      newShots = $m_sci_Nil$()
-    } else {
-      const arg1$2 = this$3.head__O();
-      const h$1 = new $c_sci_$colon$colon(f$1(arg1$2), $m_sci_Nil$());
-      let t$1 = h$1;
-      let rest$1 = $as_sci_List(this$3.tail__O());
-      while ((rest$1 !== $m_sci_Nil$())) {
-        const arg1$3 = rest$1.head__O();
-        const nx$1 = new $c_sci_$colon$colon(f$1(arg1$3), $m_sci_Nil$());
-        t$1.sci_$colon$colon__f_next = nx$1;
-        t$1 = nx$1;
-        rest$1 = $as_sci_List(rest$1.tail__O())
-      };
-      newShots = h$1
-    };
-    const x1 = $p_Lmodel_Model__moveAndCheckStrikes__sci_List__D__Lindigo_shared_config_GameConfig__T2(this, hitsChecked.Lmodel_CheckHitsResult__f_remainingGrandmas, delta, config);
-    if ((x1 === null)) {
-      throw new $c_s_MatchError(x1)
-    };
-    const grandmasMoved = $as_sci_List(x1._1__O());
-    const newStrikes = $uI(x1._2__O());
-    const this$4 = hitsChecked.Lmodel_CheckHitsResult__f_resetGrandmas;
-    const f$2 = ((this$3$1) => ((x$7$2) => {
-      const x$7 = $as_Lmodel_Grandma(x$7$2);
-      return x$7.reset__Lmodel_Grandma()
-    }))(this);
-    let this$5;
-    if ((this$4 === $m_sci_Nil$())) {
-      this$5 = $m_sci_Nil$()
-    } else {
-      const arg1$4 = this$4.head__O();
-      const h$2 = new $c_sci_$colon$colon(f$2(arg1$4), $m_sci_Nil$());
-      let t$2 = h$2;
-      let rest$2 = $as_sci_List(this$4.tail__O());
-      while ((rest$2 !== $m_sci_Nil$())) {
-        const arg1$5 = rest$2.head__O();
-        const nx$2 = new $c_sci_$colon$colon(f$2(arg1$5), $m_sci_Nil$());
-        t$2.sci_$colon$colon__f_next = nx$2;
-        t$2 = nx$2;
-        rest$2 = $as_sci_List(rest$2.tail__O())
-      };
-      this$5 = h$2
-    };
-    const newGrandmas = this$5.appendedAll__sc_IterableOnce__sci_List(grandmasMoved);
-    const this$6 = hitsChecked.Lmodel_CheckHitsResult__f_resetGrandmas;
-    const f$3 = ((this$4$1) => ((x$8$2) => {
-      const x$8 = $as_Lmodel_Grandma(x$8$2);
-      return x$8.Lmodel_Grandma__f_location
-    }))(this);
-    let this$7;
-    if ((this$6 === $m_sci_Nil$())) {
-      this$7 = $m_sci_Nil$()
-    } else {
-      const arg1$6 = this$6.head__O();
-      const h$3 = new $c_sci_$colon$colon(f$3(arg1$6), $m_sci_Nil$());
-      let t$3 = h$3;
-      let rest$3 = $as_sci_List(this$6.tail__O());
-      while ((rest$3 !== $m_sci_Nil$())) {
-        const arg1$7 = rest$3.head__O();
-        const nx$3 = new $c_sci_$colon$colon(f$3(arg1$7), $m_sci_Nil$());
-        t$3.sci_$colon$colon__f_next = nx$3;
-        t$3 = nx$3;
-        rest$3 = $as_sci_List(rest$3.tail__O())
-      };
-      this$7 = h$3
-    };
-    const f$4 = ((this$5$1) => ((location$2) => {
-      const location = $as_Lmodel_Location(location$2);
-      return $m_Lmodel_Splatter$().fromLocation__Lmodel_Location__Lmodel_Splatter(location)
-    }))(this);
-    let newSplats;
-    if ((this$7 === $m_sci_Nil$())) {
-      newSplats = $m_sci_Nil$()
-    } else {
-      const arg1$8 = this$7.head__O();
-      const h$4 = new $c_sci_$colon$colon(f$4(arg1$8), $m_sci_Nil$());
-      let t$4 = h$4;
-      let rest$4 = $as_sci_List(this$7.tail__O());
-      while ((rest$4 !== $m_sci_Nil$())) {
-        const arg1$9 = rest$4.head__O();
-        const nx$4 = new $c_sci_$colon$colon(f$4(arg1$9), $m_sci_Nil$());
-        t$4.sci_$colon$colon__f_next = nx$4;
-        t$4 = nx$4;
-        rest$4 = $as_sci_List(rest$4.tail__O())
-      };
-      newSplats = h$4
-    };
-    const skrillex = this.Lmodel_Model__f_skrillex;
-    const shotSpeed = this.Lmodel_Model__f_shotSpeed;
-    const grandmaSpeed = this.Lmodel_Model__f_grandmaSpeed;
-    const points = ((this.Lmodel_Model__f_points + hitsChecked.Lmodel_CheckHitsResult__f_points) | 0);
-    const strikes = ((this.Lmodel_Model__f_strikes + newStrikes) | 0);
-    const suffix = this.Lmodel_Model__f_splats;
-    const splats = newSplats.appendedAll__sc_IterableOnce__sci_List(suffix).take__I__sci_List(200);
-    return new $c_Lmodel_Model(skrillex, newShots, shotSpeed, newLights, newGrandmas, grandmaSpeed, points, strikes, splats)
-  };
-  productPrefix__T() {
-    return "Model"
-  };
-  productArity__I() {
-    return 9
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Model__f_skrillex;
-        break
-      }
-      case 1: {
-        return this.Lmodel_Model__f_shots;
-        break
-      }
-      case 2: {
-        return this.Lmodel_Model__f_shotSpeed;
-        break
-      }
-      case 3: {
-        return this.Lmodel_Model__f_lights;
-        break
-      }
-      case 4: {
-        return this.Lmodel_Model__f_grandmas;
-        break
-      }
-      case 5: {
-        return this.Lmodel_Model__f_grandmaSpeed;
-        break
-      }
-      case 6: {
-        return this.Lmodel_Model__f_points;
-        break
-      }
-      case 7: {
-        return this.Lmodel_Model__f_strikes;
-        break
-      }
-      case 8: {
-        return this.Lmodel_Model__f_splats;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const data = $f_T__hashCode__I("Model");
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x = this.Lmodel_Model__f_skrillex;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const x$1 = this.Lmodel_Model__f_shots;
-    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv = this.Lmodel_Model__f_shotSpeed;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    const x$2 = this.Lmodel_Model__f_lights;
-    const data$4 = $m_sr_Statics$().anyHash__O__I(x$2);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$4, data$4);
-    const hash$5 = acc;
-    const x$3 = this.Lmodel_Model__f_grandmas;
-    const data$5 = $m_sr_Statics$().anyHash__O__I(x$3);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$5, data$5);
-    const hash$6 = acc;
-    const dv$1 = this.Lmodel_Model__f_grandmaSpeed;
-    const data$6 = $m_sr_Statics$().doubleHash__D__I(dv$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$6, data$6);
-    const hash$7 = acc;
-    const data$7 = this.Lmodel_Model__f_points;
-    acc = $m_sr_Statics$().mix__I__I__I(hash$7, data$7);
-    const hash$8 = acc;
-    const data$8 = this.Lmodel_Model__f_strikes;
-    acc = $m_sr_Statics$().mix__I__I__I(hash$8, data$8);
-    const hash$9 = acc;
-    const x$4 = this.Lmodel_Model__f_splats;
-    const data$9 = $m_sr_Statics$().anyHash__O__I(x$4);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$9, data$9);
-    const hash$10 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$10, 9)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Model)) {
-      const Model$1 = $as_Lmodel_Model(x$1);
-      let $$x4;
-      if (((((this.Lmodel_Model__f_shotSpeed === Model$1.Lmodel_Model__f_shotSpeed) && (this.Lmodel_Model__f_grandmaSpeed === Model$1.Lmodel_Model__f_grandmaSpeed)) && (this.Lmodel_Model__f_points === Model$1.Lmodel_Model__f_points)) && (this.Lmodel_Model__f_strikes === Model$1.Lmodel_Model__f_strikes))) {
-        const x = this.Lmodel_Model__f_skrillex;
-        const x$2 = Model$1.Lmodel_Model__f_skrillex;
-        $$x4 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        $$x4 = false
-      };
-      let $$x3;
-      if ($$x4) {
-        const x$3 = this.Lmodel_Model__f_shots;
-        const x$4 = Model$1.Lmodel_Model__f_shots;
-        $$x3 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-      } else {
-        $$x3 = false
-      };
-      let $$x2;
-      if ($$x3) {
-        const x$5 = this.Lmodel_Model__f_lights;
-        const x$6 = Model$1.Lmodel_Model__f_lights;
-        $$x2 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
-      } else {
-        $$x2 = false
-      };
-      let $$x1;
-      if ($$x2) {
-        const x$7 = this.Lmodel_Model__f_grandmas;
-        const x$8 = Model$1.Lmodel_Model__f_grandmas;
-        $$x1 = ((x$7 === null) ? (x$8 === null) : x$7.equals__O__Z(x$8))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        const x$9 = this.Lmodel_Model__f_splats;
-        const x$10 = Model$1.Lmodel_Model__f_splats;
-        return ((x$9 === null) ? (x$10 === null) : x$9.equals__O__Z(x$10))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Model(obj) {
-  return (((obj instanceof $c_Lmodel_Model) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Model"))
-}
-function $isArrayOf_Lmodel_Model(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Model)))
-}
-function $asArrayOf_Lmodel_Model(obj, depth) {
-  return (($isArrayOf_Lmodel_Model(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Model;", depth))
-}
-const $d_Lmodel_Model = new $TypeData().initClass({
-  Lmodel_Model: 0
-}, false, "model.Model", {
-  Lmodel_Model: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Model.prototype.$classData = $d_Lmodel_Model;
-class $c_Lmodel_Shot extends $c_O {
-  constructor(location, hitBox) {
-    super();
-    this.Lmodel_Shot__f_location = null;
-    this.Lmodel_Shot__f_hitBox = null;
-    this.Lmodel_Shot__f_location = location;
-    this.Lmodel_Shot__f_hitBox = hitBox
-  };
-  moveBy__D__Lmodel_Shot(shotSpeed) {
-    const newLocation = new $c_Lmodel_Location(this.Lmodel_Shot__f_location.Lmodel_Location__f_x, (this.Lmodel_Shot__f_location.Lmodel_Location__f_y - shotSpeed));
-    const this$1 = this.Lmodel_Shot__f_hitBox;
-    const point = newLocation.toPoint__Lindigo_shared_datatypes_Point();
-    $m_Lindigo_shared_datatypes_Rectangle$();
-    const size = this$1.Lindigo_shared_datatypes_Rectangle__f_size;
-    return new $c_Lmodel_Shot(newLocation, new $c_Lindigo_shared_datatypes_Rectangle(point, size))
-  };
-  productPrefix__T() {
-    return "Shot"
-  };
-  productArity__I() {
-    return 2
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Shot__f_location;
-        break
-      }
-      case 1: {
-        return this.Lmodel_Shot__f_hitBox;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Shot)) {
-      const Shot$1 = $as_Lmodel_Shot(x$1);
-      const x = this.Lmodel_Shot__f_location;
-      const x$2 = Shot$1.Lmodel_Shot__f_location;
-      if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-        const x$3 = this.Lmodel_Shot__f_hitBox;
-        const x$4 = Shot$1.Lmodel_Shot__f_hitBox;
-        return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Shot(obj) {
-  return (((obj instanceof $c_Lmodel_Shot) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Shot"))
-}
-function $isArrayOf_Lmodel_Shot(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Shot)))
-}
-function $asArrayOf_Lmodel_Shot(obj, depth) {
-  return (($isArrayOf_Lmodel_Shot(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Shot;", depth))
-}
-const $d_Lmodel_Shot = new $TypeData().initClass({
-  Lmodel_Shot: 0
-}, false, "model.Shot", {
-  Lmodel_Shot: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Shot.prototype.$classData = $d_Lmodel_Shot;
-class $c_Lmodel_Skrillex extends $c_O {
-  constructor(location) {
-    super();
-    this.Lmodel_Skrillex__f_location = null;
-    this.Lmodel_Skrillex__f_location = location
-  };
-  productPrefix__T() {
-    return "Skrillex"
-  };
-  productArity__I() {
-    return 1
-  };
-  productElement__I__O(x$1) {
-    return ((x$1 === 0) ? this.Lmodel_Skrillex__f_location : $m_sr_Statics$().ioobe__I__O(x$1))
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    const this$2 = $m_s_util_hashing_MurmurHash3$();
-    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Skrillex)) {
-      const Skrillex$1 = $as_Lmodel_Skrillex(x$1);
-      const x = this.Lmodel_Skrillex__f_location;
-      const x$2 = Skrillex$1.Lmodel_Skrillex__f_location;
-      return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Skrillex(obj) {
-  return (((obj instanceof $c_Lmodel_Skrillex) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Skrillex"))
-}
-function $isArrayOf_Lmodel_Skrillex(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Skrillex)))
-}
-function $asArrayOf_Lmodel_Skrillex(obj, depth) {
-  return (($isArrayOf_Lmodel_Skrillex(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Skrillex;", depth))
-}
-const $d_Lmodel_Skrillex = new $TypeData().initClass({
-  Lmodel_Skrillex: 0
-}, false, "model.Skrillex", {
-  Lmodel_Skrillex: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Skrillex.prototype.$classData = $d_Lmodel_Skrillex;
-class $c_Lmodel_Splatter extends $c_O {
-  constructor(location, rotation, scale) {
-    super();
-    this.Lmodel_Splatter__f_location = null;
-    this.Lmodel_Splatter__f_rotation = 0.0;
-    this.Lmodel_Splatter__f_scale = 0.0;
-    this.Lmodel_Splatter__f_location = location;
-    this.Lmodel_Splatter__f_rotation = rotation;
-    this.Lmodel_Splatter__f_scale = scale
-  };
-  productPrefix__T() {
-    return "Splatter"
-  };
-  productArity__I() {
-    return 3
-  };
-  productElement__I__O(x$1) {
-    switch (x$1) {
-      case 0: {
-        return this.Lmodel_Splatter__f_location;
-        break
-      }
-      case 1: {
-        return new $c_Lindigo_shared_datatypes_Radians(this.Lmodel_Splatter__f_rotation);
-        break
-      }
-      case 2: {
-        return this.Lmodel_Splatter__f_scale;
-        break
-      }
-      default: {
-        return $m_sr_Statics$().ioobe__I__O(x$1)
-      }
-    }
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    let acc = (-889275714);
-    const hash = acc;
-    const data = $f_T__hashCode__I("Splatter");
-    acc = $m_sr_Statics$().mix__I__I__I(hash, data);
-    const hash$1 = acc;
-    const x = this.Lmodel_Splatter__f_location;
-    const data$1 = $m_sr_Statics$().anyHash__O__I(x);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
-    const hash$2 = acc;
-    const x$1 = new $c_Lindigo_shared_datatypes_Radians(this.Lmodel_Splatter__f_rotation);
-    const data$2 = $m_sr_Statics$().anyHash__O__I(x$1);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$2, data$2);
-    const hash$3 = acc;
-    const dv = this.Lmodel_Splatter__f_scale;
-    const data$3 = $m_sr_Statics$().doubleHash__D__I(dv);
-    acc = $m_sr_Statics$().mix__I__I__I(hash$3, data$3);
-    const hash$4 = acc;
-    return $m_sr_Statics$().finalizeHash__I__I__I(hash$4, 3)
-  };
-  toString__T() {
-    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
-  };
-  equals__O__Z(x$1) {
-    if ((this === x$1)) {
-      return true
-    } else if ((x$1 instanceof $c_Lmodel_Splatter)) {
-      const Splatter$1 = $as_Lmodel_Splatter(x$1);
-      let $$x1;
-      if ((this.Lmodel_Splatter__f_scale === Splatter$1.Lmodel_Splatter__f_scale)) {
-        const x = this.Lmodel_Splatter__f_location;
-        const x$2 = Splatter$1.Lmodel_Splatter__f_location;
-        $$x1 = ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-      } else {
-        $$x1 = false
-      };
-      if ($$x1) {
-        return (this.Lmodel_Splatter__f_rotation === Splatter$1.Lmodel_Splatter__f_rotation)
-      } else {
-        return false
-      }
-    } else {
-      return false
-    }
-  };
-}
-function $as_Lmodel_Splatter(obj) {
-  return (((obj instanceof $c_Lmodel_Splatter) || (obj === null)) ? obj : $throwClassCastException(obj, "model.Splatter"))
-}
-function $isArrayOf_Lmodel_Splatter(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lmodel_Splatter)))
-}
-function $asArrayOf_Lmodel_Splatter(obj, depth) {
-  return (($isArrayOf_Lmodel_Splatter(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lmodel.Splatter;", depth))
-}
-const $d_Lmodel_Splatter = new $TypeData().initClass({
-  Lmodel_Splatter: 0
-}, false, "model.Splatter", {
-  Lmodel_Splatter: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Splatter.prototype.$classData = $d_Lmodel_Splatter;
 class $c_RTLong extends $c_jl_Number {
   constructor(lo, hi) {
     super();
@@ -36242,7 +38121,7 @@ function $isArrayOf_s_util_Try(obj, depth) {
 function $asArrayOf_s_util_Try(obj, depth) {
   return (($isArrayOf_s_util_Try(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lscala.util.Try;", depth))
 }
-class $c_Lindigo_entry_StandardFrameProcessor$$anonfun$1 extends $c_sr_AbstractPartialFunction {
+class $c_Lindigo_entry_ScenesFrameProcessor$$anonfun$1 extends $c_sr_AbstractPartialFunction {
   constructor(outer) {
     super()
   };
@@ -36265,18 +38144,18 @@ class $c_Lindigo_entry_StandardFrameProcessor$$anonfun$1 extends $c_sr_AbstractP
     return this.applyOrElse__s_Option__F1__O($as_s_Option(x), default$1)
   };
 }
-const $d_Lindigo_entry_StandardFrameProcessor$$anonfun$1 = new $TypeData().initClass({
-  Lindigo_entry_StandardFrameProcessor$$anonfun$1: 0
-}, false, "indigo.entry.StandardFrameProcessor$$anonfun$1", {
-  Lindigo_entry_StandardFrameProcessor$$anonfun$1: 1,
+const $d_Lindigo_entry_ScenesFrameProcessor$$anonfun$1 = new $TypeData().initClass({
+  Lindigo_entry_ScenesFrameProcessor$$anonfun$1: 0
+}, false, "indigo.entry.ScenesFrameProcessor$$anonfun$1", {
+  Lindigo_entry_ScenesFrameProcessor$$anonfun$1: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
   s_PartialFunction: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lindigo_entry_StandardFrameProcessor$$anonfun$1.prototype.$classData = $d_Lindigo_entry_StandardFrameProcessor$$anonfun$1;
-class $c_Lindigo_entry_StandardFrameProcessor$$anonfun$2 extends $c_sr_AbstractPartialFunction {
+$c_Lindigo_entry_ScenesFrameProcessor$$anonfun$1.prototype.$classData = $d_Lindigo_entry_ScenesFrameProcessor$$anonfun$1;
+class $c_Lindigo_entry_ScenesFrameProcessor$$anonfun$2 extends $c_sr_AbstractPartialFunction {
   constructor(outer) {
     super()
   };
@@ -36299,17 +38178,17 @@ class $c_Lindigo_entry_StandardFrameProcessor$$anonfun$2 extends $c_sr_AbstractP
     return this.applyOrElse__s_Option__F1__O($as_s_Option(x), default$1)
   };
 }
-const $d_Lindigo_entry_StandardFrameProcessor$$anonfun$2 = new $TypeData().initClass({
-  Lindigo_entry_StandardFrameProcessor$$anonfun$2: 0
-}, false, "indigo.entry.StandardFrameProcessor$$anonfun$2", {
-  Lindigo_entry_StandardFrameProcessor$$anonfun$2: 1,
+const $d_Lindigo_entry_ScenesFrameProcessor$$anonfun$2 = new $TypeData().initClass({
+  Lindigo_entry_ScenesFrameProcessor$$anonfun$2: 0
+}, false, "indigo.entry.ScenesFrameProcessor$$anonfun$2", {
+  Lindigo_entry_ScenesFrameProcessor$$anonfun$2: 1,
   sr_AbstractPartialFunction: 1,
   O: 1,
   F1: 1,
   s_PartialFunction: 1,
   Ljava_io_Serializable: 1
 });
-$c_Lindigo_entry_StandardFrameProcessor$$anonfun$2.prototype.$classData = $d_Lindigo_entry_StandardFrameProcessor$$anonfun$2;
+$c_Lindigo_entry_ScenesFrameProcessor$$anonfun$2.prototype.$classData = $d_Lindigo_entry_ScenesFrameProcessor$$anonfun$2;
 class $c_Lindigo_gameengine_GameLoop$$anonfun$$nestedInanonfun$loop$1$1 extends $c_sr_AbstractPartialFunction {
   constructor(outer) {
     super()
@@ -39161,6 +41040,18 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
   y__I() {
     return (((((4 & this.Lindigo_shared_scenegraph_Graphic__f_bitmap$0) << 24) >> 24) === 0) ? $p_Lindigo_shared_scenegraph_Graphic__y$lzycompute__I(this) : this.Lindigo_shared_scenegraph_Graphic__f_y)
   };
+  moveTo__I__I__Lindigo_shared_scenegraph_Graphic(x, y) {
+    $m_Lindigo_shared_datatypes_Point$();
+    const pt = new $c_Lindigo_shared_datatypes_Point(x, y);
+    const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const effects = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(pt, depth, rotation, scale, ref, crop, effects, material)
+  };
   moveBy__Lindigo_shared_datatypes_Point__Lindigo_shared_scenegraph_Graphic(pt) {
     const position = this.Lindigo_shared_scenegraph_Graphic__f_position.$plus__Lindigo_shared_datatypes_Point__Lindigo_shared_datatypes_Point(pt);
     const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
@@ -39186,6 +41077,44 @@ class $c_Lindigo_shared_scenegraph_Graphic extends $c_O {
   };
   scaleBy__D__D__Lindigo_shared_scenegraph_Graphic(x, y) {
     return this.scaleBy__Lindigo_shared_datatypes_Vector2__Lindigo_shared_scenegraph_Graphic(($m_Lindigo_shared_datatypes_Vector2$(), new $c_Lindigo_shared_datatypes_Vector2(x, y)))
+  };
+  withAlpha__D__Lindigo_shared_scenegraph_Graphic(a) {
+    const position = this.Lindigo_shared_scenegraph_Graphic__f_position;
+    const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const this$1 = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    $m_Lindigo_shared_datatypes_Effects$();
+    const tint = this$1.Lindigo_shared_datatypes_Effects__f_tint;
+    const overlay = this$1.Lindigo_shared_datatypes_Effects__f_overlay;
+    const border = this$1.Lindigo_shared_datatypes_Effects__f_border;
+    const glow = this$1.Lindigo_shared_datatypes_Effects__f_glow;
+    const flip = this$1.Lindigo_shared_datatypes_Effects__f_flip;
+    const effects = new $c_Lindigo_shared_datatypes_Effects(tint, overlay, border, glow, a, flip);
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
+  };
+  flipHorizontal__Z__Lindigo_shared_scenegraph_Graphic(hValue) {
+    const position = this.Lindigo_shared_scenegraph_Graphic__f_position;
+    const depth = this.Lindigo_shared_scenegraph_Graphic__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Graphic__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Graphic__f_scale;
+    const ref = this.Lindigo_shared_scenegraph_Graphic__f_ref;
+    const crop = this.Lindigo_shared_scenegraph_Graphic__f_crop;
+    const this$2 = this.Lindigo_shared_scenegraph_Graphic__f_effects;
+    const vertical = this.Lindigo_shared_scenegraph_Graphic__f_effects.Lindigo_shared_datatypes_Effects__f_flip.Lindigo_shared_datatypes_Flip__f_vertical;
+    const newValue = new $c_Lindigo_shared_datatypes_Flip(hValue, vertical);
+    $m_Lindigo_shared_datatypes_Effects$();
+    const tint = this$2.Lindigo_shared_datatypes_Effects__f_tint;
+    const overlay = this$2.Lindigo_shared_datatypes_Effects__f_overlay;
+    const border = this$2.Lindigo_shared_datatypes_Effects__f_border;
+    const glow = this$2.Lindigo_shared_datatypes_Effects__f_glow;
+    const alpha = this$2.Lindigo_shared_datatypes_Effects__f_alpha;
+    const effects = new $c_Lindigo_shared_datatypes_Effects(tint, overlay, border, glow, alpha, newValue);
+    const material = this.Lindigo_shared_scenegraph_Graphic__f_material;
+    return new $c_Lindigo_shared_scenegraph_Graphic(position, depth, rotation, scale, ref, crop, effects, material)
   };
   withRef__I__I__Lindigo_shared_scenegraph_Graphic(xValue, yValue) {
     $m_Lindigo_shared_datatypes_Point$();
@@ -39332,6 +41261,27 @@ class $c_Lindigo_shared_scenegraph_Text extends $c_O {
     const eventHandler = this.Lindigo_shared_scenegraph_Text__f_eventHandler;
     return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
   };
+  withTint__D__D__D__Lindigo_shared_scenegraph_Text(red, green, blue) {
+    const text = this.Lindigo_shared_scenegraph_Text__f_text;
+    const alignment = this.Lindigo_shared_scenegraph_Text__f_alignment;
+    const position = this.Lindigo_shared_scenegraph_Text__f_position;
+    const depth = this.Lindigo_shared_scenegraph_Text__f_depth;
+    const rotation = this.Lindigo_shared_scenegraph_Text__f_rotation;
+    const scale = this.Lindigo_shared_scenegraph_Text__f_scale;
+    const fontKey = this.Lindigo_shared_scenegraph_Text__f_fontKey;
+    const this$2 = this.Lindigo_shared_scenegraph_Text__f_effects;
+    $m_Lindigo_shared_datatypes_RGBA$();
+    const newValue = new $c_Lindigo_shared_datatypes_RGBA(red, green, blue, 1.0);
+    $m_Lindigo_shared_datatypes_Effects$();
+    const overlay = this$2.Lindigo_shared_datatypes_Effects__f_overlay;
+    const border = this$2.Lindigo_shared_datatypes_Effects__f_border;
+    const glow = this$2.Lindigo_shared_datatypes_Effects__f_glow;
+    const alpha = this$2.Lindigo_shared_datatypes_Effects__f_alpha;
+    const flip = this$2.Lindigo_shared_datatypes_Effects__f_flip;
+    const effects = new $c_Lindigo_shared_datatypes_Effects(newValue, overlay, border, glow, alpha, flip);
+    const eventHandler = this.Lindigo_shared_scenegraph_Text__f_eventHandler;
+    return new $c_Lindigo_shared_scenegraph_Text(text, alignment, position, depth, rotation, scale, fontKey, effects, eventHandler)
+  };
   withDepth__I__Lindigo_shared_scenegraph_SceneGraphNodePrimitive(depth) {
     const text = this.Lindigo_shared_scenegraph_Text__f_text;
     const alignment = this.Lindigo_shared_scenegraph_Text__f_alignment;
@@ -39401,6 +41351,232 @@ const $d_Lindigo_shared_subsystems_SubSystemsRegister$$anonfun$1 = new $TypeData
   Ljava_io_Serializable: 1
 });
 $c_Lindigo_shared_subsystems_SubSystemsRegister$$anonfun$1.prototype.$classData = $d_Lindigo_shared_subsystems_SubSystemsRegister$$anonfun$1;
+class $c_Linvaders_model_Horizontal$Left$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_model_Horizontal$Left$__f_opposite = null;
+    this.Linvaders_model_Horizontal$Left$__f_bitmap$init$0 = false;
+    $n_Linvaders_model_Horizontal$Left$ = this;
+    this.Linvaders_model_Horizontal$Left$__f_opposite = $m_Linvaders_model_Horizontal$Right$();
+    this.Linvaders_model_Horizontal$Left$__f_bitmap$init$0 = true
+  };
+  opposite__Linvaders_model_Horizontal$Right$() {
+    if ((!this.Linvaders_model_Horizontal$Left$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 29")
+    };
+    return this.Linvaders_model_Horizontal$Left$__f_opposite
+  };
+  inDirection__D__D(by) {
+    return (-by)
+  };
+  productPrefix__T() {
+    return "Left"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2364455
+  };
+  toString__T() {
+    return "Left"
+  };
+  opposite__Linvaders_model_Horizontal() {
+    return this.opposite__Linvaders_model_Horizontal$Right$()
+  };
+}
+const $d_Linvaders_model_Horizontal$Left$ = new $TypeData().initClass({
+  Linvaders_model_Horizontal$Left$: 0
+}, false, "invaders.model.Horizontal$Left$", {
+  Linvaders_model_Horizontal$Left$: 1,
+  O: 1,
+  Linvaders_model_Horizontal: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Horizontal$Left$.prototype.$classData = $d_Linvaders_model_Horizontal$Left$;
+let $n_Linvaders_model_Horizontal$Left$ = (void 0);
+function $m_Linvaders_model_Horizontal$Left$() {
+  if ((!$n_Linvaders_model_Horizontal$Left$)) {
+    $n_Linvaders_model_Horizontal$Left$ = new $c_Linvaders_model_Horizontal$Left$()
+  };
+  return $n_Linvaders_model_Horizontal$Left$
+}
+class $c_Linvaders_model_Horizontal$Right$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_model_Horizontal$Right$__f_opposite = null;
+    this.Linvaders_model_Horizontal$Right$__f_bitmap$init$0 = false;
+    $n_Linvaders_model_Horizontal$Right$ = this;
+    this.Linvaders_model_Horizontal$Right$__f_opposite = $m_Linvaders_model_Horizontal$Left$();
+    this.Linvaders_model_Horizontal$Right$__f_bitmap$init$0 = true
+  };
+  opposite__Linvaders_model_Horizontal$Left$() {
+    if ((!this.Linvaders_model_Horizontal$Right$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 25")
+    };
+    return this.Linvaders_model_Horizontal$Right$__f_opposite
+  };
+  inDirection__D__D(by) {
+    return by
+  };
+  productPrefix__T() {
+    return "Right"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 78959100
+  };
+  toString__T() {
+    return "Right"
+  };
+  opposite__Linvaders_model_Horizontal() {
+    return this.opposite__Linvaders_model_Horizontal$Left$()
+  };
+}
+const $d_Linvaders_model_Horizontal$Right$ = new $TypeData().initClass({
+  Linvaders_model_Horizontal$Right$: 0
+}, false, "invaders.model.Horizontal$Right$", {
+  Linvaders_model_Horizontal$Right$: 1,
+  O: 1,
+  Linvaders_model_Horizontal: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Horizontal$Right$.prototype.$classData = $d_Linvaders_model_Horizontal$Right$;
+let $n_Linvaders_model_Horizontal$Right$ = (void 0);
+function $m_Linvaders_model_Horizontal$Right$() {
+  if ((!$n_Linvaders_model_Horizontal$Right$)) {
+    $n_Linvaders_model_Horizontal$Right$ = new $c_Linvaders_model_Horizontal$Right$()
+  };
+  return $n_Linvaders_model_Horizontal$Right$
+}
+class $c_Linvaders_model_Vertical$Down$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_model_Vertical$Down$__f_opposite = null;
+    this.Linvaders_model_Vertical$Down$__f_bitmap$init$0 = false;
+    $n_Linvaders_model_Vertical$Down$ = this;
+    this.Linvaders_model_Vertical$Down$__f_opposite = $m_Linvaders_model_Vertical$Up$();
+    this.Linvaders_model_Vertical$Down$__f_bitmap$init$0 = true
+  };
+  opposite__Linvaders_model_Vertical() {
+    if ((!this.Linvaders_model_Vertical$Down$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 15")
+    };
+    return this.Linvaders_model_Vertical$Down$__f_opposite
+  };
+  inDirection__D__D(by) {
+    return by
+  };
+  productPrefix__T() {
+    return "Down"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2136258
+  };
+  toString__T() {
+    return "Down"
+  };
+}
+const $d_Linvaders_model_Vertical$Down$ = new $TypeData().initClass({
+  Linvaders_model_Vertical$Down$: 0
+}, false, "invaders.model.Vertical$Down$", {
+  Linvaders_model_Vertical$Down$: 1,
+  O: 1,
+  Linvaders_model_Vertical: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Vertical$Down$.prototype.$classData = $d_Linvaders_model_Vertical$Down$;
+let $n_Linvaders_model_Vertical$Down$ = (void 0);
+function $m_Linvaders_model_Vertical$Down$() {
+  if ((!$n_Linvaders_model_Vertical$Down$)) {
+    $n_Linvaders_model_Vertical$Down$ = new $c_Linvaders_model_Vertical$Down$()
+  };
+  return $n_Linvaders_model_Vertical$Down$
+}
+class $c_Linvaders_model_Vertical$Up$ extends $c_O {
+  constructor() {
+    super();
+    this.Linvaders_model_Vertical$Up$__f_opposite = null;
+    this.Linvaders_model_Vertical$Up$__f_bitmap$init$0 = false;
+    $n_Linvaders_model_Vertical$Up$ = this;
+    this.Linvaders_model_Vertical$Up$__f_opposite = $m_Linvaders_model_Vertical$Down$();
+    this.Linvaders_model_Vertical$Up$__f_bitmap$init$0 = true
+  };
+  opposite__Linvaders_model_Vertical() {
+    if ((!this.Linvaders_model_Vertical$Up$__f_bitmap$init$0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 11")
+    };
+    return this.Linvaders_model_Vertical$Up$__f_opposite
+  };
+  inDirection__D__D(by) {
+    return (-by)
+  };
+  productPrefix__T() {
+    return "Up"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2747
+  };
+  toString__T() {
+    return "Up"
+  };
+}
+const $d_Linvaders_model_Vertical$Up$ = new $TypeData().initClass({
+  Linvaders_model_Vertical$Up$: 0
+}, false, "invaders.model.Vertical$Up$", {
+  Linvaders_model_Vertical$Up$: 1,
+  O: 1,
+  Linvaders_model_Vertical: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Linvaders_model_Vertical$Up$.prototype.$classData = $d_Linvaders_model_Vertical$Up$;
+let $n_Linvaders_model_Vertical$Up$ = (void 0);
+function $m_Linvaders_model_Vertical$Up$() {
+  if ((!$n_Linvaders_model_Vertical$Up$)) {
+    $n_Linvaders_model_Vertical$Up$ = new $c_Linvaders_model_Vertical$Up$()
+  };
+  return $n_Linvaders_model_Vertical$Up$
+}
 const $ct_Ljava_io_FilterOutputStream__Ljava_io_OutputStream__ = (function($thiz, out) {
   $thiz.Ljava_io_FilterOutputStream__f_out = out;
   return $thiz
@@ -39634,232 +41810,6 @@ const $d_ju_NoSuchElementException = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_ju_NoSuchElementException.prototype.$classData = $d_ju_NoSuchElementException;
-class $c_Lmodel_Horizontal$Left$ extends $c_O {
-  constructor() {
-    super();
-    this.Lmodel_Horizontal$Left$__f_opposite = null;
-    this.Lmodel_Horizontal$Left$__f_bitmap$init$0 = false;
-    $n_Lmodel_Horizontal$Left$ = this;
-    this.Lmodel_Horizontal$Left$__f_opposite = $m_Lmodel_Horizontal$Right$();
-    this.Lmodel_Horizontal$Left$__f_bitmap$init$0 = true
-  };
-  opposite__Lmodel_Horizontal$Right$() {
-    if ((!this.Lmodel_Horizontal$Left$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/model/Direction.scala: 29")
-    };
-    return this.Lmodel_Horizontal$Left$__f_opposite
-  };
-  inDirection__D__D(by) {
-    return (-by)
-  };
-  productPrefix__T() {
-    return "Left"
-  };
-  productArity__I() {
-    return 0
-  };
-  productElement__I__O(x$1) {
-    return $m_sr_Statics$().ioobe__I__O(x$1)
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    return 2364455
-  };
-  toString__T() {
-    return "Left"
-  };
-  opposite__Lmodel_Horizontal() {
-    return this.opposite__Lmodel_Horizontal$Right$()
-  };
-}
-const $d_Lmodel_Horizontal$Left$ = new $TypeData().initClass({
-  Lmodel_Horizontal$Left$: 0
-}, false, "model.Horizontal$Left$", {
-  Lmodel_Horizontal$Left$: 1,
-  O: 1,
-  Lmodel_Horizontal: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Horizontal$Left$.prototype.$classData = $d_Lmodel_Horizontal$Left$;
-let $n_Lmodel_Horizontal$Left$ = (void 0);
-function $m_Lmodel_Horizontal$Left$() {
-  if ((!$n_Lmodel_Horizontal$Left$)) {
-    $n_Lmodel_Horizontal$Left$ = new $c_Lmodel_Horizontal$Left$()
-  };
-  return $n_Lmodel_Horizontal$Left$
-}
-class $c_Lmodel_Horizontal$Right$ extends $c_O {
-  constructor() {
-    super();
-    this.Lmodel_Horizontal$Right$__f_opposite = null;
-    this.Lmodel_Horizontal$Right$__f_bitmap$init$0 = false;
-    $n_Lmodel_Horizontal$Right$ = this;
-    this.Lmodel_Horizontal$Right$__f_opposite = $m_Lmodel_Horizontal$Left$();
-    this.Lmodel_Horizontal$Right$__f_bitmap$init$0 = true
-  };
-  opposite__Lmodel_Horizontal$Left$() {
-    if ((!this.Lmodel_Horizontal$Right$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/model/Direction.scala: 25")
-    };
-    return this.Lmodel_Horizontal$Right$__f_opposite
-  };
-  inDirection__D__D(by) {
-    return by
-  };
-  productPrefix__T() {
-    return "Right"
-  };
-  productArity__I() {
-    return 0
-  };
-  productElement__I__O(x$1) {
-    return $m_sr_Statics$().ioobe__I__O(x$1)
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    return 78959100
-  };
-  toString__T() {
-    return "Right"
-  };
-  opposite__Lmodel_Horizontal() {
-    return this.opposite__Lmodel_Horizontal$Left$()
-  };
-}
-const $d_Lmodel_Horizontal$Right$ = new $TypeData().initClass({
-  Lmodel_Horizontal$Right$: 0
-}, false, "model.Horizontal$Right$", {
-  Lmodel_Horizontal$Right$: 1,
-  O: 1,
-  Lmodel_Horizontal: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Horizontal$Right$.prototype.$classData = $d_Lmodel_Horizontal$Right$;
-let $n_Lmodel_Horizontal$Right$ = (void 0);
-function $m_Lmodel_Horizontal$Right$() {
-  if ((!$n_Lmodel_Horizontal$Right$)) {
-    $n_Lmodel_Horizontal$Right$ = new $c_Lmodel_Horizontal$Right$()
-  };
-  return $n_Lmodel_Horizontal$Right$
-}
-class $c_Lmodel_Vertical$Down$ extends $c_O {
-  constructor() {
-    super();
-    this.Lmodel_Vertical$Down$__f_opposite = null;
-    this.Lmodel_Vertical$Down$__f_bitmap$init$0 = false;
-    $n_Lmodel_Vertical$Down$ = this;
-    this.Lmodel_Vertical$Down$__f_opposite = $m_Lmodel_Vertical$Up$();
-    this.Lmodel_Vertical$Down$__f_bitmap$init$0 = true
-  };
-  opposite__Lmodel_Vertical() {
-    if ((!this.Lmodel_Vertical$Down$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/model/Direction.scala: 15")
-    };
-    return this.Lmodel_Vertical$Down$__f_opposite
-  };
-  inDirection__D__D(by) {
-    return by
-  };
-  productPrefix__T() {
-    return "Down"
-  };
-  productArity__I() {
-    return 0
-  };
-  productElement__I__O(x$1) {
-    return $m_sr_Statics$().ioobe__I__O(x$1)
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    return 2136258
-  };
-  toString__T() {
-    return "Down"
-  };
-}
-const $d_Lmodel_Vertical$Down$ = new $TypeData().initClass({
-  Lmodel_Vertical$Down$: 0
-}, false, "model.Vertical$Down$", {
-  Lmodel_Vertical$Down$: 1,
-  O: 1,
-  Lmodel_Vertical: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Vertical$Down$.prototype.$classData = $d_Lmodel_Vertical$Down$;
-let $n_Lmodel_Vertical$Down$ = (void 0);
-function $m_Lmodel_Vertical$Down$() {
-  if ((!$n_Lmodel_Vertical$Down$)) {
-    $n_Lmodel_Vertical$Down$ = new $c_Lmodel_Vertical$Down$()
-  };
-  return $n_Lmodel_Vertical$Down$
-}
-class $c_Lmodel_Vertical$Up$ extends $c_O {
-  constructor() {
-    super();
-    this.Lmodel_Vertical$Up$__f_opposite = null;
-    this.Lmodel_Vertical$Up$__f_bitmap$init$0 = false;
-    $n_Lmodel_Vertical$Up$ = this;
-    this.Lmodel_Vertical$Up$__f_opposite = $m_Lmodel_Vertical$Down$();
-    this.Lmodel_Vertical$Up$__f_bitmap$init$0 = true
-  };
-  opposite__Lmodel_Vertical() {
-    if ((!this.Lmodel_Vertical$Up$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/model/Direction.scala: 11")
-    };
-    return this.Lmodel_Vertical$Up$__f_opposite
-  };
-  inDirection__D__D(by) {
-    return (-by)
-  };
-  productPrefix__T() {
-    return "Up"
-  };
-  productArity__I() {
-    return 0
-  };
-  productElement__I__O(x$1) {
-    return $m_sr_Statics$().ioobe__I__O(x$1)
-  };
-  productIterator__sc_Iterator() {
-    return new $c_sr_ScalaRunTime$$anon$1(this)
-  };
-  hashCode__I() {
-    return 2747
-  };
-  toString__T() {
-    return "Up"
-  };
-}
-const $d_Lmodel_Vertical$Up$ = new $TypeData().initClass({
-  Lmodel_Vertical$Up$: 0
-}, false, "model.Vertical$Up$", {
-  Lmodel_Vertical$Up$: 1,
-  O: 1,
-  Lmodel_Vertical: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lmodel_Vertical$Up$.prototype.$classData = $d_Lmodel_Vertical$Up$;
-let $n_Lmodel_Vertical$Up$ = (void 0);
-function $m_Lmodel_Vertical$Up$() {
-  if ((!$n_Lmodel_Vertical$Up$)) {
-    $n_Lmodel_Vertical$Up$ = new $c_Lmodel_Vertical$Up$()
-  };
-  return $n_Lmodel_Vertical$Up$
-}
 class $c_Lorg_scalajs_linker_runtime_UndefinedBehaviorError extends $c_jl_VirtualMachineError {
   constructor(cause) {
     super();
@@ -44034,6 +45984,14 @@ class $c_Lindigo_package$ extends $c_O {
     const hi = (2048 | b.RTLong__f_hi);
     this.Lindigo_package$__f_bitmap$init$0 = new $c_RTLong(lo, hi)
   };
+  ClearColor__Lindigo_shared_ClearColor$() {
+    const b = this.Lindigo_package$__f_bitmap$init$0;
+    const hi = (32768 & b.RTLong__f_hi);
+    if ((!(hi !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_ClearColor
+  };
   GameConfig__Lindigo_shared_config_GameConfig$() {
     const b = this.Lindigo_package$__f_bitmap$init$0;
     const hi = (65536 & b.RTLong__f_hi);
@@ -44041,6 +45999,14 @@ class $c_Lindigo_package$ extends $c_O {
       throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
     };
     return this.Lindigo_package$__f_GameConfig
+  };
+  GameViewport__Lindigo_shared_config_GameViewport$() {
+    const b = this.Lindigo_package$__f_bitmap$init$0;
+    const hi = (131072 & b.RTLong__f_hi);
+    if ((!(hi !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 7")
+    };
+    return this.Lindigo_package$__f_GameViewport
   };
   indigo$shared$SharedTypeAliases$_setter_$AsString_$eq__Lindigo_shared_AsString$__V(x$1) {
     this.Lindigo_package$__f_AsString = x$1;
@@ -44709,6 +46675,14 @@ class $c_Lindigo_package$ extends $c_O {
     };
     return this.Lindigo_package$__f_Keys
   };
+  NonEmptyList__Lindigo_shared_collections_NonEmptyList$() {
+    const b = this.Lindigo_package$__f_bitmap$init$0;
+    const lo = (131072 & b.RTLong__f_lo);
+    if ((!(lo !== 0))) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/davismi5/repos/pkg/indigo/indigo/indigo-core/src/main/scala/indigo/package.scala: 61")
+    };
+    return this.Lindigo_package$__f_NonEmptyList
+  };
 }
 const $d_Lindigo_package$ = new $TypeData().initClass({
   Lindigo_package$: 0
@@ -44728,6 +46702,141 @@ function $m_Lindigo_package$() {
     $n_Lindigo_package$ = new $c_Lindigo_package$()
   };
   return $n_Lindigo_package$
+}
+class $c_Lindigo_scenes_SceneEvent$JumpTo extends $c_O {
+  constructor(name) {
+    super();
+    this.Lindigo_scenes_SceneEvent$JumpTo__f_name = null;
+    this.Lindigo_scenes_SceneEvent$JumpTo__f_name = name
+  };
+  productPrefix__T() {
+    return "JumpTo"
+  };
+  productArity__I() {
+    return 1
+  };
+  productElement__I__O(x$1) {
+    return ((x$1 === 0) ? new $c_Lindigo_scenes_SceneName(this.Lindigo_scenes_SceneEvent$JumpTo__f_name) : $m_sr_Statics$().ioobe__I__O(x$1))
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    const this$2 = $m_s_util_hashing_MurmurHash3$();
+    return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+  };
+  toString__T() {
+    return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+  };
+  equals__O__Z(x$1) {
+    if ((this === x$1)) {
+      return true
+    } else if ((x$1 instanceof $c_Lindigo_scenes_SceneEvent$JumpTo)) {
+      const JumpTo$1 = $as_Lindigo_scenes_SceneEvent$JumpTo(x$1);
+      return (this.Lindigo_scenes_SceneEvent$JumpTo__f_name === JumpTo$1.Lindigo_scenes_SceneEvent$JumpTo__f_name)
+    } else {
+      return false
+    }
+  };
+}
+function $as_Lindigo_scenes_SceneEvent$JumpTo(obj) {
+  return (((obj instanceof $c_Lindigo_scenes_SceneEvent$JumpTo) || (obj === null)) ? obj : $throwClassCastException(obj, "indigo.scenes.SceneEvent$JumpTo"))
+}
+function $isArrayOf_Lindigo_scenes_SceneEvent$JumpTo(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lindigo_scenes_SceneEvent$JumpTo)))
+}
+function $asArrayOf_Lindigo_scenes_SceneEvent$JumpTo(obj, depth) {
+  return (($isArrayOf_Lindigo_scenes_SceneEvent$JumpTo(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lindigo.scenes.SceneEvent$JumpTo;", depth))
+}
+const $d_Lindigo_scenes_SceneEvent$JumpTo = new $TypeData().initClass({
+  Lindigo_scenes_SceneEvent$JumpTo: 0
+}, false, "indigo.scenes.SceneEvent$JumpTo", {
+  Lindigo_scenes_SceneEvent$JumpTo: 1,
+  O: 1,
+  Lindigo_scenes_SceneEvent: 1,
+  Lindigo_shared_events_GlobalEvent: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_scenes_SceneEvent$JumpTo.prototype.$classData = $d_Lindigo_scenes_SceneEvent$JumpTo;
+class $c_Lindigo_scenes_SceneEvent$Next$ extends $c_O {
+  productPrefix__T() {
+    return "Next"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return 2424595
+  };
+  toString__T() {
+    return "Next"
+  };
+}
+const $d_Lindigo_scenes_SceneEvent$Next$ = new $TypeData().initClass({
+  Lindigo_scenes_SceneEvent$Next$: 0
+}, false, "indigo.scenes.SceneEvent$Next$", {
+  Lindigo_scenes_SceneEvent$Next$: 1,
+  O: 1,
+  Lindigo_scenes_SceneEvent: 1,
+  Lindigo_shared_events_GlobalEvent: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_scenes_SceneEvent$Next$.prototype.$classData = $d_Lindigo_scenes_SceneEvent$Next$;
+let $n_Lindigo_scenes_SceneEvent$Next$ = (void 0);
+function $m_Lindigo_scenes_SceneEvent$Next$() {
+  if ((!$n_Lindigo_scenes_SceneEvent$Next$)) {
+    $n_Lindigo_scenes_SceneEvent$Next$ = new $c_Lindigo_scenes_SceneEvent$Next$()
+  };
+  return $n_Lindigo_scenes_SceneEvent$Next$
+}
+class $c_Lindigo_scenes_SceneEvent$Previous$ extends $c_O {
+  productPrefix__T() {
+    return "Previous"
+  };
+  productArity__I() {
+    return 0
+  };
+  productElement__I__O(x$1) {
+    return $m_sr_Statics$().ioobe__I__O(x$1)
+  };
+  productIterator__sc_Iterator() {
+    return new $c_sr_ScalaRunTime$$anon$1(this)
+  };
+  hashCode__I() {
+    return (-1209131241)
+  };
+  toString__T() {
+    return "Previous"
+  };
+}
+const $d_Lindigo_scenes_SceneEvent$Previous$ = new $TypeData().initClass({
+  Lindigo_scenes_SceneEvent$Previous$: 0
+}, false, "indigo.scenes.SceneEvent$Previous$", {
+  Lindigo_scenes_SceneEvent$Previous$: 1,
+  O: 1,
+  Lindigo_scenes_SceneEvent: 1,
+  Lindigo_shared_events_GlobalEvent: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lindigo_scenes_SceneEvent$Previous$.prototype.$classData = $d_Lindigo_scenes_SceneEvent$Previous$;
+let $n_Lindigo_scenes_SceneEvent$Previous$ = (void 0);
+function $m_Lindigo_scenes_SceneEvent$Previous$() {
+  if ((!$n_Lindigo_scenes_SceneEvent$Previous$)) {
+    $n_Lindigo_scenes_SceneEvent$Previous$ = new $c_Lindigo_scenes_SceneEvent$Previous$()
+  };
+  return $n_Lindigo_scenes_SceneEvent$Previous$
 }
 class $c_Lindigo_shared_events_AssetEvent$AssetBatchLoadError extends $c_O {
   constructor(key, message) {
@@ -60685,6 +62794,6 @@ const $d_scm_Queue = new $TypeData().initClass({
 });
 $c_scm_Queue.prototype.$classData = $d_scm_Queue;
 $L0 = new $c_RTLong(0, 0);
-IndigoGame = $m_LBassInvader$();
+IndigoGame = $m_Linvaders_BassInvader$();
 }).call(this);
 //# sourceMappingURL=bassinvader-fastopt.js.map

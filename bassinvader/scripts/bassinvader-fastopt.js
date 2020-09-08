@@ -17553,6 +17553,7 @@ class $c_Linvaders_Settings$ extends $c_O {
     this.Linvaders_Settings$__f_lives = 0;
     this.Linvaders_Settings$__f_bloodFadeSpeed = 0.0;
     this.Linvaders_Settings$__f_grandmaFadeSpeed = 0.0;
+    this.Linvaders_Settings$__f_grandmaDirectionChangePer = 0;
     this.Linvaders_Settings$__f_config = null;
     this.Linvaders_Settings$__f_bitmap$init$0 = 0;
     $n_Linvaders_Settings$ = this;
@@ -17568,12 +17569,14 @@ class $c_Linvaders_Settings$ extends $c_O {
     this.Linvaders_Settings$__f_bitmap$init$0 = (((16 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
     this.Linvaders_Settings$__f_grandmaFadeSpeed = 0.05;
     this.Linvaders_Settings$__f_bitmap$init$0 = (((32 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
+    this.Linvaders_Settings$__f_grandmaDirectionChangePer = 120;
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((64 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24);
     $m_Lindigo_package$().GameConfig__Lindigo_shared_config_GameConfig$();
     $m_Lindigo_package$().GameViewport__Lindigo_shared_config_GameViewport$();
     const viewport = new $c_Lindigo_shared_config_GameViewport(1200, 800);
     const clearColor = $m_Lindigo_package$().ClearColor__Lindigo_shared_ClearColor$().Black__Lindigo_shared_ClearColor();
     this.Linvaders_Settings$__f_config = new $c_Lindigo_shared_config_GameConfig(viewport, 60, clearColor, 1, $m_Lindigo_shared_config_AdvancedGameConfig$().default__Lindigo_shared_config_AdvancedGameConfig());
-    this.Linvaders_Settings$__f_bitmap$init$0 = (((64 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24)
+    this.Linvaders_Settings$__f_bitmap$init$0 = (((128 | this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24)
   };
   shotSpeed__D() {
     if (((((2 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
@@ -17605,9 +17608,15 @@ class $c_Linvaders_Settings$ extends $c_O {
     };
     return this.Linvaders_Settings$__f_grandmaFadeSpeed
   };
-  config__Lindigo_shared_config_GameConfig() {
+  grandmaDirectionChangePer__I() {
     if (((((64 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 14")
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 13")
+    };
+    return this.Linvaders_Settings$__f_grandmaDirectionChangePer
+  };
+  config__Lindigo_shared_config_GameConfig() {
+    if (((((128 & this.Linvaders_Settings$__f_bitmap$init$0) << 24) >> 24) === 0)) {
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/Settings.scala: 15")
     };
     return this.Linvaders_Settings$__f_config
   };
@@ -25766,8 +25775,9 @@ class $c_Linvaders_model_Grandma$ extends $c_O {
     return this.Linvaders_model_Grandma$__f_aboveScreen
   };
   initial__Lindigo_shared_config_GameConfig__Linvaders_model_Grandma(config) {
-    const initX = $m_s_util_Random$().between__I__I__I(0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width);
-    const initLocation = new $c_Linvaders_model_Location(initX, $m_Linvaders_model_Grandma$().aboveScreen__D());
+    const initX = $m_s_util_Random$().between__D__D__D(0.0, config.Lindigo_shared_config_GameConfig__f_viewport.Lindigo_shared_config_GameViewport__f_width);
+    const initY = $m_s_util_Random$().between__D__D__D(0.0, 200.0);
+    const initLocation = new $c_Linvaders_model_Location(initX, ($m_Linvaders_model_Grandma$().aboveScreen__D() - initY));
     const this$1 = $m_s_util_Random$();
     let initDir;
     if (this$1.s_util_Random__f_self.nextBoolean__Z()) {
@@ -35305,6 +35315,10 @@ const $d_Linvaders_model_CheckHitsResult = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Linvaders_model_CheckHitsResult.prototype.$classData = $d_Linvaders_model_CheckHitsResult;
+const $p_Linvaders_model_Direction__trueWithProbability__I__Z = (function($thiz, trueEvery) {
+  const rand = $m_s_util_Random$().between__I__I__I(1, ((1 + trueEvery) | 0));
+  return ($intMod(rand, trueEvery) === 0)
+});
 class $c_Linvaders_model_Direction extends $c_O {
   constructor(vertical, horizontal) {
     super();
@@ -35389,7 +35403,7 @@ class $c_Linvaders_model_Direction extends $c_O {
       $$x2 = ($$x4 < new $c_Lindigo_shared_datatypes_Rectangle(position$2, size$2).left__I())
     };
     let newHorizontal;
-    if ($$x2) {
+    if (($$x2 || $p_Linvaders_model_Direction__trueWithProbability__I__Z(this, $m_Linvaders_Settings$().grandmaDirectionChangePer__I()))) {
       newHorizontal = this.Linvaders_model_Direction__f_horizontal.opposite__Linvaders_model_Horizontal()
     } else {
       newHorizontal = this.Linvaders_model_Direction__f_horizontal
@@ -41362,7 +41376,7 @@ class $c_Linvaders_model_Horizontal$Left$ extends $c_O {
   };
   opposite__Linvaders_model_Horizontal$Right$() {
     if ((!this.Linvaders_model_Horizontal$Left$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 29")
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 31")
     };
     return this.Linvaders_model_Horizontal$Left$__f_opposite
   };
@@ -41420,7 +41434,7 @@ class $c_Linvaders_model_Horizontal$Right$ extends $c_O {
   };
   opposite__Linvaders_model_Horizontal$Left$() {
     if ((!this.Linvaders_model_Horizontal$Right$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 25")
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 27")
     };
     return this.Linvaders_model_Horizontal$Right$__f_opposite
   };
@@ -41478,7 +41492,7 @@ class $c_Linvaders_model_Vertical$Down$ extends $c_O {
   };
   opposite__Linvaders_model_Vertical() {
     if ((!this.Linvaders_model_Vertical$Down$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 15")
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 17")
     };
     return this.Linvaders_model_Vertical$Down$__f_opposite
   };
@@ -41533,7 +41547,7 @@ class $c_Linvaders_model_Vertical$Up$ extends $c_O {
   };
   opposite__Linvaders_model_Vertical() {
     if ((!this.Linvaders_model_Vertical$Up$__f_bitmap$init$0)) {
-      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 11")
+      throw new $c_s_UninitializedFieldError("Uninitialized field: /Users/jonasackermann/SideProjects/bass-invader-indigo/src/main/scala/invaders/model/Direction.scala: 13")
     };
     return this.Linvaders_model_Vertical$Up$__f_opposite
   };
